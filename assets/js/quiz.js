@@ -71,6 +71,7 @@ const questions = [{
 ]
 
 let startGameBtn = document.getElementById("start-game")
+let nextQuestionBtn = document.getElementById("next-question-btn")
 let gameDiv = document.getElementById("game-div")
 let questionText = document.getElementById("question-text")
 let btnOne = document.getElementById("btn1");
@@ -99,7 +100,15 @@ function addQuestionContent(index) {
     btnFour.innerText = answers[3].answerText;
     btnFive.innerText = answers[4].answerText;
     btnSix.innerText = answers[5].answerText;
-}
+};
+
+nextQuestionBtn.addEventListener('click', function nextQuestion() {
+    questions.splice(0, 1);
+    addQuestionContent(0);
+})
+
+
+
 
 
     
