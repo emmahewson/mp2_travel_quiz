@@ -5,7 +5,7 @@ const gameDiv = document.getElementById("game-div")
 const questionText = document.getElementById("question-text")
 const choices = Array.from(document.getElementsByClassName("choice"))
 
-// declaring points & score
+// declaring points
 let userTotal = [0, 0, 0, 0, 0, 0];
 
 let wildlifePoints = [0, 1, 0, 0, 3, 2];
@@ -16,8 +16,7 @@ let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
 
-
-// Start quiz
+// Start quiz functionality
 startGameBtn.addEventListener('click', function startGame() {
     gameDiv.classList.toggle("hidden");
     startGameBtn.classList.toggle("hidden");
@@ -69,10 +68,15 @@ function handleAnswer() {
 // Next question button
 nextQuestionBtn.addEventListener('click', function nextQuestion() {
 
+    // tests if each button has class of selected 
     choices.forEach(choice => {
-
         if (choice.classList.contains("selected")) {
+
+            // iterates through question array
             questions[0].answers.forEach(answer => {
+
+                // matches the selected answer to the same answer in the array
+                // updates the user totals based on the answer category/type by iterating through each answers array
                 if (choice.innerText === answer.answerText) {
                     switch (answer.answerType) {
                         case "wildlife":
@@ -105,21 +109,18 @@ nextQuestionBtn.addEventListener('click', function nextQuestion() {
                                 userTotal[i] += remotePoints[i];
                             }
                             break;
-                    }
-                }
-                
-            })
-
-        }
-        
-    })
+                    };
+                };
+            });
+        };
+    });
 
     // temp - adds scores to test site
     let scoreText = document.getElementsByClassName("score-text");
     for (let i = 0; i < scoreText.length; i++) {
         scoreText[i].innerText = userTotal[i];
-    }
-    
+    };
+
 
     // removes 'selected' class from buttons
     choices.forEach(choice => {
@@ -138,9 +139,6 @@ nextQuestionBtn.addEventListener('click', function nextQuestion() {
 
     nextQuestionBtn.disabled = true;
 });
-
-
-
 
 function showResults() {
     console.log("Results");
