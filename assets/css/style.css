@@ -6,6 +6,11 @@ body {
     display: block;
 }
 
-#game-div {
+
+.selected {
+    background-color: cyan;
+}
+
+.hidden {
     display: none;
 }
