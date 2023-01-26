@@ -4,6 +4,17 @@ body {
 
 .btn {
     display: block;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+.choice {
+    background-color:rgb(206, 229, 230);
+    font-weight: 700;
+    width: 500px;
 }
 
 
@@ -35,4 +46,8 @@ body {
 #progressbar-fg {
     background-color: cyan;
     z-index: 2;
+}
+
+#results-image {
+    width: 300px;
 }

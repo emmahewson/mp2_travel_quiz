@@ -70,7 +70,7 @@ const questions = [{
 },
 {
     questionNumber: 3,
-    questionText: "If you could only listen to one type of music for the rest of your life you would choose…",
+    questionText: "Choose a music genre…",
     answers: [{
             answerNumber: 1,
             answerText: "Punk",
@@ -105,10 +105,10 @@ const questions = [{
 },
 {
     questionNumber: 4,
-    questionText: "Which of these sounds like your kind of breakfast?",
+    questionText: "Which breakfast appeals to you the most?",
     answers: [{
             answerNumber: 1,
-            answerText: "Sprouted millet, sorghum and buckwheat toast with avocado and cultured vegetables",
+            answerText: "Sprouted millet and buckwheat toast with avocado and smoked butter",
             answerType: "food"
         },
         {
@@ -118,7 +118,7 @@ const questions = [{
         },
         {
             answerNumber: 3,
-            answerText: "Getting up at 4am to drive to the beach to go surfing, and grabbing whatever you can find at a service station",
+            answerText: "5am surf followed by a trail bar and coffee in your campervan",
             answerType: "thrill"
         },
         {
@@ -140,10 +140,10 @@ const questions = [{
 },
 {
     questionNumber: 5,
-    questionText: "Which part of the internet are you most likely to waste your life on?",
+    questionText: "Where do you spend most of your on the internet",
     answers: [{
             answerNumber: 1,
-            answerText: "I try to avoid places with phone signal",
+            answerText: "What's an internet?",
             answerType: "remote"
         },
         {
@@ -153,12 +153,12 @@ const questions = [{
         },
         {
             answerNumber: 3,
-            answerText: "BBC good food",
+            answerText: "BBC Good Food",
             answerType: "food"
         },
         {
             answerNumber: 4,
-            answerText: "Nowhere, I accidentally dropped my phone in to a ravine",
+            answerText: "Nowhere, I dropped my phone in to a ravine",
             answerType: "thrill"
         },
         {
@@ -175,7 +175,7 @@ const questions = [{
 },
 {
     questionNumber: 6,
-    questionText: "Which of these people is your favourite?",
+    questionText: "Which of these people do you most admire?",
     answers: [{
             answerNumber: 1,
             answerText: "David Attenborough",
@@ -245,7 +245,7 @@ const questions = [{
 },
 {
     questionNumber: 8,
-    questionText: "What was your favourite subject at school?",
+    questionText: "Favourite subject at school...",
     answers: [{
             answerNumber: 1,
             answerText: "Geography",
@@ -280,35 +280,35 @@ const questions = [{
 },
 {
     questionNumber: 9,
-    questionText: "Which of the following would be your most likely excuse for being late for work…",
+    questionText: "What would be most likely to make you late for work?",
     answers: [{
             answerNumber: 1,
-            answerText: "I was googling the history of the ancient Egyptians and I ended up drowning in an infinite internet wormhole of facts.",
+            answerText: "I got trapped in a Google blackhole of pointless facts.",
             answerType: "culture"
         },
         {
             answerNumber: 2,
-            answerText: "My best friend called to tell me about the date they had last night.",
+            answerText: "My best friend called to tell me about their date.",
             answerType: "people"
         },
         {
             answerNumber: 3,
-            answerText: "I saw an upside-down sheep by the side of the road and I stopped to turn it over.",
+            answerText: "I stopped to rescue an upside-down sheep.",
             answerType: "wildlife"
         },
         {
             answerNumber: 4,
-            answerText: "I live 300 miles away in a valley populated only by myself and a pack of wolves.",
+            answerText: "I got cut off by 3 feet of snow.",
             answerType: "remote"
         },
         {
             answerNumber: 5,
-            answerText: "I got stuck in a glacial cravasse and had to drag myself out using only my teeth.",
+            answerText: "I got stuck in a glacial cravasse for a few days.",
             answerType: "thrill"
         },
         {
             answerNumber: 6,
-            answerText: "I had to wait until my toast was exactly the right temperature before I added the 2nd layer of artisan butter.",
+            answerText: "I had to go to 3 cafes to find the perfect bircher muesli.",
             answerType: "food"
         },
     ]

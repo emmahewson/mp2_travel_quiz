@@ -12,11 +12,12 @@ const progressText = document.getElementById("progress-text");
 const progressBar = document.getElementById("progressbar-fg");
 const restartGameBtn = document.getElementById("restart-game");
 
+// declaring other variables
 let maxQuestions = 10;
 
-// declaring points
+/* index of points matches index of country in countries_array
+ * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan]*/ 
 let userTotal = [0, 0, 0, 0, 0, 0];
-
 let wildlifePoints = [0, 1, 0, 0, 3, 2];
 let thrillPoints = [3, 0, 1, 0, 2, 0];
 let culturePoints = [0, 0, 3, 2, 0, 1];
@@ -24,7 +25,10 @@ let foodPoints = [2, 3, 0, 1, 0, 0];
 let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
-// Start quiz functionality
+
+// Quiz functions
+
+// Start Game
 startGameBtn.addEventListener('click', function startGame() {
     gameDiv.classList.toggle("hidden");
     startGameBtn.classList.toggle("hidden");
@@ -35,41 +39,28 @@ startGameBtn.addEventListener('click', function startGame() {
 
 // Populate the questions and answers & move on progress bar
 function addQuestionContent(index) {
-    questionText.innerText = questions[0].questionText;
-    populateAnswers(index);
-
-    // progressBar functionality
-    let questionNumber = questions[0].questionNumber;
-    progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
-    progressBar.style.width = `${questionNumber / maxQuestions * 100}%`
-
-};
-
-// Populate the answers
-function populateAnswers(index) {
+    // populate question
+    questionText.innerText = questions[index].questionText;
+    // populate answers
     let answers = questions[index].answers;
     for (let i = 0; i < answers.length; i++) {
         choices[i].innerText = answers[i].answerText;
-    }
+    };
+    // progress bar & question number
+    let questionNumber = questions[0].questionNumber;
+    progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
+    progressBar.style.width = `${questionNumber / maxQuestions * 100}%`
 };
 
-// restart game button
-restartGameBtn.addEventListener('click', function() {
-    window.location.reload();
-})
 
-
-/** Button toggle and select/deselect taken from:
- * https://www.sitepoint.com/community/t/select-one-button-deselect-other-buttons/348053*/
-
-// function to handle user selecting answer
+/** User selects answer
+ * Adapted from https://www.sitepoint.com/community/t/select-one-button-deselect-other-buttons/348053 */
 function handleAnswer() {
     choices.forEach(choice => {
         choice.addEventListener('click', () => {
             setClasses(choice);
         });
     });
-
     // adds a 'selected' class to selected answer & removes from others
     // enables next question button
     function setClasses(target) {
@@ -82,26 +73,27 @@ function handleAnswer() {
             };
         });
     };
-}
+};
 
-// Trigger nextQuestionButton using Enter - BUG!!!! Doesn't deselect
+// restart game button
+restartGameBtn.addEventListener('click', function() {
+    window.location.reload();
+});
+
+// Trigger nextQuestionButton using Enter - BUG! Doesn't deselect answer after click
 document.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         nextQuestionBtn.click();
     };
 });
 
-
 // Next question button
 nextQuestionBtn.addEventListener('click', function nextQuestion() {
-
-    // tests if each button has class of selected 
+    // tests if each button has class of 'selected'
     choices.forEach(choice => {
         if (choice.classList.contains("selected")) {
-
             // iterates through question array
             questions[0].answers.forEach(answer => {
-
                 // matches the selected answer to the same answer in the array
                 // updates the user totals based on the answer category/type by iterating through each answers array
                 if (choice.innerText === answer.answerText) {
@@ -141,19 +133,15 @@ nextQuestionBtn.addEventListener('click', function nextQuestion() {
             });
         };
     });
-
-    // temp - adds scores to test site
+    // temp - adds scores to test site - TO BE REMOVED
     let scoreText = document.getElementsByClassName("score-text");
     for (let i = 0; i < scoreText.length; i++) {
         scoreText[i].innerText = userTotal[i];
     };
-
-
     // removes 'selected' class from buttons
     choices.forEach(choice => {
         choice.classList.remove("selected");
     });
-
     // remove current question from array and replace with next question or show results
     if (questions.length <= 1) {
         showResults();
@@ -164,22 +152,20 @@ nextQuestionBtn.addEventListener('click', function nextQuestion() {
         questions.splice(0, 1);
         addQuestionContent(0);
     }
-
+    // disables next question button
     nextQuestionBtn.disabled = true;
 });
-
 
 
 function showResults() {
     // hides the question / answers
     gameDiv.classList.toggle("hidden");
-
     //calculates the index of the highest score (Matches index of country in countries array)
     let highestIndex = userTotal.indexOf(Math.max(...userTotal));
-
     // populates the results-div
     resultsCountry.innerText = countries[highestIndex].name;
     resultsImage.src = `assets/images/${countries[highestIndex].image}`;
     resultsText.innerText = countries[highestIndex].text;
+    // shows the results div
     resultsDiv.classList.toggle("hidden");
 }
