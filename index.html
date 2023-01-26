@@ -27,7 +27,7 @@
         <button class="btn" id="next-question-btn">Next Question</button>
     </div>
 
-    <div class="container" id="scores-div">
+    <div class="container hidden" id="scores-div">
         <p>Scores</p>
         <p>New Zealand: <span class="score-text" id="score-nz"></span></p>
         <p>Mexico: <span class="score-text" id="score-mex"></span></p>
@@ -37,9 +37,16 @@
         <p>Kyrgyzstan: <span class="score-text" id="score-kyr"></span></p>
     </div>
 
+    <div class="container hidden" id="results-div">
+        <h2>Your perfect destination is: <span id="results-country">The Moon!</span></h2>
+        <img src="" id="results-image">
+        <p id="results-text">Placeholder text</p>
+    </div>
+
 
     <script src="assets/js/quiz.js"></script>
     <script src="assets/js/questions_array.js"></script>
+    <script src="assets/js/countries_array.js"></script>
 </body>
 
 </html>

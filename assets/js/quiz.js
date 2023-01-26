@@ -1,9 +1,13 @@
 // declaring consts for DOM elements
-const startGameBtn = document.getElementById("start-game")
-const nextQuestionBtn = document.getElementById("next-question-btn")
-const gameDiv = document.getElementById("game-div")
-const questionText = document.getElementById("question-text")
-const choices = Array.from(document.getElementsByClassName("choice"))
+const startGameBtn = document.getElementById("start-game");
+const nextQuestionBtn = document.getElementById("next-question-btn");
+const gameDiv = document.getElementById("game-div");
+const questionText = document.getElementById("question-text");
+const choices = Array.from(document.getElementsByClassName("choice"));
+const resultsDiv = document.getElementById("results-div");
+const resultsCountry = document.getElementById("results-country");
+const resultsImage = document.getElementById("results-image");
+const resultsText = document.getElementById("results-text");
 
 // declaring points
 let userTotal = [0, 0, 0, 0, 0, 0];
@@ -64,6 +68,14 @@ function handleAnswer() {
         });
     };
 }
+
+// Trigger nextQuestionButton using Enter - BUG!!!! Doesn't deselect
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        nextQuestionBtn.click();
+    };
+});
+
 
 // Next question button
 nextQuestionBtn.addEventListener('click', function nextQuestion() {
@@ -129,18 +141,30 @@ nextQuestionBtn.addEventListener('click', function nextQuestion() {
 
     // remove current question from array and replace with next question or show results
     if (questions.length <= 1) {
-        gameDiv.classList.toggle("hidden");
         showResults();
     } else {
+        if (questions.length == 2) {
+            nextQuestionBtn.innerText = "See Results";
+        }
         questions.splice(0, 1);
         addQuestionContent(0);
     }
 
-
     nextQuestionBtn.disabled = true;
 });
 
+
+
 function showResults() {
-    console.log("Results");
-    gameDiv.classList.add = "hidden";
+    // hides the question / answers
+    gameDiv.classList.toggle("hidden");
+
+    //calculates the index of the highest score (Matches index of country in countries array)
+    let highestIndex = userTotal.indexOf(Math.max(...userTotal));
+
+    // populates the results-div
+    resultsCountry.innerText = countries[highestIndex].name;
+    resultsImage.src = `assets/images/${countries[highestIndex].image}`;
+    resultsText.innerText = countries[highestIndex].text;
+    resultsDiv.classList.toggle("hidden");
 }
