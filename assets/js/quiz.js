@@ -10,6 +10,7 @@ const resultsImage = document.getElementById("results-image");
 const resultsText = document.getElementById("results-text");
 const progressText = document.getElementById("progress-text");
 const progressBar = document.getElementById("progressbar-fg");
+const restartGameBtn = document.getElementById("restart-game");
 
 let maxQuestions = 10;
 
@@ -32,7 +33,6 @@ startGameBtn.addEventListener('click', function startGame() {
     handleAnswer();
 });
 
-
 // Populate the questions and answers & move on progress bar
 function addQuestionContent(index) {
     questionText.innerText = questions[0].questionText;
@@ -52,6 +52,12 @@ function populateAnswers(index) {
         choices[i].innerText = answers[i].answerText;
     }
 };
+
+// restart game button
+restartGameBtn.addEventListener('click', function() {
+    window.location.reload();
+})
+
 
 /** Button toggle and select/deselect taken from:
  * https://www.sitepoint.com/community/t/select-one-button-deselect-other-buttons/348053*/
