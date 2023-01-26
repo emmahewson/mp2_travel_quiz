@@ -8,6 +8,10 @@ const resultsDiv = document.getElementById("results-div");
 const resultsCountry = document.getElementById("results-country");
 const resultsImage = document.getElementById("results-image");
 const resultsText = document.getElementById("results-text");
+const progressText = document.getElementById("progress-text");
+const progressBar = document.getElementById("progressbar-fg");
+
+let maxQuestions = 10;
 
 // declaring points
 let userTotal = [0, 0, 0, 0, 0, 0];
@@ -19,7 +23,6 @@ let foodPoints = [2, 3, 0, 1, 0, 0];
 let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
-
 // Start quiz functionality
 startGameBtn.addEventListener('click', function startGame() {
     gameDiv.classList.toggle("hidden");
@@ -29,11 +32,17 @@ startGameBtn.addEventListener('click', function startGame() {
     handleAnswer();
 });
 
-// Populate the questions and answers
+
+// Populate the questions and answers & move on progress bar
 function addQuestionContent(index) {
     questionText.innerText = questions[0].questionText;
-    populateAnswers(index)
-    choices
+    populateAnswers(index);
+
+    // progressBar functionality
+    let questionNumber = questions[0].questionNumber;
+    progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
+    progressBar.style.width = `${questionNumber / maxQuestions * 100}%`
+
 };
 
 // Populate the answers

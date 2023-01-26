@@ -14,3 +14,25 @@ body {
 .hidden {
     display: none;
 }
+
+#progress-div {
+    width: 300px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.progressbar {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+#progressbar-bg {
+    background-color: lightcyan;
+}
+
+#progressbar-fg {
+    background-color: cyan;
+    z-index: 2;
+}
