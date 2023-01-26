@@ -1,35 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: pink;
 }
 
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+#answer-div {
+    margin: 0 auto;
+}
+
 .btn {
-    display: block;
-    padding: 15px;
-    margin: 20px;
+    margin: 0 auto;
     border-radius: 10px;
     font-size: 16px;
-
 }
 
 .choice {
+    display: block;
+    padding: 15px 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
     background-color:rgb(206, 229, 230);
     font-weight: 700;
-    width: 500px;
+    width: 100%;
 }
 
-
-.selected {
-    background-color: cyan;
+.btn-main {
+    padding: 5px;
 }
 
-.hidden {
-    display: none;
+#start-button-div, #next-question-div {
+
+    padding: 20px 0;
 }
+
+#start-button-div {
+    display: flex;
+}
+
+#next-question-btn {
+    margin-top: 20px;
+    float: right;
+}
+
+#restart-game-btn {
+    margin: 0 auto;
+}
+
 
 #progress-div {
+
+    margin-top: 30px;
+    margin-bottom: 10px;
     width: 300px;
     position: relative;
     padding-bottom: 50px;
+}
+
+#progress-text {
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .progressbar {
@@ -49,5 +96,23 @@ body {
 }
 
 #results-image {
-    width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#results-text {
+    margin: 20px 0;
+}
+
+#results-country-text {
+    margin-top: 40px;
+}
+
+.selected {
+    background-color: cyan;
+}
+
+.hidden {
+    display: none;
 }

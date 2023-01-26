@@ -31,6 +31,7 @@ let remotePoints = [0, 0, 2, 0, 1, 3];
 // Start Game
 startGameBtn.addEventListener('click', function startGame() {
     gameDiv.classList.toggle("hidden");
+    restartGameBtn.classList.toggle("hidden");
     startGameBtn.classList.toggle("hidden");
     addQuestionContent(0);
     nextQuestionBtn.disabled = true;

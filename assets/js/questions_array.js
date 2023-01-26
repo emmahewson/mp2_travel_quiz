@@ -140,7 +140,7 @@ const questions = [{
 },
 {
     questionNumber: 5,
-    questionText: "Where do you spend most of your on the internet",
+    questionText: "Where do you spend most of your on the internet?",
     answers: [{
             answerNumber: 1,
             answerText: "What's an internet?",
