@@ -140,7 +140,7 @@ const questions = [{
 },
 {
     questionNumber: 5,
-    questionText: "Where do you spend most of your on the internet?",
+    questionText: "Where do you spend most time on the internet?",
     answers: [{
             answerNumber: 1,
             answerText: "What's an internet?",
@@ -280,7 +280,7 @@ const questions = [{
 },
 {
     questionNumber: 9,
-    questionText: "What would be most likely to make you late for work?",
+    questionText: "You're late for work... why?",
     answers: [{
             answerNumber: 1,
             answerText: "I got trapped in a Google blackhole of pointless facts.",

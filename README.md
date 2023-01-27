@@ -1,108 +1,295 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# GAME TITLE TO GO HERE
 
-Welcome emmahewson,
+![Mock-up]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+#### **By Emma Hewson**
+[Click here to view the live web application]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This is the documentation for __________________. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
+1. [Section Name](#)
+    * [Sub-Section Name](#)
+        * [Sub-Section Name](#)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Project Development & Planning
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+### Project Goals
 
-Another blue button should appear to click: _Open Browser_.
+#### **Project Purpose**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### **User Goals**
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Research
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### **Market Review**
 
-------
+#### **Key Takeaways from Market Review**
+* Example
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### User Stories
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### **User Story 1:___________**
+* Example
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Design, Layout & Structure
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### **Wireframes**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<details><summary>TEXT HERE</summary>
+<img src="">
+</details>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+   
+#### **Structure**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Text here
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<details><summary>Screenshots</summary>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<img src="assets/images/readme/wireframes-navroute-button-1.jpg">
+<img src="assets/images/readme/wireframes-navroute-button-2.jpg">
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+</details>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### **Colour**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+![Colour Pallette]()
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+#### **Fonts**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+I imported [Google Fonts](https://fonts.google.com/) and used [Font Name]() (with a fallback of ______________) for the main body text. 
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Technologies Used
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Languages
+* [HTML](https://en.wikipedia.org/wiki/HTML5)
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Tools
 
-**So….?**
+CHECK IF ALL THESE ARE RELEVANT OR IF ANY ARE MISSING
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* [Git](https://git-scm.com/)
+    * Used for version control via GitPod by using the terminal to Git and Push to GitHub
+* [GitHub](https://github.com/)
+    * Used to store the project code after being created in GitPod / Git
+* [Gitpod](https://www.gitpod.io/)
+    * Used to create, edit & preview the project's code
+* [Figma](https://www.figma.com/)
+    * Used to develop the wireframes in to a full mockup including colours, fonts, proportions etc
+* [Bootstrap 5.2.3](https://getbootstrap.com/)
+    * TBC!!!
+* [Google Fonts](https://fonts.google.com/)
+    * Used to select & import the fonts to the project (Poppins & Fira Sans)
+* [Font Awesome](https://fontawesome.com/)
+    * Used to add icons to the site
+* [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html)
+    * Used to help create the colour pallette as well as designing some of the graphic elements such as the buttons
+* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html)
+    * Used to crop, adjust and resize the photos to optimise them for the site
+* [Tiny PNG](https://tinypng.com/)
+    * Used to further optimise the images for the site and reduce file size
+* [Favicon.io](https://favicon.io/favicon-converter/)
+    * Used to create and add the favicon to the browser tab
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Features
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Title One
 
-**Anything more?**
+#### **Subtitle**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<details><summary>Screenshots</summary>
 
----
+<img src="">
 
-Happy coding!
+*Feature Name*
+
+</details>
+
+* Example Info
+* Example Info
+
+
+### Future Features
+
+
+#### **Title**
+Text
+
+
+
+## Testing & Bugs
+
+### HTML Validation
+
+I ran the code for all the pages through the [W3C HTML Validator](https://validator.w3.org/nu/).
+<details><summary>HTML Validation Results</summary>
+<img src="">
+</details>
+
+#### **Results**
+
+#### **HTML Validation After Fixes**
+<details><summary>Title</summary>
+<img src="">
+</details>
+
+
+### CSS Validation
+
+I ran the CSS code through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input). 
+<details><summary>CSS Validation Results</summary>
+<img src="">
+</details>
+
+### Accessibility
+
+I ran the site through the [Wave Web Accessibility Evaulation Tool](https://wave.webaim.org/). 
+
+#### **Error**
+<details><summary>Screenshot</summary>
+    <img src="">
+    </details>
+
+Description
+
+
+### Performance
+
+I ran the site through Google Chrome Dev Tools' Lighthouse to check on its performance.
+
+#### **Original Results**
+<details><summary>Title</summary>
+<img src="">
+</details>
+
+Amendments
+
+#### **Final Results**
+<details><summary>Title</summary>
+<img src="">
+</details>
+
+
+### Responsiveness / Device Testing
+
+The site was tested on the following devices
+* Apple Macbook Pro 16inch
+* LG Ultrafine Display 27inch External Monitor
+* Apple iMac 5K 27-inch
+* Apple iPhone SE
+* Apple iPhone 5S
+* Google Chrome Developer Tools - simulator for all different device options as well as using the adjustable sizing options
+
+DETAILS OF BUGS (Link to bugs below?)
+
+
+### Browser Compatibility
+
+The site was tested on the following browsers
+* Google Chrome
+* Mozilla Firefox
+* Apple Safari
+
+DETAILS OF BUGS (Link to bugs below?)
+
+### Bugs & Fixes
+
+During development and testing, in addition to the improvements described in the validation section above, I encountered the following bugs:
+
+#### **Bug Title**
+
+Description
+
+
+### Testing User Stories
+
+I tested the site based on my user stories:
+
+#### **1. Description of user story:**
+
+<details><summary>Screen Recording</summary>
+
+<img src="">
+
+</details>
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Example Text | Example Text | Example Text | Example Text |
+
+
+## Deployment
+
+### GitHub Pages
+
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+1. In the GitHub repository, navigate to the Settings tab 
+2. From the left hand menu select 'Pages'
+3. From the source select Branch: main
+4. Click 'Save'
+5. A live link will be displayed when published successfully. 
+
+The live link can be found here -  LINK TO GO HERE!!
+
+### Forking the GitHub Repository
+
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+1. Click on Fork button in upper right hand corner
+
+### Cloning the GitHub Repository
+
+You can clone the repository to use locally by following these steps:
+1. Navigate to the GitHub Repository you want to clone
+2. Click on the code drop down button
+3. Click on HTTPS
+4. Copy the repository link to the clipboard
+5. Open your IDE of choice (git must be installed for the next steps)
+6. Type git clone copied-git-url into the IDE terminal
+
+The project will now be cloned locally for you to use.
+
+## Credits
+
+### Code
+
+* [Title](): Example Text
+
+### Content
+
+* Example text
+
+### Media
+
+#### **Video**
+* Example text
+
+#### **Photos**
+
+* Example Text [Description of image]()
+
+
+### Acknowledgements
+
+* My mentor [Gareth McGirr](https://github.com/Gareth-McGirr/) for all his help and advice throughout the project
+* The whole team at [Code Institute](https://codeinstitute.net/) for their teaching and support
