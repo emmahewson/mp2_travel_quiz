@@ -1,11 +1,11 @@
-# GAME TITLE TO GO HERE
+# The Travel Personality Quiz
 
 ![Mock-up]()
 
 #### **By Emma Hewson**
 [Click here to view the live web application]()
 
-This is the documentation for __________________. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
+This is the documentation for my web application: The Travel Personality Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
 
 ## Table of Contents
@@ -16,26 +16,47 @@ This is the documentation for __________________. It has been built using HTML5,
 
 
 ## Project Development & Planning
-
+Throughout the development of this game I followed the principles of User Experience (UX), including the 5 planes of Strategy, Scope, Structure, Skeleton & Surface. At all times I wanted to make sure that the website was easy to use, responsive, accessible and intuitive as well as meeting the goals and needs of the user and client.
 
 ### Project Goals
 
 #### **Project Purpose**
+A web-based quiz that allows users to learn more about their 'travel personality' and recommends a destination for them to visit based on their answers.
+
+#### **Client Goals**
+The quiz was built as a milestone project on my Diploma in Web Application Development with [Code Institute](https://codeinstitute.net/) as a learning tool for interactive frontend development and my first project using JavaScript and so didn't have a specific client.
+However in order to make the end product more professional and to help with create a clear scope for the project I treated it as a real-world application which could be used by a travel agency or travel blogger, with a focus on more exotic or lesser known destinations. This client's goals would be:
+* Engaging users with interactivity and a fun application on their site
+* Allowing users to learn more about lesser-known destinations
+* Helping users to choose where to go
+* Helping users learn more about their travel personality
 
 #### **User Goals**
+The audience for this quiz would be people who are looking to travel or go on holiday but are unsure where to go. They perhaps want to experience more exotic destinations or want to go somewhere off the beaten track and wish to find a destination that would suit their personality and tastes.
+Their main goals would be:
+* Learning more about themselves and their travel personality
+* Having fun doing a short quiz
+* Getting recommendations of where to go travelling or on holiday
+* Learning more about a lesser-known destination that suits their travel personality
 
 
 ### Research
 
 #### **Market Review**
+I looked at a variety of online travel quizzes. Most were hosted by travel agencies or travel bloggers. I looked at the style and content of their questions and answers, how the results were presented, the design and style of the websites and how the quiz was structured. I also looked more broadly at personality tests. Some of the websites that I researched are below.
+
+[Conde Nast Quiz](https://www.cntraveler.com/story/where-should-you-go-on-vacation-next) | [Jessie On A Journey](https://jessieonajourney.com/travel-personality-quiz/) | [Inspiring Travel](https://www.inspiringtravel.co.uk/other-shores/on-trend/holiday-destination-quiz/) | [British Airways](https://bahighlife.com/destinations/quiz-which-holiday-destination-is-right-for-you) | [Truity](https://www.truity.com/test/travel-personality-test) | [16 Personalities](https://www.16personalities.com)
 
 #### **Key Takeaways from Market Review**
-* Example
+* 10 questions is a good length to keep a user's interest
+* Most questions were about travel though some focused more on personality
+* Many of the quizzes featured simple animations on hover or click
+* Most of the quizzes didn't offer a back button to change an answer
 
 
 ### User Stories
 
-#### **User Story 1:___________**
+#### **User Story 1: **
 * Example
 
 
