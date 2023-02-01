@@ -34,11 +34,6 @@ button {
     font-family: 'Raleway', sans-serif;
 }
 
-.button-div {
-    display: flex;
-    justify-content: center;
-}
-
 .btn-game-main {
     padding: 5px 20px;
     border-radius: 10px;
@@ -140,6 +135,7 @@ button {
     font-weight: 500;
     background-color: #FC7070;
     color: white;
+
 }
 
 
@@ -197,7 +193,7 @@ button {
 .btn-choice {
     background-color: #4D93BB;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     width: 48%;
     height: 90px;
     padding: 18px 20px;
@@ -214,17 +210,174 @@ button {
 }
 
 .btn-choice:hover {
-    background-color:  #407694;
+    background-color: #407694;
 }
 
-#restart-button-div {
+#restart-button-div,
+#start-again-button-div {
     margin-top: 60px;
 }
 
-#restart-game-btn {
+#restart-game-btn,
+#start-again-btn {
     font-weight: 400;
     background-color: #FCADAD;
 }
+
+
+
+/* Results Page */
+
+#personality-div,
+#country-map-div {
+    background-color: white;
+}
+
+#country-info-div {
+    background-color: #AEE2FF;
+}
+
+#country-highlights-div {
+    background-color: #407694;
+}
+
+.results-container {
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+#personality-div,
+#country-highlights-div,
+#country-info-div {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#personality-div,
+#country-info-div {
+    margin-top: 60px;
+}
+
+#personality-div {
+    padding: 40px;
+}
+
+#country-info-div,
+#country-highlights-div {
+    padding: 50px 40px;
+}
+
+#personality-div,
+#country-map-div {
+    border-radius: 24px;
+}
+
+#personality-heading {
+    font-size: 36px;
+}
+
+#personality-text-div {
+    width: 50%;
+    margin-top: 40px;
+}
+
+#country-info-div {
+    border-radius: 24px 24px 0 0;
+}
+
+#recommend-title-div {
+    width: max-content;
+    margin: 0 auto;
+}
+
+#country-heading {
+    font-size: 20px;
+}
+
+#country-heading-place {
+    font-family: 'Righteous', sans-serif;
+    font-size: 64px;
+    line-height: 70px;
+}
+
+#results-image {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 24px;
+}
+
+#country-highlights-div {
+    border-radius: 0 0 24px 24px;
+}
+
+#country-highlights-div>h2,
+#country-highlights-div>p {
+    color: white;
+}
+
+#country-highlights-div>h2 {
+    font-size: 36px;
+}
+
+#country-highlights-div>p {
+    margin-top: 8px;
+}
+
+#country-map-div {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#map {
+    background-color: #FC7070;
+    height: 450px;
+    border: 3px solid #FFFFFF;
+    box-shadow: inset 2px -2px 12px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+}
+
+#highlight-content-div {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+}
+
+#highlight-title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#highlight-photo-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    border-radius: 0 0 24px 24px;
+}
+
+.highlight-photo {
+    width: 25%;
+    height: auto;
+}
+
+#highlight-photo-1 {
+    border-radius: 0 0 0 24px;
+}
+
+#highlight-photo-4 {
+    border-radius: 0 0 24px 0;
+}
+
+#start-again-button-div p {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
 
 
 
@@ -234,8 +387,35 @@ button {
     #answer-div {
         width: 80%;
     }
+
+    #personality-div,
+    #country-highlights-div,
+    #country-info-div {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
 }
 
+@media (max-width: 768px) {
+    .highlight-photo {
+        width: 50%;
+    }
+
+    #highlight-photo-1 {
+        border-radius: 0;
+    }
+    
+    #highlight-photo-3 {
+        border-radius: 0 0 0 24px;
+    }
+
+    #personality-div,
+    #country-highlights-div,
+    #country-info-div {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
 
 
 @media (max-width: 576px) {
@@ -256,6 +436,50 @@ button {
         width: 100%;
         height: initial;
     }
+
+    #personality-div,
+    #country-highlights-div,
+    #country-info-div {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #highlight-content-div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #personality-div {
+        padding: 20px;
+    }
+
+    #country-info-div,
+    #country-highlights-div {
+        padding: 30px 20px;
+    }
+
+    #results-image {
+        margin: 30px 0;
+    }
+
+    #personality-heading,
+    #country-highlights-div>h2 {
+        font-size: 24px;
+    }
+
+    #country-heading {
+        font-size: 14px;
+    }
+    
+    #country-heading-place {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    #start-again-button-div {
+        margin-bottom: 20px;
+    }
+
 }
 
 /* DOM Manipulation Classes */
