@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Righteous&display=swap');
+
 /* General Styles */
 
 * {
@@ -5,21 +7,59 @@
     padding: 0;
 }
 
+body {
+    background-color: rgb(255, 255, 255);
+}
+
 .inline {
     display: inline;
 }
 
+.text-centre {
+    text-align: center;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+h1, h2, h3 {
+    font-family: 'Righteous', sans-serif;
+}
+
+p, button {
+    font-family: 'Raleway', sans-serif;
+}
 
 /* Background */
 
 #background-div {
     background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 100%);
-    min-height: 100vh;
+
     max-width: 1300px;
     margin: 0 auto;
+    position: absoloute;
+}
+
+/* Logo */
+
+#logo-div {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-div img {
+    width: 220px;
+    margin-top: 50px;
 }
 
 /* Footer */
+
+#test-div {
+    background-color: aquamarine;
+    height: 500px;
+    width: 100%;
+}
 
 
 #cloud-div {
@@ -31,15 +71,66 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 0px;
     width: 100%;
     max-width: 1300px;
 }
 
 
-.socials-footer a {
+#footer-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+
+}
+
+#footer-text p a {
     text-decoration: none;
+    color: black;
+    padding-left: 5px;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+#footer-text p a:hover {
+    color: #FC7070;
+}
+
+
+
+
+/* Welcome Page */
+
+#welcome-div {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#welcome-div h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#start-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+#start-game {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #FC7070;
+    color: white;
+    box-shadow: 1px -1px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 
