@@ -23,12 +23,28 @@ body {
     display: inline-block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Righteous', sans-serif;
 }
 
-p, button {
+p,
+button {
     font-family: 'Raleway', sans-serif;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-game-main {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 1px -1px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 /* Background */
@@ -109,7 +125,6 @@ p, button {
     max-width: 600px;
     margin: 0 auto;
     margin-top: 60px;
-    margin-bottom: 60px;
 }
 
 #welcome-div h1 {
@@ -118,32 +133,128 @@ p, button {
 }
 
 #start-button-div {
-    display: flex;
-    justify-content: center;
+    margin: 60px 0;
 }
 
-#start-game {
-    padding: 5px 20px;
-    border-radius: 10px;
-    border: none;
+#start-game-btn {
     font-weight: 500;
-    font-size: 16px;
     background-color: #FC7070;
     color: white;
-    box-shadow: 1px -1px 2px 1px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+/* Game */
+
+#progress-div {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 300px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#progress-text {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.progressbar {
+    width: 100%;
+    height: 15px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+#progressbar-bg {
+    background-color: #F7F0F0;
+}
+
+#progressbar-fg {
+    background-color: #FCADAD;
+    z-index: 2;
+    width: 10%;
+}
+
+#question-text {
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 40px;
+    padding: 0 25px;
+}
+
+#answer-div {
+    width: 70%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.btn-choice {
+    background-color: #4D93BB;
+    color: white;
+    font-weight: 600;
+    width: 48%;
+    height: 90px;
+    padding: 18px 20px;
+    border: none;
+    box-shadow: 2px -2px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    -o-transition: background-color 0.25s ease-in-out;
+}
+
+.btn-choice:hover {
+    background-color:  #407694;
+}
+
+#restart-button-div {
+    margin-top: 60px;
+}
+
+#restart-game-btn {
+    font-weight: 400;
+    background-color: #FCADAD;
+}
+
 
 
 /* Media Queries */
 
-@media (max-width: 575px) {
+@media (max-width: 992px) {
+    #answer-div {
+        width: 80%;
+    }
+}
+
+
+
+@media (max-width: 576px) {
     #cloud-div {
-        height: 438px;
+        height: 320px;
+        bottom: 20px;
         background-image: url("../images/clouds_sml.png");
         background-position: center bottom;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+    }
 
+    #answer-div {
+        width: 85%;
+    }
+
+    .btn-choice {
+        width: 100%;
+        height: initial;
     }
 }
 
@@ -156,41 +267,3 @@ p, button {
 .hidden {
     display: none;
 }
-
-
-/* OLD STUFF - ADD IN AS NEEDED
-#progress-div {
-
-    margin-top: 30px;
-    margin-bottom: 10px;
-    width: 300px;
-    position: relative;
-    padding-bottom: 50px;
-}
-
-#progress-text {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.progressbar {
-    width: 100%;
-    height: 20px;
-    border-radius: 20px;
-    position: absolute;
-}
-
-#progressbar-bg {
-    background-color: lightcyan;
-}
-
-#progressbar-fg {
-    background-color: cyan;
-    z-index: 2;
-}
-
-
-
-
-
-*/
