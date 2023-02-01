@@ -5,18 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>The Travel Personality Quiz</title>
+    <script src="https://kit.fontawesome.com/75c900e0d1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>What's your ideal travel destination?</h1>
+    <div id="background-div">
+        <div class="container" id="welcome-div">
+            <h1>Welcome!</h1>
+            <p>Hey there traveller! Are you looking to get off the beaten-track but have no idea where to go?
+                <br>Are you a thrill-seeker or an animal lover? Do you love the buzz of the city or the total silence of
+                the
+                deepest wilderness?
+                <br>Take The Travel Personality Quiz to find out and get personalised recommendations for your next
+                adventure!
+                <br><br>Go on... hit the button... you know you want to!</p>
+        </div>
+        <div class="container" id="start-button-div">
+            <button class="btn btn-main" id="start-game">Start Quiz</button>
+        </div>
 
-    <div class="container" id="start-button-div">
-        <button class="btn btn-main" id="start-game">Start Game</button>
-        <button class="btn btn-main hidden" id="restart-game">Restart Game</button>
+        <div class="container" id="restart-button-div">
+            <button class="btn btn-main hidden" id="restart-game">Restart Quiz</button>
+        </div>
+
+        <footer>
+            <div id="cloud-div">
+                <p class="inline">Made by Emma Hewson</p>
+                <ul class="social-links inline">
+                    <li class="socials-footer inline">
+                        <a href="https://www.linkedin.com/in/emmajmhewson/" target="_blank">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="socials-footer inline">
+                        <a href="https://github.com/emmahewson" target="_blank">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </footer>
     </div>
 
+
+
+
+
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/questions_array.js"></script>
+    <script src="assets/js/countries_array.js"></script>
+</body>
+
+</html>
+
+<!--
     <div class="container hidden" id="game-div">
         <div id="progress-div">
             <p id="progress-text"></p>
@@ -52,12 +99,4 @@
         <img src="" id="results-image">
         <p id="results-text"></p>
     </div>
-
-
-
-    <script src="assets/js/quiz.js"></script>
-    <script src="assets/js/questions_array.js"></script>
-    <script src="assets/js/countries_array.js"></script>
-</body>
-
-</html>
+-->

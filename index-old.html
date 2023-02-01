@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>What's your ideal travel destination?</h1>
+
+    <div class="container" id="start-button-div">
+        <button class="btn btn-main" id="start-game">Start Game</button>
+        <button class="btn btn-main hidden" id="restart-game">Restart Game</button>
+    </div>
+
+    <div class="container hidden" id="game-div">
+        <div id="progress-div">
+            <p id="progress-text"></p>
+            <div class="progressbar" id="progressbar-fg"></div>
+            <div class="progressbar" id="progressbar-bg"></div>
+        </div>
+        <h2 class="question" id="question-text">This is the question</h2>
+        <div id="answer-div">
+            <button class="btn choice" id="btn1">Option 1</button>
+            <button class="btn choice" id="btn2">Option 2</button>
+            <button class="btn choice" id="btn3">Option 3</button>
+            <button class="btn choice" id="btn4">Option 4</button>
+            <button class="btn choice" id="btn5">Option 5</button>
+            <button class="btn choice" id="btn6">Option 6</button>
+        </div>
+        <div id="next-question-div">
+            <button class="btn btn-main" id="next-question-btn">Next Question</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="scores-div">
+        <p>Scores</p>
+        <p>New Zealand: <span class="score-text" id="score-nz"></span></p>
+        <p>Mexico: <span class="score-text" id="score-mex"></span></p>
+        <p>Peru: <span class="score-text" id="score-peru"></span></p>
+        <p>China: <span class="score-text" id="score-china"></span></p>
+        <p>Zambia: <span class="score-text" id="score-zam"></span></p>
+        <p>Kyrgyzstan: <span class="score-text" id="score-kyr"></span></p>
+    </div>
+
+    <div class="container hidden" id="results-div">
+        <h2 id="results-country-text">Your ideal destination is: <span id="results-country"></span></h2>
+        <img src="" id="results-image">
+        <p id="results-text"></p>
+    </div>
+
+
+
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/questions_array.js"></script>
+    <script src="assets/js/countries_array.js"></script>
+</body>
+
+</html>

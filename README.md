@@ -298,7 +298,7 @@ The project will now be cloned locally for you to use.
 
 ### Content
 
-* Example text
+* [ChatGPT](https://openai.com/blog/chatgpt/): To create copy about countries and attractions
 
 ### Media
 
