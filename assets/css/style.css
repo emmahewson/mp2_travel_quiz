@@ -309,6 +309,10 @@ button {
     justify-content: center;
     align-items: center;
     column-gap: 15px;
+
+    flex-wrap: wrap;
+    row-gap: 15px;
+
 }
 
 #personality-stats-div h3 {
@@ -317,8 +321,8 @@ button {
 
 .stat-key-div {
     display: flex;
-    justify-content: end;
-    margin-bottom: 3px;
+    justify-content: start;
+    margin-bottom: 6px;
     text-transform: uppercase;
     min-width: 175px;
 }
@@ -336,7 +340,7 @@ button {
     width: 15px;
     height: 15px;
     border-radius: 5px;
-    margin-left: 5px;
+    margin-right: 5px;
     aspect-ratio: 1;
 }
 
@@ -365,8 +369,7 @@ button {
 }
 
 #pie-chart {
-    background-image: conic-gradient(
-            #FFE55A 0deg,#FFE55A 205.2deg,
+    background-image: conic-gradient(#FFE55A 0deg, #FFE55A 205.2deg,
             #9EE58C 205.2deg, #9EE58C 275.2deg,
             #E7A7F1 275.2deg, #E7A7F1 318.4deg,
             #FFC289 318.4deg, #FFC289 343.6deg,
@@ -494,6 +497,10 @@ button {
         order: 2;
     }
 
+    #personality-stats-div {
+        width: 100%;
+    }
+
     #personality-heading {
         margin-bottom: 20px;
     }
@@ -613,13 +620,7 @@ button {
         margin-top: 30px;
     }
 
-    #personality-heading {
-        margin-bottom: 30px;
-    }
 
-    #personality-stats-div {
-        margin-top: 0;
-    }
 
     #country-info-div {
         padding: 30px 20px;
@@ -657,11 +658,14 @@ button {
     }
 }
 
-/* Footer sizing on smallest devices */
+/* Smallest devices */
 @media (max-width: 450px) {
     #cloud-div {
         height: 250px;
     }
+
+
+
 
 }
 
