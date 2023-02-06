@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
 
 .inline {
@@ -34,23 +34,53 @@ button {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Start/Restart Game Buttons */
+
 .btn-game-main {
     padding: 5px 20px;
     border-radius: 10px;
     border: none;
     font-size: 16px;
-    box-shadow: 1px -1px 2px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 1px 0px 3px 1px rgba(0, 0, 0, 0.15);
 }
+
+#start-game-btn {
+    font-weight: 500;
+    background-color: #FC7070;
+    color: white;
+}
+
+#restart-game-btn,
+#start-again-btn {
+    font-weight: 400;
+
+}
+
+#restart-game-btn {
+    font-weight: 400;
+    background-color: #d1d1d1;
+}
+
+#start-again-btn {
+    background-color: #FCADAD;
+}
+
+#restart-button-div,
+#start-again-button-div {
+    margin-top: 60px;
+}
+
+
 
 /* Background */
 
 #background-div {
-    background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 100%);
-
+    background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 70%);
     max-width: 1300px;
     margin: 0 auto;
     position: absoloute;
 }
+
 
 /* Logo */
 
@@ -64,6 +94,7 @@ button {
     margin-top: 50px;
 }
 
+
 /* Footer */
 
 #test-div {
@@ -71,7 +102,6 @@ button {
     height: 500px;
     width: 100%;
 }
-
 
 #cloud-div {
     height: 350px;
@@ -111,8 +141,6 @@ button {
 }
 
 
-
-
 /* Welcome Page */
 
 #welcome-div {
@@ -131,13 +159,6 @@ button {
     margin: 60px 0;
 }
 
-#start-game-btn {
-    font-weight: 500;
-    background-color: #FC7070;
-    color: white;
-
-}
-
 
 
 
@@ -146,7 +167,7 @@ button {
 #progress-div {
     margin: 0 auto;
     margin-top: 50px;
-    width: 300px;
+    width: 400px;
     position: relative;
     padding-bottom: 50px;
 }
@@ -157,13 +178,14 @@ button {
 }
 
 .progressbar {
-    width: 100%;
+
     height: 15px;
     border-radius: 20px;
     position: absolute;
 }
 
 #progressbar-bg {
+    width: 100%;
     background-color: #F7F0F0;
 }
 
@@ -193,6 +215,7 @@ button {
 .btn-choice {
     background-color: #4D93BB;
     color: white;
+    font-size: 16px;
     font-weight: 500;
     width: 48%;
     height: 90px;
@@ -213,16 +236,7 @@ button {
     background-color: #407694;
 }
 
-#restart-button-div,
-#start-again-button-div {
-    margin-top: 60px;
-}
 
-#restart-game-btn,
-#start-again-btn {
-    font-weight: 400;
-    background-color: #FCADAD;
-}
 
 
 
@@ -273,11 +287,93 @@ button {
 
 #personality-heading {
     font-size: 36px;
+    margin-bottom: 40px;
 }
 
-#personality-text-div {
-    width: 50%;
-    margin-top: 40px;
+#personality-div-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+#personality-text-div,
+#personality-stats-div {
+    width: 48%;
+}
+
+#stats-key-chart-div {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+#personality-stats-div h3 {
+    font-size: 16px;
+}
+
+.stat-key-div {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+#pie-numbers {
+    font-size: 13px;
+}
+
+.stat-percent {
+    font-weight: 600;
+}
+
+.stat-key {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+    aspect-ratio: 1;
+}
+
+#stat-key-1 {
+    background-color: #FFE55A;
+}
+
+#stat-key-2 {
+    background-color: #9EE58C;
+}
+
+#stat-key-3 {
+    background-color: #E7A7F1;
+}
+
+#stat-key-4 {
+    background-color: #FFC289;
+}
+
+#stat-key-5 {
+    background-color: #ACAAFF;
+}
+
+#stat-key-6 {
+    background-color: #FDA18D;
+}
+
+#pie-chart {
+    background-image: conic-gradient(
+            #FFE55A 0deg,#FFE55A 205.2deg,
+            #9EE58C 205.2deg, #9EE58C 275.2deg,
+            #E7A7F1 275.2deg, #E7A7F1 318.4deg,
+            #FFC289 318.4deg, #FFC289 343.6deg,
+            #ACAAFF 343.6deg, #ACAAFF 354.4deg,
+            #FDA18D 354.4deg);
+    height: 170px;
+    width: 170px;
+    aspect-ratio: 1;
+    border-radius: 50%;
 }
 
 #country-info-div {
@@ -376,13 +472,9 @@ button {
 
 
 
-
-
-
-
-
 /* Media Queries */
 
+/* Medium Devices */
 @media (max-width: 992px) {
     #answer-div {
         width: 80%;
@@ -394,6 +486,11 @@ button {
         margin-left: 60px;
         margin-right: 60px;
     }
+
+    #personality-text-div {
+        width: 100%;
+        order: 2;
+    }
 }
 
 @media (max-width: 768px) {
@@ -404,9 +501,13 @@ button {
     #highlight-photo-1 {
         border-radius: 0;
     }
-    
+
     #highlight-photo-3 {
-        border-radius: 0 0 0 24px;
+        border-radius: 0 0 0 12px;
+    }
+
+    #highlight-photo-4 {
+        border-radius: 0 0 12px 0;
     }
 
     #personality-div,
@@ -415,28 +516,71 @@ button {
         margin-left: 40px;
         margin-right: 40px;
     }
+
+    #country-highlights-div {
+        padding-bottom: 40px;
+    }
 }
 
-
+/* Small Devices */
 @media (max-width: 576px) {
+    /* Main Elements */
+
+    #logo-div img {
+        width: 155px;
+        margin-top: 30px;
+    }
+
     #cloud-div {
-        height: 320px;
-        bottom: 20px;
+        height: 280px;
         background-image: url("../images/clouds_sml.png");
         background-position: center bottom;
+        background-position-y: 20px;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
+    /* Welcome */
+    #welcome-div {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    #welcome-div>h1 {
+        margin-bottom: 15px;
+    }
+
+    #start-button-div {
+        margin: 30px 0 0 0;
+    }
+
+    /* Game */
     #answer-div {
         width: 85%;
+    }
+
+    #progress-div {
+        margin-top: 30px;
+        width: 85%;
+        padding-bottom: 40px;
+    }
+
+    #question-text {
+        font-size: 20px;
+        margin-bottom: 30px;
     }
 
     .btn-choice {
         width: 100%;
         height: initial;
+        padding: 15px;
     }
 
+    #restart-button-div {
+        margin-top: 40px;
+    }
+
+    /* Results */
     #personality-div,
     #country-highlights-div,
     #country-info-div {
@@ -453,9 +597,25 @@ button {
         padding: 20px;
     }
 
-    #country-info-div,
-    #country-highlights-div {
+    #personality-div,
+    #country-info-div {
+        margin-top: 30px;
+    }
+
+    #personality-heading {
+        margin-bottom: 30px;
+    }
+
+    #personality-stats-div {
+        margin-top: 0;
+    }
+
+    #country-info-div {
         padding: 30px 20px;
+    }
+
+    #country-highlights-div {
+        padding: 30px 20px 20px 20px;
     }
 
     #results-image {
@@ -467,17 +627,29 @@ button {
         font-size: 24px;
     }
 
+    #country-highlights-div>h2 {
+        margin-top: 10px;
+    }
+
     #country-heading {
         font-size: 14px;
     }
-    
+
     #country-heading-place {
         font-size: 36px;
         line-height: 36px;
     }
 
     #start-again-button-div {
-        margin-bottom: 20px;
+        margin-top: 40px;
+
+    }
+}
+
+/* Footer sizing on smallest devices */
+@media (max-width: 450px) {
+    #cloud-div {
+        height: 250px;
     }
 
 }
