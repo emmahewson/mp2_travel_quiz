@@ -233,9 +233,9 @@ DETAILS OF BUGS (Link to bugs below?)
 
 During development and testing, in addition to the improvements described in the validation section above, I encountered the following bugs:
 
-#### **Bug Title**
+#### **Inset Shadow stopped click on map**
 
-Description
+After adding an inset shadow on the map using a ::before element created in CSS I realised it had disabled any interaction with the map. After some research I discovered I needed to disable pointer events on the overlay in order to click through and interact with the map.
 
 
 ### Testing User Stories

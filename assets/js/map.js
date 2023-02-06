@@ -1,12 +1,19 @@
 
 // REPLACE ONCE REST OF QUIZ IS BUILT - CURRENTLY APPEARS ONLOAD
     window.onload = function () {
-        initMap(1);
+        initMap(5);
     }
     
     function initMap(index) {
+        let zoomLevel;
+        let width = screen.width;
+        if (width <= 576) {
+            zoomLevel = countries[index].zoomSml;
+        } else {
+            zoomLevel = countries[index].zoomLrg;
+        }
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: countries[index].zoom,
+            zoom: zoomLevel,
             center: countries[index].center
         })
  

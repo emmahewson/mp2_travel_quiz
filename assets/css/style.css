@@ -432,8 +432,22 @@ button {
     background-color: #FC7070;
     height: 450px;
     border: 3px solid #FFFFFF;
-    box-shadow: inset 2px -2px 12px 5px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
+    position: relative;
+    pointer-events: all;
+}
+
+/* Overlay inset shadow technique adapted from https://bavotasan.com/2011/adding-inset-shadow-to-image-css3/ */
+#map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 2px -2px 18px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    pointer-events: none;
 }
 
 #highlight-content-div {
@@ -620,8 +634,6 @@ button {
         margin-top: 30px;
     }
 
-
-
     #country-info-div {
         padding: 30px 20px;
     }
@@ -651,6 +663,7 @@ button {
         font-size: 36px;
         line-height: 36px;
     }
+
 
     #start-again-button-div {
         margin-top: 40px;
