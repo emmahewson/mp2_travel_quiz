@@ -295,7 +295,7 @@ button {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    column-gap: 30px;
+    column-gap: 20px;
 }
 
 #personality-text-div,
@@ -304,7 +304,7 @@ button {
 }
 
 #stats-key-chart-div {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,10 +320,12 @@ button {
     justify-content: end;
     margin-bottom: 3px;
     text-transform: uppercase;
+    min-width: 175px;
 }
 
 #pie-numbers {
     font-size: 13px;
+    justify-self: flex-end;
 }
 
 .stat-percent {
@@ -490,6 +492,15 @@ button {
     #personality-text-div {
         width: 100%;
         order: 2;
+    }
+
+    #personality-heading {
+        margin-bottom: 20px;
+    }
+
+    #personality-div-flex {
+        justify-content: center;
+        row-gap: 20px;
     }
 }
 
