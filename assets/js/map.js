@@ -1,7 +1,7 @@
 
 // REPLACE ONCE REST OF QUIZ IS BUILT - CURRENTLY APPEARS ONLOAD
     window.onload = function () {
-        initMap(5);
+        initMap(1);
     }
     
     function initMap(index) {
