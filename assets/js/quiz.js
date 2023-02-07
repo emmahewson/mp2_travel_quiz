@@ -16,6 +16,7 @@ const answerTieDiv = document.getElementById("answer-tie-div-hide");
 
 // declaring other variables
 let maxQuestions = 10;
+let username = ""
 
 /* index of points matches index of country in countries_array
  * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan]*/
@@ -27,7 +28,7 @@ let foodPoints = [2, 3, 0, 1, 0, 0];
 let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
-
+let personalityTally = [];
 
 
 // Start Game Button - master function
@@ -35,7 +36,7 @@ function startGame(event) {
     event.preventDefault();
 
     // capturing user name
-    let username = document.getElementById("name-input");
+    username = document.getElementById("name-input");
 
     // alert if no username entered
     if (username.value === "") {
@@ -46,7 +47,7 @@ function startGame(event) {
         console.log("My name is " + username.value + " and I'm starting the game!");
         welcomeDiv.classList.toggle("hidden");
         gameDiv.classList.toggle("hidden");
-        addQuestionContent(0, username);
+        addQuestionContent(0);
         handleAnswer();
     }
 
@@ -61,12 +62,13 @@ function startGame(event) {
 
     // Populate the questions and answers & move on progress bar
     function addQuestionContent(index) {
+        let currentQuestion = questions[index];
 
         // populate question
-        questionText.innerText = questions[index].questionText;
+        questionText.innerText = currentQuestion.questionText;
 
         // populate answers
-        let answers = questions[index].answers;
+        let answers = currentQuestion.answers;
         for (let i = 0; i < answers.length; i++) {
             choices[i].innerText = answers[i].answerText;
         };
@@ -75,6 +77,7 @@ function startGame(event) {
         let questionNumber = questions[0].questionNumber;
         progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
         progressBar.style.width = `${questionNumber / maxQuestions * 100}%`
+
     }
 
     /** User selects answer
@@ -114,6 +117,59 @@ function startGame(event) {
         };
     };
 
+    // logs the score and the 'style' to arrays
+    function logResults(choice) {
+        // iterates through question array
+        questions[0].answers.forEach(answer => {
+            // matches the selected answer to the same answer in the array
+            // updates the user totals based on the answer category/type by iterating through each answers array
+            if (choice.innerText === answer.answerText) {
+                switch (answer.answerType) {
+                    case "wildlife":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += wildlifePoints[i];
+                        }
+                        break;
+                    case "thrill":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += thrillPoints[i];
+                        }
+                        break;
+                    case "culture":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += culturePoints[i];
+                        }
+                        break;
+                    case "food":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += foodPoints[i];
+                        }
+                        break;
+                    case "people":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += peoplePoints[i];
+                        }
+                        break;
+                    case "remote":
+                        for (let i = 0; i < userTotal.length; i++) {
+                            userTotal[i] += remotePoints[i];
+                        }
+                        break;
+                };
+                // adds the personality type to an array
+                personalityTally.push(answer.answerType);
+            };
+        });
+
+        // temp - adds scores to test site - TO BE REMOVED
+        let scoreText = document.getElementsByClassName("score-text");
+        for (let i = 0; i < scoreText.length; i++) {
+            scoreText[i].innerText = userTotal[i];
+        };
+        let tallyText = document.getElementById("personality-tally");
+        tallyText.innerText = personalityTally;
+    }
+
     // re-enable the buttons
     function enableButtons() {
         choices.forEach(choice => {
@@ -121,43 +177,40 @@ function startGame(event) {
         });
     }
 
-    // logs the score and the 'style' to arrays
-    function logResults(choice) {
-        logScores(choice);
-        logStyles(choice);
 
-    }
-    // helper functions for logAnswerResults
-    function logScores(choice) {}
+// tie breaker functionality
+function activateTieBreaker() {
+    answerDiv.classList.add("hidden");
+    progressDiv.classList.add("hidden");
+    answerTieDiv.classList.remove("hidden");
 
-    function logStyles(choice) {}
-
-    // Goes to results page
-    function showResults() {
-
-        // add an if statement here to see if there is a tie - to show tie breaker
-
-        // hide and reveal divs
-        gameDiv.classList.toggle("hidden");
-        resultsDiv.classList.toggle("hidden");
-
-        // declaring consts for DOM variables on results page
-        const personalityHeading = document.getElementById("personality-heading");
-        const personalityText = document.getElementById("personality-text");
-
-
-        // populating page
-        let resultsName = username.value.toUpperCase();
-
-        (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
-    }
-
-    // tie breaker functionality
-    function activateTieBreaker() {
-        answerDiv.classList.add("hidden");
-        progressDiv.classList.add("hidden");
-        answerTieDiv.classList.remove("hidden");
-    
-        // add function to only show the relevant photos
-    }
+    // add function to only show the relevant photos
 }
+
+// Goes to results page
+function showResults() {
+
+    // add an if statement here to see if there is a tie - to show tie breaker
+
+    // hide and reveal divs
+    gameDiv.classList.toggle("hidden");
+    resultsDiv.classList.toggle("hidden");
+
+    // declaring consts for DOM variables on results page
+    const personalityHeading = document.getElementById("personality-heading");
+    const personalityText = document.getElementById("personality-text");
+
+
+    // populating page
+    let resultsName = username.value.toUpperCase();
+
+    (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
+}
+
+
+};
+
+
+
+
+
