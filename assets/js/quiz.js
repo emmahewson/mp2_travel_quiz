@@ -117,7 +117,7 @@ function startGame(event) {
         };
     };
 
-    // logs the score and the 'style' to arrays
+    // logs the score and the personality to arrays
     function logResults(choice) {
         // iterates through question array
         questions[0].answers.forEach(answer => {
@@ -168,6 +168,39 @@ function startGame(event) {
         };
         let tallyText = document.getElementById("personality-tally");
         tallyText.innerText = personalityTally;
+
+        function elementCount(arr, element) {
+            return arr.filter((currentElement) => currentElement == element).length;
+        };
+
+        let cultureScore = elementCount(personalityTally, "culture");
+        let foodScore = elementCount(personalityTally, "food");
+        let peopleScore = elementCount(personalityTally, "people");
+        let remoteScore = elementCount(personalityTally, "remote");
+        let thrillScore = elementCount(personalityTally, "thrill");
+        let wildlifeScore = elementCount(personalityTally, "wildlife");
+
+        let personalityScoreArray = [cultureScore, foodScore, peopleScore, remoteScore, thrillScore, wildlifeScore];
+        let winningScore = Math.max(...personalityScoreArray);
+        console.log(winningScore);
+
+        // TO WORK OUT THE TIE BREAK & PERSONALITY FUNCTIONALITY - WHERE TO START
+        // NEED TO:
+        // filter the array down to only the personalities with the winning score
+            // if its .length is longer than 1 then go to tie breaker if not then return the winning personality
+            // the tie breaker is populated by checking each score aginst the winningScore - a loop and if statement / switch??
+                // if the score isn't equal add "hidden" to the classlist
+            // add the click event for the relevant button - same method as above - that personality type is the winner
+        
+        // SORRY THIS IS REALLY MESSY!!
+
+        console.log("Culture Score: " + cultureScore);
+        console.log("Food Score: " + foodScore);
+        console.log("People Score: " + peopleScore);
+        console.log("Remote Score: " + remoteScore);
+        console.log("Thrill Score: " + thrillScore);
+        console.log("Wildlife Score: " + wildlifeScore);
+
     }
 
     // re-enable the buttons
@@ -178,39 +211,39 @@ function startGame(event) {
     }
 
 
-// tie breaker functionality
-function activateTieBreaker() {
-    answerDiv.classList.add("hidden");
-    progressDiv.classList.add("hidden");
-    answerTieDiv.classList.remove("hidden");
+    // tie breaker functionality
+    function activateTieBreaker() {
+        answerDiv.classList.add("hidden");
+        progressDiv.classList.add("hidden");
+        answerTieDiv.classList.remove("hidden");
 
-    // add function to only show the relevant photos
-}
+        // add function to only show the relevant photos
+    }
 
-// Goes to results page
-function showResults() {
+    // Goes to results page
+    function showResults() {
+        calculatePersonality()
 
-    // add an if statement here to see if there is a tie - to show tie breaker
+        // add an if statement here to see if there is a tie - to show tie breaker
 
-    // hide and reveal divs
-    gameDiv.classList.toggle("hidden");
-    resultsDiv.classList.toggle("hidden");
+        // hide and reveal divs
+        gameDiv.classList.toggle("hidden");
+        resultsDiv.classList.toggle("hidden");
 
-    // declaring consts for DOM variables on results page
-    const personalityHeading = document.getElementById("personality-heading");
-    const personalityText = document.getElementById("personality-text");
+        // declaring consts for DOM variables on results page
+        const personalityHeading = document.getElementById("personality-heading");
+        const personalityText = document.getElementById("personality-text");
 
 
-    // populating page
-    let resultsName = username.value.toUpperCase();
+        // populating page
+        let resultsName = username.value.toUpperCase();
 
-    (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
-}
+        (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
+    }
+
+    function calculatePersonality() {
+
+    }
 
 
 };
-
-
-
-
-
