@@ -7,6 +7,9 @@ const questionText = document.getElementById("question-text");
 const choices = Array.from(document.getElementsByClassName("btn-choice"));
 const progressText = document.getElementById("progress-text");
 const progressBar = document.getElementById("progressbar-fg");
+const restartGameBtn = document.getElementById("restart-game-btn");
+const startAgainBtn = document.getElementById("start-again-btn");
+
 
 // declaring other variables
 let maxQuestions = 10;
@@ -41,6 +44,15 @@ function startGame(event) {
         addQuestionContent(0, username);
         handleAnswer();
     }
+
+    // restart & start again game buttons
+    restartGameBtn.addEventListener('click', function () {
+        window.location.reload();
+    });
+
+    startAgainBtn.addEventListener('click', function () {
+        window.location.reload();
+    });
 
 
     // Populate the questions and answers & move on progress bar
@@ -125,7 +137,7 @@ function startGame(event) {
         // declaring consts for DOM variables on results page
         const personalityHeading = document.getElementById("personality-heading");
         const personalityText = document.getElementById("personality-text");
-        
+
 
         // populating page
         let resultsName = username.value.toUpperCase();
