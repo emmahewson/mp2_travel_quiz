@@ -432,7 +432,7 @@ button {
 }
 
 #map {
-    background-color: #FC7070;
+    background-color: #ffffff;
     height: 450px;
     border: 3px solid #FFFFFF;
     border-radius: 24px;
@@ -443,6 +443,17 @@ button {
     pointer-events: all;
     overflow: hidden;
 }
+
+#map > div > div {
+    overflow: hidden;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -o-border-radius: 24px;
+
+}
+
+
 
 /* Overlay inset shadow technique adapted from https://bavotasan.com/2011/adding-inset-shadow-to-image-css3/ */
 #map::before {
@@ -455,6 +466,11 @@ button {
     box-shadow: inset 2px -2px 18px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
     pointer-events: none;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -o-border-radius: 24px;
+    overflow: hidden;
 }
 
 #highlight-content-div {
