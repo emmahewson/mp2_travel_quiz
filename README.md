@@ -237,6 +237,10 @@ During development and testing, in addition to the improvements described in the
 
 After adding an inset shadow on the map using a ::before element created in CSS I realised it had disabled any interaction with the map. After some research I discovered I needed to disable pointer events on the overlay in order to click through and interact with the map.
 
+#### **Google Map API on mobile - border-radius**
+
+On mobile the Google Maps API was not contained within the div's border radius rounded corners. NEED TO ADD FIX HERE
+
 
 ### Testing User Stories
 

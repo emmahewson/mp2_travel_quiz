@@ -435,6 +435,7 @@ button {
     border-radius: 24px;
     position: relative;
     pointer-events: all;
+    overflow: hidden;
 }
 
 /* Overlay inset shadow technique adapted from https://bavotasan.com/2011/adding-inset-shadow-to-image-css3/ */
