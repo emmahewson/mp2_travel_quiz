@@ -16,7 +16,7 @@
             <div id="logo-div"><img src="assets/images/quiz_logo_01.svg" alt="The Travel Personality Quiz"></div>
         </a>
 
-        <div class="text-centre hidden" id="welcome-div">
+        <div class="text-centre" id="welcome-div">
             <h1>WELCOME!</h1>
             <p>Hey there traveller! Are you looking to get off the beaten-track but have no idea where to go? Are you a
                 thrill-seeker or an animal lover? Do you love the buzz of the city or the total silence of
@@ -25,10 +25,14 @@
                 <br><br>Take The Travel Personality Quiz to find out and get personalised recommendations
                 for your next
                 adventure!
-                <br><br>Go on... hit the button... you know you want to!
+                <br><br>Go on... tell us your name and hit the button... you know you want to!
             </p>
             <div class="text-centre" id="start-button-div">
-                <button class="btn-game-main" id="start-game-btn">Start Quiz</button>
+                <form action="" id="start-form" method="POST" onsubmit="startGame(event)">
+                    <input class="text-centre" id="name-input" type="text" placeholder="Enter your name"
+                        aria-label="Enter your name">
+                    <input type="submit" class="btn-game-main" id="start-game-btn" value="Start Quiz"></input>
+                </form>
             </div>
         </div>
 
@@ -55,7 +59,7 @@
         </div>
 
 
-        <div class="" id="results-div">
+        <div class="hidden" id="results-div">
             <div class="results-container" id="personality-div">
                 <h1 class="text-centre" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
                 <div id="personality-div-flex">
@@ -189,30 +193,20 @@
     </div>
 
 
-
-
-
-
-
     <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3bbw0F5d1sjzp5iet_vlxKb0RrevMCA&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3bbw0F5d1sjzp5iet_vlxKb0RrevMCA&callback=initMap">
+    </script>
 
     <script src="assets/js/questions_array.js"></script>
     <script src="assets/js/countries_array.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <script src="assets/js/map.js"></script>
 </body>
 
 </html>
 
 <!--
-        <script src="assets/js/quiz.js"></script>
-
-        <div class="" id="restart-button-div">
-            <button class="btn btn-main hidden" id="restart-game">Restart Quiz</button>
-        </div>
-        
-    
-
     <div class="container hidden" id="scores-div">
         <p>Scores</p>
         <p>New Zealand: <span class="score-text" id="score-nz"></span></p>

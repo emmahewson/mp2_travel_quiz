@@ -235,11 +235,56 @@ During development and testing, in addition to the improvements described in the
 
 #### **Inset Shadow stopped click on map**
 
-After adding an inset shadow on the map using a ::before element created in CSS I realised it had disabled any interaction with the map. After some research I discovered I needed to disable pointer events on the overlay in order to click through and interact with the map.
+After adding an inset shadow on the map using a ::before element created in CSS I realised it had disabled any interaction with the map. After some research I discovered I needed to disable pointer events on the overlay and enable it on the map again in order to click through and interact with the map.
+
+```
+#map {
+    pointer-events: all;
+}
+
+#map::before {
+    pointer-events: none;
+}
+```
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
 
 #### **Google Map API on mobile - border-radius**
 
-On mobile the Google Maps API was not contained within the div's border radius rounded corners. NEED TO ADD FIX HERE
+After deploying the site to GitHub pages and viewing on mobile and in Safari the Google Maps API was not contained within the div's border radius rounded corners. After investigating the issue using Dev tools and searching online I worked out that the issue related to the way that Google Maps API builds the HTML for the map, it creates a series of divs enclosed in each other and on certain browsers the border radius and overflow were not translating down in to these divs. I tried targeting all descendent divs, however I ran in to an issue where the overflow:hidden caused the map to disappear completely. After trial and error I discovered I needed to target the 2nd level of div with the CSS styling and this solved the issue.
+
+```
+#map > div > div {
+    overflow: hidden;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+```
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
 
 
 ### Testing User Stories

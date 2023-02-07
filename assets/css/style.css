@@ -42,27 +42,51 @@ button {
     border: none;
     font-size: 16px;
     box-shadow: inset 1px 0px 3px 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 #start-game-btn {
     font-weight: 500;
     background-color: #FC7070;
     color: white;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+#start-game-btn:hover {
+    background-color: #ff3030;
 }
 
 #restart-game-btn,
 #start-again-btn {
     font-weight: 400;
-
 }
 
 #restart-game-btn {
     font-weight: 400;
     background-color: #d1d1d1;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+#restart-game-btn:hover {
+    background-color: #FCADAD;
 }
 
 #start-again-btn {
     background-color: #FCADAD;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+#start-again-btn:hover {
+    background-color: #FC7070;
 }
 
 #restart-button-div,
@@ -159,6 +183,15 @@ button {
     margin: 60px 0;
 }
 
+#name-input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    min-width: 150px;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 14px;
+}
 
 
 
@@ -450,7 +483,6 @@ button {
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
     -o-border-radius: 24px;
-
 }
 
 
@@ -707,8 +739,9 @@ button {
 
 /* DOM Manipulation Classes */
 
-.selected {
-    background-color: cyan;
+.selected,
+.selected:hover {
+    background-color: #FC7070;
 }
 
 .hidden {
