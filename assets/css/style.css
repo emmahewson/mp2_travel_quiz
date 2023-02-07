@@ -121,12 +121,6 @@ button {
 
 /* Footer */
 
-#test-div {
-    background-color: aquamarine;
-    height: 500px;
-    width: 100%;
-}
-
 #cloud-div {
     height: 350px;
     background-image: url("../images/clouds_lrg.png");
@@ -211,7 +205,6 @@ button {
 }
 
 .progressbar {
-
     height: 15px;
     border-radius: 20px;
     position: absolute;
@@ -235,14 +228,18 @@ button {
     padding: 0 25px;
 }
 
-#answer-div {
+#answer-div,
+#answer-tie-div {
     width: 70%;
     max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     row-gap: 20px;
+}
+
+#answer-div {
+    justify-content: space-between;
 }
 
 .btn-choice {
@@ -269,7 +266,61 @@ button {
     background-color: #407694;
 }
 
+/* Game Tie Breaker styling */
 
+#answer-tie-div {
+    justify-content: space-around;
+    column-gap: 20px;
+}
+
+#tie-break-title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0 25px;
+}
+
+#tie-break-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.question-photo {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.culture {
+    background-image: url("../images/personality/culture.jpg");
+}
+
+.foodie {
+    background-image: url("../images/personality/foodie.jpg");
+}
+
+.people {
+    background-image: url("../images/personality/people.jpg");
+}
+
+.remote {
+    background-image: url("../images/personality/remote.jpg");
+}
+
+.thrill {
+    background-image: url("../images/personality/thrill.jpg");
+}
+
+.wildlife {
+    background-image: url("../images/personality/wildlife.jpg");
+}
 
 
 

@@ -5,10 +5,13 @@ const gameDiv = document.getElementById("game-div");
 const resultsDiv = document.getElementById("results-div");
 const questionText = document.getElementById("question-text");
 const choices = Array.from(document.getElementsByClassName("btn-choice"));
+const progressDiv = document.getElementById("progress-div");
 const progressText = document.getElementById("progress-text");
 const progressBar = document.getElementById("progressbar-fg");
 const restartGameBtn = document.getElementById("restart-game-btn");
 const startAgainBtn = document.getElementById("start-again-btn");
+const answerDiv = document.getElementById("answer-div-hide");
+const answerTieDiv = document.getElementById("answer-tie-div-hide");
 
 
 // declaring other variables
@@ -23,6 +26,8 @@ let culturePoints = [0, 0, 3, 2, 0, 1];
 let foodPoints = [2, 3, 0, 1, 0, 0];
 let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
+
+
 
 
 // Start Game Button - master function
@@ -49,7 +54,6 @@ function startGame(event) {
     restartGameBtn.addEventListener('click', function () {
         window.location.reload();
     });
-
     startAgainBtn.addEventListener('click', function () {
         window.location.reload();
     });
@@ -130,6 +134,9 @@ function startGame(event) {
 
     // Goes to results page
     function showResults() {
+
+        // add an if statement here to see if there is a tie - to show tie breaker
+
         // hide and reveal divs
         gameDiv.classList.toggle("hidden");
         resultsDiv.classList.toggle("hidden");
@@ -143,5 +150,14 @@ function startGame(event) {
         let resultsName = username.value.toUpperCase();
 
         (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
+    }
+
+    // tie breaker functionality
+    function activateTieBreaker() {
+        answerDiv.classList.add("hidden");
+        progressDiv.classList.add("hidden");
+        answerTieDiv.classList.remove("hidden");
+    
+        // add function to only show the relevant photos
     }
 }

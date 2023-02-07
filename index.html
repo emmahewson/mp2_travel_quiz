@@ -37,22 +37,38 @@
         </div>
 
         <div class="text-centre hidden" id="game-div">
-            <div id="progress-div">
+            <div class="" id="progress-div">
                 <p id="progress-text">Question 12 of 11</p>
                 <div class="progressbar" id="progressbar-fg"></div>
                 <div class="progressbar" id="progressbar-bg"></div>
             </div>
-            <p id="question-text">This is the question... what is...</p>
-
-            <div id="answer-div">
-                <button class="btn-choice" id="btn1">This the the text for option 1</button>
-                <button class="btn-choice" id="btn2">This the the text for option 2</button>
-                <button class="btn-choice" id="btn3">This the the text for option 3 and it's a bit longer than the
-                    others</button>
-                <button class="btn-choice" id="btn4">Option 4 text here</button>
-                <button class="btn-choice" id="btn5">Option 5 is this text</button>
-                <button class="btn-choice" id="btn6">Option 6 goes here</button>
+            
+            <div class="" id="answer-div-hide">
+                <p id="question-text">This is the question... what is...</p>
+                <div id="answer-div">
+                    <button class="btn-choice" id="btn1">This the the text for option 1</button>
+                    <button class="btn-choice" id="btn2">This the the text for option 2</button>
+                    <button class="btn-choice" id="btn3">This the the text for option 3 and it's a bit longer than the
+                        others</button>
+                    <button class="btn-choice" id="btn4">Option 4 text here</button>
+                    <button class="btn-choice" id="btn5">Option 5 is this text</button>
+                    <button class="btn-choice" id="btn6">Option 6 goes here</button>
+                </div>
             </div>
+            <div class="hidden" id="answer-tie-div-hide">
+                <p id="tie-break-title">Tie Breaker!</p>
+                <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks most like your kind of holiday...</p>
+                <div id="answer-tie-div">
+                    <button class="btn-choice question-photo culture" id="tie-btn1"></button>
+                    <button class="btn-choice question-photo thrill" id="tie-btn2"></button>
+                    <button class="btn-choice question-photo foodie" id="tie-btn3"></button>
+                    <button class="btn-choice question-photo people" id="tie-btn4"></button>
+                    <button class="btn-choice question-photo remote" id="tie-btn5"></button>
+                    <button class="btn-choice question-photo wildlife" id="tie-btn6"></button>
+                </div>
+            </div>
+
+
             <div class="text-centre" id="restart-button-div">
                 <button class="btn-game-main" id="restart-game-btn">Restart Quiz</button>
             </div>
