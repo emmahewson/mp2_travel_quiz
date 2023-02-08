@@ -343,7 +343,7 @@ The project will now be cloned locally for you to use.
 
 ### Code
 
-* [Title](): Example Text
+* [Chart.js](https://www.chartjs.org/): ChartJS library used to create Pie Chart
 
 ### Content
 

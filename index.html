@@ -42,7 +42,7 @@
                 <div class="progressbar" id="progressbar-fg"></div>
                 <div class="progressbar" id="progressbar-bg"></div>
             </div>
-            
+
             <div class="" id="answer-div-hide">
                 <p id="question-text">This is the question... what is...</p>
                 <div id="answer-div">
@@ -57,14 +57,20 @@
             </div>
             <div class="hidden" id="answer-tie-div-hide">
                 <p id="tie-break-title">Tie Breaker!</p>
-                <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks most like your kind of holiday...</p>
+                <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks
+                    most like your kind of holiday...</p>
                 <div id="answer-tie-div">
-                    <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1" data-type="culture"></button>
+                    <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1"
+                        data-type="culture"></button>
                     <button class="btn-choice-tie question-photo foodie hidden" id="tie-btn2" data-type="food"></button>
-                    <button class="btn-choice-tie question-photo people hidden" id="tie-btn3" data-type="people"></button>
-                    <button class="btn-choice-tie question-photo remote hidden" id="tie-btn4" data-type="remote"></button>
-                    <button class="btn-choice-tie question-photo thrill hidden" id="tie-btn5" data-type="thrill"></button>
-                    <button class="btn-choice-tie question-photo wildlife hidden" id="tie-btn6" data-type="wildlife"></button>
+                    <button class="btn-choice-tie question-photo people hidden" id="tie-btn3"
+                        data-type="people"></button>
+                    <button class="btn-choice-tie question-photo remote hidden" id="tie-btn4"
+                        data-type="remote"></button>
+                    <button class="btn-choice-tie question-photo thrill hidden" id="tie-btn5"
+                        data-type="thrill"></button>
+                    <button class="btn-choice-tie question-photo wildlife hidden" id="tie-btn6"
+                        data-type="wildlife"></button>
                 </div>
             </div>
 
@@ -100,37 +106,40 @@
                     <div id="personality-stats-div">
                         <h3 class="text-centre">YOUR VITAL STATISTICS</h3>
                         <div id="stats-key-chart-div">
-                            <div id="pie-chart"></div>
+                            
+                            <div id="pie-chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
                             <div id="pie-numbers">
                                 <div class="stat-key-div" id="stat-key-div-1">
                                     <div class="stat-key" id="stat-key-1"></div>
-                                    <p><span id="stat-type-1">Thrill-Seeker: </span><span class="stat-percent"
-                                            id="stat-percent-1">57%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-2">
                                     <div class="stat-key" id="stat-key-2"></div>
-                                    <p><span id="stat-type-2">Culture-Vulture: </span><span class="stat-percent"
-                                            id="stat-percent-2">20%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-3">
                                     <div class="stat-key" id="stat-key-3"></div>
-                                    <p><span id="stat-type-3">Animal-Lover: </span><span class="stat-percent"
-                                            id="stat-percent-3">12%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-4">
                                     <div class="stat-key" id="stat-key-4"></div>
-                                    <p><span id="stat-type-4">Peace-Lover: </span><span class="stat-percent"
-                                            id="stat-percent-4">7%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-5">
                                     <div class="stat-key" id="stat-key-5"></div>
-                                    <p><span id="stat-type-5">People-Person: </span><span class="stat-percent"
-                                            id="stat-percent-5">3%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-6">
                                     <div class="stat-key" id="stat-key-6"></div>
-                                    <p><span id="stat-type-6">Foodie: </span><span class="stat-percent"
-                                            id="stat-percent-6">1%</span></p>
+                                    <p><span class="stat-type">Thrill-Seeker: </span><span
+                                            class="stat-percent">57%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -187,9 +196,12 @@
                 <button class="btn-game-main" id="start-again-btn">Start Again</button>
             </div>
         </div>
+
+        <!-- DELETE ONCE FINISHED!!! -->
         <div class="container" id="scores-div">
             <p>Personality Tally: <span id="personality-tally"></span></p>
         </div>
+        
 
 
         <footer>
@@ -220,14 +232,14 @@
     <script src="assets/js/questions_array.js"></script>
     <script src="assets/js/countries_array.js"></script>
     <script src="assets/js/personalities_array.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/quiz.js"></script>
     <script src="assets/js/map.js"></script>
 </body>
 
 </html>
 
-<!--
+
     
 
    
--->

@@ -218,8 +218,8 @@ function startGame(event) {
 
         } else {
             // if not tied - sets the winning personality & reveals results
-            topPersonality = topPersonalityArray;
-            console.log("The winning personality is... " + topPersonality);
+            topPersonality = topPersonalityArray[0];
+            console.log("No Tie The winning personality is... " + topPersonality);
             showResults(topPersonality);
         };
 
@@ -240,16 +240,18 @@ function startGame(event) {
 
     // Reveal Results
     function showResults(topPersonality) {
-        gameDiv.classList.toggle("hidden");
-        resultsDiv.classList.toggle("hidden");
-        console.log("The winning personality on the results page is... " + topPersonality);
 
-        // declaring consts for DOM variables on results page
+
+    // declaring consts for DOM variables on results page
         const personalityHeading = document.getElementById("personality-heading");
         const personalityText = document.getElementById("personality-text");
+        const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
+        const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
+        const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
+        const pieChart = document.getElementById("pie-chart");
 
 
-        // Populates personality results on page based on winning personality
+    // Populates personality results on page based on winning personality
         for (let i = 0; i < personalities.length; i++) {
             if (personalities[i].type === topPersonality) {
 
@@ -257,31 +259,128 @@ function startGame(event) {
                 let prefix = personalities[i].prefix;
                 let description = personalities[i].text;
 
-                let capsUser = username.value.toUpperCase();
-                let capsPrefix = prefix.toUpperCase();
-                let capsPersonality = personality.toUpperCase();
-
-                personalityHeading.innerText = `${capsUser}, YOU ARE ${capsPrefix}... ${capsPersonality}`
+                personalityHeading.innerText = `${username.value}, YOU ARE ${prefix}... ${personality}`
                 personalityText.innerText = description;
             };
         };
 
-        // Update piechart
 
+    // Update Statistics
 
+        // sort personalities by score
+        function compareScores(a, b) {
+            return a.score - b.score
+        };
+        let sortedPersonalities = personalities.sort(compareScores);
+        let reverseSortedPersonalities = sortedPersonalities.reverse();
+
+        // calculate sum of all scores
+        let scoresTotal = 0;
+        for (let i = 0; i < sortedPersonalities.length; i++) {
+            scoresTotal += sortedPersonalities[i].score;
+        };
+        console.log("The total of the scores is... " + scoresTotal);
+
+        // calculate percentages for scores
+
+        let percentageArray = [];
+        let percentagesTotal = 0;
+        for (let i = 0; i < reverseSortedPersonalities.length; i++) {
+            percentageArray.push(calcPercent(reverseSortedPersonalities[i].score, scoresTotal));
+            percentagesTotal += calcPercent(reverseSortedPersonalities[i].score, scoresTotal);
+        };
+
+        // If scores add up to 100% add difference to top score
+        let percentDifference = 100 - percentagesTotal;
+
+        console.log("All the percentages added together are... " + percentagesTotal + "%");
+        console.log("The original percentage array is..." + percentageArray);
+        console.log("The total percentage is less than 100% by... " + percentDifference);
+
+        if (percentDifference !== 0) {
+            percentageArray[0] += percentDifference;
+        }
+
+        console.log("The amended percentage array is..." + percentageArray);
+
+        let keyColors = [];
+        let pieLabels = [];
+
+        // populate statistics & create color array for piechart
+        for (let i = 0; i < reverseSortedPersonalities.length; i++) {
+            pieColorKey[i].classList.add(reverseSortedPersonalities[i].color);
+            pieTypesText[i].innerText = reverseSortedPersonalities[i].name;
+            piePercentages[i].innerText = `: ${percentageArray[i]}%`;
+            keyColors.push(reverseSortedPersonalities[i].colorCode);
+            pieLabels.push((reverseSortedPersonalities[i].name));
+        };
+
+    // build piechart
+
+        // uses chart.js library https://www.chartjs.org/
+        var xValues = pieLabels;
+        var yValues = percentageArray;
+        var barColors = keyColors;
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: pieLabels,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true,
+                        boxPadding: 5,
+                        backgroundColor: 'rgba(17, 66, 92, 0.9)',
+                        titleFont: 'Raleway, sans-serif',
+                        /** Tooltip popup formatting callback taken from
+                         * https://stackoverflow.com/questions/46317867/how-to-append-text-or-symbol-to-tooltip-of-chart-js
+                         * https://stackoverflow.com/questions/44632529/how-do-you-hide-the-title-of-a-chart-tooltip
+                         */
+                        callbacks: {
+                            title: () => null,
+                            label: function (context) {
+                                return context.label + ': ' + context.formattedValue + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // helper function - calculate percentage
+        function calcPercent(score, total) {
+            return Math.floor((score / total) * 100);
+        }
+
+        gameDiv.classList.toggle("hidden");
+        resultsDiv.classList.toggle("hidden");
+        console.log("The winning personality on the results page is... " + topPersonality);
 
     }
 
 
 };
+/*
+personalities[0].score = 5;
+personalities[1].score = 3;
+personalities[2].score = 4;
+personalities[3].score = 1;
+personalities[4].score = 0;
+personalities[5].score = 6;
 
-// program to sort array by property age
 
-function compareAge(a, b) {
+let topPersonality = "wildlife";
+username = "Bobette";
 
-    return a.age - b.age;
-}
-
-const students = [{name: 'Sara', age:24},{name: 'John', age:22}, {name: 'Jack', age:27}];
-
-console.log(students.sort(compareAge));
+*/

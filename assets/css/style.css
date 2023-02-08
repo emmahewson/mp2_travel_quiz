@@ -383,6 +383,7 @@ button {
 #personality-heading {
     font-size: 36px;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 #personality-div-flex {
@@ -429,6 +430,7 @@ button {
 
 .stat-percent {
     font-weight: 600;
+    font-size: 15px;
 }
 
 .stat-key {
@@ -439,33 +441,42 @@ button {
     aspect-ratio: 1;
 }
 
-#stat-key-1 {
+.yellow {
     background-color: #FFE55A;
 }
 
-#stat-key-2 {
+.green {
     background-color: #9EE58C;
 }
 
-#stat-key-3 {
+.pink {
     background-color: #E7A7F1;
 }
 
-#stat-key-4 {
+.orange {
     background-color: #FFC289;
 }
 
-#stat-key-5 {
+.purple {
     background-color: #ACAAFF;
 }
 
-#stat-key-6 {
+.red {
     background-color: #FDA18D;
 }
 
 #pie-chart {
-    background-image: conic-gradient(#FFE55A 0deg, #FFE55A 205.2deg,
-            #9EE58C 205.2deg, #9EE58C 275.2deg,
+    height: 170px;
+    width: 170px;
+}
+
+
+
+
+/*
+#pie-chart {
+    background: conic-gradient(#FFE55A 0deg, #FFE55A 205.2deg,
+            rgba(30 30 30 0.5) 205.2deg, rgba(30 30 30 0.5) 275.2deg,
             #E7A7F1 275.2deg, #E7A7F1 318.4deg,
             #FFC289 318.4deg, #FFC289 343.6deg,
             #ACAAFF 343.6deg, #ACAAFF 354.4deg,
@@ -475,6 +486,7 @@ button {
     aspect-ratio: 1;
     border-radius: 50%;
 }
+*/
 
 #country-info-div {
     border-radius: 24px 24px 0 0;
