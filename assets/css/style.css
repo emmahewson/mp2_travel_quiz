@@ -288,6 +288,10 @@ button {
 }
 
 .question-photo {
+    background-color: #4D93BB;
+    border: none;
+    box-shadow: 2px -2px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
     width: 200px;
     height: 200px;
     background-position: center;
@@ -296,6 +300,10 @@ button {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    -o-transition: background-color 0.25s ease-in-out;
 }
 
 .culture {
@@ -528,7 +536,7 @@ button {
     overflow: hidden;
 }
 
-#map > div > div {
+#map>div>div {
     overflow: hidden;
     border-radius: 24px;
     -webkit-border-radius: 24px;

@@ -5,6 +5,7 @@ const gameDiv = document.getElementById("game-div");
 const resultsDiv = document.getElementById("results-div");
 const questionText = document.getElementById("question-text");
 const choices = Array.from(document.getElementsByClassName("btn-choice"));
+const tieChoices = Array.from(document.getElementsByClassName("btn-choice-tie"));
 const progressDiv = document.getElementById("progress-div");
 const progressText = document.getElementById("progress-text");
 const progressBar = document.getElementById("progressbar-fg");
@@ -13,10 +14,10 @@ const startAgainBtn = document.getElementById("start-again-btn");
 const answerDiv = document.getElementById("answer-div-hide");
 const answerTieDiv = document.getElementById("answer-tie-div-hide");
 
-
 // declaring other variables
 let maxQuestions = 10;
-let username = ""
+let username;
+let personalityTally = [];
 
 /* index of points matches index of country in countries_array
  * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan]*/
@@ -28,7 +29,6 @@ let foodPoints = [2, 3, 0, 1, 0, 0];
 let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
-let personalityTally = [];
 
 
 // Start Game Button - master function
@@ -96,12 +96,12 @@ function startGame(event) {
                 choice.classList.remove("selected");
                 if (choice == target) {
                     choice.classList.add("selected");
-                    logResults(choice);
+                    logPersonalities(choice);
                     // Sets short timeout before question refresh
                     setTimeout(function () {
                         // remove current question from array and replace with next question or go to results
                         if (questions.length <= 1) {
-                            showResults();
+                            findTopPersonality();
                         } else {
                             questions.splice(0, 1);
                             addQuestionContent(0);
@@ -117,93 +117,106 @@ function startGame(event) {
         };
     };
 
-    // logs the score and the personality to arrays
-    function logResults(choice) {
-        // iterates through question array
+    // logs personality type for each answer to an array (Helper function)
+    function logPersonalities(choice) {
+        // iterates through answers in questions_array
         questions[0].answers.forEach(answer => {
-            // matches the selected answer to the same answer in the array
-            // updates the user totals based on the answer category/type by iterating through each answers array
+            // matches the selected answer to the same answer in the questions array
             if (choice.innerText === answer.answerText) {
-                switch (answer.answerType) {
-                    case "wildlife":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += wildlifePoints[i];
-                        }
-                        break;
-                    case "thrill":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += thrillPoints[i];
-                        }
-                        break;
-                    case "culture":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += culturePoints[i];
-                        }
-                        break;
-                    case "food":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += foodPoints[i];
-                        }
-                        break;
-                    case "people":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += peoplePoints[i];
-                        }
-                        break;
-                    case "remote":
-                        for (let i = 0; i < userTotal.length; i++) {
-                            userTotal[i] += remotePoints[i];
-                        }
-                        break;
-                };
                 // adds the personality type to an array
                 personalityTally.push(answer.answerType);
             };
         });
 
-        // temp - adds scores to test site - TO BE REMOVED
-        let scoreText = document.getElementsByClassName("score-text");
-        for (let i = 0; i < scoreText.length; i++) {
-            scoreText[i].innerText = userTotal[i];
-        };
+        // temp - adds tally text to site - TO BE REMOVED
         let tallyText = document.getElementById("personality-tally");
         tallyText.innerText = personalityTally;
+    };
 
+    function findTopPersonality() {
+
+        let scoreArray = [];
+        let topPersonalityArray = [];
+        let topPersonality;
+
+        // updates scores for each personality in array
+        for (let i = 0; i < personalities.length; i++) {
+            personalities[i].score = elementCount(personalityTally, personalities[i].type)
+            scoreArray.push(personalities[i].score);
+        };
+
+        console.log("culture: " + personalities[0].score);
+        console.log("food: " + personalities[1].score);
+        console.log("people: " + personalities[2].score);
+        console.log("remote: " + personalities[3].score);
+        console.log("thrill: " + personalities[4].score);
+        console.log("wildlife: " + personalities[5].score);
+        console.log("score array: " + scoreArray);
+
+
+        // calculate the results
+        // calculate the maximum number of times any personality type appears
+        let maxPersonalityScore = Math.max(...scoreArray);
+
+        console.log("Maximum Score: " + maxPersonalityScore);
+
+        // create an array of the winning personalities
+        for (let i = 0; i < personalities.length; i++) {
+            if (personalities[i].score === maxPersonalityScore) {
+                topPersonalityArray.push(personalities[i].type);
+            };
+        };
+        console.log("winning personality/personalities: " + topPersonalityArray);
+
+        // check number of top score personalities ()
+        // let numOfWinners = elementCount(topPersonalityArray, maxPersonalityScore);
+        // console.log("Number of winning personalities: " + numOfWinners);
+
+        // Works out if result is tied
+        if (topPersonalityArray.length > 1) {
+
+            //run tie breaker if more than 1 winner
+            console.log("It's a tie!")
+
+            // reveals the images for the tied results
+            for (let i = 0; i < tieChoices.length; i++) {
+                if (topPersonalityArray.includes(tieChoices[i].getAttribute("data-type"))) {
+                    tieChoices[i].classList.remove("hidden");
+                };
+            };
+            // hides the main questions div and reveals the tie-breaker div
+            answerDiv.classList.add("hidden");
+            progressDiv.classList.add("hidden");
+            answerTieDiv.classList.remove("hidden");
+
+            // sets the winning personality based on clicked image & reveals results
+            for (let i = 0; i < tieChoices.length; i++) {
+                tieChoices[i].addEventListener("click", function () {
+                    let tieWinner = tieChoices[i].getAttribute("data-type");
+                    personalityTally.push(tieWinner);
+                    topPersonality = personalityTally[personalityTally.length - 1];
+                    console.log("the winning post-tie personality is... " + topPersonality);
+                    showResults(topPersonality);
+                });
+            }
+
+        } else {
+            // if not tied - sets the winning personality & reveals results
+            topPersonality = topPersonalityArray;
+            console.log("The winning personality is... " + topPersonality);
+            showResults(topPersonality);
+        };
+
+
+        // helper function to filter arrays
+        // function adapted from https://linuxhint.com/count-array-element-occurrences-in-javascript/#:~:text=To%20count%20element%20occurrences%20in,%E2%80%9Cfor%2Dof%E2%80%9D%20loop.
         function elementCount(arr, element) {
             return arr.filter((currentElement) => currentElement == element).length;
         };
-
-        let cultureScore = elementCount(personalityTally, "culture");
-        let foodScore = elementCount(personalityTally, "food");
-        let peopleScore = elementCount(personalityTally, "people");
-        let remoteScore = elementCount(personalityTally, "remote");
-        let thrillScore = elementCount(personalityTally, "thrill");
-        let wildlifeScore = elementCount(personalityTally, "wildlife");
-
-        let personalityScoreArray = [cultureScore, foodScore, peopleScore, remoteScore, thrillScore, wildlifeScore];
-        let winningScore = Math.max(...personalityScoreArray);
-        console.log(winningScore);
-
-        // TO WORK OUT THE TIE BREAK & PERSONALITY FUNCTIONALITY - WHERE TO START
-        // NEED TO:
-        // filter the array down to only the personalities with the winning score
-            // if its .length is longer than 1 then go to tie breaker if not then return the winning personality
-            // the tie breaker is populated by checking each score aginst the winningScore - a loop and if statement / switch??
-                // if the score isn't equal add "hidden" to the classlist
-            // add the click event for the relevant button - same method as above - that personality type is the winner
-        
-        // SORRY THIS IS REALLY MESSY!!
-
-        console.log("Culture Score: " + cultureScore);
-        console.log("Food Score: " + foodScore);
-        console.log("People Score: " + peopleScore);
-        console.log("Remote Score: " + remoteScore);
-        console.log("Thrill Score: " + thrillScore);
-        console.log("Wildlife Score: " + wildlifeScore);
-
     }
 
-    // re-enable the buttons
+
+    // re-enable the buttons after question answered
     function enableButtons() {
         choices.forEach(choice => {
             choice.disabled = false;
@@ -211,24 +224,11 @@ function startGame(event) {
     }
 
 
-    // tie breaker functionality
-    function activateTieBreaker() {
-        answerDiv.classList.add("hidden");
-        progressDiv.classList.add("hidden");
-        answerTieDiv.classList.remove("hidden");
-
-        // add function to only show the relevant photos
-    }
-
     // Goes to results page
-    function showResults() {
-        calculatePersonality()
-
-        // add an if statement here to see if there is a tie - to show tie breaker
-
-        // hide and reveal divs
+    function showResults(topPersonality) {
         gameDiv.classList.toggle("hidden");
         resultsDiv.classList.toggle("hidden");
+        console.log("The winning personality on the results page is... " + topPersonality);
 
         // declaring consts for DOM variables on results page
         const personalityHeading = document.getElementById("personality-heading");
@@ -244,6 +244,5 @@ function startGame(event) {
     function calculatePersonality() {
 
     }
-
 
 };

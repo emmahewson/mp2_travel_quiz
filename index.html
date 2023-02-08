@@ -59,12 +59,12 @@
                 <p id="tie-break-title">Tie Breaker!</p>
                 <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks most like your kind of holiday...</p>
                 <div id="answer-tie-div">
-                    <button class="btn-choice question-photo culture" id="tie-btn1"></button>
-                    <button class="btn-choice question-photo thrill" id="tie-btn2"></button>
-                    <button class="btn-choice question-photo foodie" id="tie-btn3"></button>
-                    <button class="btn-choice question-photo people" id="tie-btn4"></button>
-                    <button class="btn-choice question-photo remote" id="tie-btn5"></button>
-                    <button class="btn-choice question-photo wildlife" id="tie-btn6"></button>
+                    <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1" data-type="culture"></button>
+                    <button class="btn-choice-tie question-photo foodie hidden" id="tie-btn2" data-type="food"></button>
+                    <button class="btn-choice-tie question-photo people hidden" id="tie-btn3" data-type="people"></button>
+                    <button class="btn-choice-tie question-photo remote hidden" id="tie-btn4" data-type="remote"></button>
+                    <button class="btn-choice-tie question-photo thrill hidden" id="tie-btn5" data-type="thrill"></button>
+                    <button class="btn-choice-tie question-photo wildlife hidden" id="tie-btn6" data-type="wildlife"></button>
                 </div>
             </div>
 
@@ -188,13 +188,6 @@
             </div>
         </div>
         <div class="container" id="scores-div">
-            <p>Scores</p>
-            <p>New Zealand: <span class="score-text" id="score-nz"></span></p>
-            <p>Mexico: <span class="score-text" id="score-mex"></span></p>
-            <p>Peru: <span class="score-text" id="score-peru"></span></p>
-            <p>China: <span class="score-text" id="score-china"></span></p>
-            <p>Zambia: <span class="score-text" id="score-zam"></span></p>
-            <p>Kyrgyzstan: <span class="score-text" id="score-kyr"></span></p>
             <p>Personality Tally: <span id="personality-tally"></span></p>
         </div>
 
@@ -226,6 +219,7 @@
 
     <script src="assets/js/questions_array.js"></script>
     <script src="assets/js/countries_array.js"></script>
+    <script src="assets/js/personalities_array.js"></script>
     <script src="assets/js/quiz.js"></script>
     <script src="assets/js/map.js"></script>
 </body>
