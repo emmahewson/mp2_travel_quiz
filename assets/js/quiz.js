@@ -31,6 +31,8 @@ let remotePoints = [0, 0, 2, 0, 1, 3];
 
 
 
+
+
 // Start Game Button - master function
 function startGame(event) {
     event.preventDefault();
@@ -195,6 +197,20 @@ function startGame(event) {
                     let tieWinner = tieChoices[i].getAttribute("data-type");
                     personalityTally.push(tieWinner);
                     topPersonality = personalityTally[personalityTally.length - 1];
+
+                    // updates scores again post tie-break selection
+                    for (let i = 0; i < personalities.length; i++) {
+                        personalities[i].score = elementCount(personalityTally, personalities[i].type)
+                        scoreArray.push(personalities[i].score);
+                    };
+
+                    console.log("post tie culture: " + personalities[0].score);
+                    console.log("post tie food: " + personalities[1].score);
+                    console.log("post tie people: " + personalities[2].score);
+                    console.log("post tie remote: " + personalities[3].score);
+                    console.log("post tie thrill: " + personalities[4].score);
+                    console.log("post tie wildlife: " + personalities[5].score);
+
                     console.log("the winning post-tie personality is... " + topPersonality);
                     showResults(topPersonality);
                 });
@@ -215,7 +231,6 @@ function startGame(event) {
         };
     }
 
-
     // re-enable the buttons after question answered
     function enableButtons() {
         choices.forEach(choice => {
@@ -223,8 +238,7 @@ function startGame(event) {
         });
     }
 
-
-    // Goes to results page
+    // Reveal Results
     function showResults(topPersonality) {
         gameDiv.classList.toggle("hidden");
         resultsDiv.classList.toggle("hidden");
@@ -235,14 +249,39 @@ function startGame(event) {
         const personalityText = document.getElementById("personality-text");
 
 
-        // populating page
-        let resultsName = username.value.toUpperCase();
+        // Populates personality results on page based on winning personality
+        for (let i = 0; i < personalities.length; i++) {
+            if (personalities[i].type === topPersonality) {
 
-        (personalityHeading.innerText = `${resultsName}, YOU ARE A BUMHEAD!`);
+                let personality = personalities[i].name;
+                let prefix = personalities[i].prefix;
+                let description = personalities[i].text;
+
+                let capsUser = username.value.toUpperCase();
+                let capsPrefix = prefix.toUpperCase();
+                let capsPersonality = personality.toUpperCase();
+
+                personalityHeading.innerText = `${capsUser}, YOU ARE ${capsPrefix}... ${capsPersonality}`
+                personalityText.innerText = description;
+            };
+        };
+
+        // Update piechart
+
+
+
     }
 
-    function calculatePersonality() {
-
-    }
 
 };
+
+// program to sort array by property age
+
+function compareAge(a, b) {
+
+    return a.age - b.age;
+}
+
+const students = [{name: 'Sara', age:24},{name: 'John', age:22}, {name: 'Jack', age:27}];
+
+console.log(students.sort(compareAge));
