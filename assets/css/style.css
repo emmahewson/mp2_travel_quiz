@@ -45,7 +45,7 @@ button {
 /* Start/Restart Game Buttons */
 
 .btn-game-main {
-    padding: 5px 20px;
+    padding: 10px 25px;
     border-radius: 10px;
     border: none;
     font-size: 16px;
@@ -199,11 +199,11 @@ button {
 #name-input {
     display: block;
     margin: 0 auto;
-    margin-bottom: 15px;
     min-width: 150px;
     border-radius: 10px;
-    padding: 7px;
-    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 
@@ -249,12 +249,15 @@ button {
 
 #answer-div,
 #answer-tie-div {
-    width: 70%;
-    max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
+}
+
+#answer-div {
+    width: 70%;
+    max-width: 960px;
 }
 
 #answer-div {
@@ -288,9 +291,15 @@ button {
 /* Game Tie Breaker styling */
 
 #answer-tie-div {
-    justify-content: space-around;
-    column-gap: 20px;
+    justify-content: center;
+    column-gap: 20px;   
 }
+
+#answer-tie-div-hide {
+    width: 85%;
+    margin: 0 auto;
+}
+
 
 #tie-break-title {
     font-weight: 600;
@@ -719,21 +728,24 @@ button {
 
     /* Welcome */
     #welcome-div {
-        width: 90%;
-        margin-top: 30px;
+        width: 85%;
+        margin-top: 20px;
     }
 
     #welcome-div>h1 {
-        margin-bottom: 15px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     #start-button-div {
-        margin: 30px 0 0 0;
+        margin: 20px 0 0 0;
     }
+    
 
     /* Game */
     #answer-div {
         width: 85%;
+        row-gap: 15px;
     }
 
     #progress-div {
@@ -747,14 +759,24 @@ button {
         margin-bottom: 30px;
     }
 
+    #answer-tie-div {
+        row-gap: 10px;
+        column-gap: 10px;   
+    }
+
     .btn-choice {
         width: 100%;
         height: initial;
-        padding: 15px;
+        padding: 8px 10px;
     }
 
     #restart-button-div {
         margin-top: 40px;
+    }
+
+    .question-photo {
+        width: 150px;
+        height: 150px;
     }
 
     /* Results */

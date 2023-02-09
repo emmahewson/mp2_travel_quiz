@@ -312,7 +312,8 @@ The website failed to scroll to the top when clicking on a button, this caused p
 
 #### **Mobile input zoom-in not resetting**
 
-During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by...
+During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">.
+I wanted to make sure that accessibility wasn't affected by over-riding the zoom so I also increased the size of the name input box and start button.
 
 
 <details><summary>Screenshots</summary>

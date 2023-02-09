@@ -65,10 +65,11 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-scrollToTop();
+
 // Start Game Button - controls all game functionality
 function startGame(event) {
     event.preventDefault();
+    scrollToTop();
 
     // capturing user name
     username = document.getElementById("name-input");
@@ -303,6 +304,7 @@ function startGame(event) {
         // hide game div & reveal results divs
         gameDiv.classList.toggle("hidden");
         resultsDiv.classList.toggle("hidden");
+        scrollToTop();
 
         // Populates personality results on page based on winning personality
         for (let i = 0; i < personalities.length; i++) {
