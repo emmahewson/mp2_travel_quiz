@@ -51,6 +51,7 @@ button {
     font-size: 16px;
     box-shadow: inset 1px 0px 3px 1px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    color: black;
 }
 
 #start-game-btn {
@@ -61,10 +62,6 @@ button {
     -moz-transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
-}
-
-#start-game-btn:hover {
-    background-color: #ff3030;
 }
 
 #restart-game-btn,
@@ -79,10 +76,6 @@ button {
     -moz-transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
-}
-
-#restart-game-btn:hover {
-    background-color: #FCADAD;
 }
 
 #start-again-btn {
@@ -284,9 +277,7 @@ button {
     -o-transition: background-color 0.25s ease-in-out;
 }
 
-.btn-choice:hover {
-    background-color: #407694;
-}
+
 
 /* Game Tie Breaker styling */
 
@@ -843,9 +834,24 @@ button {
     #cloud-div {
         height: 250px;
     }
-
-
 }
+
+
+/* Hover effects - only on hover devices */
+@media (hover: hover) {
+    .btn-choice:hover {
+        background-color: #407694;
+    }
+
+    #start-game-btn:hover {
+        background-color: #ff3030;
+    }
+    
+    #restart-game-btn:hover {
+        background-color: #FCADAD;
+    }
+
+    }
 
 /* DOM Manipulation Classes */
 

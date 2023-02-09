@@ -264,7 +264,7 @@ After adding an inset shadow on the map using a ::before element created in CSS 
 </details>
 
 
-#### **Google Map API on mobile - border-radius**
+#### **Google Map API on mobile & Safari - border-radius**
 
 After deploying the site to GitHub pages and viewing on mobile and in Safari the Google Maps API was not contained within the div's border radius rounded corners. After investigating the issue using Dev tools and searching online I worked out that the issue related to the way that Google Maps API builds the HTML for the map, it creates a series of divs enclosed in each other and on certain browsers the border radius and overflow were not translating down in to these divs. I tried targeting all descendent divs, however I ran in to an issue where the overflow:hidden caused the map to disappear completely. After trial and error I discovered I needed to target the 2nd level of div with the CSS styling and this solved the issue.
 
@@ -314,6 +314,24 @@ The website failed to scroll to the top when clicking on a button, this caused p
 
 During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">.
 I wanted to make sure that accessibility wasn't affected by over-riding the zoom so I also increased the size of the name input box and start button.
+
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
+
+#### **Button colour on mobile**
+
+I found that the button text colour on mobile was set to blue rather than black, presumably as a result of this being a clickable button. I fixed this by explicitly setting the color of the button text in the CSS.
 
 
 <details><summary>Screenshots</summary>
