@@ -3,7 +3,10 @@ let personalities = [{
         score: 0,
         prefix: "A",
         name: "Culture-Vulture",
-        text: "This text describes a culture vulture",
+        text: [
+            "Culture-Vulture paragraph 1",
+            "Culture-Vulture paragraph 2"
+        ],
         color: "purple",
         colorCode: "#ACAAFF"
     },
@@ -12,7 +15,10 @@ let personalities = [{
         score: 0,
         prefix: "A",
         name: "Foodie",
-        text: "This text describes a foodie",
+        text: [
+            "Foodie paragraph 1",
+            "Foodie paragraph 2"
+        ],
         color: "red",
         colorCode: "#FDA18D"
     },
@@ -21,7 +27,10 @@ let personalities = [{
         score: 0,
         prefix: "A",
         name: "People-Person",
-        text: "This text describes a people person",
+        text: [
+            "People Person paragraph 1",
+            "People Person paragraph 2"
+        ],
         color: "pink",
         colorCode: "#E7A7F1"
     },
@@ -30,7 +39,10 @@ let personalities = [{
         score: 0,
         prefix: "A",
         name: "Peace-Lover",
-        text: "This text describes a remote sort of person",
+        text: [
+            "Peace-Lover paragraph 1",
+            "Peace-Lover paragraph 2"
+        ],
         color: "green",
         colorCode: "#9EE58C"
     },
@@ -51,7 +63,10 @@ let personalities = [{
         score: 0,
         prefix: "An",
         name: "Animal-Lover",
-        text: "This text describes an animal lover",
+        text: [
+            "Animal-Lover paragraph 1",
+            "Animal-Lover paragraph 2"
+        ],
         color: "orange",
         colorCode: "#FFC289"
     }

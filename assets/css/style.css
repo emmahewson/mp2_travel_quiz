@@ -137,7 +137,6 @@ button {
     max-width: 1300px;
 }
 
-
 #footer-contents {
     position: absolute;
     bottom: 20px;
@@ -148,12 +147,13 @@ button {
     column-gap: 20px;
 }
 
-
+#footer-contents>p {
+    font-weight: 600;
+}
 
 #social-links {
     display: flex;
     column-gap: 20px;
-
 }
 
 #social-links a {
@@ -283,7 +283,7 @@ button {
 
 #answer-tie-div {
     justify-content: center;
-    column-gap: 20px;   
+    column-gap: 20px;
 }
 
 #answer-tie-div-hide {
@@ -307,7 +307,8 @@ button {
 }
 
 .question-photo {
-    background-color: #4D93BB;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     box-shadow: 2px -2px 4px 2px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
@@ -323,6 +324,18 @@ button {
     -moz-transition: background-color 0.25s ease-in-out;
     -webkit-transition: background-color 0.25s ease-in-out;
     -o-transition: background-color 0.25s ease-in-out;
+}
+
+.question-photo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: inherit;
+    border-radius: inherit;
+
 }
 
 .culture {
@@ -492,29 +505,9 @@ button {
     width: 170px;
 }
 
-
-
-
-/*
-#pie-chart {
-    background: conic-gradient(#FFE55A 0deg, #FFE55A 205.2deg,
-            rgba(30 30 30 0.5) 205.2deg, rgba(30 30 30 0.5) 275.2deg,
-            #E7A7F1 275.2deg, #E7A7F1 318.4deg,
-            #FFC289 318.4deg, #FFC289 343.6deg,
-            #ACAAFF 343.6deg, #ACAAFF 354.4deg,
-            #FDA18D 354.4deg);
-    height: 170px;
-    width: 170px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-}
-*/
-
 #country-info-div {
     border-radius: 24px 24px 0 0;
 }
-
-
 
 #country-heading {
     font-size: 20px;
@@ -567,6 +560,7 @@ button {
     overflow: hidden;
 }
 
+/* Bug Fix for overflowing map on border radius corners on Safari */
 #map>div>div {
     overflow: hidden;
     border-radius: 24px;
@@ -574,8 +568,6 @@ button {
     -moz-border-radius: 24px;
     -o-border-radius: 24px;
 }
-
-
 
 /* Overlay inset shadow technique adapted from https://bavotasan.com/2011/adding-inset-shadow-to-image-css3/ */
 #map::before {
@@ -631,9 +623,6 @@ button {
     margin-bottom: 20px;
     font-weight: 600;
 }
-
-
-
 
 
 /* Media Queries */
@@ -731,7 +720,7 @@ button {
     #start-button-div {
         margin: 20px 0 0 0;
     }
-    
+
 
     /* Game */
     #answer-div {
@@ -752,7 +741,7 @@ button {
 
     #answer-tie-div {
         row-gap: 10px;
-        column-gap: 10px;   
+        column-gap: 10px;
     }
 
     .btn-choice {
@@ -846,12 +835,16 @@ button {
     #start-game-btn:hover {
         background-color: #ff3030;
     }
-    
+
     #restart-game-btn:hover {
         background-color: #FCADAD;
     }
 
+    .question-photo:hover {
+        background-color: rgba(0, 0, 0, .5);
     }
+
+}
 
 /* DOM Manipulation Classes */
 
