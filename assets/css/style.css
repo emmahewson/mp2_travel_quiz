@@ -23,6 +23,14 @@ body {
     display: inline-block;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
 h1,
 h2,
 h3 {
@@ -137,24 +145,35 @@ button {
 }
 
 
-#footer-text {
+#footer-contents {
     position: absolute;
     bottom: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 20px;
+}
+
+
+
+#social-links {
+    display: flex;
+    column-gap: 20px;
 
 }
 
-#footer-text p a {
+#social-links a {
     text-decoration: none;
+    font-size: 32px;
     color: black;
-    padding-left: 5px;
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
 }
 
-#footer-text p a:hover {
+#social-links a:hover {
     color: #FC7070;
 }
 
@@ -383,7 +402,6 @@ button {
 #personality-heading {
     font-size: 36px;
     margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
 #personality-div-flex {
@@ -399,8 +417,8 @@ button {
     width: 48%;
 }
 
-#second-country,
-#third-country {
+#second-personality,
+#third-personality {
     font-weight: 600;
 }
 
@@ -424,7 +442,6 @@ button {
     display: flex;
     justify-content: start;
     margin-bottom: 6px;
-    text-transform: uppercase;
     min-width: 175px;
 }
 
@@ -497,10 +514,7 @@ button {
     border-radius: 24px 24px 0 0;
 }
 
-#recommend-title-div {
-    width: max-content;
-    margin: 0 auto;
-}
+
 
 #country-heading {
     font-size: 20px;
@@ -510,7 +524,6 @@ button {
     font-family: 'Righteous', sans-serif;
     font-size: 64px;
     line-height: 70px;
-    text-transform: uppercase;
 }
 
 #results-image {
@@ -808,8 +821,6 @@ button {
     #cloud-div {
         height: 250px;
     }
-
-
 
 
 }

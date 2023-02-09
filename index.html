@@ -11,11 +11,13 @@
 </head>
 
 <body>
+    <!-- Background Gradient & Logo -->
     <div id="background-div">
         <a href="#">
             <div id="logo-div"><img src="assets/images/quiz_logo_01.svg" alt="The Travel Personality Quiz"></div>
         </a>
 
+        <!-- Welcome -->
         <div class="text-centre" id="welcome-div">
             <h1>WELCOME!</h1>
             <p>Hey there traveller! Are you looking to get off the beaten-track but have no idea where to go? Are you a
@@ -27,15 +29,17 @@
                 adventure!
                 <br><br>Go on... tell us your name and hit the button... you know you want to!
             </p>
+            <!-- Name Input & Start Game -->
             <div class="text-centre" id="start-button-div">
                 <form action="" id="start-form" method="POST" onsubmit="startGame(event)">
                     <input class="text-centre" id="name-input" type="text" placeholder="Enter your name"
-                        aria-label="Enter your name">
+                        aria-label="Enter your name" minlength="2" maxlength="10">
                     <input type="submit" class="btn-game-main" id="start-game-btn" value="Start Quiz"></input>
                 </form>
             </div>
         </div>
 
+        <!-- Game -->
         <div class="text-centre hidden" id="game-div">
             <div class="" id="progress-div">
                 <p id="progress-text">Question 12 of 11</p>
@@ -80,18 +84,22 @@
             </div>
         </div>
 
-
+        <!-- Results -->
         <div class="hidden" id="results-div">
+            <!-- Personality Results -->
             <div class="results-container" id="personality-div">
-                <h1 class="text-centre" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
+                <h1 class="text-centre uppercase" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
                 <div id="personality-div-flex">
                     <div id="personality-text-div">
                         <p id="personality-text-p1">Personality Description para 1</p>
                         <br>
                         <p id="personality-text-p2">Personality Description para 2</p>
                         <br>
-                        <p id="personality-text-p3">But we humans are complex creatures, you also scored highly as a <span id="second-country">Culture-Vulture</span> and
-                            <span id="third-country">Animal-Lover</span>. Check our our recommendations below to see which destination suits all these aspects of your personality!</p>
+                        <p id="personality-text-p3">But we humans are complex creatures, you also scored highly as <span
+                                id="second-prefix" class="lowercase">a</span> <span id="second-personality">Second
+                                Personality</span> and
+                            <span id="third-personality">Third Personality</span>. Check our our recommendations below
+                            to see which destination suits all these aspects of your personality!</p>
                     </div>
                     <div id="personality-stats-div">
                         <h3 class="text-centre">YOUR VITAL STATISTICS</h3>
@@ -100,36 +108,36 @@
                             <div id="pie-chart">
                                 <canvas id="myChart"></canvas>
                             </div>
-                            <div id="pie-numbers">
+                            <div id="pie-numbers" class="uppercase">
                                 <div class="stat-key-div" id="stat-key-div-1">
                                     <div class="stat-key" id="stat-key-1"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 1: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-2">
                                     <div class="stat-key" id="stat-key-2"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 2: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-3">
                                     <div class="stat-key" id="stat-key-3"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 3: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-4">
                                     <div class="stat-key" id="stat-key-4"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 4: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-5">
                                     <div class="stat-key" id="stat-key-5"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 5: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                                 <div class="stat-key-div" id="stat-key-div-6">
                                     <div class="stat-key" id="stat-key-6"></div>
-                                    <p><span class="stat-type">Thrill-Seeker: </span><span
-                                            class="stat-percent">57%</span></p>
+                                    <p><span class="stat-type">Personality 6: </span><span
+                                            class="stat-percent">0%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -137,10 +145,11 @@
                 </div>
             </div>
 
+            <!-- Country Results - General -->
             <div class="results-container" id="country-info-div">
-                <div id="recommend-title-div" class="text-centre">
+                <div class="text-centre">
                     <h2 id="country-heading">WE RECOMMEND:</h2>
-                    <p id="country-heading-place">NEW ZEALAND!</p>
+                    <p id="country-heading-place" class="uppercase">NEW ZEALAND!</p>
                 </div>
 
                 <img src="assets/images/caption.jpg" id="results-image">
@@ -154,6 +163,7 @@
                     everyone. With friendly locals, delicious cuisine, and an abundance of activities, you'll leave
                     with unforgettable memories of your time in this truly magical country.</p>
             </div>
+            <!-- Country Results - Highlights -->
             <div class="results-container" id="country-highlights-div">
                 <h2 class="text-centre">HIGHLIGHTS</h2>
                 <p class="text-centre">Click on a pin to find out more about what <span id="highlight-country-name">New
@@ -174,24 +184,18 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Restart Game Button -->
             <div class="text-centre" id="start-again-button-div">
                 <p>Want to have another go at the quiz?</p>
                 <button class="btn-game-main" id="start-again-btn">Start Again</button>
             </div>
         </div>
 
-        <!-- DELETE ONCE FINISHED!!! 
-        <div class="container hidden" id="scores-div">
-            <p>Personality Tally: <span id="personality-tally"></span></p>
-        </div>
-    -->
-
-
         <footer>
             <div id="cloud-div">
-                <div id="footer-text" class="text-centre">
-                    <p>Made by Emma Hewson
+                <div id="footer-contents">
+                    <p>Made by Emma Hewson</p>
+                    <div id="social-links">
                         <a href="https://www.linkedin.com/in/emmajmhewson/" target="_blank">
                             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             <span class="sr-only">LinkedIn</span>
@@ -200,7 +204,7 @@
                             <i class="fa-brands fa-github" aria-hidden="true"></i>
                             <span class="sr-only">GitHub</span>
                         </a>
-                    </p>
+                    </div>
                 </div>
 
             </div>

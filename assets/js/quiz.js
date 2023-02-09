@@ -1,4 +1,5 @@
 // declaring consts for Welcome Page DOM Objects
+const logo = document.getElementById("logo-div").children[0];
 const startGameBtn = document.getElementById("start-game-btn");
 const welcomeDiv = document.getElementById("welcome-div");
 
@@ -19,8 +20,9 @@ const resultsDiv = document.getElementById("results-div");
 const personalityHeading = document.getElementById("personality-heading");
 const personalityTextP1 = document.getElementById("personality-text-p1");
 const personalityTextP2 = document.getElementById("personality-text-p2");
-const secondCountry = document.getElementById("second-country");
-const thirdCountry = document.getElementById("third-country");
+const secondPersonality = document.getElementById("second-personality");
+const secondPrefix = document.getElementById("second-prefix");
+const thirdPersonality = document.getElementById("third-personality");
 const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
 const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
 const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
@@ -46,7 +48,16 @@ let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
 
-
+// logo, restart & start again game buttons - reload page
+logo.addEventListener('click', function () {
+    window.location.reload();
+});
+restartGameBtn.addEventListener('click', function () {
+    window.location.reload();
+});
+startAgainBtn.addEventListener('click', function () {
+    window.location.reload();
+});
 
 
 // Start Game Button - controls all game functionality
@@ -69,13 +80,7 @@ function startGame(event) {
         handleAnswer();
     }
 
-    // restart & start again game buttons
-    restartGameBtn.addEventListener('click', function () {
-        window.location.reload();
-    });
-    startAgainBtn.addEventListener('click', function () {
-        window.location.reload();
-    });
+
 
 
     // Populate the questions and answers & move on progress bar
@@ -144,11 +149,6 @@ function startGame(event) {
                 personalityTally.push(answer.answerType);
             };
         });
-
-        // REMOVE THIS BIT!!!
-        // temp - adds tally text to site - TO BE REMOVED
-        // let tallyText = document.getElementById("personality-tally");
-        // tallyText.innerText = personalityTally;
     };
 
 
@@ -364,14 +364,14 @@ function startGame(event) {
         };
 
         // Populates the 2nd and 3rd place countries in the personality description
-        secondCountry.innerText = reverseSortedPersonalities[1].name;
-        thirdCountry.innerText = reverseSortedPersonalities[2].name;
-        
+        secondPersonality.innerText = reverseSortedPersonalities[1].name;
+        secondPrefix.innerText = reverseSortedPersonalities[1].prefix;
+        thirdPersonality.innerText = reverseSortedPersonalities[2].name;
+
         console.log("Personality Tally - end of everything" + personalityTally) // REMOVE ONCE FINISHED
         // build piechart
 
         // uses chart.js library https://www.chartjs.org/
-        var xValues = pieLabels;
         var yValues = percentageArray;
         var barColors = keyColors;
 
