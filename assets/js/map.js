@@ -1,9 +1,4 @@
-
-// REPLACE ONCE REST OF QUIZ IS BUILT - CURRENTLY APPEARS ONLOAD
-    window.onload = function () {
-        initMap(1);
-    }
-    
+  
     function initMap(index) {
         let zoomLevel;
         let width = screen.width;
@@ -24,6 +19,8 @@
         const imageTwo = document.getElementById('highlight-photo-2')
         const imageThree = document.getElementById('highlight-photo-3')
         const imageFour = document.getElementById('highlight-photo-4')
+        const highlightInfoDiv = document.getElementById('highlight-info-div')
+
  
         // Clickable map markers adapted from: https://www.aspsnippets.com/Articles/Google-Maps-API-V3-Add-click-event-listener-to-all-multiple-markers.aspx
 
@@ -51,6 +48,7 @@
                     imageTwo.src = `assets/images/${this.imgTwo}`;
                     imageThree.src = `assets/images/${this.imgThree}`;
                     imageFour.src = `assets/images/${this.imgFour}`;
+                    highlightInfoDiv.classList.remove("hidden");
                 });
             })(marker, data);
         }

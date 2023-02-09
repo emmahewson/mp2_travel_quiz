@@ -1,5 +1,4 @@
-let personalities = [
-    {
+let personalities = [{
         type: "culture",
         score: 0,
         prefix: "A",
@@ -40,7 +39,10 @@ let personalities = [
         score: 0,
         prefix: "A",
         name: "Thrill-Seeker",
-        text: "This text describes a thrill seeker",
+        text: [
+            "You love an adrenaline rush! You are at your happiest when you are flying through the air or leaping in the sea. Anything that gets the blood pumping and the adrenal gland firing!",
+            "But it's not just bungee jumping or sky diving that floats your boat, anything that gets you moving, be it climbing a hill, or seeing what's around the next bend, you have a thirst for new experiences and aren't afraid to get off the beaten track to find them."
+        ],
         color: "yellow",
         colorCode: "#FFE55A"
     },

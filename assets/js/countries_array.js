@@ -9,10 +9,10 @@ const countries = [{
             lng: 172.67
         },
         highlights: [{
-                title: 'Highlight 1',
+                title: 'Queenstown, Otago',
                 lat: '-44.471390897973976',
                 lng: '168.585126556376',
-                description: 'Text describing Highlight 1',
+                description: 'Queenstown, located on the shores of Lake Wakatipu in the South Island of New Zealand, is a must-visit destination for adventure seekers and nature lovers alike. This picturesque town is surrounded by stunning mountain ranges and offers a variety of outdoor activities, including skiing, bungee jumping, and white-water rafting.',
                 imgOne: "newzealand_flag.png",
                 imgTwo: "mexico_flag.png",
                 imgThree: "peru_flag.png",

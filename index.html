@@ -86,27 +86,17 @@
                 <h1 class="text-centre" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
                 <div id="personality-div-flex">
                     <div id="personality-text-div">
-                        <p id="personality-text">You love an adrenaline rush! You are at your happiest when you are
-                            flying
-                            through the air or
-                            leaping
-                            in the sea. Anything that gets the blood pumping and the adrenal gland firing!<br><br>
-
-                            But it's not just bungee jumping or sky diving that floats your boat, anything that gets you
-                            moving,
-                            be it climbing a hill, or seeing what's around the next bend, you have a thirst for new
-                            experiences
-                            and aren't afraid to get off the beaten track to find them.<br><br>
-
-                            But we humans are complex creatures, you also scored high as a Culture-Vulture and
-                            Animal-Lover.
-                            Check our our recommendations below to see which destination suits all these aspects of your
-                            personality!</p>
+                        <p id="personality-text-p1">Personality Description para 1</p>
+                        <br>
+                        <p id="personality-text-p2">Personality Description para 2</p>
+                        <br>
+                        <p id="personality-text-p3">But we humans are complex creatures, you also scored highly as a <span id="second-country">Culture-Vulture</span> and
+                            <span id="third-country">Animal-Lover</span>. Check our our recommendations below to see which destination suits all these aspects of your personality!</p>
                     </div>
                     <div id="personality-stats-div">
                         <h3 class="text-centre">YOUR VITAL STATISTICS</h3>
                         <div id="stats-key-chart-div">
-                            
+
                             <div id="pie-chart">
                                 <canvas id="myChart"></canvas>
                             </div>
@@ -148,9 +138,9 @@
             </div>
 
             <div class="results-container" id="country-info-div">
-                <div id="recommend-title-div">
+                <div id="recommend-title-div" class="text-centre">
                     <h2 id="country-heading">WE RECOMMEND:</h2>
-                    <p class="text-centre" id="country-heading-place">NEW ZEALAND!</p>
+                    <p id="country-heading-place">NEW ZEALAND!</p>
                 </div>
 
                 <img src="assets/images/caption.jpg" id="results-image">
@@ -166,27 +156,21 @@
             </div>
             <div class="results-container" id="country-highlights-div">
                 <h2 class="text-centre">HIGHLIGHTS</h2>
-                <p class="text-centre">Click on a pin to find out more about what New Zealand has to offer!</p>
+                <p class="text-centre">Click on a pin to find out more about what <span id="highlight-country-name">New
+                        Zealand</span> has to offer!</p>
                 <div class="results-container" id="country-map-div">
                     <div id="map"></div>
-                    <div id="highlight-content-div">
-                        <p id="highlight-title">Queenstown, Otago</p>
-                        <p id="highlight-text">Queenstown, located on the shores of Lake Wakatipu in the
-                            South Island of New Zealand, is
-                            a must-visit destination for adventure seekers and nature lovers alike. This
-                            picturesque
-                            town is surrounded by stunning mountain ranges and offers a variety of outdoor
-                            activities, including skiing, bungee jumping, and white-water rafting. </p>
-                    </div>
-                    <div id="highlight-photo-div">
-                        <img class="highlight-photo" id="highlight-photo-1" src="assets/images/caption.jpg"
-                            alt="Queenstown New Zealand">
-                        <img class="highlight-photo" id="highlight-photo-2" src="assets/images/caption.jpg"
-                            alt="Queenstown New Zealand">
-                        <img class="highlight-photo" id="highlight-photo-3" src="assets/images/caption.jpg"
-                            alt="Queenstown New Zealand">
-                        <img class="highlight-photo" id="highlight-photo-4" src="assets/images/caption.jpg"
-                            alt="Queenstown New Zealand">
+                    <div id="highlight-info-div" class="hidden">
+                        <div id="highlight-content-div">
+                            <p id="highlight-title"></p>
+                            <p id="highlight-text"></p>
+                        </div>
+                        <div id="highlight-photo-div">
+                            <img class="highlight-photo" id="highlight-photo-1" src="" alt="Queenstown New Zealand">
+                            <img class="highlight-photo" id="highlight-photo-2" src="" alt="Queenstown New Zealand">
+                            <img class="highlight-photo" id="highlight-photo-3" src="" alt="Queenstown New Zealand">
+                            <img class="highlight-photo" id="highlight-photo-4" src="" alt="Queenstown New Zealand">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -197,11 +181,11 @@
             </div>
         </div>
 
-        <!-- DELETE ONCE FINISHED!!! -->
-        <div class="container" id="scores-div">
+        <!-- DELETE ONCE FINISHED!!! 
+        <div class="container hidden" id="scores-div">
             <p>Personality Tally: <span id="personality-tally"></span></p>
         </div>
-        
+    -->
 
 
         <footer>
@@ -232,14 +216,10 @@
     <script src="assets/js/questions_array.js"></script>
     <script src="assets/js/countries_array.js"></script>
     <script src="assets/js/personalities_array.js"></script>
+    <script src="assets/js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/quiz.js"></script>
-    <script src="assets/js/map.js"></script>
+
 </body>
 
 </html>
-
-
-    
-
-   

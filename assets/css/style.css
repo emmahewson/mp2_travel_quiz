@@ -399,6 +399,11 @@ button {
     width: 48%;
 }
 
+#second-country,
+#third-country {
+    font-weight: 600;
+}
+
 #stats-key-chart-div {
     margin-top: 15px;
     display: flex;
@@ -505,6 +510,7 @@ button {
     font-family: 'Righteous', sans-serif;
     font-size: 64px;
     line-height: 70px;
+    text-transform: uppercase;
 }
 
 #results-image {
