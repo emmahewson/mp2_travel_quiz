@@ -49,6 +49,7 @@
                     imageThree.src = `assets/images/${this.imgThree}`;
                     imageFour.src = `assets/images/${this.imgFour}`;
                     highlightInfoDiv.classList.remove("hidden");
+                    highlightInfoDiv.scrollIntoView(false, {behavior: 'smooth'});
                 });
             })(marker, data);
         }
