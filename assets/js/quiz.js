@@ -57,9 +57,15 @@ restartGameBtn.addEventListener('click', function () {
 });
 startAgainBtn.addEventListener('click', function () {
     window.location.reload();
+    
 });
 
+// function to move back to the top of the page
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
+scrollToTop();
 // Start Game Button - controls all game functionality
 function startGame(event) {
     event.preventDefault();
@@ -108,6 +114,7 @@ function startGame(event) {
         choices.forEach(choice => {
             choice.addEventListener('click', () => {
                 selectAndSubmit(choice);
+                setTimeout(scrollToTop, 500);
             });
         });
 

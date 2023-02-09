@@ -112,12 +112,12 @@ CHECK IF ALL THESE ARE RELEVANT OR IF ANY ARE MISSING
     * Used to create, edit & preview the project's code
 * [Figma](https://www.figma.com/)
     * Used to develop the wireframes in to a full mockup including colours, fonts, proportions etc
-* [Bootstrap 5.2.3](https://getbootstrap.com/)
-    * TBC!!!
 * [Google Fonts](https://fonts.google.com/)
     * Used to select & import the fonts to the project (Poppins & Fira Sans)
 * [Font Awesome](https://fontawesome.com/)
     * Used to add icons to the site
+* [ChatGPT](https://openai.com/blog/chatgpt/)
+    * To create copy about countries and attractions
 * [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html)
     * Used to help create the colour pallette as well as designing some of the graphic elements such as the buttons
 * [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html)
@@ -126,6 +126,10 @@ CHECK IF ALL THESE ARE RELEVANT OR IF ANY ARE MISSING
     * Used to further optimise the images for the site and reduce file size
 * [Favicon.io](https://favicon.io/favicon-converter/)
     * Used to create and add the favicon to the browser tab
+* [Chart.js](https://www.chartjs.org/)
+    * Used to create and style the pie chart based on user personality results
+* [Google Maps API](https://developers.google.com/maps)
+    * Linked to Google Maps API to load the relevant country map and create clickable markers
 
 
 ## Features
@@ -286,6 +290,44 @@ After deploying the site to GitHub pages and viewing on mobile and in Safari the
 </details>
 
 
+#### **Website not scrolling to top on reload & button click**
+
+The website failed to scroll to the top when clicking on a button, this caused particular problems on mobile where less of the game was visible at once. I overcame this issue with the following techniques:
+
+* Adding `<script>history.scrollRestoration = "manual"</script>` to the head element of the HTML file to turn off the automatic browser scroll settings.
+* Adding `window.scrollTo({ top: 0, behavior: 'smooth' })` to the button clicks with a timeout to match the timeout on the button deselection.
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
+
+#### **Mobile input zoom-in not resetting**
+
+During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by...
+
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
+
 
 ### Testing User Stories
 
@@ -343,11 +385,13 @@ The project will now be cloned locally for you to use.
 
 ### Code
 
-* [Chart.js](https://www.chartjs.org/): ChartJS library used to create Pie Chart
+* Small code snippets & methods taken from online searches. All relevant code is credited in JavaScript files.
+* [Chart.js](https://www.chartjs.org/): ChartJS library used to create pie chart
+* [Google Maps API](https://developers.google.com/maps): Connected to Google Maps API for the map and clickable markers
 
 ### Content
 
-* [ChatGPT](https://openai.com/blog/chatgpt/): To create copy about countries and attractions
+* [ChatGPT](https://openai.com/blog/chatgpt/): To create text copy about countries and attractions to populate site
 
 ### Media
 
