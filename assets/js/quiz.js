@@ -1,5 +1,4 @@
 // declaring consts for Welcome Page DOM Objects
-const logo = document.getElementById("logo-div").children[0];
 const startGameBtn = document.getElementById("start-game-btn");
 const welcomeDiv = document.getElementById("welcome-div");
 
@@ -48,24 +47,6 @@ let peoplePoints = [1, 2, 0, 3, 0, 0];
 let remotePoints = [0, 0, 2, 0, 1, 3];
 
 
-// logo, restart & start again game buttons - reload page
-logo.addEventListener('click', function () {
-    window.location.reload();
-});
-restartGameBtn.addEventListener('click', function () {
-    window.location.reload();
-});
-startAgainBtn.addEventListener('click', function () {
-    window.location.reload();
-    
-});
-
-// function to move back to the top of the page
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-
 // Start Game Button - controls all game functionality
 function startGame(event) {
     event.preventDefault();
@@ -84,11 +65,12 @@ function startGame(event) {
         welcomeDiv.classList.toggle("hidden");
         gameDiv.classList.toggle("hidden");
         addQuestionContent(0);
+        // restart button - reload page
+        restartGameBtn.addEventListener('click', function () {
+            window.location.reload();
+        });
         handleAnswer();
     }
-
-
-
 
     // Populate the questions and answers & move on progress bar
     function addQuestionContent(index) {
@@ -291,6 +273,7 @@ function startGame(event) {
         };
     }
 
+
     // re-enable the buttons after question answered
     function enableButtons() {
         choices.forEach(choice => {
@@ -431,9 +414,20 @@ function startGame(event) {
 
         initMap(topCountryIndex);
 
-
+        // start again game button - reload page
+        startAgainBtn.addEventListener('click', function () {
+            window.location.reload();
+        });
         console.log("The winning personality on the results page is... " + topPersonality); // REMOVE ONCE FINISHED
 
+    }
+
+    // helper function to move back to the top of the page
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 
 
