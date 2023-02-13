@@ -116,8 +116,6 @@ CHECK IF ALL THESE ARE RELEVANT OR IF ANY ARE MISSING
     * Used to select & import the fonts to the project (Poppins & Fira Sans)
 * [Font Awesome](https://fontawesome.com/)
     * Used to add icons to the site
-* [ChatGPT](https://openai.com/blog/chatgpt/)
-    * To create copy about countries and attractions
 * [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html)
     * Used to help create the colour pallette as well as designing some of the graphic elements such as the buttons
 * [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html)
@@ -484,12 +482,14 @@ The project will now be cloned locally for you to use.
 
 ### Content
 
-* [ChatGPT](https://openai.com/blog/chatgpt/): To create text copy about countries and attractions to populate site
+* [Planet Aware](https://www.planetware.com/tourist-attractions/new-zealand-nz.htm): New Zealand Text
+* [Lonely Planet](https://www.lonelyplanet.com/articles/best-places-to-visit-in-mexico): Mexico Text
+* [Planet Aware](https://www.planetware.com/tourist-attractions/peru-per.htm): Peru Text
+* [Planet Aware](https://www.planetware.com/tourist-attractions/china-chn.htm): China Text
+* [Secret Africa](https://secretafrica.com/top-10-tourist-attractions-in-zambia/): Zambia Text
+* [Wild Frontiers Travel](https://www.wildfrontierstravel.com/en_GB/blog/places-to-visit-in-kyrgyzstan): Kyrgyzstan Text
 
 ### Media
-
-#### **Video**
-* Example text
 
 #### **Photos**
 

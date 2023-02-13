@@ -27,7 +27,8 @@ const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
 const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
 const resultsCountry = document.getElementById("country-heading-place");
 const resultsImage = document.getElementById("results-image");
-const resultsText = document.getElementById("country-text");
+const resultsTextP1 = document.getElementById("country-text-para1");
+const resultsTextP2 = document.getElementById("country-text-para2");
 const highlightCountryName = document.getElementById("highlight-country-name");
 const startAgainBtn = document.getElementById("start-again-btn");
 
@@ -409,7 +410,8 @@ function startGame(event) {
         let topCountryIndex = userTotal.indexOf(Math.max(...userTotal));
         resultsCountry.innerText = `${countries[topCountryIndex].name}!`;
         resultsImage.src = `assets/images/${countries[topCountryIndex].image}`;
-        resultsText.innerText = countries[topCountryIndex].text;
+        resultsTextP1.innerText = countries[topCountryIndex].text[0];
+        resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;
 
         initMap(topCountryIndex);
