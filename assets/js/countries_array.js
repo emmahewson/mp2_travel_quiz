@@ -1,6 +1,6 @@
 const countries = [{
         name: "New Zealand",
-        image: "newzealand_flag.png",
+        image: "nz_main.jpg",
         text: [
             "New Zealand is a breathtakingly beautiful country that offers a unique blend of stunning landscapes, diverse wildlife, and rich cultural heritage. From the majestic peaks of the Southern Alps to the pristine beaches of the Bay of Islands, visitors will be mesmerized by the natural beauty that surrounds them.",
             "Whether you prefer outdoor adventures, such as hiking, skiing, and surfing, or more relaxed pursuits, such as wine tasting and visiting art galleries, New Zealand has something for everyone. With friendly locals, delicious cuisine, and an abundance of activities, you'll leave with unforgettable memories of your time in this truly magical country."
@@ -16,56 +16,56 @@ const countries = [{
                 lat: "-45.0295903775837",
                 lng: "168.658942058923",
                 description: "Snuggled between the shores of shimmering Lake Wakatipu and the snowy peaks of the Remarkables, Queenstown is New Zealand's adventure capital and one of the country's top destinations for international visitors. Bungee jumping, jet boating, white water rafting, paragliding, rock climbing, mountain biking, and downhill skiing are just some of the adrenaline-fueled things to do here, and visitors can explore the stunning alpine scenery on the excellent network of hiking trails.",
-                imgOne: "newzealand_flag.png",
-                imgTwo: "mexico_flag.png",
-                imgThree: "peru_flag.png",
-                imgFour: "china_flag.png"
+                imgOne: "nz_queenstown1.jpeg",
+                imgTwo: "nz_queenstown2.jpeg",
+                imgThree: "nz_queenstown3.jpeg",
+                imgFour: "nz_queenstown4.jpeg"
             },
             {
                 title: "Fiordland National Park",
                 lat: "-45.4607777885178",
                 lng: "167.542494646234",
                 description: "A World Heritage Site, Fiordland National Park protects some of the most spectacular scenery in the country. Glaciers sculpted this dramatic landscape, carving the famous fjords of Milford, Dusky, and Doubtful Sounds. Visitors here can explore gushing cascades, offshore islands, virgin rain forests, vast lakes, and craggy mountain peaks.",
-                imgOne: "china_flag.png",
-                imgTwo: "peru_flag.png",
-                imgThree: "mexico_flag.png",
-                imgFour: "newzealand_flag.png"
+                imgOne: "nz_fjord1.jpeg",
+                imgTwo: "nz_fjord2.jpeg",
+                imgThree: "nz_fjord3.jpeg",
+                imgFour: "nz_fjord4.jpeg"
             },
             {
                 title: "Bay of Islands",
                 lat: "-35.2002139810079",
                 lng: "174.147378613278",
                 description: "A three-hour drive north of Auckland, the beautiful Bay of Islands is one of the most popular vacation destinations in the country. More than 144 islands dot the glittering bay, making it a haven for sailing and yachting. Penguins, dolphins, whales, and marlin live in these fertile waters, and the region is a popular sport-fishing spot. Visitors can sea kayak along the coast, hike the many island trails and explore subtropical forests where Kauri trees grow.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                imgOne: "nz_boi1.jpeg",
+                imgTwo: "nz_boi2.jpeg",
+                imgThree: "nz_boi3.jpeg",
+                imgFour: "nz_boi4.jpeg"
             },
             {
                 title: "Tongariro National Park",
                 lat: "-39.1921237561613",
                 lng: "175.593644315596",
                 description: "In the center of the North Island lies Tongariro National Park. A dual World Heritage Site due to its spectacular volcanic features and its importance to the Maori culture. One of the oldest national parks in the world, Tongariro is a land of dramatic beauty, with towering volcanoes, turquoise lakes, arid plateaus, alpine meadows, and hot springs. A highlight of the park is the Tongariro Alpine Crossing, one of the most popular day walks in the country.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                imgOne: "nz_tongariro1.jpeg",
+                imgTwo: "nz_tongariro2.jpeg",
+                imgThree: "nz_tongariro3.jpeg",
+                imgFour: "nz_tongariro4.jpeg"
             },
             {
                 title: "Kaikoura",
                 lat: "-42.397080802675",
                 lng: "173.678533106625",
                 description: "Birders, wildlife enthusiasts, and seafood aficionados will love the charming coastal village of Kaikoura. Tucked between the Seaward Kaikoura Range and the Pacific Ocean, Kaikoura offers excellent coastal hikes and popular whale watching tours. In addition to sperm whales and humpbacks, passengers may spot fur seals, dolphins, and a wide variety of birds including the graceful albatross.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                imgOne: "nz_kaikoura1.jpeg",
+                imgTwo: "nz_kaikoura2.jpeg",
+                imgThree: "nz_kaikoura3.jpeg",
+                imgFour: "nz_kaikoura4.jpeg"
             }
         ]
     },
     {
         name: "Mexico",
-        image: "mexico_flag.png",
+        image: "mex_main.jpg",
         text: [
             "Mexico is a country of vibrant culture, stunning natural beauty, and rich history. From the pristine beaches of Cancun to the bustling streets of Mexico City, the country offers something for every traveler. Visit the ancient pyramids of the Maya, or stroll through the colourful streets of colonial cities like San Miguel de Allende.",
             "Indulge in the delicious cuisine, including traditional dishes like tacos al pastor and pozole, or dance to the rhythm of mariachi music. With its warm climate, friendly locals, and diverse range of activities, Mexico is the perfect destination for a relaxing beach vacation or a cultural immersion experience. Whether you're seeking adventure, history, or simply a taste of the good life, Mexico is a country that promises to deliver."
@@ -130,7 +130,7 @@ const countries = [{
     },
     {
         name: "Peru",
-        image: "peru_flag.png",
+        image: "peru_main.jpg",
         text: [
             "Peru is a country of breathtaking natural beauty and rich cultural heritage located in South America. From the towering peaks of the Andes to the mysterious ruins of Machu Picchu, Peru offers endless opportunities for adventure and exploration.",
             "Visitors can hike through the lush Amazon rainforest, visit the colonial charm of Lima, or take a journey through the Sacred Valley to witness the wonder of Machu Picchu. With a diverse cuisine, vibrant music and arts scene, and friendly local population, Peru is the perfect destination for travelers looking to experience the best of South America."
@@ -142,60 +142,60 @@ const countries = [{
             lng: -75.69794894348689
         },
         highlights: [{
-                title: "Machu Picchu",
-                lat: "-13.2260487705917",
-                lng: "-72.4972464118752",
-                description: "Perched high upon a ridge, 300 meters above the Urubamba River, the majestic Inca City of Machu Picchu is one of the most dramatic settings of a ruined city anywhere in the world. Almost as impressive as the ruins themselves is the spectacular backdrop of steep, lush, and often cloud-shrouded mountains. The journey is also part of the experience of visiting Machu Picchu, whether it's by hiking the Inca Trail or seeing the route by train. In either case, it's impossible not to be inspired by the scenery.",
-                imgOne: "newzealand_flag.png",
-                imgTwo: "mexico_flag.png",
-                imgThree: "peru_flag.png",
-                imgFour: "china_flag.png"
+                title: "Huaraz",
+                lat: "-9.36034",
+                lng: "-77.50699",
+                description: "Huaraz is a city located in the Ancash region of Peru. It is known for its proximity to the Cordillera Blanca mountain range, making it a popular destination for outdoor activities such as hiking, climbing, and trekking. The city also boasts a rich cultural heritage, with many pre-Columbian ruins and archaeological sites in the surrounding area.",
+                imgOne: "peru_huaraz1.jpeg",
+                imgTwo: "peru_huaraz2.jpeg",
+                imgThree: "peru_huaraz3.jpeg",
+                imgFour: "peru_huaraz4.jpeg"
             },
             {
                 title: "Amazon Rainforest",
                 lat: "-12.5769623608411",
                 lng: "-69.2028660793961",
                 description: "Puerto Maldonado is a key jumping-off point for tours of the Amazon. This is a completely different experience than what you will find in other parts of Peru, with hot humid jungle and a chance to see all kinds of unique wildlife. Caimans, capybara, monkeys, parrots, turtles, and piranhas are what you can expect to find in this part of the country.",
-                imgOne: "china_flag.png",
-                imgTwo: "peru_flag.png",
-                imgThree: "mexico_flag.png",
-                imgFour: "newzealand_flag.png"
+                imgOne: "peru_amazon1.jpeg",
+                imgTwo: "peru_amazon2.jpeg",
+                imgThree: "peru_amazon3.jpeg",
+                imgFour: "peru_amazon4.jpeg"
             },
             {
                 title: "Cusco",
                 lat: "-13.5326799050756",
                 lng: "-71.9684334126922",
-                description: "Walking through the streets of Cusco is like wandering through a museum, with history built upon history in this UNESCO World Heritage Site. Inca ruins have been used in the foundations of many of the lovely old colonial buildings lining the narrow roads, showcasing the city's long history.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                description: "Walking through the streets of Cusco is like wandering through a museum, with history built upon history in this UNESCO World Heritage Site. Inca ruins have been used in the foundations of many of the lovely old colonial buildings lining the narrow roads, showcasing the city's long history. Cusco is also the gateway to the magnificent ruins of Machu Picchu",
+                imgOne: "peru_cusco1.jpeg",
+                imgTwo: "peru_cusco2.jpeg",
+                imgThree: "peru_cusco3.jpeg",
+                imgFour: "peru_cusco4.jpeg"
             },
             {
                 title: "Lake Titicaca",
                 lat: "-15.7190374523318",
                 lng: "-69.5813083708804",
                 description: "Sitting at 3,820 meters above sea level, Lake Titicaca is known for being the highest navigable lake in the world. A boat trip to the islands and surrounding villages is the best way to appreciate the lake. One of the main tourist attractions is the Uros Floating Islands (Islas Flotantes), which sustain small communities of Uros Indians. These are man-made islands constructed of reeds that have sustained a traditional way of life since the time of the Incas.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                imgOne: "peru_titicaca1.jpeg",
+                imgTwo: "peru_titicaca2.jpeg",
+                imgThree: "peru_titicaca3.jpeg",
+                imgFour: "peru_titicaca4.jpeg"
             },
             {
                 title: "Nazca",
                 lat: "-14.73877797037",
                 lng: "-75.1300264596599",
                 description: "The mysterious Nazca lines are an unusual sight that will leave you with a sense of awe. From the air, it is possible to see 70 different plant and animal drawings as well as hundreds of lines and other geometrical shapes. Some of these lines stretch as long as 10 kilo-meters, and they are spread over hundreds of square kilometres. Theories hold that the lines were the product of the Paracas and Nazca cultures sometime between 900 BC and AD 600, thoughhy they were created is the subject of much debate.",
-                imgOne: "mexico_flag.png",
-                imgTwo: "newzealand_flag.png",
-                imgThree: "china_flag.png",
-                imgFour: "peru_flag.png"
+                imgOne: "peru_nasca1.jpeg",
+                imgTwo: "peru_nasca2.jpeg",
+                imgThree: "peru_nasca3.jpeg",
+                imgFour: "peru_nasca4.jpeg"
             }
         ]
     },
     {
         name: "China",
-        image: "china_flag.png",
+        image: "china_main.jpg",
         text: [
             "China is a country of ancient wonders and modern marvels. From the Great Wall of China to the Forbidden City, the country is full of breathtaking historical sites. Take a stroll through the winding streets of Beijing's hutongs, or visit the iconic Terracotta Warriors in Xian.",
             "In addition to its rich history, China is also a land of breathtaking natural beauty, with scenic landscapes ranging from the towering peaks of the Himalayas to the tranquil beauty of Yunnan's rice paddies. With its bustling cities, vibrant culture, and delicious cuisine, China is a country that has something for everyone. Whether you're seeking adventure, history, or simply a taste of the good life, China is the perfect destination."
@@ -260,7 +260,7 @@ const countries = [{
     },
     {
         name: "Zambia",
-        image: "zambia_flag.png",
+        image: "zambia_main.jpg",
         text: [
             "Zambia is a landlocked country in southern Africa, known for its breathtaking natural beauty and rich cultural heritage. With its diverse landscape ranging from the lush Victoria Falls, the expansive Kafue National Park, and the rolling savannas of the South Luangwa National Park, Zambia is a true adventure destination.",
             "Visitors can take part in a range of activities, from wildlife viewing to rafting, fishing, and cultural tours. With a friendly and welcoming local population, a vibrant arts and music scene, and a range of comfortable accommodations, Zambia is the perfect destination for travelers looking for a unique and authentic African experience."
@@ -325,7 +325,7 @@ const countries = [{
     },
     {
         name: "Kyrgyzstan",
-        image: "kyrgyzstan_flag.png",
+        image: "kyrg_main.jpg",
         text: [
             "Kyrgyzstan is a Central Asian country known for its breathtaking natural beauty and rich nomadic culture. Surrounded by towering mountains and rolling green pastures, Kyrgyzstan offers endless opportunities for outdoor adventure, including hiking, horseback riding, and skiing. Take a dip in the hot springs of Issyk-Kul Lake, or visit the historic nomadic yurts that dot the countryside.",
             "With a long history of hospitality, Kyrgyzstan's friendly local population will make you feel right at home and with a rich cultural heritage that includes traditional music, dance, and cuisine, Kyrgyzstan is the perfect destination for travellers seeking a unique and authentic Central Asian experience."

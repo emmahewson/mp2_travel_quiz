@@ -409,7 +409,7 @@ function startGame(event) {
         //calculates the index of the highest score (Matches index of country in countries array)
         let topCountryIndex = userTotal.indexOf(Math.max(...userTotal));
         resultsCountry.innerText = `${countries[topCountryIndex].name}!`;
-        resultsImage.src = `assets/images/${countries[topCountryIndex].image}`;
+        resultsImage.src = `assets/images/countries/main/${countries[topCountryIndex].image}`;
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;

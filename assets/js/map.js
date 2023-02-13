@@ -54,10 +54,10 @@
                 google.maps.event.addListener(marker, "click", function (e) {
                     highlightTitle.innerText = this.title;
                     highlightText.innerText = this.text;
-                    imageOne.src = `assets/images/${this.imgOne}`;
-                    imageTwo.src = `assets/images/${this.imgTwo}`;
-                    imageThree.src = `assets/images/${this.imgThree}`;
-                    imageFour.src = `assets/images/${this.imgFour}`;
+                    imageOne.src = `assets/images/countries/highlights/${this.imgOne}`;
+                    imageTwo.src = `assets/images/countries/highlights/${this.imgTwo}`;
+                    imageThree.src = `assets/images/countries/highlights/${this.imgThree}`;
+                    imageFour.src = `assets/images/countries/highlights/${this.imgFour}`;
                     highlightInfoDiv.classList.remove("hidden");
                     highlightInfoDiv.scrollIntoView(false, {behavior: 'smooth'});
                 });
