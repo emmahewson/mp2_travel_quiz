@@ -9,6 +9,7 @@
             index = index;
         };
         
+        // sets zoom level based on screen size
         let zoomLevel;
         let width = screen.width;
         if (width <= 576) {
