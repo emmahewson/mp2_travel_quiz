@@ -1,5 +1,14 @@
   
     function initMap(index) {
+        // gives the Google Maps API a default country on page load
+        // avoids console errors
+        // adapted from https://www.javascripttutorial.net/es6/javascript-default-parameters/#:~:text=Setting%20JavaScript%20default%20parameters%20for,the%20default%20values%20of%20undefined%20.
+        if (typeof index === 'undefined') {
+            index = 0;
+        } else {
+            index = index;
+        };
+        
         let zoomLevel;
         let width = screen.width;
         if (width <= 576) {

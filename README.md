@@ -347,6 +347,71 @@ I found that the button text colour on mobile was set to blue rather than black,
 </details>
 
 
+#### **Google Maps API - Console Errors**
+
+On page load Dev Tool's console was logging a series of errors relating to Google Maps API.
+
+**Error 1**
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+</details>
+
+This error was also stopping the map from loading. I fixed this by changing the order that the `<script>` files were called in the index.html file footer. The Google Maps API script had to be called after the map.js file containing the initmap function as in the code below.
+
+**Index.html Footer - script files order**
+
+```
+    <script src="assets/js/questions_array.js"></script>
+    <script src="assets/js/countries_array.js"></script>
+    <script src="assets/js/personalities_array.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3bbw0F5d1sjzp5iet_vlxKb0RrevMCA&callback=initMap"></script>
+    <script src="assets/js/quiz.js"></script>
+```
+
+**Error 2**
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+</details>
+
+This error was due to the initMap function not being fed an index value from the countries array as it hadn't been calculated yet. I overcame this using an if statement at the start of the initMap function that checked if the parameter was undefined (ie it hadn't been given a value yet) and if so it gave it the value of 0 to load the first country in the countries array. This got rid of the console error.
+I found and adapted this solution from [here](https://www.javascripttutorial.net/es6/javascript-default-parameters/#:~:text=Setting%20JavaScript%20default%20parameters%20for,the%20default%20values%20of%20undefined%20.). (Credited in code comments.)
+
+
+
+
+
+#### **Console Errors with Chart.js**
+
+On page load Dev Tool's console was logging an error and failing to load the pie chart.
+
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Before*
+
+<img src="">
+
+*After*
+
+</details>
+
+I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E). It was happenning because the CDN link I was using to the chart.js library was out of date and I needed to update it to a more recent version - as in the code below.
+
+
+```
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+```
+
+
 
 ### Testing User Stories
 
