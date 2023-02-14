@@ -23,7 +23,7 @@ const questions = [{
         },
         {
             answerNumber: 5,
-            answerText: "In the kitchen making 'helpful' cooking suggestions",
+            answerText: "In the kitchen 'helping' the chef",
             answerType: "food"
         },
         {
@@ -53,7 +53,7 @@ const questions = [{
         },
         {
             answerNumber: 4,
-            answerText: "Getting as far away from other human beings as possible",
+            answerText: "Getting as far from other people as possible",
             answerType: "remote"
         },
         {
@@ -105,10 +105,10 @@ const questions = [{
 },
 {
     questionNumber: 4,
-    questionText: "Which breakfast appeals to you the most?",
+    questionText: "My preferred breakfast is...",
     answers: [{
             answerNumber: 1,
-            answerText: "Sprouted millet and buckwheat toast with avocado and smoked butter",
+            answerText: "Buckwheat toast with avocado and smoked butter",
             answerType: "food"
         },
         {
@@ -118,12 +118,12 @@ const questions = [{
         },
         {
             answerNumber: 3,
-            answerText: "5am surf followed by a trail bar and coffee in your campervan",
+            answerText: "5am surf followed by a coffee in the campervan",
             answerType: "thrill"
         },
         {
             answerNumber: 4,
-            answerText: "Anything as long as you can share it with your dog",
+            answerText: "Anything as long as I can share it with my dog",
             answerType: "wildlife"
         },
         {
@@ -158,7 +158,7 @@ const questions = [{
         },
         {
             answerNumber: 4,
-            answerText: "Nowhere, I dropped my phone in to a ravine",
+            answerText: "Nowhere, I dropped my phone in a ravine",
             answerType: "thrill"
         },
         {
@@ -283,7 +283,7 @@ const questions = [{
     questionText: "You're late for work... why?",
     answers: [{
             answerNumber: 1,
-            answerText: "I got trapped in a Google blackhole of pointless facts.",
+            answerText: "I got trapped in a Google vortex of facts.",
             answerType: "culture"
         },
         {
@@ -303,7 +303,7 @@ const questions = [{
         },
         {
             answerNumber: 5,
-            answerText: "I got stuck in a glacial cravasse for a few days.",
+            answerText: "I got stuck in a glacial cravasse.",
             answerType: "thrill"
         },
         {

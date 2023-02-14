@@ -282,8 +282,8 @@ const countries = [{
         zoomLrg: 5,
         zoomSml: 4.5,
         center: {
-            lat: -9.124418935821506,
-            lng: -75.69794894348689
+            lat: -9.061035675257347,
+            lng: -72.97094771150853
         },
         highlights: [{
                 title: "Huaraz",
@@ -446,10 +446,10 @@ const countries = [{
                 ]
             },
             {
-                title: "The Forbidden City & the Imperial Palace, Beijing",
-                lat: "39.9171793523341",
-                lng: "116.390743586633",
-                description: "China's largest and most important building, the Forbidden City (Zǐjìnchéng) - also known as the Imperial Palace - is situated in the very heart of Beijing and is a must-see when visiting the country. Started during the Yuan Dynasty between 1271-1368, much of the complex seen today was built between 1406 and 1420. Really many splendid palaces in one, this sprawling complex was the residence of 24 Ming and Qing Emperors, whose presence forbade the entry of anyone other than the imperial family and their courtesans.",
+                title: "The Potala Palace, Tibet",
+                lat: "29.65570864098931",
+                lng: "91.11861138650869",
+                description: "The Potala Palace is an iconic attraction in Tibet that draws visitors from around the world. As the former residence of the Dalai Lama, the palace boasts stunning architecture, intricate artwork, and breathtaking views of the surrounding mountains. It's a must-see destination for anyone interested in Tibetan history and culture.",
                 images: [
                     {
                         img: "",
