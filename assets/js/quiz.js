@@ -19,9 +19,7 @@ const resultsDiv = document.getElementById("results-div");
 const personalityHeading = document.getElementById("personality-heading");
 const personalityTextP1 = document.getElementById("personality-text-p1");
 const personalityTextP2 = document.getElementById("personality-text-p2");
-const secondPersonality = document.getElementById("second-personality");
-const secondPrefix = document.getElementById("second-prefix");
-const thirdPersonality = document.getElementById("third-personality");
+const personalityTextP3 = document.getElementById("personality-text-p3");
 const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
 const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
 const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
@@ -356,10 +354,16 @@ function startGame(event) {
             pieLabels.push((reverseSortedPersonalities[i].name));
         };
 
-        // Populates the 2nd and 3rd place countries in the personality description
-        secondPersonality.innerText = reverseSortedPersonalities[1].name;
-        secondPrefix.innerText = reverseSortedPersonalities[1].prefix;
-        thirdPersonality.innerText = reverseSortedPersonalities[2].name;
+        // Populates the 3rd paragraph of the personality based on if there are other high scoring personality types
+        if (percentageArray[1] < 15) {
+            personalityTextP3.innerText = `Check our our recommendations below to see which destination suits all these aspects your personality!`
+        } else if (percentageArray[2] < 15) {
+            personalityTextP3.innerHTML = `But we humans are complex creatures, you also scored highly as ${reverseSortedPersonalities[1].prefix} <strong>${reverseSortedPersonalities[1].name}</strong>. Check our our recommendations below
+            to see which destination suits all these aspects your personality!`;
+        } else {
+            personalityTextP3.innerHTML = `But we humans are complex creatures, you also scored highly as ${reverseSortedPersonalities[1].prefix} <strong>${reverseSortedPersonalities[1].name}</strong> and <strong>${reverseSortedPersonalities[2].name}</strong>. Check our our recommendations below
+            to see which destination suits all these aspects your personality!`
+        };
 
         console.log("Personality Tally - end of everything" + personalityTally) // REMOVE ONCE FINISHED
         // build piechart

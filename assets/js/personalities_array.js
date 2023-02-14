@@ -1,7 +1,7 @@
 let personalities = [{
         type: "culture",
         score: 0,
-        prefix: "A",
+        prefix: "a",
         name: "Culture-Vulture",
         text: [
             "Knowledge is power could be your motto! You love to learn about the world around you and what better way to do that than to travel! You may well be knowledgable about art, literature, music or history. You and often seek out opportunities to explore and learn more about different forms of culture.",
@@ -13,7 +13,7 @@ let personalities = [{
     {
         type: "food",
         score: 0,
-        prefix: "A",
+        prefix: "a",
         name: "Foodie",
         text: [
             "Food Glorious Food! You are at your happiest with a plate or glass of something delicious in front of you. Your best travel memories revolve around that amazing restaurant you went to in the back streets of Buenos Aires or finding the perfect dumpling in China.",
@@ -25,7 +25,7 @@ let personalities = [{
     {
         type: "people",
         score: 0,
-        prefix: "A",
+        prefix: "a",
         name: "People-Person",
         text: [
             "You are someone who thrives on social interactions and has a natural ability to connect with others. You are energetic, sociable, and often the life of the party and have a way of making others feel comfortable and included. You love to chat and work out what makes other people tick.",
@@ -37,7 +37,7 @@ let personalities = [{
     {
         type: "remote",
         score: 0,
-        prefix: "A",
+        prefix: "a",
         name: "Peace-Lover",
         text: [
             "Hell is other people… you are someone who is super comfortable with your own company and dislikes noise, chaos and crowds. Being alone allows you to recharge and rejuvenate and to fill your lungs with that fresh, unpolluted air of the remote areas that you love so much",
@@ -49,7 +49,7 @@ let personalities = [{
     {
         type: "thrill",
         score: 0,
-        prefix: "A",
+        prefix: "a",
         name: "Thrill-Seeker",
         text: [
             "You love an adrenaline rush! You are at your happiest when you are flying through the air or leaping in the sea. Anything that gets the blood pumping and the adrenal gland firing!",
@@ -61,7 +61,7 @@ let personalities = [{
     {
         type: "wildlife",
         score: 0,
-        prefix: "An",
+        prefix: "an",
         name: "Animal-Lover",
         text: [
             "4 legs good! You have a deep passion and affinity for our animal friends. You'd rather be in the company of animals than humans and you love to interact with animals, to protect them and to see them in their natural environment. You have a great respect and love for nature and believe the natural world should be cherished and protected.",
