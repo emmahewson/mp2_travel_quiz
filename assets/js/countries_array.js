@@ -428,20 +428,20 @@ const countries = [{
                 description: "The magnificent Great Wall of China - known in Chinese as 'Changcheng', or the 'Long Wall' - stretches more than 6,000 kilometers from the fortresses of Shanhaiguan in the east all the way to Jiayuguan in the west. Averaging six to eight meters in height but rising as high as 16 meters - and wide enough in places for five horses or 10 men to pass - the wall boasts numerous battlements and watchtowers. Some of the wall's oldest fortifications date back as far as the 7th century BC, with the best-known areas added around 210 BC.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_wall1.jpeg",
+                        alt: "The Great Wall of China on a green hilltop"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_wall2.jpeg",
+                        alt: "The Great Wall of China in the snow"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_wall3.jpeg",
+                        alt: "View through a door in the Great Wall of China"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_wall4.jpeg",
+                        alt: "Tourists on the Great Wall of China"
                     }
                 ]
             },
@@ -452,20 +452,20 @@ const countries = [{
                 description: "The Potala Palace is an iconic attraction in Tibet that draws visitors from around the world. As the former residence of the Dalai Lama, the palace boasts stunning architecture, intricate artwork, and breathtaking views of the surrounding mountains. It's a must-see destination for anyone interested in Tibetan history and culture.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_potala1.jpeg",
+                        alt: "The Potala Palace on a hilltop"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_potala2.jpeg",
+                        alt: "People pray at one of The Potala Palace's temples"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_potala3.jpeg",
+                        alt: "View of the inside of the Potala Palace"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_potala4.jpeg",
+                        alt: "Ornate, pointy roof on The Potala Palace"
                     }
                 ]
             },
@@ -476,20 +476,20 @@ const countries = [{
                 description: "It was while digging wells on the outskirts of Xi'an in the 1970s that farmers stumbled across what was to be China's most important archeological find: the Terracotta Army. Distributed over three large underground pits and built to guard the First Emperor's tomb, the find included more than 8,000 life-size warriors, some 520 horses, and more than 100 chariots, along with numerous other non-military characters dating from around 280 BC. Although some were severely damaged due to the passing of time, many of the statues unearthed have been painstakingly re-assembled and stand as testament to the importance bestowed upon the emperor and the afterlife.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_terra1.jpeg",
+                        alt: "Large aircraft hangar with rows of terrcotta warrior statues"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_terra2.jpeg",
+                        alt: "Close up on a terracotta warrior's face"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_terra3.jpeg",
+                        alt: "A group of terracotta warriors"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_terra4.jpeg",
+                        alt: "A side view of some terracotta warriors"
                     }
                 ]
             },
@@ -500,20 +500,20 @@ const countries = [{
                 description: "No visit to China would be complete without at least one panda experience. While the country's top zoos boast many fine specimens of these fascinating creatures, the best place to see them in a close approximation to their natural habitat is at the excellent Research Base of Giant Panda Breeding in Chengdu, located in the province of Sichuan. Here, you'll have the chance to watch as many as 80 pandas go about their daily routines, from foraging to playing in the facility's large park-like setting.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_panda1.jpeg",
+                        alt: "Adult pandas looking at the camera"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_panda2.jpeg",
+                        alt: "A red panda asleep on a branch with his tongue out"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_panda3.jpeg",
+                        alt: "A panda sculpture"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_panda4.jpeg",
+                        alt: "Baby pandas, all different sizes, fast asleep"
                     }
                 ]
             },
@@ -524,20 +524,20 @@ const countries = [{
                 description: "Known in China as Chang Jiang ('Long River'), the mighty Yangtze River extends more than 6,000 kilometers, making it the longest and most important river in China and the third longest in the world after the Amazon and the Nile. While its immense length ensures the river can be visited at numerous points in China, by far the most popular for tourists is the beautiful Three Gorges - Qutang, Wu, and Xiling - a 200-kilometer stretch between the towns of Fengjie and Yichang. In places a mix of raging torrents and dangerous shallows, here the river winds its way through the gorges and their rugged cliffs and high mountain peaks in a stretch of scenery as dramatic as the Grand Canyon.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_yang1.jpeg",
+                        alt: "Three Gorges on the Yangtze River"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_yang2.jpeg",
+                        alt: "A tourist admires the scenery on a Yangtze River cruise"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_yang3.jpeg",
+                        alt: "Traditional boats on the river"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "chi_yang4.jpeg",
+                        alt: "The wide valley of the Yangtze River"
                     }
                 ]
             }
