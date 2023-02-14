@@ -700,20 +700,20 @@ const countries = [{
                 description: "Arslanbob is a stunning mountainous village located in the Jalal-Abad region of Kyrgyzstan, known for its natural beauty, rich cultural heritage, and abundant walnut forests. Visitors can explore the lush forests, hike through the rolling hills, and experience the traditional way of life of the local Kyrgyz people. With its picturesque setting, charming homestays, and delicious cuisine, Arslanbob is the perfect destination for those seeking a unique and authentic Kyrgyz experience.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_arslan1.jpeg",
+                        alt: "A family in traditional clothes in Arslanbob"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_arslan2.jpeg",
+                        alt: "Old farmhouse in Arslanbob"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_arslan3.jpeg",
+                        alt: "Hands holding walnuts from the Arslanbob walnut groves"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_arslan4.jpeg",
+                        alt: "Green rolling hills and mountains near Arslanbob"
                     }
                 ]
             },
@@ -724,20 +724,20 @@ const countries = [{
                 description: "Bishkek is the vibrant capital city of Kyrgyzstan, known for its lively culture, bustling markets, and stunning mountain scenery. Visitors can stroll through the city's parks and boulevards, sample the delicious local cuisine, and explore the museums and cultural sites. Whether you're seeking adventure in the surrounding mountains, or simply a taste of city life, Bishkek has something for everyone. With its friendly locals, comfortable accommodations, and diverse range of activities, Bishkek is the perfect starting point for any Kyrgyzstan adventure.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_bishkek1.jpeg",
+                        alt: "Aerial view of Bishkek main square"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_bishkek2.jpeg",
+                        alt: "Flowers on one of Bishkek's squares"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_bishkek3.jpeg",
+                        alt: "Traditional Kyrgyz bread at a Bishkek market"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_bishkek4.jpeg",
+                        alt: "3 Kyrgyz chefs present a traditional feast"
                     }
                 ]
             },
@@ -748,20 +748,20 @@ const countries = [{
                 description: "Jety Orguz is a scenic valley located in the Terskey Alatau Mountains of Kyrgyzstan, known for its stunning natural beauty and rich cultural heritage. Visitors can hike through the rolling hills, take a dip in the hot springs, and stay in the traditional yurts of the local nomads. With its pristine setting, comfortable homestays, and delicious local cuisine, Jety Orguz is the perfect destination for those seeking a unique and authentic Kyrgyz experience.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_jety1.jpeg",
+                        alt: "The red cliffs of Jety-Orguz canyon"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_jety2.jpeg",
+                        alt: "A yurt high in the valley"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_jety3.jpeg",
+                        alt: "Jert-Orguz Canyon"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_jety4.jpeg",
+                        alt: "A young boy stands on two horses near Jety-Orguz"
                     }
                 ]
             },
@@ -772,20 +772,20 @@ const countries = [{
                 description: "Lake Issyk Kul is the largest lake in Kyrgyzstan and one of the largest high-altitude lakes in the world. Surrounded by the towering peaks of the Tien Shan Mountains, Lake Issyk Kul is known for its stunning natural beauty and rich cultural heritage. Visitors can relax on the sandy beaches, take a dip in the warm waters, or explore the nearby villages and historical sites.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_issuk1.jpeg",
+                        alt: "Aerial view of Lake Issuk Kul"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_issuk2.jpeg",
+                        alt: "An eagle hunter in traditional dress holds his eagle"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_issuk3.jpeg",
+                        alt: "Two horses in a mountain valley near Issuk Kul"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_issuk4.jpeg",
+                        alt: "Lake Issuk Kul with snowy mountains in the distance"
                     }
                 ]
             },
@@ -796,20 +796,20 @@ const countries = [{
                 description: "Lake Song Kul is a pristine alpine lake located in the central Tian Shan Mountains of Kyrgyzstan. Surrounded by rolling meadows and towering peaks, Lake Song Kul is known for its stunning natural beauty and rich cultural heritage. Visitors can explore the surrounding pastures on horseback, relax in traditional nomadic yurts, and sample the delicious local cuisine. This is a truly remote and beautiful place to spend a few days.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_song1.jpeg",
+                        alt: "Vast empty plains and a single yurt at Song Kul"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_song2.jpeg",
+                        alt: "Men build a yurt at Song Kul"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_song3.jpeg",
+                        alt: "A young man rides a horse with lake Song Kul in the background"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "kyr_song4.jpeg",
+                        alt: "A group of yurts and horses near the lake"
                     }
                 ]
             }
