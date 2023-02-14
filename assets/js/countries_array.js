@@ -564,20 +564,20 @@ const countries = [{
                 description: "Regarded as one of the Seven Wonders of the Natural World and one of Africa's most astonishing sights, Victoria Falls reigns supreme as one of the top tourist attractions in Zambia. Victoria Falls is a fantastic start or end point to a Zambian safari. If you have the time, it is highly recommended that you spend a few days exploring and sampling the many thrilling activities on offer. From relaxed sightseeing on foot and scenic helicopter flights to heart-pounding, adrenaline-inducing experiences like white water rafting on high-grade rapids, microlight flights and bungee jumping - there is something for everyone to enjoy!",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_falls1.jpeg",
+                        alt: "Victoria Falls"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_falls2.jpeg",
+                        alt: "Victoria Falls Aerial View"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_falls3.jpeg",
+                        alt: "A girl jumps in to a pool a the top of the falls"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_falls4.jpeg",
+                        alt: "A girl jumps backwards doing a bungy jump"
                     }
                 ]
             },
@@ -588,20 +588,20 @@ const countries = [{
                 description: "Situated along the lower section of the Zambezi River, the Lower Zambezi National Park is one of Zambia's premier wildlife and safari destinations. The main draw of the national park is its remote off-the-beaten-path location and pristine wilderness. Encompassing vast and varied terrain, including forest, grassland, and floodplain, the Lower Zambezi National Park supports a fantastic diversity of wildlife. Home to plenty of big game, including elephants, lions, buffaloes, hippos, and Nile crocodiles, as well as an array of birdlife and other wildlife species, wildlife enthusiasts will definitely not be disappointed.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_lznp1.jpeg",
+                        alt: "Elephants on a wide plain"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_lznp2.jpeg",
+                        alt: "Baboons at sunset"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_lznp3.jpeg",
+                        alt: "A leopard turns and snarls at the camera"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_lznp4.jpeg",
+                        alt: "An elephant in a forest stretches its trunk towards the canopy"
                     }
                 ]
             },
@@ -612,20 +612,20 @@ const countries = [{
                 description: "South Luangwa National Park is arguably the greatest wildlife-viewing destination and top tourist attraction in Zambia. Boasting among the highest concentration of wildlife in all of Africa, the park is regarded as one of the very best places to see large herds of buffalo, elephants, and giraffes. South Luangwa is famous for their walking safaris, which are led by expert guides through some of Africa's best game viewing territory. Another major attraction is boat safaris, especially during the park's rainy season. As the Luangwa River breaks its banks, shallow-draft vessels can navigate into the flooded riverine groves - this is undoubtedly one of Zambia's most unique and exciting safari highlights!",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_slnp1.jpeg",
+                        alt: "Elephants in the water"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_slnp2.jpeg",
+                        alt: "Antelope at sunset"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_slnp3.jpeg",
+                        alt: "Elephants at sunset"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_slnp4.jpeg",
+                        alt: "A large male lion stands by a waterhole"
                     }
                 ]
             },
@@ -636,20 +636,20 @@ const countries = [{
                 description: "Kafue National Park is the largest national park and wildlife reserve in Zambia and the second-biggest park in all of Africa. It covers more than 22000km² (2500km2 more than South Africa's Kruger National Park), with the terrain varying significantly from north to south. Despite being one of Africa's largest parks, Kafue is the least visited of Zambia's three major national parks. Located well off-the-beaten-track, Kafue National Park is still very, very wild and regarded as somewhat of a Zambian hidden gem.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_knp1.jpeg",
+                        alt: "Aerial view of Kafue National Park"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_knp2.jpeg",
+                        alt: "A leopard in long brown grass"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_knp3.jpeg",
+                        alt: "A female lion at sunset by a lake"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_knp4.jpeg",
+                        alt: "Antelope and elephants on the savannah"
                     }
                 ]
             },
@@ -660,20 +660,20 @@ const countries = [{
                 description: "Lake Kashiba is undoubtedly one of Zambia's best hidden gems. As the surface level of the water is 30 feet below the floor of the surrounding forest, Lake Kashiba is often referred to as a 'sunken lake'. While the surface area of the lake is small, it is incredibly deep with a depth of 330 feet around its sides. The depth of the centre of Lake Kashiba is however unknown, which has given rise to several mystical tales and legends of monsters below the surface. Despite the air of mystery that surrounds it, the bluish-green water of the lake is extremely welcoming, and it has become a popular destination for activities like fishing and swimming.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_kashiba1.jpeg",
+                        alt: "Trees by Lake Kashiba"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_kashiba2.jpeg",
+                        alt: "A man jumps in to Lake Kashiba"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_kashiba3.jpeg",
+                        alt: "Reflected trees in Lake Kashiba"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "zam_kashiba4.jpeg",
+                        alt: "The green waters of Lake Kashiba"
                     }
                 ]
             }
