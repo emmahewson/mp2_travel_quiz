@@ -9,22 +9,29 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     background-color: #fff;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 .inline {
     display: inline;
 }
 
-.text-centre {
-    text-align: center;
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.inline-block {
-    display: inline-block;
+.text-centre {
+    text-align: center;
 }
 
 .uppercase {
@@ -42,9 +49,29 @@ h3 {
 }
 
 p,
-button {
+button,
+input,
+#personality-stats-div h3 {
     font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
+
+.small-heading {
+    font-size: 36px;
+}
+
+.weight-500 {
+    font-weight: 500;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
 
 /* Start/Restart Game Buttons */
 
@@ -52,7 +79,6 @@ button {
     padding: 10px 25px;
     border-radius: 10px;
     border: none;
-    font-size: 16px;
     box-shadow: inset 1px 0px 3px 1px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     color: black;
@@ -60,7 +86,6 @@ button {
 
 #start-game-btn,
 #go-home-btn {
-    font-weight: 500;
     background-color: #FC7070;
     color: white;
     transition: all 0.25s ease-in-out;
@@ -69,13 +94,8 @@ button {
     -o-transition: all 0.25s ease-in-out;
 }
 
-#restart-game-btn,
-#start-again-btn {
-    font-weight: 400;
-}
 
 #restart-game-btn {
-    font-weight: 400;
     background-color: #d1d1d1;
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -89,10 +109,6 @@ button {
     -moz-transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
-}
-
-#start-again-btn:hover {
-    background-color: #FC7070;
 }
 
 #restart-button-div,
@@ -114,10 +130,6 @@ button {
 
 /* Logo */
 
-#logo-div {
-    display: flex;
-    justify-content: center;
-}
 
 #logo-div img {
     width: 220px;
@@ -146,18 +158,12 @@ button {
     position: absolute;
     bottom: 20px;
     width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: baseline;
     column-gap: 20px;
 }
 
-#footer-contents>p {
-    font-weight: 600;
-}
 
 #social-links {
-    display: flex;
     column-gap: 20px;
 }
 
@@ -186,7 +192,6 @@ button {
 }
 
 #welcome-div h1 {
-    font-size: 36px;
     margin-bottom: 30px;
 }
 
@@ -200,7 +205,6 @@ button {
     min-width: 150px;
     border-radius: 10px;
     padding: 10px;
-    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -239,7 +243,6 @@ button {
 }
 
 #question-text {
-    font-weight: 500;
     font-size: 26px;
     margin-bottom: 40px;
     padding: 0 25px;
@@ -265,17 +268,12 @@ button {
 .btn-choice {
     background-color: #4D93BB;
     color: white;
-    font-size: 16px;
-    font-weight: 500;
     width: 48%;
     height: 90px;
     padding: 18px 20px;
     border: none;
     box-shadow: 2px -2px 4px 2px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: background-color 0.25s ease-in-out;
     -moz-transition: background-color 0.25s ease-in-out;
     -webkit-transition: background-color 0.25s ease-in-out;
@@ -287,7 +285,6 @@ button {
 /* Game Tie Breaker styling */
 
 #answer-tie-div {
-    justify-content: center;
     column-gap: 20px;
 }
 
@@ -296,9 +293,7 @@ button {
     margin: 0 auto;
 }
 
-
 #tie-break-title {
-    font-weight: 600;
     font-size: 26px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -306,8 +301,6 @@ button {
 }
 
 #tie-break-text {
-    font-size: 16px;
-    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -404,6 +397,11 @@ button {
     padding: 40px;
 }
 
+#personality-stats-div {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
 #country-info-div,
 #country-highlights-div {
     padding: 50px 40px;
@@ -418,42 +416,15 @@ button {
 }
 
 #personality-heading {
-    font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-#personality-div-flex {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 20px;
-}
-
-#personality-text-div,
-#personality-stats-div {
-    width: 48%;
-}
-
-#second-personality,
-#third-personality {
-    font-weight: 600;
-}
 
 #stats-key-chart-div {
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 15px;
-
-    flex-wrap: wrap;
+    column-gap: 10px;
     row-gap: 15px;
 
-}
-
-#personality-stats-div h3 {
-    font-size: 16px;
 }
 
 .stat-key-div {
@@ -463,14 +434,8 @@ button {
     min-width: 175px;
 }
 
-#pie-numbers {
-    font-size: 13px;
-    justify-self: flex-end;
-}
-
-.stat-percent {
-    font-weight: 600;
-    font-size: 15px;
+.stat-type {
+    font-size: 14px;
 }
 
 .stat-key {
@@ -539,9 +504,6 @@ button {
     color: white;
 }
 
-#country-highlights-div>h2 {
-    font-size: 36px;
-}
 
 #country-highlights-div>p {
     margin-top: 8px;
@@ -599,14 +561,11 @@ button {
 }
 
 #highlight-title {
-    font-weight: 700;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
 #highlight-photo-div {
-    display: flex;
-    flex-wrap: wrap;
     padding-top: 30px;
     border-radius: 0 0 24px 24px;
 }
@@ -626,7 +585,6 @@ button {
 
 #start-again-button-div p {
     margin-bottom: 20px;
-    font-weight: 600;
 }
 
 
@@ -640,7 +598,6 @@ button {
 }
 
 #error-div h1 {
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -661,19 +618,6 @@ button {
     #country-info-div {
         margin-left: 60px;
         margin-right: 60px;
-    }
-
-    #personality-text-div {
-        width: 100%;
-        order: 2;
-    }
-
-    #personality-stats-div {
-        width: 100%;
-    }
-
-    #personality-heading {
-        margin-bottom: 20px;
     }
 
     #personality-div-flex {
@@ -736,7 +680,6 @@ button {
     }
 
     #welcome-div>h1 {
-        font-size: 24px;
         margin-bottom: 10px;
     }
 
@@ -816,8 +759,7 @@ button {
         margin: 30px 0;
     }
 
-    #personality-heading,
-    #country-highlights-div>h2 {
+    .small-heading {
         font-size: 24px;
     }
 
@@ -846,6 +788,14 @@ button {
     #cloud-div {
         height: 250px;
     }
+    #social-links,
+    #footer-contents {
+        column-gap: 10px;
+    }
+    
+    #social-links a {
+        font-size: 26px;
+    }
 }
 
 
@@ -855,12 +805,17 @@ button {
         background-color: #407694;
     }
 
-    #start-game-btn:hover {
+    #start-game-btn:hover,
+    #go-home-btn:hover {
         background-color: #ff3030;
     }
 
     #restart-game-btn:hover {
         background-color: #FCADAD;
+    }
+
+    #start-again-btn:hover {
+        background-color: #FC7070;
     }
 
     .question-photo:hover {

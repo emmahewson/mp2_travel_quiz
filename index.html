@@ -22,11 +22,11 @@
 <body>
     <!-- Background Gradient & Logo -->
     <div id="background-div">
-        <div id="logo-div"><img src="assets/images/quiz_logo_01.svg" alt="The Travel Personality Quiz"></div>
+        <div class="flex-center" id="logo-div"><img src="assets/images/quiz_logo_01.svg" alt="The Travel Personality Quiz"></div>
 
         <!-- Welcome -->
         <div class="text-centre" id="welcome-div">
-            <h1>WELCOME!</h1>
+            <h1 class="small-heading">WELCOME!</h1>
             <p>Hey there traveller! Are you looking to get off the beaten-track but have no idea where to go? Are you a
                 thrill-seeker or an animal lover? Do you love the buzz of the city or the total silence of
                 the
@@ -41,7 +41,7 @@
                 <form action="" id="start-form" method="POST" onsubmit="startGame(event)">
                     <input class="text-centre" id="name-input" type="text" placeholder="Enter your name"
                         aria-label="Enter your name" minlength="2" maxlength="10">
-                    <input type="submit" class="btn-game-main" id="start-game-btn" value="Start Quiz"></input>
+                    <input type="submit" class="btn-game-main weight-500" id="start-game-btn" value="Start Quiz"></input>
                 </form>
             </div>
         </div>
@@ -55,22 +55,22 @@
             </div>
 
             <div class="" id="answer-div-hide">
-                <p id="question-text">This is the question... what is...</p>
+                <p class="weight-500" id="question-text">This is the question... what is...</p>
                 <div id="answer-div">
-                    <button class="btn-choice" id="btn1">This the the text for option 1</button>
-                    <button class="btn-choice" id="btn2">This the the text for option 2</button>
-                    <button class="btn-choice" id="btn3">This the the text for option 3 and it's a bit longer than the
+                    <button class="btn-choice weight-500 flex-center" id="btn1">This the the text for option 1</button>
+                    <button class="btn-choice weight-500 flex-center" id="btn2">This the the text for option 2</button>
+                    <button class="btn-choice weight-500 flex-center" id="btn3">This the the text for option 3 and it's a bit longer than the
                         others</button>
-                    <button class="btn-choice" id="btn4">Option 4 text here</button>
-                    <button class="btn-choice" id="btn5">Option 5 is this text</button>
-                    <button class="btn-choice" id="btn6">Option 6 goes here</button>
+                    <button class="btn-choice weight-500 flex-center" id="btn4">Option 4 text here</button>
+                    <button class="btn-choice weight-500 flex-center" id="btn5">Option 5 is this text</button>
+                    <button class="btn-choice weight-500 flex-center" id="btn6">Option 6 goes here</button>
                 </div>
             </div>
             <div class="hidden" id="answer-tie-div-hide">
-                <p id="tie-break-title">Tie Breaker!</p>
+                <p class="weight-600" id="tie-break-title">Tie Breaker!</p>
                 <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks
                     most like your kind of holiday...</p>
-                <div id="answer-tie-div">
+                <div class="flex-center" id="answer-tie-div">
                     <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1" role="img"
                         aria-label="image of girl standing in front of ancient statues" data-type="culture"></button>
                     <button class="btn-choice-tie question-photo foodie hidden" id="tie-btn2" role="img"
@@ -96,8 +96,48 @@
         <div class="hidden" id="results-div">
             <!-- Personality Results -->
             <div class="results-container" id="personality-div">
-                <h1 class="text-centre uppercase" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
-                <div id="personality-div-flex">
+                <h1 class="text-centre uppercase small-heading" id="personality-heading">BOB, YOU ARE A... THRILL-SEEKER!</h1>
+                <div id="personality-stats-div">
+                    <h3 class="text-centre">YOUR VITAL STATISTICS</h3>
+                    <div class="flex-center" id="stats-key-chart-div">
+
+                        <div id="pie-chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div id="pie-numbers" class="uppercase">
+                            <div class="stat-key-div" id="stat-key-div-1">
+                                <div class="stat-key" id="stat-key-1"></div>
+                                <p><span class="stat-type">Personality 1: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                            <div class="stat-key-div" id="stat-key-div-2">
+                                <div class="stat-key" id="stat-key-2"></div>
+                                <p><span class="stat-type">Personality 2: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                            <div class="stat-key-div" id="stat-key-div-3">
+                                <div class="stat-key" id="stat-key-3"></div>
+                                <p><span class="stat-type">Personality 3: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                            <div class="stat-key-div" id="stat-key-div-4">
+                                <div class="stat-key" id="stat-key-4"></div>
+                                <p><span class="stat-type">Personality 4: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                            <div class="stat-key-div" id="stat-key-div-5">
+                                <div class="stat-key" id="stat-key-5"></div>
+                                <p><span class="stat-type">Personality 5: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                            <div class="stat-key-div" id="stat-key-div-6">
+                                <div class="stat-key" id="stat-key-6"></div>
+                                <p><span class="stat-type">Personality 6: </span><span
+                                        class="stat-percent weight-600">0%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div id="personality-text-div">
                         <p id="personality-text-p1">Personality Description para 1</p>
                         <br>
@@ -105,48 +145,8 @@
                         <br>
                         <p id="personality-text-p3">Personality Description para 3</p>
                     </div>
-                    <div id="personality-stats-div">
-                        <h3 class="text-centre">YOUR VITAL STATISTICS</h3>
-                        <div id="stats-key-chart-div">
+                    
 
-                            <div id="pie-chart">
-                                <canvas id="myChart"></canvas>
-                            </div>
-                            <div id="pie-numbers" class="uppercase">
-                                <div class="stat-key-div" id="stat-key-div-1">
-                                    <div class="stat-key" id="stat-key-1"></div>
-                                    <p><span class="stat-type">Personality 1: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                                <div class="stat-key-div" id="stat-key-div-2">
-                                    <div class="stat-key" id="stat-key-2"></div>
-                                    <p><span class="stat-type">Personality 2: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                                <div class="stat-key-div" id="stat-key-div-3">
-                                    <div class="stat-key" id="stat-key-3"></div>
-                                    <p><span class="stat-type">Personality 3: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                                <div class="stat-key-div" id="stat-key-div-4">
-                                    <div class="stat-key" id="stat-key-4"></div>
-                                    <p><span class="stat-type">Personality 4: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                                <div class="stat-key-div" id="stat-key-div-5">
-                                    <div class="stat-key" id="stat-key-5"></div>
-                                    <p><span class="stat-type">Personality 5: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                                <div class="stat-key-div" id="stat-key-div-6">
-                                    <div class="stat-key" id="stat-key-6"></div>
-                                    <p><span class="stat-type">Personality 6: </span><span
-                                            class="stat-percent">0%</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Country Results - General -->
@@ -173,17 +173,17 @@
             </div>
             <!-- Country Results - Highlights -->
             <div class="results-container" id="country-highlights-div">
-                <h2 class="text-centre">HIGHLIGHTS</h2>
+                <h2 class="text-centre small-heading">HIGHLIGHTS</h2>
                 <p class="text-centre">Click on a pin to find out more about what <span id="highlight-country-name">New
                         Zealand</span> has to offer!</p>
                 <div class="results-container" id="country-map-div">
                     <div id="map"></div>
                     <div id="highlight-info-div" class="hidden">
                         <div id="highlight-content-div">
-                            <p id="highlight-title"></p>
+                            <p class="weight-700" id="highlight-title"></p>
                             <p id="highlight-text"></p>
                         </div>
-                        <div id="highlight-photo-div">
+                        <div class="flex-center" id="highlight-photo-div">
                             <img class="highlight-photo" id="highlight-photo-1" src="" alt="Highlight Photo 1">
                             <img class="highlight-photo" id="highlight-photo-2" src="" alt="Highlight Photo 2">
                             <img class="highlight-photo" id="highlight-photo-3" src="" alt="Highlight Photo 3">
@@ -194,16 +194,16 @@
             </div>
             <!-- Restart Game Button -->
             <div class="text-centre" id="start-again-button-div">
-                <p>Want to have another go at the quiz?</p>
+                <p class="weight-600">Want to have another go at the quiz?</p>
                 <button class="btn-game-main" id="start-again-btn">Start Again</button>
             </div>
         </div>
 
         <footer>
             <div id="cloud-div">
-                <div id="footer-contents">
-                    <p>Made by Emma Hewson</p>
-                    <div id="social-links">
+                <div class="flex-center" id="footer-contents">
+                    <p class="weight-600">Made by Emma Hewson</p>
+                    <div class="flex-center" id="social-links">
                         <a href="https://www.linkedin.com/in/emmajmhewson/" target="_blank">
                             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             <span class="sr-only">LinkedIn</span>
