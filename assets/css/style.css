@@ -58,7 +58,8 @@ button {
     color: black;
 }
 
-#start-game-btn {
+#start-game-btn,
+#go-home-btn {
     font-weight: 500;
     background-color: #FC7070;
     color: white;
@@ -629,6 +630,24 @@ button {
 }
 
 
+/* 404 Page */
+
+#error-div {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#error-div h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#go-home-btn {
+    margin-top: 30px;
+}
+
 /* Media Queries */
 
 /* Medium Devices */
@@ -815,8 +834,8 @@ button {
         line-height: 36px;
     }
 
-
-    #start-again-button-div {
+    #start-again-button-div,
+    #go-home-btn {
         margin-top: 40px;
 
     }

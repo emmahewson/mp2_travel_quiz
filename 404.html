@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The Travel Personality Quiz</title>
+    <!-- Favicon Code -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <!--/ Favicon Code -->
+    <script src="https://kit.fontawesome.com/75c900e0d1.js" crossorigin="anonymous"></script>
+    <script>
+        history.scrollRestoration = "manual"
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Background Gradient & Logo -->
+    <div id="background-div">
+        <div id="logo-div"><img src="assets/images/quiz_logo_01.svg" alt="The Travel Personality Quiz"></div>
+
+        <!-- Welcome -->
+        <div class="text-centre" id="error-div">
+            <h1>404!</h1>
+            <p>You seem to have stumbled too far off the beaten track!<br>Click the button below to go home.</p>
+            <!-- Go Home Button -->
+                <a href="index.html"><button class="btn-game-main text-centre" id="go-home-btn" >Go Home</button></a>
+        </div>
+
+        <footer>
+            <div id="cloud-div">
+                <div id="footer-contents">
+                    <p>Made by Emma Hewson</p>
+                    <div id="social-links">
+                        <a href="https://www.linkedin.com/in/emmajmhewson/" target="_blank">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/emmahewson" target="_blank">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="assets/js/questions_array.js"></script>
+    <script src="assets/js/countries_array.js"></script>
+    <script src="assets/js/personalities_array.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3bbw0F5d1sjzp5iet_vlxKb0RrevMCA&callback=initMap">
+    </script>
+
+    <script src="assets/js/quiz.js"></script>
+
+
+</body>
+
+</html>
