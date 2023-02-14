@@ -44,19 +44,19 @@ const countries = [{
                 images: [
                     {
                         img: "nz_fjord1.jpeg",
-                        alt: ""
+                        alt: "Milford Sound, New Zealand"
                     },
                     {
                         img: "nz_fjord2.jpeg",
-                        alt: ""
+                        alt: "Waterfall on a steep fjord in New Zealand"
                     },
                     {
                         img: "nz_fjord3.jpeg",
-                        alt: ""
+                        alt: "New Zealand fjords and turquoise sea"
                     },
                     {
                         img: "nz_fjord4.jpeg",
-                        alt: ""
+                        alt: "Kayakers in Fjordland National Park"
                     }
                 ]
             },
@@ -68,19 +68,19 @@ const countries = [{
                 images: [
                     {
                         img: "nz_boi1.jpeg",
-                        alt: ""
+                        alt: "Aerial view of Bay of Islands, New Zealand"
                     },
                     {
                         img: "nz_boi2.jpeg",
-                        alt: ""
+                        alt: "Waterfall in the Bay of Islands"
                     },
                     {
                         img: "nz_boi3.jpeg",
-                        alt: ""
+                        alt: "Kayakers by a waterfall"
                     },
                     {
                         img: "nz_boi4.jpeg",
-                        alt: ""
+                        alt: "Underwater scuba divers with reefs and fish"
                     }
                 ]
             },
@@ -92,19 +92,19 @@ const countries = [{
                 images: [
                     {
                         img: "nz_tongariro1.jpeg",
-                        alt: ""
+                        alt: "Walker at the top of the Tongariro Crossing"
                     },
                     {
                         img: "nz_tongariro2.jpeg",
-                        alt: ""
+                        alt: "Walkers surrounded by volcanic steam"
                     },
                     {
                         img: "nz_tongariro3.jpeg",
-                        alt: ""
+                        alt: "Colourful volcanic landscape"
                     },
                     {
                         img: "nz_tongariro4.jpeg",
-                        alt: ""
+                        alt: "Walkers in the snow on Tongariro"
                     }
                 ]
             },
@@ -116,19 +116,19 @@ const countries = [{
                 images: [
                     {
                         img: "nz_kaikoura1.jpeg",
-                        alt: ""
+                        alt: "Aerial view of Kaikoura"
                     },
                     {
                         img: "nz_kaikoura2.jpeg",
-                        alt: ""
+                        alt: "Seals on rocks with snowy mountains behind"
                     },
                     {
                         img: "nz_kaikoura3.jpeg",
-                        alt: ""
+                        alt: "Dolphin leaping near to kayakers"
                     },
                     {
                         img: "nz_kaikoura4.jpeg",
-                        alt: ""
+                        alt: "Girl watches many nearby dolphins from a boat"
                     }
                 ]
             }
@@ -155,20 +155,20 @@ const countries = [{
                 description: "The nation's long-standing political capital clearly stands at the forefront of Mexico's cultural scene as well. A stroll through the buzzing downtown area reveals the capital's storied history, from pre-Hispanic and colonial-era architecture to the contemporary megalopolis. Old-school cantinas and intriguing museums sit alongside edgy contemporary galleries and glamorous plazas displaying a treasure trove of artisanal and designer shopping.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_city1.jpeg",
+                        alt: "Palacio de Bellas Artes"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_city2.jpeg",
+                        alt: "Paseo de la Reforma"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_city3.jpeg",
+                        alt: "Frida Khalo House"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_city4.jpeg",
+                        alt: "Street Taco Vendors"
                     }
                 ]
 
@@ -180,20 +180,20 @@ const countries = [{
                 description: "Take a dramatic Maya ruin, plonk it down beside the achingly beautiful white sands and turquoise-blue waters of the Caribbean and you've got the rightly world-famous Tulum. Add in numerous attractions in the surrounding area from cenotes (limestone sinkholes) to other Maya ruins, and it's no wonder many people come for a few days and find themselves staying for far longer.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_tulum1.jpeg",
+                        alt: "Tulum Ruins on the coast"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_tulum2.jpeg",
+                        alt: "Jungle lodge with swimming hole"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_tulum3.jpeg",
+                        alt: "Sculpture of man made of palm leaves"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_tulum4.jpeg",
+                        alt: "Cenote near Tulum"
                     }
                 ]
             },
@@ -204,20 +204,20 @@ const countries = [{
                 description: "The most popular of Mexico's ancient sights for good reason, Chichén Itzá is simply spectacular. From the imposing, monolithic El Castillo pyramid (where the shadow of the plumed serpent god Kukulcán creeps down the staircase during the spring and autumn equinoxes) to the Sacred Cenote and curiously designed El Caracol, the legacy of Maya astronomers will blow your mind. Admire the Wall of Skulls and the stone carvings at the Temple of Warriors, or come back at night for the sound-and-light show.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_chi1.jpeg",
+                        alt: "Chichén Itzá Main Pyramid"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_chi2.jpeg",
+                        alt: "Stone animal heads"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_chi3.jpeg",
+                        alt: "Chichén Itzá aerial view"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_chi4.jpeg",
+                        alt: "Aerial view of jungle cenote"
                     }
                 ]
             },
@@ -228,20 +228,20 @@ const countries = [{
                 description: "The Ferrocarril Chihuahua Pacífico (Copper Canyon Railway) remains one of Latin America's best rail trips. Trains climb from sea level at Los Mochis to the adventure-minded town of Creel via the sensational rocky landscapes of the Copper Canyon. Vistas from your window include alpine forests, subtropical valleys, Tarahumara villages and glimpses of some of the world's deepest canyons.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_ccr1.jpeg",
+                        alt: "Copper Canyon railway travelling through canyon"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_ccr2.jpeg",
+                        alt: "Copper Canyon at sunset"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_ccr3.jpeg",
+                        alt: "Aerial view of the Copper Canyon"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_ccr4.jpeg",
+                        alt: "Man leans out of the Copper Canyon train and waves"
                     }
                 ]
             },
@@ -252,20 +252,20 @@ const countries = [{
                 description: "This highly individual southern city basks in bright upland light and captivates everyone with its deliciously inventive version of Mexican cuisine, gorgeous handicrafts, frequent colorful fiestas, colonial architecture, booming arts scene and fine mezcals distilled in nearby villages - Oaxaca City is actually considered the capital of mezcal. Within easy reach of the city are the superb ancient Zapotec capital, Monte Albán, dozens of indigenous craft-making villages with busy weekly markets, and the cool, forested hills of the Sierra Norte, perfect for hikers, mountain bikers and horseback riders.",
                 images: [
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_oax1.jpeg",
+                        alt: "Colourful builings on city street in Oaxaca"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_oax2.jpeg",
+                        alt: "Oaxaca Cathedral"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_oax3.jpeg",
+                        alt: "Women dance in traditional clothes"
                     },
                     {
-                        img: "",
-                        alt: ""
+                        img: "mex_oax4.jpeg",
+                        alt: "Petrified waterfall near Oaxaca"
                     }
                 ]
             }
@@ -293,19 +293,19 @@ const countries = [{
                 images: [
                     {
                         img: "peru_huaraz1.jpeg",
-                        alt: ""
+                        alt: "Indigenous people walking near a turquoise lake"
                     },
                     {
                         img: "peru_huaraz2.jpeg",
-                        alt: ""
+                        alt: "City of Huaraz with snowy mountains behind"
                     },
                     {
                         img: "peru_huaraz3.jpeg",
-                        alt: ""
+                        alt: "A girl sitting looking at a turquoise lake"
                     },
                     {
                         img: "peru_huaraz4.jpeg",
-                        alt: ""
+                        alt: "A cyclist rests on a path with mountains behind"
                     }
                 ]
             },
@@ -317,19 +317,19 @@ const countries = [{
                 images: [
                     {
                         img: "peru_amazon1.jpeg",
-                        alt: ""
+                        alt: "A rope bridge leads to a large tree in a jungle"
                     },
                     {
                         img: "peru_amazon2.jpeg",
-                        alt: ""
+                        alt: "A red macaw in flight"
                     },
                     {
                         img: "peru_amazon3.jpeg",
-                        alt: ""
+                        alt: "A small boat on a glassy jungle river"
                     },
                     {
                         img: "peru_amazon4.jpeg",
-                        alt: ""
+                        alt: "A grass hut floats on a large jungle river"
                     }
                 ]
             },
@@ -341,19 +341,19 @@ const countries = [{
                 images: [
                     {
                         img: "peru_cusco1.jpeg",
-                        alt: ""
+                        alt: "Cusco Skyline with hills behind"
                     },
                     {
                         img: "peru_cusco2.jpeg",
-                        alt: ""
+                        alt: "Cusco Cathedral and plaza"
                     },
                     {
                         img: "peru_cusco3.jpeg",
-                        alt: ""
+                        alt: "Women in traditional dress with a baby in a sling"
                     },
                     {
                         img: "peru_cusco4.jpeg",
-                        alt: ""
+                        alt: "Machu Picchu"
                     }
                 ]
             },
@@ -365,19 +365,19 @@ const countries = [{
                 images: [
                     {
                         img: "peru_titicaca1.jpeg",
-                        alt: ""
+                        alt: "The floating Uros Islands - women in bright clothes greet a reed boat"
                     },
                     {
                         img: "peru_titicaca2.jpeg",
-                        alt: ""
+                        alt: "Aerial view of Puno and Lake Titicaca"
                     },
                     {
                         img: "peru_titicaca3.jpeg",
-                        alt: ""
+                        alt: "Lake Titicaca wetlands aerial view"
                     },
                     {
                         img: "peru_titicaca4.jpeg",
-                        alt: ""
+                        alt: "Tourists on a traditional reed boat with a double decker viewing platform"
                     }
                 ]
             },
@@ -389,19 +389,19 @@ const countries = [{
                 images: [
                     {
                         img: "peru_nasca1.jpeg",
-                        alt: ""
+                        alt: "Nazca Lines aerial photo - the hummingbird"
                     },
                     {
                         img: "peru_nasca2.jpeg",
-                        alt: ""
+                        alt: "Giant cat image on a hill"
                     },
                     {
                         img: "peru_nasca3.jpeg",
-                        alt: ""
+                        alt: "Aerial view of many lines and shapes"
                     },
                     {
                         img: "peru_nasca4.jpeg",
-                        alt: ""
+                        alt: "A small plane flying above the Nazca lines"
                     }
                 ]
             }
