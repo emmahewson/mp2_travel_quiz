@@ -410,6 +410,7 @@ function startGame(event) {
         let topCountryIndex = userTotal.indexOf(Math.max(...userTotal));
         resultsCountry.innerText = `${countries[topCountryIndex].name}!`;
         resultsImage.src = `assets/images/countries/main/${countries[topCountryIndex].image}`;
+        resultsImage.alt = countries[topCountryIndex].alt;
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;

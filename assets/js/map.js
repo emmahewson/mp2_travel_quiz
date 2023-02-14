@@ -43,10 +43,24 @@
                 map: map,
                 title: data.title,
                 text: data.description,
-                imgOne: data.imgOne,
-                imgTwo: data.imgTwo,
-                imgThree: data.imgThree,
-                imgFour: data.imgFour
+                images: [
+                    {
+                        img: data.images[0].img,
+                        alt: data.images[0].alt
+                    },
+                    {
+                        img: data.images[1].img,
+                        alt: data.images[1].alt
+                    },
+                    {
+                        img: data.images[2].img,
+                        alt: data.images[2].alt
+                    },
+                    {
+                        img: data.images[3].img,
+                        alt: data.images[3].alt
+                    }
+                ]
             });
  
             //Attach click event to the marker & populate page with data
@@ -54,10 +68,14 @@
                 google.maps.event.addListener(marker, "click", function (e) {
                     highlightTitle.innerText = this.title;
                     highlightText.innerText = this.text;
-                    imageOne.src = `assets/images/countries/highlights/${this.imgOne}`;
-                    imageTwo.src = `assets/images/countries/highlights/${this.imgTwo}`;
-                    imageThree.src = `assets/images/countries/highlights/${this.imgThree}`;
-                    imageFour.src = `assets/images/countries/highlights/${this.imgFour}`;
+                    imageOne.src = `assets/images/countries/highlights/${this.images[0].img}`;
+                    imageOne.alt = this.images[0].alt;
+                    imageTwo.src = `assets/images/countries/highlights/${this.images[1].img}`;
+                    imageTwo.alt = this.images[1].alt;
+                    imageThree.src = `assets/images/countries/highlights/${this.images[2].img}`;
+                    imageThree.alt = this.images[2].alt;
+                    imageFour.src = `assets/images/countries/highlights/${this.images[3].img}`;
+                    imageFour.alt = this.images[3].alt;
                     highlightInfoDiv.classList.remove("hidden");
                     highlightInfoDiv.scrollIntoView(false, {behavior: 'smooth'});
                 });
