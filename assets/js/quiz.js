@@ -60,7 +60,6 @@ function startGame(event) {
 
         // game play functionality
     } else {
-        console.log("My name is " + username.value + " and I'm starting the game!"); // remove?
         welcomeDiv.classList.toggle("hidden");
         gameDiv.classList.toggle("hidden");
         addQuestionContent(0);
@@ -154,18 +153,9 @@ function startGame(event) {
             scoreArray.push(personalities[i].score);
         };
 
-        console.log("culture: " + personalities[0].score); // REMOVE ONCE FINISHED
-        console.log("food: " + personalities[1].score);
-        console.log("people: " + personalities[2].score);
-        console.log("remote: " + personalities[3].score);
-        console.log("thrill: " + personalities[4].score);
-        console.log("wildlife: " + personalities[5].score);
-        console.log("score array: " + scoreArray);
-
         // calculate the results
         // calculate the maximum number of times any personality type appears
         let maxPersonalityScore = Math.max(...scoreArray);
-        console.log("Maximum Score: " + maxPersonalityScore); // REMOVE ONCE FINISHED
 
         // create an array of the winning personalities
         for (let i = 0; i < personalities.length; i++) {
@@ -173,14 +163,11 @@ function startGame(event) {
                 topPersonalityArray.push(personalities[i].type);
             };
         };
-        console.log("winning personality/personalities: " + topPersonalityArray); // REMOVE ONCE FINISHED
-
 
         // Checks for a tie
         if (topPersonalityArray.length > 1) {
 
-            //run tie breaker if more than 1 winner
-            console.log("It's a tie!") // REMOVE ONCE FINISHED
+        //run tie breaker if more than 1 winner
             // reveals photos for tied personalities
             for (let i = 0; i < tieChoices.length; i++) {
                 if (topPersonalityArray.includes(tieChoices[i].getAttribute("data-type"))) {
@@ -205,14 +192,6 @@ function startGame(event) {
                         scoreArray.push(personalities[i].score);
                     };
 
-                    console.log("post tie culture: " + personalities[0].score); // REMOVE ONCE FINISHED
-                    console.log("post tie food: " + personalities[1].score);
-                    console.log("post tie people: " + personalities[2].score);
-                    console.log("post tie remote: " + personalities[3].score);
-                    console.log("post tie thrill: " + personalities[4].score);
-                    console.log("post tie wildlife: " + personalities[5].score);
-                    console.log("the winning post-tie personality is... " + topPersonality);
-
                     // Reveals results
                     chooseCountry();
                     showResults(topPersonality);
@@ -222,7 +201,6 @@ function startGame(event) {
         } else {
             // if not tied - sets the winning personality & reveals results
             topPersonality = topPersonalityArray[0];
-            console.log("No Tie The winning personality is... " + topPersonality);
             chooseCountry();
             showResults(topPersonality);
         };
@@ -313,7 +291,6 @@ function startGame(event) {
         for (let i = 0; i < sortedPersonalities.length; i++) {
             scoresTotal += sortedPersonalities[i].score;
         };
-        console.log("The total of the scores is... " + scoresTotal); // REMOVE ONCE FINISHED
 
         // calculate percentages for each personality
         // adds them to an array & works out sum of all % (to manage rounding issues)
@@ -332,15 +309,9 @@ function startGame(event) {
         // If scores add up to 100% add difference to top score
         let percentDifference = 100 - percentagesTotal;
 
-        console.log("All the percentages added together are... " + percentagesTotal + "%"); // REMOVE ONCE FINISHED
-        console.log("The original percentage array is..." + percentageArray);
-        console.log("The total percentage is less than 100% by... " + percentDifference);
-
         if (percentDifference !== 0) {
             percentageArray[0] += percentDifference;
         }
-
-        console.log("The amended percentage array is..." + percentageArray); // REMOVE ONCE FINISHED
 
         // populate statistics & create color array for piechart
         let keyColors = [];
@@ -365,9 +336,7 @@ function startGame(event) {
             to see which destination suits all these aspects your personality!`
         };
 
-        console.log("Personality Tally - end of everything" + personalityTally) // REMOVE ONCE FINISHED
         // build piechart
-
         // uses chart.js library https://www.chartjs.org/
         var yValues = percentageArray;
         var barColors = keyColors;
@@ -425,8 +394,6 @@ function startGame(event) {
         startAgainBtn.addEventListener('click', function () {
             window.location.reload();
         });
-        console.log("The winning personality on the results page is... " + topPersonality); // REMOVE ONCE FINISHED
-
     }
 
     // helper function to move back to the top of the page
