@@ -493,6 +493,8 @@ The project will now be cloned locally for you to use.
 
 ### Media
 
+* Background Cloud Image [Image by rawpixel.com on Freepik](https://www.freepik.com/free-vector/cloud-background-pastel-paper-cut-style-vector_18220838.htm#&position=8&from_view=collections)
+
 #### **Photos**
 
 **New Zealand**
