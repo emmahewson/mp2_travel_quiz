@@ -691,18 +691,22 @@ input,
     /* Game */
     #answer-div {
         width: 85%;
-        row-gap: 15px;
+        row-gap: 20px;
     }
 
     #progress-div {
-        margin-top: 30px;
+        margin-top: 20px;
         width: 85%;
-        padding-bottom: 40px;
+        padding-bottom: 35px;
+    }
+
+    #progress-text {
+        margin-bottom: 10px;
     }
 
     #question-text {
         font-size: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     #answer-tie-div {
@@ -713,7 +717,8 @@ input,
     .btn-choice {
         width: 100%;
         height: initial;
-        padding: 8px 10px;
+        padding: 10px;
+        border-radius: 10px;
     }
 
     #restart-button-div {

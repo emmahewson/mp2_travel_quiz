@@ -30,6 +30,7 @@
         const imageThree = document.getElementById('highlight-photo-3')
         const imageFour = document.getElementById('highlight-photo-4')
         const highlightInfoDiv = document.getElementById('highlight-info-div')
+        const countryHighlightDiv = document.getElementById('country-highlights-div')
 
  
         // Clickable map markers adapted from: https://www.aspsnippets.com/Articles/Google-Maps-API-V3-Add-click-event-listener-to-all-multiple-markers.aspx
@@ -77,7 +78,11 @@
                     imageFour.src = `assets/images/countries/highlights/${this.images[3].img}`;
                     imageFour.alt = this.images[3].alt;
                     highlightInfoDiv.classList.remove("hidden");
-                    highlightInfoDiv.scrollIntoView(false, {behavior: 'smooth'});
+                    // timeout to allow photos to load before scroll
+                    setTimeout(function() {
+                        countryHighlightDiv.scrollIntoView(false, {behavior: 'smooth'});
+                    }, 100);
+                    
                 });
             })(marker, data);
         }

@@ -146,7 +146,7 @@ const countries = [{
         zoomSml: 4,
         center: {
             lat: 22.52994095041273,
-            lng: -102.20123143246553
+            lng: -98
         },
         highlights: [{
                 title: "Mexico City",
