@@ -121,8 +121,7 @@ input,
 /* Background */
 
 #background-div {
-    /* background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 70%); */
-    background: pink;
+    background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 70%);
     max-width: 1300px;
     margin: 0 auto;
     position: absoloute;
