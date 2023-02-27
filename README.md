@@ -55,6 +55,8 @@ I looked at a variety of online travel quizzes. Most were hosted by travel agenc
 
 
 ### User Stories
+Based on the research and goal development above I created a list of user stories. I felt that the quiz was most likely to be something that a visitor used once, rather than repeatedly, as it would likely form part of a bigger website e.g. a tour operator or travel agent site, with a user moving on to discover more about the products offered, so all user stories relate to a first time user.
+
 * I want to take part in a fun, online game to find out my travel personality and my ideal travel destination
 * I want to see information, images and a map of my recommended destination
 * I want to see a breakdown of my results to learn more about my personality
@@ -83,9 +85,9 @@ I decided to create a fully designed site in Figma, developing the structure, sk
 
 #### **Structure**
 
-The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to user’s expectations and making everything as intuitive as I could.
+The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to users' expectations and making everything as intuitive as I could.
 
-The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code. There are 3 main divs within the page which appear and disappear depending on where you are in the game, these are:
+The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code at different points in the game. There are 3 main divs within the page which appear and disappear depending on where you are in the game, these are:
 
 Welcome - a brief intro with a name capture input to personalise the user's results and a start game button
 Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
@@ -100,12 +102,15 @@ Both the main index.html and 404 page contain a logo at the top (not clickable t
 
 The design of the site is influenced by the view out the window on a plane journey, with the clouds at the bottom as the footer and a light, airy gradient background as the sky. I have therefore used shades of blue for the colour palette, with a contrasting shades of orange for key elements to allow for good legibility.
 
-![Colour Pallette]()
+![Main Colour Pallette](docs/colors/color-pallette-01.jpg)
 
+In addition I created a colour palette for the pie chart and personality types, with each colour corresponding to a personality. These make the data more visual for the user. These colours are all soft, slightly desaturated to match the overall light, airy feel of the site design.
+
+![Pie Chart Colour Pallette](docs/colors/color-pallette-02.jpg)
 
 #### **Fonts**
 
-I imported [Google Fonts](https://fonts.google.com/) and used [Font Name]() (with a fallback of ______________) for the main body text. 
+I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https://fonts.google.com/specimen/Righteous) (with a fallback of Sans Serif) for the logo and some of the main headings. I felt this font had a slightly exotic, exciting look which added to the travel theme. It also has good legibility and is eye-catching. I also used [Raleway](https://fonts.google.com/specimen/Raleway) (with a fallback of Sans Serif) for the main body text as it contrasted well with the heading font, had good flexibility with a range of weights and is known for being clear and legible as an online font, as well as having a warm, friendly roundness to it.
 
 
 ## Technologies Used
@@ -116,8 +121,6 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Font Name]() (wit
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Tools
-
-CHECK IF ALL THESE ARE RELEVANT OR IF ANY ARE MISSING
 
 * [Git](https://git-scm.com/)
     * Used for version control via GitPod by using the terminal to Git and Push to GitHub
