@@ -81,7 +81,7 @@
                     // timeout to allow photos to load before scroll
                     setTimeout(function() {
                         countryHighlightDiv.scrollIntoView(false, {behavior: 'smooth'});
-                    }, 100);
+                    }, 150);
                     
                 });
             })(marker, data);
