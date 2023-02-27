@@ -237,7 +237,7 @@ DETAILS OF BUGS (Link to bugs below?)
 
 During development and testing, in addition to the improvements described in the validation section above, I encountered the following bugs:
 
-#### **Inset Shadow stopped click on map**
+#### **1: Inset Shadow stopped click on map**
 
 After adding an inset shadow on the map using a ::before element created in CSS I realised it had disabled any interaction with the map. After some research I discovered I needed to disable pointer events on the overlay and enable it on the map again in order to click through and interact with the map.
 
@@ -264,7 +264,7 @@ After adding an inset shadow on the map using a ::before element created in CSS 
 </details>
 
 
-#### **Google Map API on mobile & Safari - border-radius**
+#### **2: Google Map API on mobile & Safari - border-radius**
 
 After deploying the site to GitHub pages and viewing on mobile and in Safari the Google Maps API was not contained within the div's border radius rounded corners. After investigating the issue using Dev tools and searching online I worked out that the issue related to the way that Google Maps API builds the HTML for the map, it creates a series of divs enclosed in each other and on certain browsers the border radius and overflow were not translating down in to these divs. I tried targeting all descendent divs, however I ran in to an issue where the overflow:hidden caused the map to disappear completely. After trial and error I discovered I needed to target the 2nd level of div with the CSS styling and this solved the issue.
 
@@ -290,7 +290,7 @@ After deploying the site to GitHub pages and viewing on mobile and in Safari the
 </details>
 
 
-#### **Website not scrolling to top on reload & button click**
+#### **3: Website not scrolling to top on reload & button click**
 
 The website failed to scroll to the top when clicking on a button, this caused particular problems on mobile where less of the game was visible at once. I overcame this issue with the following techniques:
 
@@ -310,7 +310,7 @@ The website failed to scroll to the top when clicking on a button, this caused p
 </details>
 
 
-#### **Mobile input zoom-in not resetting**
+#### **4: Mobile input zoom-in not resetting**
 
 During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">.
 I wanted to make sure that accessibility wasn't affected by over-riding the zoom so I also increased the size of the name input box and start button.
@@ -329,7 +329,7 @@ I wanted to make sure that accessibility wasn't affected by over-riding the zoom
 </details>
 
 
-#### **Button colour on mobile**
+#### **5: Button colour on mobile**
 
 I found that the button text colour on mobile was set to blue rather than black, presumably as a result of this being a clickable button. I fixed this by explicitly setting the color of the button text in the CSS.
 
@@ -347,7 +347,7 @@ I found that the button text colour on mobile was set to blue rather than black,
 </details>
 
 
-#### **Google Maps API - Console Errors**
+#### **6: Google Maps API - Console Errors**
 
 On page load Dev Tool's console was logging a series of errors relating to Google Maps API.
 
@@ -396,7 +396,7 @@ More information [here](https://stackoverflow.com/questions/47799388/javascript-
 
 
 
-#### **Console Errors with Chart.js**
+#### **7: Console Errors with Chart.js**
 
 On page load Dev Tool's console was logging an error and failing to load the pie chart.
 
@@ -421,7 +421,7 @@ I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E)
 ```
 
 
-#### **Button styling on mobile**
+#### **8: Button styling on mobile**
 
 When testing on mobile I discovered that the button styling had changed compared to the main site and dev tools phone simulators.
 
@@ -430,16 +430,23 @@ When testing on mobile I discovered that the button styling had changed compared
 
 <img src="">
 
-*Mobile Device*
+*Before*
 
 <img src="">
 
-*Dev Tools Mobile Simulator*
+*After*
 
 </details>
 
-I found the solution to this was to 
+I found the solution to this was to add the following code to the CSS to over-ride the mobile device's built in styling that it adds to certain buttons and inputs. Whilst only one of the buttons was affected (the only one with a 'type' attribute defined, I decided to over-ride the styling for all the buttons incase there were any issues on other mobile devices elsewhere.)
 
+```
+.btn-game-main {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+```
 
 ### Testing User Stories
 
