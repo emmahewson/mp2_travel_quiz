@@ -484,6 +484,114 @@ Give the user the ability to save their results and recommendations, creating an
 Give the user more detailed country recommendations, with multiple options and more countries available
 
 
+## JavaScript Functionality
+
+This section explains in plain English what happens in the JavaScript code as the user moves through the game. This is in addition to the comments in the JavaScript Code.
+
+### Welcome Section
+* The user enters their name and click on 'Start Quiz'
+    * If no name is entered an alert appears prompting the user to enter a name
+    * The name is stored to be used in the results page
+* The start game button starts the main JavaScript function which contains all the game functionality
+
+### Game Section
+* The start game button:
+    * hides the welcome section and reveals the game section
+    * populates the question & answers from the first question in the questions array (in a separate .js file)
+    * sets the progress bar based on the question number of the first question in the questions array
+
+
+* When the user selects an answer:
+    * All other answers are disabled so the user cannot select more than once
+    * The answer is given a class of 'selected' to change its colour
+    * Each answer has an associated 'personality type' - this is logged to an array called 'personality tally', for each answer selected another 'personality type' is added to the array, one for each question.
+    * There is a brief timeout before the question reloads (see [Answers](#answers) in features section for more information)
+    * The 'selected' class is removed from the selected answer to remove the colour styling
+    * The first question in the questions array is removed from the array
+    * The game is populated with the question and answers from the new first question in the questions array
+    * The buttons are re-enabled
+    * The progress bar is moved on based on the question number of the first question in the questions array
+    * The page scrolls back to the top
+    * This repeats until there are no questions left in the questions array
+
+* When the user selects the final answer:
+    * Calculating the winning personality:
+        * The personality tally contains the 10 personality types that come from the selected answers
+        * The code checks for the type that occurs the most frequently
+            * It does this by creating a new array of the number of times each personality occurs, the 'personality score', finding the max value in this array, then creating a new array of only personalities that scored that amount. It can then test to see how many personalities are in that array and therefore whether there is a tie.
+        * If there is a single winner the personality result is stored and the results show (see below)
+        * If there is a tie:
+            * The tie breaker question is revealed and the main quiz hidden
+            * The tie breaker contains photos which relate to the tied winning personalities only (not the others)
+            * The user selects a single image to break the tie - this is now the winning personality
+            * This personality is logged and the results show
+    * Calculating the recommended country:
+        * This is more complex than having a single country associated with a personality type as I wanted the recommendations to be more personalised and less simplistic. It is based on all the user's answers which give points to certain countries based on the personality type.
+        * Takes the original 'personality tally' array (based on the user's answers)
+            * For each personality type in the array it assigns points to different countries based on how much that country would appeal to someone who likes food, culture, thrill-seeking etc.
+            * e.g. if a 'food' answer is selected Mexico is awarded 3 points, New Zealand 2 & Peru 1
+            * This system of awarding multiple countries points also helps to avoid tied results
+            * This is done using arrays of points where the index matches the index of the country in the countries array (stored in a separate js file)
+            * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan] - order of countries in the countries array
+
+            ```
+            let userTotal = [0, 0, 0, 0, 0, 0];
+            let wildlifePoints = [0, 1, 0, 0, 3, 2];
+            let thrillPoints = [3, 0, 1, 0, 2, 0];
+            let culturePoints = [0, 0, 3, 2, 0, 1];
+            let foodPoints = [2, 3, 0, 1, 0, 0];
+            let peoplePoints = [1, 2, 0, 3, 0, 0];
+            let remotePoints = [0, 0, 2, 0, 1, 3];
+            ```
+            * These point are added to the userTotal array (see code above)
+            * The winning country is the one with the most points (matched using the index in the array)
+    * The game div is hidden and the results div appears
+
+### Game Section - Restart Quiz Button
+* When the user clicks on the Restart Quiz button the page reloads, which:
+    * hides the game section
+    * reveals the welcome section
+    * clears all results so far
+
+
+### Results Section - Personality
+* The personality results are populated based on the winning personality
+    * The user name is included in the heading to personalise the results
+    * The personalities array contains all the associated text, colours and details which are used to populate the personality results
+* The pie chart and percentages are populated:
+    * The personality scores (calculated and added to the personalities array earlier) are compared and sorted and the array sorted in to order based on the scores
+    * This is then reversed to put the highest scoring personality first
+    * The percentages are calculated based on the number of questions answered (10 for a clear winner, 11 for a tie)
+    * Due to rounding issues if the number doesn't add up to 100 the top score is increased so that they do
+    * These results then populate the pie chart and key
+        * The colours for the key & pie chart are assigned by pulling the associated colour from the personalities array
+        * This means that the same colours are always used for the same personalities
+    * The pie chart animates on - animation by chart.js
+* The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
+
+### Results Section - Country
+* The recommended country results are populated based on the winning country
+    * This is based on the index of the winning country (see above)
+    * All the data is stored in the countries array including text, photos, alt values, map information, highlights data etc
+    * The country image is also assigned an associated 'alt' value to make it accessible (stored in the countries array)
+* The map uses Google Maps API to create a personalised map showing the winning country
+    * Longitude and Latitude taken from the countries array
+    * Zoom level taken from the countries array - responsive based on screen size (zoom level changes for smaller screens)
+    * The map contains clickable markers
+        * Each marker is clickable and reveals text and photos about a tourist attraction at that location
+        * The highlight images are also assigned an associated 'alt' value to make them accessible (stored in the countries array)
+        * When a user clicks on a marker the page scrolls down so that the user can see the highlight's photos
+        * If a user clicks on another marker the highlight text and photos are replaced
+    * If the map fails to load text is displayed in the map box which handles the error smoothly for the user (built in functionality from Google Maps API)
+    * The map also contains all the standard Google Maps functionality such as zoom, satellite view, street view and full screen
+
+### Results Section - Start Again Button
+* When the user clicks on the Start Again button the page reloads, which:
+    * hides the game section
+    * reveals the welcome section
+    * clears all results so far
+
+
 
 ## Testing & Bugs
 
