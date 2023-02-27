@@ -116,6 +116,14 @@ input,
     margin-top: 60px;
 }
 
+.btn-game-main,
+#name-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
 
 
 /* Background */
@@ -793,11 +801,12 @@ input,
     #cloud-div {
         height: 250px;
     }
+
     #social-links,
     #footer-contents {
         column-gap: 10px;
     }
-    
+
     #social-links a {
         font-size: 26px;
     }
