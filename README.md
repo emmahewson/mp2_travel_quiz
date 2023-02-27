@@ -33,7 +33,7 @@ However in order to make the end product more professional and to help with crea
 
 #### **User Goals**
 The audience for this quiz would be people who are looking to travel or go on holiday but are unsure where to go. They perhaps want to experience more exotic destinations or want to go somewhere off the beaten track and wish to find a destination that would suit their personality and tastes.
-Their main goals would be:
+User Goals:
 * Learning more about themselves and their travel personality
 * Having fun doing a short quiz
 * Getting recommendations of where to go travelling or on holiday
@@ -55,35 +55,50 @@ I looked at a variety of online travel quizzes. Most were hosted by travel agenc
 
 
 ### User Stories
-
-#### **User Story 1: **
-* Example
+* I want to take part in a fun, online game to find out my travel personality and my ideal travel destination
+* I want to see information, images and a map of my recommended destination
+* I want to see a breakdown of my results to learn more about my personality
+* I want to access the quiz on any device
+* I want to navigate the site easily
 
 
 ### Design, Layout & Structure
 
 
 #### **Wireframes**
+I decided to create a fully designed site in Figma, developing the structure, skeleton and layout as well as the style and look of the site, making all major creative design decisions, including the colours, fonts & layout prior to beginning coding. I created designs for desktop, tablet and mobile to make sure that responsiveness was at the forefront of the application from the beginning.
 
-<details><summary>TEXT HERE</summary>
-<img src="">
+<details><summary>Welcome</summary>
+<img src="docs/wireframes/wireframes_welcome.png">
 </details>
 
+<details><summary>Game</summary>
+<img src="docs/wireframes/wireframes_game.png">
+</details>
+
+<details><summary>Results</summary>
+<img src="docs/wireframes/wireframes_results.png">
+</details>
    
+
 #### **Structure**
 
-Text here
+The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to user’s expectations and making everything as intuitive as I could.
 
-<details><summary>Screenshots</summary>
+The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code. There are 3 main divs within the page which appear and disappear depending on where you are in the game, these are:
 
-<img src="assets/images/readme/wireframes-navroute-button-1.jpg">
-<img src="assets/images/readme/wireframes-navroute-button-2.jpg">
+Welcome - a brief intro with a name capture input to personalise the user's results and a start game button
+Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
+Results - the results of the quiz, showing the user's personality results breakdown in the form of a pie chart and text information as well as a recommended destination based on their responses to the quiz. This page also contains a button to take the user back to the start to begin the quiz again.
 
-</details>
+There is also a 404 page for when a user lands on a non-existent page with a button to link back to index.html to start the quiz again
+
+Both the main index.html and 404 page contain a logo at the top (not clickable to avoid the user mistakenly clicking it and having to start the quiz again) and a cloud graphics footer, containing my name and social links.
 
 
 #### **Colour**
 
+The design of the site is influenced by the view out the window on a plane journey, with the clouds at the bottom as the footer and a light, airy gradient background as the sky. I have therefore used shades of blue for the colour palette, with a contrasting shades of orange for key elements to allow for good legibility.
 
 ![Colour Pallette]()
 
