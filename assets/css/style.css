@@ -86,7 +86,7 @@ input,
 
 #start-game-btn,
 #go-home-btn {
-    background-color: #FC7070;
+    background-color: #FCADAD;
     color: black;
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -819,15 +819,12 @@ input,
         background-color: #407694;
     }
 
-    #start-game-btn:hover,
-    #go-home-btn:hover {
-        background-color: #ff3030;
-    }
-
     #restart-game-btn:hover {
         background-color: #FCADAD;
     }
 
+    #start-game-btn:hover,
+    #go-home-btn:hover,
     #start-again-btn:hover {
         background-color: #FC7070;
     }

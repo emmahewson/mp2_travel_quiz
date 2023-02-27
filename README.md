@@ -98,15 +98,20 @@ There is also a 404 page for when a user lands on a non-existent page with a but
 Both the main index.html and 404 page contain a logo at the top (not clickable to avoid the user mistakenly clicking it and having to start the quiz again) and a cloud graphics footer, containing my name and social links.
 
 
-#### **Colour**
+#### **Colour & Design**
 
-The design of the site is influenced by the view out the window on a plane journey, with the clouds at the bottom as the footer and a light, airy gradient background as the sky. I have therefore used shades of blue for the colour palette, with a contrasting shades of orange for key elements to allow for good legibility.
+The design of the site is influenced by the view out the window on a plane journey, with the 'paper-like' clouds with drop shadows at the bottom as the footer and a light, airy gradient background as the sky. I have therefore used shades of blue for the colour palette, with a contrasting shades of orange for key elements to allow for good legibility.
 
 ![Main Colour Pallette](docs/colors/color-pallette-01.jpg)
 
 In addition I created a colour palette for the pie chart and personality types, with each colour corresponding to a personality. These make the data more visual for the user. These colours are all soft, slightly desaturated to match the overall light, airy feel of the site design.
 
 ![Pie Chart Colour Pallette](docs/colors/color-pallette-02.jpg)
+
+**Other Design Choices**
+* The use of drop shadows & inner shadows to match the layered paper effect on the footer
+* Consistent use of border radius to give the site a soft, rounded feel and match the rounded cloud design
+
 
 #### **Fonts**
 
@@ -152,27 +157,331 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 ## Features
 
-### Title One
+### All Sections/Pages
 
-#### **Subtitle**
+#### **Favicon**
 
 <details><summary>Screenshots</summary>
 
 <img src="">
 
-*Feature Name*
+*Favicon*
 
 </details>
 
-* Example Info
-* Example Info
+* I included a Favicon for the site using the little plane graphic from the logo. This helped to build the brand and continue the site design in the user's browser tab.
+
+#### **Logo**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Logo*
+
+</details>
+
+* A simple logo with the name of the game
+* The logo appears on all pages
+* The logo is responsive and changes sized based on the user's screen size
+* The logo isn't clickable. I had originally made it go back to the home page but during testing and based on feedback from my mentor I discovered this could cause a user to accidentally reset the quiz back to the start. This would cause a negative emotional response from a user so I broke the convention of having the logo link to the home page in this case as I felt it provided the best user experience.
+
+
+#### **Footer**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Footer on desktop*
+
+<img src="">
+
+*Footer on tablet*
+
+<img src="">
+
+*Footer on mobile*
+
+</details>
+
+* The footer is made of a series of layered 'paper-like' clouds to give a feeling of being above the clouds in a plane.
+* The footer contains the text "Made By Emma Hewson" and links to my relevant social media sites so that it can be used as a portfolio project
+* The footer social icons have aria labels to make them accessible
+* The footer social icons have a hover effect with a smooth colour transition
+* The footer is responsive, the cloud image adjusts as a background image down to tablet-size screens and is replaced by a smaller image on mobile to make the design work and the site perform well.
+
+
+### Welcome Section
+
+![Welcome Section - Mock Up]()
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Alert if no name entered*
+
+<img src="">
+
+*Hover effect on button*
+
+</details>
+
+* Brief text info about the game, how it works & encouraging the user to play
+* Layout is responsive with margins changing on smaller devices
+* Name input box
+    * User must enter a name to start game - alert with appears if no name entered
+    * Name is used in the results section to personalise the results
+    * Has a character max of 10 and min of 2 to make the text in the results section work visually
+* Start Quiz button - launches the quiz
+    * Has a hover effect on non touchscreen devices with a smooth colour transition
+
+
+### Game Section
+
+![Game Section - Mock Up]()
+
+<details><summary>Screenshot</summary>
+
+<img src="">
+
+*Game Section*
+
+</details>
+
+* The game section is fully responsive with the answers stacking full width on smaller devices and in 2 columns on larger devices as well as other layout changes
+
+
+#### **Progress Bar**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Progress Bar updates with each question answered*
+
+</details>
+
+* Gives the user an indication of where they are in the quiz and how many questions are left
+* Contains both a visual reference in the pink bar and a number reference in the question number
+* Updates when a user selects an answer and the question is repopulated
+
+
+#### **Question**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Question*
+
+</details>
+
+* Question text updates (along with the corresponding answers) each time a user makes a selection
+
+
+#### **Answers**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Answers*
+
+</details>
+
+* Updates with the next set of answers (along with the corresponding question) each time the user makes a selection
+* Has a darker blue hover effect on non touchscreen devices with a smooth transition
+* Once the user has selected an answer it turns orange
+* There is a brief timeout to allow the orange to appear before the question & answers update, this gives the user a sense that the answer has definitely been selected and submitted and gives them time to see the question update happenning - all part of creating an intuitive and positive user experience.
+* This also avoids having a separate 'next question' button which would add more clicks and may annoy a user
+* During the time out the user cannot select another answer - this avoids accidental selections or duplicate results
+
+
+#### **Restart Quiz Button**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Restart Quiz Button*
+
+</details>
+
+* A button to allow the user to go back to the start of the quiz
+* Has a hover effect with a short, smooth colour transition on non touchscreen devices
+
+
+### Tie Breaker
+
+![Tie Breaker - Mock Up]()
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Tie Breaker layouts*
+
+</details>
+
+As there are only 10 questions and each ones selects one of 6 personality types, there was a high chance of a tied result. I wanted to find a way to make the results as accurate and personalised as possible, so, where a tie happens, this round puts the final result decision in to the hands of the user, using images to find out what their perfect trip would look like. This helps it stand apart from the other questions and highlights its importance to the user.
+
+* Images appear which relate to the tied winning personality results, each image representing a personality e.g. "foodie", "culture-vulture" etc.
+* User selects one of them, this becomes the winning personality
+* This round only appears if there is a tied result
+* This round is also taken in to account in the final personality statistics
+* There can be anything from 2-5 images depending on how many results were tied
+* The images have associated "alt" values to make them accessible
+* The layout is fully responsive depending on the screen size and the number of images that appear
+
+
+### Results Section
+
+![Results Section - Mock Up]()
+
+* The results section is fully responsive with the answers stacking full width on smaller devices and in 2 columns on larger devices as well as other layout changes
+
+
+#### **Personality Type**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Personality Type Box*
+
+<img src="">
+
+*User's name and personality type heading*
+
+<img src="">
+
+*Pie Chart and statistics*
+
+<img src="">
+
+*Text about personality type*
+
+<img src="">
+
+*Paragraph about the influence of 2nd and 3rd place personality results on the country recommendation*
+
+</details>
+
+* This section gives detailed information about the user's personality results
+* It is personalised to the user with their name
+* The pie chart has a colour key with each personality type having an associated colour
+* Each answer selected by the user is associated with one of the personality types, the percentages are calculated based on these, including the tie break
+* The pie chart animates on
+* Includes text information about the personality type
+* The final paragraph is bespoke to the user's results, if they have high % scores in the 2nd and 3rd place personalities these are included here.
+    * The recommended country is based on all the personality types chosen, not just the winning one - this helps explain this to the user.
+    * This gives a sense of results being truly personalised to the user
+* The personality results are fully responsive, stacking on smaller screens
+
+
+#### **Recommended Country**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Country Recommendation*
+
+
+</details>
+
+The recommended country is calculated using all the answers given by the user. This adds more accuracy to the results, taking in to account various different aspects of their personality, rather than just associating a single country with a personality type.
+
+It is calculated as follows:
+* Each answer relates to a personality type
+* Each time the user selects an answer, points are awarded to 3 countries, based on how relevant the personality type is to the destination
+    * e.g. if the 'food' answer is selected Mexico gets 3 points, New Zealand gets 2 and Peru gets 1
+* These are added up at the end and a winning country is selected
+
+The country recommendation section contains
+* The name of the country selected
+* A hero image of the country (including an "alt" value to make this accessible)
+* Text about the country
+
+
+
+#### **Country Highlights**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Country Highlights - Whole section*
+
+<img src="">
+
+*Clickable marker with page scroll*
+
+<img src="">
+
+*Responsive map zoom*
+
+<img src="">
+
+*Google Maps Built in Functionality*
+
+
+</details>
+
+* A map which shows the recommended country using Google Maps API with clickable markers to find out more information about key highlights in that destination
+* The highlight information is hidden until the user clicks on a marker
+* Each marker is located at the site of a tourist attraction
+* Each time a user clicks on a marker it replaces the information, this keeps the page short and neat and creates a better user experience as well as adding interactivity
+* There is explanatory text at the top telling the user to click on a marker, though the markers in themselves encourage users to click on them due to the popularity of Google Maps and people's knowledge of it
+* When a marker is clicked text and images appear about that destination highlight
+* The highlight images have associated "alt" values to make them accessible
+* The page scrolls to the bottom of the highlights section when a marker is clicked, this makes sure that the user can see the photos that appear
+* This section is fully responsive, as well as layout changes to the main div and photos the map zoom level also changes for different devices to allow the whole country to appear on the user's screen and all markers to be visible and not too close together.
+* The map also has Google's in-built functionality including:
+    * Zoom buttons
+    * Touchscreen zoom and scroll
+    * Satellite and map view options
+    * Streetview
+    * Full screen button
+
+
+#### **Start Again Button**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+*Start Again Button*
+
+</details>
+
+* A button to allow users to re-take the quiz
+* Allows users to navigate the site easily and start again if they're not happy with their results
+* Has explanatory text to give the site a friendly 'voice'
+* Button has a hover effect with a short, smooth colour transition on non touchscreen devices
+
+
+### 404 Page
+
+![404 Page - Mock Up]()
+
+* 404 page to smoothly handle user's who have ended up on a non-existent part of the site
+* This bespoke 404 page provides a positive emotional response to the user and a better user experience
+* The page has the same design as the rest of the site, so the users don't feel like they have left the site, encouraging them to return to the home page
+* The text is light hearted and relevant to the theme of the quiz
+* There is a button to take the user back to the home page so there is no need to user the browser back button
 
 
 ### Future Features
+I would like to expand the site in the future with the following features
 
+#### **User Account**
+Give the user the ability to save their results and recommendations, creating an account and log in so that they can re-access their data.
 
-#### **Title**
-Text
+#### **Multiple / More Detailed Recommendations**
+Give the user more detailed country recommendations, with multiple options and more countries available
 
 
 
