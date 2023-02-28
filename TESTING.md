@@ -26,10 +26,33 @@ I ran the code for all the pages through the [W3C HTML Validator](https://valida
 <img src="">
 </details>
 
-#### **Results**
+#### **Errors**
 
-#### **HTML Validation After Fixes**
-<details><summary>Title</summary>
+There were 4 errors, some occurring on multiple elements:
+
+* An empty "action" attribute on the form
+<details><summary>Screenshot</summary>
+<img src="">
+</details>
+
+* A stray </input> end tag
+<details><summary>Screenshot</summary>
+<img src="">
+</details>
+
+* An error relating to the "role" attribute on the tie-break buttons images (based on a method to improve accessibility for background images that I researched online)
+<details><summary>Screenshot</summary>
+<img src="">
+</details>
+
+* An empty "src" attribute on the highlight images (which would be populated by the JavaScript)
+<details><summary>Screenshot</summary>
+<img src="">
+</details>
+
+
+#### **HTML Validation After Errors Fixed**
+<details><summary>HTML Validation Results</summary>
 <img src="">
 </details>
 

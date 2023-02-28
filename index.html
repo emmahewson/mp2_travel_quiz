@@ -38,10 +38,10 @@
             </p>
             <!-- Name Input & Start Game -->
             <div class="text-centre" id="start-button-div">
-                <form action="" id="start-form" method="POST" onsubmit="startGame(event)">
+                <form id="start-form" method="POST" onsubmit="startGame(event)">
                     <input class="text-centre" id="name-input" type="text" placeholder="Enter your name"
                         aria-label="Enter your name" minlength="2" maxlength="10">
-                    <input type="submit" class="btn-game-main weight-500" id="start-game-btn" value="Start Quiz"></input>
+                    <input type="submit" class="btn-game-main weight-500" id="start-game-btn" value="Start Quiz">
                 </form>
             </div>
         </div>
@@ -71,17 +71,17 @@
                 <p id="tie-break-text">Uh oh! It seems like you have a split personality!<br>Choose the photo that looks
                     most like your kind of holiday...</p>
                 <div class="flex-center" id="answer-tie-div">
-                    <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1" role="img"
+                    <button class="btn-choice-tie question-photo culture hidden" id="tie-btn1"
                         aria-label="image of girl standing in front of ancient statues" data-type="culture"></button>
-                    <button class="btn-choice-tie question-photo foodie hidden" id="tie-btn2" role="img"
+                    <button class="btn-choice-tie question-photo foodie hidden" id="tie-btn2"
                         aria-label="image of girl eating tasty food and smiling" data-type="food"></button>
-                    <button class="btn-choice-tie question-photo people hidden" id="tie-btn3" role="img"
+                    <button class="btn-choice-tie question-photo people hidden" id="tie-btn3"
                         aria-label="image of girl standing on a busy city street" data-type="people"></button>
-                    <button class="btn-choice-tie question-photo remote hidden" id="tie-btn4" role="img"
+                    <button class="btn-choice-tie question-photo remote hidden" id="tie-btn4"
                         aria-label="image of man standing in an vast empty valley" data-type="remote"></button>
-                    <button class="btn-choice-tie question-photo thrill hidden" id="tie-btn5" role="img"
+                    <button class="btn-choice-tie question-photo thrill hidden" id="tie-btn5"
                         aria-label="image of man on a tight-rope high in a ravine" data-type="thrill"></button>
-                    <button class="btn-choice-tie question-photo wildlife hidden" id="tie-btn6" role="img"
+                    <button class="btn-choice-tie question-photo wildlife hidden" id="tie-btn6"
                         aria-label="image of man holding out food to a small alpaca" data-type="wildlife"></button>
                 </div>
             </div>
@@ -184,10 +184,10 @@
                             <p id="highlight-text"></p>
                         </div>
                         <div class="flex-center" id="highlight-photo-div">
-                            <img class="highlight-photo" id="highlight-photo-1" src="" alt="Highlight Photo 1">
-                            <img class="highlight-photo" id="highlight-photo-2" src="" alt="Highlight Photo 2">
-                            <img class="highlight-photo" id="highlight-photo-3" src="" alt="Highlight Photo 3">
-                            <img class="highlight-photo" id="highlight-photo-4" src="" alt="Highlight Photo 4">
+                            <img class="highlight-photo" id="highlight-photo-1" alt="Highlight Photo 1">
+                            <img class="highlight-photo" id="highlight-photo-2" alt="Highlight Photo 2">
+                            <img class="highlight-photo" id="highlight-photo-3" alt="Highlight Photo 3">
+                            <img class="highlight-photo" id="highlight-photo-4" alt="Highlight Photo 4">
                         </div>
                     </div>
                 </div>
