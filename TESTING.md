@@ -115,12 +115,31 @@ I ran the CSS code through the []().
 
 I ran the site through the [Wave Web Accessibility Evaulation Tool](https://wave.webaim.org/). 
 
-#### **Error**
-<details><summary>Screenshot</summary>
-    <img src="">
-    </details>
+#### **Errors**
 
-Description
+There were 2 warnings, some occurring on multiple elements:
+
+<details><summary>Warning 1</summary>
+<img src="">
+</details>
+
+* Missing heading level
+* Fix: change `<h3>`to `<h2>`
+
+<details><summary>Warning 2</summary>
+<img src="">
+</details>
+
+* Possible headings x3
+* Fix: Changed recommended country name to a heading, but left the question & tie-breaker as `<p>` elements as this made more sense semantically and these were warnings rather than errors with the tool guessing what it thought was a heading.
+
+
+#### **Wave Web Accessibility Results After Errors Fixed**
+
+<details><summary>Wave Web Accessibility Final Results</summary>
+<img src="">
+</details>
+
 
 - - -
 
