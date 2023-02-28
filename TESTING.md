@@ -22,48 +22,56 @@ This is the testing documentation for my web application: The Travel Personality
 ### HTML Validation
 
 I ran the code for all the pages through the [W3C HTML Validator](https://validator.w3.org/nu/).
-<details><summary>HTML Validation Results</summary>
-<img src="">
-</details>
 
 #### **Errors**
 
 There were 5 errors, some occurring on multiple elements:
 
-* An empty "action" attribute on the form
-* Fix: remove the action attribute
-<details><summary>Screenshot</summary>
-<img src="">
+<details><summary>Error 1</summary>
+<img src="docs/testing/testing_htmlval1.jpeg">
 </details>
 
-* A stray </input> end tag
+* An empty "action" attribute on the form
+* Fix: remove the action attribute
+
+<details><summary>Error 2</summary>
+<img src="docs/testing/testing_htmlval2.jpeg">
+</details>
+
+* A stray `</input>` end tag
 * Fix: remove the tag
-<details><summary>Screenshot</summary>
-<img src="">
+
+<details><summary>Error 3</summary>
+<img src="docs/testing/testing_htmlval3.jpeg">
 </details>
 
 * An error relating to the "role" attribute on the tie-break buttons images (based on a method to improve accessibility for background images that I researched online)
 * Fix: remove role attribute
-<details><summary>Screenshot</summary>
-<img src="">
+
+<details><summary>Error 4</summary>
+<img src="docs/testing/testing_htmlval4.jpeg">
 </details>
 
 * An empty "src" attribute on the highlight images (which would be populated by the JavaScript)
 * Fix: Give the src a value of one of the highlight images as a placeholder (removing the src entirely throws up a different error)
-<details><summary>Screenshot</summary>
-<img src="">
+
+<details><summary>Error 5</summary>
+<img src="docs/testing/testing_htmlval5.jpeg">
 </details>
 
-* On the 404 page the button element was a descendant of an <a> element
-* Fix: change the button to an <a> element
-<details><summary>Screenshot</summary>
-<img src="">
-</details>
+* On the 404 page the `<button>` element was a descendant of an `<a>` element
+* Fix: change the `<button>` to an `<a>` element
+
 
 
 #### **HTML Validation After Errors Fixed**
-<details><summary>HTML Validation Results</summary>
-<img src="">
+
+<details><summary>HTML Validation Final Results - index.html</summary>
+<img src="docs/testing/testing_htmlval_final1.jpeg">
+</details>
+
+<details><summary>HTML Validation Final Results - 404.html</summary>
+<img src="docs/testing/testing_htmlval_final2.jpeg">
 </details>
 
 - - -
