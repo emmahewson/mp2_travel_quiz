@@ -104,10 +104,142 @@ Error 2: incorrect aspect ratio value
 
 ### JavaScript Validation
 
-I ran the JavaScript code through the [](). 
-<details><summary>JavaScript Validation Results</summary>
-<img src="">
+I ran the JavaScript code through [JSHint](https://jshint.com/). 
+
+There were no errors but there were a number of warnings which can be groups as follows:
+
+<details><summary>Missing or unnecessary semi-colons</summary>
+<img src="docs/testing/testing_jsval1.jpeg">
 </details>
+
+* Fix: remove or add semi-colons as appropriate
+
+
+<details><summary>Functions declared within loops referencing an outer scoped variable may lead to confusing semantics.</summary>
+<img src="docs/testing/testing_jsval2.jpeg">
+<img src="docs/testing/testing_jsval3.jpeg">
+</details>
+
+* Fix: I did extensive investigation about these warnings, it seems to relate to the way I've written the function within the loop which could made the code difficult to read. There were 2 incidences of this within the code.
+    1. One of them was within the Google Map API recommended syntax, I therefore left this function within the loop as this was what had been recommended by Google for use with their API.
+    ```
+    //Attach click event to the marker & populate page with data
+        (function (marker, data) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                highlightTitle.innerText = this.title;
+                highlightText.innerText = this.text;
+                imageOne.src = `assets/images/countries/highlights/${this.images[0].img}`;
+                imageOne.alt = this.images[0].alt;
+                imageTwo.src = `assets/images/countries/highlights/${this.images[1].img}`;
+                imageTwo.alt = this.images[1].alt;
+                imageThree.src = `assets/images/countries/highlights/${this.images[2].img}`;
+                imageThree.alt = this.images[2].alt;
+                imageFour.src = `assets/images/countries/highlights/${this.images[3].img}`;
+                imageFour.alt = this.images[3].alt;
+                highlightInfoDiv.classList.remove("hidden");
+                // timeout to allow photos to load before scroll
+                setTimeout(function () {
+                    countryHighlightDiv.scrollIntoView(false, {
+                        behavior: 'smooth'
+                    });
+                }, 150);
+
+            });
+        })(marker, data);
+    ```
+    2. The other place that this warning occured was in the tie breaker, where I had declared an anonymous function within a loop.
+    ```
+    // sets the winning personality based on clicked image & reveals results
+            for (let i = 0; i < tieChoices.length; i++) {
+                tieChoices[i].addEventListener("click", function () {
+                    let tieWinner = tieChoices[i].getAttribute("data-type");
+                    personalityTally.push(tieWinner);
+                    topPersonality = personalityTally[personalityTally.length - 1];
+
+                    // updates scores again post tie-break selection
+                    for (let i = 0; i < personalities.length; i++) {
+                        personalities[i].score = elementCount(personalityTally, personalities[i].type)
+                        scoreArray.push(personalities[i].score);
+                    };
+
+                    // Reveals results
+                    chooseCountry();
+                    showResults(topPersonality);
+                });
+            }
+
+    ```
+
+    I made a number of attempts to re-write the code in a way that declared the function outside of the loop, however each attempt caused a different console error and the app failed to work, with the tie breaker click event not working and the results not being calculated. I therefore decided to leave the code as it was, based on the fact that it was a warning that came down to the readability of the code, I would like to be able to make my code more readable in the future, but as this is my first project using JavaScript I didn't have the knowledge or experience to solve this warning in this case.
+
+
+<details><summary>Do not use "new" for side effects</summary>
+<img src="docs/testing/testing_jsval4.jpeg">
+</details>
+
+* Fix: This warning related to the Chart.js code. I had used the syntax and code suggested by Chart.js, but JSHint threw up a warning about using new with an undeclared variable. After researching online I found a solution [here](https://stackoverflow.com/questions/33287045/eslint-suppress-do-not-use-new-for-side-effects) and made the warning disappear by adding a new variable and storing the chart within that. However this then threw up a different warning about an unused variable (chart). I decided as this was a warning rather than an error to leave the code as it was as it had been taken directly from the chart.js documentation and was working correctly.
+    ```
+    // build piechart
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: pieLabels,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+                    borderWidth: 0
+                }]
+            },
+    ```
+
+
+<details><summary>Undefined Variables in Google Maps API and Chart.js</summary>
+<img src="docs/testing/testing_jsval5.jpeg">
+</details>
+
+* Fix: This error related to variables declared elsewhere in the JavaScript code within Google Maps API and Chart.js. JSHint was unable to access this code to see the original variable declaration so threw up a warning, but, upon investigation, I found that this was only an issue relating to what information JSHint could access as I had followed good practice proceedures for both external JavaScript files as suggested in their documentation.
+    ```
+        // 'Chart' is defined in the external chart.js files
+        // new Chart
+        new Chart("myChart", {...
+    ```
+    ```
+        // from map.js - parts that refer to 'google' which is defined in the external Google Maps API js files.
+        // new map
+        const map = new google.maps.Map(document.getElementById("map"), {
+
+        // setting the map location
+        let myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+        // setting the map markers
+        let marker = new google.maps.Marker({
+
+        // adding the click event to the markers
+        (function (marker, data) {
+            google.maps.event.addListener(marker, "click", function (e) {...
+    ```
+
+
+<details><summary>Undeclared/Unused Variables</summary>
+<img src="docs/testing/testing_jsval6.jpeg">
+</details>
+
+* Fix: remove undeclared variables where appropriate. One of these warnings was due to the function being called in index.html to handle the form submission for the username. This was shown to us as good practice for handling form submission by Code Institute so I left it as it was (see code snippet below).
+    ```
+    // In index.html
+    <form id="start-form" method="POST" onsubmit="startGame(event)">
+
+    // in quiz.js
+    function startGame(event) {
+    ```
+
+
+#### **JavaScript Validation Post-Fix**
+
+<details><summary>JavaScript Validation Final Results</summary>
+<img src="docs/testing/testing_jsval_final.jpeg">
+</details>
+
 
 - - -
 

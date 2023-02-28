@@ -348,31 +348,4 @@ const questions = [{
         },
     ]
 },
-]
-
-const tieBreaker = [
-    {
-        personality: "thrill-seeker",
-        image: "thrill.jpg"
-    },
-    {
-        personality: "culture-vulture",
-        image: "culture.jpg"
-    },
-    {
-        personality: "animal-lover",
-        image: "wildlife.jpg"
-    },
-    {
-        personality: "peace-lover",
-        image: "remote.jpg"
-    },
-    {
-        personality: "people-person",
-        image: "people.jpg"
-    },
-    {
-        personality: "foodie",
-        image: "food.jpg"
-    }
-]
+];

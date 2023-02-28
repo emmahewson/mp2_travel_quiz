@@ -1,5 +1,4 @@
 // declaring consts for Welcome Page DOM Objects
-const startGameBtn = document.getElementById("start-game-btn");
 const welcomeDiv = document.getElementById("welcome-div");
 
 // declaring consts for Game DOM Objects
@@ -56,7 +55,7 @@ function startGame(event) {
 
     // alert if no username entered
     if (username.value === "") {
-        alert(`Please enter your name to play, real or imaginary!`)
+        alert(`Please enter your name to play, real or imaginary!`);
 
         // game play functionality
     } else {
@@ -81,12 +80,12 @@ function startGame(event) {
         let answers = currentQuestion.answers;
         for (let i = 0; i < answers.length; i++) {
             choices[i].innerText = answers[i].answerText;
-        };
+        }
 
         // set progress bar
         let questionNumber = questions[0].questionNumber;
         progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
-        progressBar.style.width = `${questionNumber / maxQuestions * 100}%`
+        progressBar.style.width = `${questionNumber / maxQuestions * 100}%`;
     }
 
     /** User selects answer
@@ -122,10 +121,10 @@ function startGame(event) {
                 } else {
                     // disable other buttons during timeout (prevent logging duplicate results)
                     choice.disabled = true;
-                };
+                }
             });
-        };
-    };
+        }
+    }
 
     // logs personality type for each answer to an array (Helper function)
     function logPersonalities(choice) {
@@ -135,9 +134,9 @@ function startGame(event) {
             if (choice.innerText === answer.answerText) {
                 // adds the personality type to an array
                 personalityTally.push(answer.answerType);
-            };
+            }
         });
-    };
+    }
 
 
     // Calculates user personality
@@ -150,9 +149,9 @@ function startGame(event) {
         // updates personality scores in personalities_array
         // creates an array of the number of times each personality occurs
         for (let i = 0; i < personalities.length; i++) {
-            personalities[i].score = elementCount(personalityTally, personalities[i].type)
+            personalities[i].score = elementCount(personalityTally, personalities[i].type);
             scoreArray.push(personalities[i].score);
-        };
+        }
 
         // calculate the results
         // calculate the maximum number of times any personality type appears
@@ -162,8 +161,8 @@ function startGame(event) {
         for (let i = 0; i < personalities.length; i++) {
             if (personalities[i].score === maxPersonalityScore) {
                 topPersonalityArray.push(personalities[i].type);
-            };
-        };
+            }
+        }
 
         // Checks for a tie
         if (topPersonalityArray.length > 1) {
@@ -173,8 +172,8 @@ function startGame(event) {
             for (let i = 0; i < tieChoices.length; i++) {
                 if (topPersonalityArray.includes(tieChoices[i].getAttribute("data-type"))) {
                     tieChoices[i].classList.remove("hidden");
-                };
-            };
+                }
+            }
             // hides the main questions div and reveals the tie-breaker div
             answerDiv.classList.add("hidden");
             progressDiv.classList.add("hidden");
@@ -189,9 +188,9 @@ function startGame(event) {
 
                     // updates scores again post tie-break selection
                     for (let i = 0; i < personalities.length; i++) {
-                        personalities[i].score = elementCount(personalityTally, personalities[i].type)
+                        personalities[i].score = elementCount(personalityTally, personalities[i].type);
                         scoreArray.push(personalities[i].score);
-                    };
+                    }
 
                     // Reveals results
                     chooseCountry();
@@ -204,7 +203,7 @@ function startGame(event) {
             topPersonality = topPersonalityArray[0];
             chooseCountry();
             showResults(topPersonality);
-        };
+        }
 
         // calculates winning country based on each personality choice
         function chooseCountry() {
@@ -242,13 +241,13 @@ function startGame(event) {
                         break;
                 }
             }
-        };
+        }
 
         // helper function to filter arrays
         // function adapted from https://linuxhint.com/count-array-element-occurrences-in-javascript/#:~:text=To%20count%20element%20occurrences%20in,%E2%80%9Cfor%2Dof%E2%80%9D%20loop.
         function elementCount(arr, element) {
             return arr.filter((currentElement) => currentElement == element).length;
-        };
+        }
     }
 
 
@@ -270,19 +269,19 @@ function startGame(event) {
         // Populates personality results on page based on winning personality
         for (let i = 0; i < personalities.length; i++) {
             if (personalities[i].type === topPersonality) {
-                personalityHeading.innerText = `${username.value}, YOU ARE ${personalities[i].prefix}... ${personalities[i].name}`
+                personalityHeading.innerText = `${username.value}, YOU ARE ${personalities[i].prefix}... ${personalities[i].name}`;
                 personalityTextP1.innerText = personalities[i].text[0];
                 personalityTextP2.innerText = personalities[i].text[1];
-            };
-        };
+            }
+        }
 
 
         // Update data & pie chart
 
         // sort personalities by score
         function compareScores(a, b) {
-            return a.score - b.score
-        };
+            return a.score - b.score;
+        }
         let sortedPersonalities = personalities.sort(compareScores);
         // reverse order of sorted personalities
         let reverseSortedPersonalities = sortedPersonalities.reverse();
@@ -291,7 +290,7 @@ function startGame(event) {
         let scoresTotal = 0;
         for (let i = 0; i < sortedPersonalities.length; i++) {
             scoresTotal += sortedPersonalities[i].score;
-        };
+        }
 
         // calculate percentages for each personality
         // adds them to an array & works out sum of all % (to manage rounding issues)
@@ -300,7 +299,7 @@ function startGame(event) {
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             percentageArray.push(calcPercent(reverseSortedPersonalities[i].score, scoresTotal));
             percentagesTotal += calcPercent(reverseSortedPersonalities[i].score, scoresTotal);
-        };
+        }
 
         // helper function - calculate percentage
         function calcPercent(score, total) {
@@ -324,18 +323,18 @@ function startGame(event) {
             piePercentages[i].innerText = `: ${percentageArray[i]}%`;
             keyColors.push(reverseSortedPersonalities[i].colorCode);
             pieLabels.push((reverseSortedPersonalities[i].name));
-        };
+        }
 
         // Populates the 3rd paragraph of the personality based on if there are other high scoring personality types
         if (percentageArray[1] < 15) {
-            personalityTextP3.innerText = `Check our our recommendations below to see which destination suits all these aspects your personality!`
+            personalityTextP3.innerText = `Check our our recommendations below to see which destination suits all these aspects your personality!`;
         } else if (percentageArray[2] < 15) {
             personalityTextP3.innerHTML = `But we humans are complex creatures, you also scored highly as ${reverseSortedPersonalities[1].prefix} <strong>${reverseSortedPersonalities[1].name}</strong>. Check our our recommendations below
             to see which destination suits all these aspects your personality!`;
         } else {
             personalityTextP3.innerHTML = `But we humans are complex creatures, you also scored highly as ${reverseSortedPersonalities[1].prefix} <strong>${reverseSortedPersonalities[1].name}</strong> and <strong>${reverseSortedPersonalities[2].name}</strong>. Check our our recommendations below
-            to see which destination suits all these aspects your personality!`
-        };
+            to see which destination suits all these aspects your personality!`;
+        }
 
         // build piechart
         // uses chart.js library https://www.chartjs.org/
@@ -404,6 +403,4 @@ function startGame(event) {
             behavior: 'smooth'
         });
     }
-
-
-};
+}
