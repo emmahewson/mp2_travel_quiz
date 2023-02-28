@@ -108,14 +108,14 @@ I ran the JavaScript code through [JSHint](https://jshint.com/).
 
 There were no errors but there were a number of warnings which can be groups as follows:
 
-<details><summary>Missing or unnecessary semi-colons</summary>
+<details><summary>Warning 1: Missing or unnecessary semi-colons</summary>
 <img src="docs/testing/testing_jsval1.jpeg">
 </details>
 
 * Fix: remove or add semi-colons as appropriate
 
 
-<details><summary>Functions declared within loops referencing an outer scoped variable may lead to confusing semantics.</summary>
+<details><summary>Warning 2: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics.</summary>
 <img src="docs/testing/testing_jsval2.jpeg">
 <img src="docs/testing/testing_jsval3.jpeg">
 </details>
@@ -173,7 +173,7 @@ There were no errors but there were a number of warnings which can be groups as 
     I made a number of attempts to re-write the code in a way that declared the function outside of the loop, however each attempt caused a different console error and the app failed to work, with the tie breaker click event not working and the results not being calculated. I therefore decided to leave the code as it was, based on the fact that it was a warning that came down to the readability of the code, I would like to be able to make my code more readable in the future, but as this is my first project using JavaScript I didn't have the knowledge or experience to solve this warning in this case.
 
 
-<details><summary>Do not use "new" for side effects</summary>
+<details><summary>Warning 3: Do not use "new" for side effects</summary>
 <img src="docs/testing/testing_jsval4.jpeg">
 </details>
 
@@ -193,7 +193,7 @@ There were no errors but there were a number of warnings which can be groups as 
     ```
 
 
-<details><summary>Undefined Variables in Google Maps API and Chart.js</summary>
+<details><summary>Warning 4: Undefined Variables in Google Maps API and Chart.js</summary>
 <img src="docs/testing/testing_jsval5.jpeg">
 </details>
 
@@ -220,7 +220,7 @@ There were no errors but there were a number of warnings which can be groups as 
     ```
 
 
-<details><summary>Undeclared/Unused Variables</summary>
+<details><summary>Warning 5: Undeclared/Unused Variables</summary>
 <img src="docs/testing/testing_jsval6.jpeg">
 </details>
 
