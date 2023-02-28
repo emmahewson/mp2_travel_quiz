@@ -81,12 +81,11 @@ There were 5 errors, some occurring on multiple elements:
 I ran the CSS code through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input). 
 
 #### **Errors**
+<details><summary>CSS Validation Initial Results</summary>
+<img src="docs/testing/testing_cssval1.jpeg">
+</details>
 
 There were 2 errors:
-
-<details><summary>Errors</summary>
-<img src="">
-</details>
 
 Error 1: Mis-spelling of 'absolute'
 * Fix: remove position value (not doing anything)
@@ -98,7 +97,7 @@ Error 2: incorrect aspect ratio value
 #### **CSS Validation After Errors Fixed**
 
 <details><summary>CSS Validation Final Results</summary>
-<img src="">
+<img src="docs/testing/testing_cssval2.jpeg">
 </details>
 
 - - -
