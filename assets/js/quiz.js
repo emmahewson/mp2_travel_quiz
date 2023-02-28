@@ -148,6 +148,7 @@ function startGame(event) {
         let topPersonality;
 
         // updates personality scores in personalities_array
+        // creates an array of the number of times each personality occurs
         for (let i = 0; i < personalities.length; i++) {
             personalities[i].score = elementCount(personalityTally, personalities[i].type)
             scoreArray.push(personalities[i].score);

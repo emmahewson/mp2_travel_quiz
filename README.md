@@ -489,15 +489,40 @@ Give the user more detailed country recommendations, with multiple options and m
 This section explains in plain English what happens in the JavaScript code as the user moves through the game. This is in addition to the comments in the JavaScript Code.
 
 ### Welcome Section
-* The user enters their name and click on 'Start Quiz'
+
+<details><summary>Details</summary>
+
+* The user enters their name and clicks on 'Start Quiz':
     * If no name is entered an alert appears prompting the user to enter a name
     * The name is stored to be used in the results page
+    
 * The start game button starts the main JavaScript function which contains all the game functionality
+</details>
 
 ### Game Section
+
+<details><summary>Details</summary>
+
 * The start game button:
     * hides the welcome section and reveals the game section
     * populates the question & answers from the first question in the questions array (in a separate .js file)
+    ```
+    const questions = [{
+        questionNumber: 1,
+        questionText: "At a party you are most likely to be found…",
+        answers: [{
+                answerNumber: 1,
+                answerText: "Leafing through the host's book collection",
+                answerType: "culture"
+            },
+            {
+                answerNumber: 2,
+                answerText: "Jumping off the roof in to the pool",
+                answerType: "thrill"
+            },
+
+    // questions array continues
+    ```
     * sets the progress bar based on the question number of the first question in the questions array
 
 
@@ -505,6 +530,11 @@ This section explains in plain English what happens in the JavaScript code as th
     * All other answers are disabled so the user cannot select more than once
     * The answer is given a class of 'selected' to change its colour
     * Each answer has an associated 'personality type' - this is logged to an array called 'personality tally', for each answer selected another 'personality type' is added to the array, one for each question.
+    ```
+    // user selects "thrill-seeker" answer
+
+    personalityTally = ["thrill"]
+    ```
     * There is a brief timeout before the question reloads (see [Answers](#answers) in features section for more information)
     * The 'selected' class is removed from the selected answer to remove the colour styling
     * The first question in the questions array is removed from the array
@@ -517,24 +547,52 @@ This section explains in plain English what happens in the JavaScript code as th
 * When the user selects the final answer:
     * Calculating the winning personality:
         * The personality tally contains the 10 personality types that come from the selected answers
+        ``` 
+        personalityTally = ["thrill", "food", "culture", "thrill", "thrill", "people", "remote", "food", "food", "culture"]
+        ```
         * The code checks for the type that occurs the most frequently
-            * It does this by creating a new array of the number of times each personality occurs, the 'personality score', finding the max value in this array, then creating a new array of only personalities that scored that amount. It can then test to see how many personalities are in that array and therefore whether there is a tie.
+            * It does this by: 
+                * creating a new array of the number of times each personality occurs, the 'personality score' (order matches the personalities array)
+                ```
+                scoreArray = [2, 3, 1, 1, 3, 0]
+                ```
+                * finding the max value in this array
+                ```
+                let maxPersonalityScore = Math.max(...scoreArray);
+
+                maxPersonalityScore = 3
+                ```
+                * then creating a new array of only personalities that scored that amount.
+                * It can then test to see how many personalities are in that array and therefore whether there is a tie.
+                ```
+                // both "food" and "thrill" scored 3 - there is a tie
+
+                topPersonalityArray = ["food", "thrill"]
+                ```
+
         * If there is a single winner the personality result is stored and the results show (see below)
         * If there is a tie:
             * The tie breaker question is revealed and the main quiz hidden
             * The tie breaker contains photos which relate to the tied winning personalities only (not the others)
             * The user selects a single image to break the tie - this is now the winning personality
             * This personality is logged and the results show
+            ```
+            // user selects the image associated with the "thrill-seeker" personality
+
+            personalityTally = ["thrill", "food", "culture", "thrill", "thrill", "people", "remote", "food", "food", "culture", "thrill"]
+
+            // "thrill-seeker" is the winning personality
+            ```
     * Calculating the recommended country:
         * This is more complex than having a single country associated with a personality type as I wanted the recommendations to be more personalised and less simplistic. It is based on all the user's answers which give points to certain countries based on the personality type.
-        * Takes the original 'personality tally' array (based on the user's answers)
+        * Takes the 'personality tally' array (based on the user's answers)
             * For each personality type in the array it assigns points to different countries based on how much that country would appeal to someone who likes food, culture, thrill-seeking etc.
             * e.g. if a 'food' answer is selected Mexico is awarded 3 points, New Zealand 2 & Peru 1
             * This system of awarding multiple countries points also helps to avoid tied results
             * This is done using arrays of points where the index matches the index of the country in the countries array (stored in a separate js file)
-            * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan] - order of countries in the countries array
-
             ```
+            // [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan] - order of countries in the countries array
+
             let userTotal = [0, 0, 0, 0, 0, 0];
             let wildlifePoints = [0, 1, 0, 0, 3, 2];
             let thrillPoints = [3, 0, 1, 0, 2, 0];
@@ -545,6 +603,13 @@ This section explains in plain English what happens in the JavaScript code as th
             ```
             * These point are added to the userTotal array (see code above)
             * The winning country is the one with the most points (matched using the index in the array)
+            ```
+            // user points after all points added (based on example personality tally above)
+
+            userTotal = [19, 11, 12, 16, 9, 5]
+            
+            // New Zealand is the winning country (index 0 in the countries array)
+            ```
     * The game div is hidden and the results div appears
 
 ### Game Section - Restart Quiz Button
@@ -552,15 +617,43 @@ This section explains in plain English what happens in the JavaScript code as th
     * hides the game section
     * reveals the welcome section
     * clears all results so far
-
+</details>
 
 ### Results Section - Personality
+
+<details><summary>Details</summary>
+
 * The personality results are populated based on the winning personality
     * The user name is included in the heading to personalise the results
     * The personalities array contains all the associated text, colours and details which are used to populate the personality results
+    ```
+    let personalities = [{
+        type: "culture",
+        score: 0,
+        prefix: "a",
+        name: "Culture-Vulture",
+        text: [
+            "Knowledge is power could be your motto! You love to learn about the world around you and what better way to do that than to travel! You may well be knowledgable about art, literature, music or history. You and often seek out opportunities to explore and learn more about different forms of culture.",
+            "You love gathering information and facts. You are at your happiest in galleries, museums and ancient ruins or learning a new language and using it to connect with local people on your travels. You are open to new cultural experiences and love to discover and learn."
+        ],
+        color: "purple",
+        colorCode: "#ACAAFF"
+    },
+
+    // personalties array continues...
+    ```
 * The pie chart and percentages are populated:
     * The personality scores (calculated and added to the personalities array earlier) are compared and sorted and the array sorted in to order based on the scores
+    ```
+    function compareScores(a, b) {
+            return a.score - b.score
+        };
+    let sortedPersonalities = personalities.sort(compareScores);
+    ```
     * This is then reversed to put the highest scoring personality first
+    ```
+    let reverseSortedPersonalities = sortedPersonalities.reverse();
+    ```
     * The percentages are calculated based on the number of questions answered (10 for a clear winner, 11 for a tie)
     * Due to rounding issues if the number doesn't add up to 100 the top score is increased so that they do
     * These results then populate the pie chart and key
@@ -568,13 +661,59 @@ This section explains in plain English what happens in the JavaScript code as th
         * This means that the same colours are always used for the same personalities
     * The pie chart animates on - animation by chart.js
 * The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
+</details>
 
 ### Results Section - Country
+<details><summary>Details</summary>
+
 * The recommended country results are populated based on the winning country
     * This is based on the index of the winning country (see above)
     * All the data is stored in the countries array including text, photos, alt values, map information, highlights data etc
     * The country image is also assigned an associated 'alt' value to make it accessible (stored in the countries array)
-* The map uses Google Maps API to create a personalised map showing the winning country
+    ```
+    const countries = [{
+        name: "New Zealand",
+        image: "nz_main.jpg",
+        alt: "Mt Cook and Lake Tekapo, New Zealand",
+        text: [
+            "New Zealand is a breathtakingly beautiful country that offers a unique blend of stunning landscapes, diverse wildlife, and rich cultural heritage. From the majestic peaks of the Southern Alps to the pristine beaches of the Bay of Islands, visitors will be mesmerized by the natural beauty that surrounds them.",
+            "Whether you prefer outdoor adventures, such as hiking, skiing, and surfing, or more relaxed pursuits, such as wine tasting and visiting art galleries, New Zealand has something for everyone. With friendly locals, delicious cuisine, and an abundance of activities, you'll leave with unforgettable memories of your time in this truly magical country."
+        ],
+        zoomLrg: 4.9,
+        zoomSml: 4.5,
+        center: {
+            lat: -40.51148,
+            lng: 172.67
+        },
+        highlights: [{
+                title: "Queenstown, Otago",
+                lat: "-45.0295903775837",
+                lng: "168.658942058923",
+                description: "Snuggled between the shores of shimmering Lake Wakatipu and the snowy peaks of the Remarkables, Queenstown is New Zealand's adventure capital and one of the country's top destinations for international visitors. Bungee jumping, jet boating, white water rafting, paragliding, rock climbing, mountain biking, and downhill skiing are just some of the adrenaline-fueled things to do here, and visitors can explore the stunning alpine scenery on the excellent network of hiking trails.",
+                images: [
+                    {
+                        img: "nz_queenstown1.jpeg",
+                        alt: "Bungee jumper leaps off platform"
+                    },
+                    {
+                        img: "nz_queenstown2.jpeg",
+                        alt: "Aerial view of Queenstown"
+                    },
+                    {
+                        img: "nz_queenstown3.jpeg",
+                        alt: "Queenstown lakefront"
+                    },
+                    {
+                        img: "nz_queenstown4.jpeg",
+                        alt: "Jetboat on turquoise river"
+                    }
+                ]
+            },
+
+            // countries array continues
+    ```
+* The map uses Google Maps API to create a personalised map showing the winning country - the code for this is stored in a separate file (map.js)
+    * The initMap function is passed the index of the winning country
     * Longitude and Latitude taken from the countries array
     * Zoom level taken from the countries array - responsive based on screen size (zoom level changes for smaller screens)
     * The map contains clickable markers
@@ -584,13 +723,16 @@ This section explains in plain English what happens in the JavaScript code as th
         * If a user clicks on another marker the highlight text and photos are replaced
     * If the map fails to load text is displayed in the map box which handles the error smoothly for the user (built in functionality from Google Maps API)
     * The map also contains all the standard Google Maps functionality such as zoom, satellite view, street view and full screen
+</details>
 
 ### Results Section - Start Again Button
+<details><summary>Details</summary>
+
 * When the user clicks on the Start Again button the page reloads, which:
     * hides the game section
     * reveals the welcome section
     * clears all results so far
-
+</details>
 
 
 ## Testing & Bugs
