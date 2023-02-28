@@ -133,7 +133,6 @@ input,
     background: linear-gradient(180deg, #AAE2FF 0.01%, #FBFBFB 70%);
     max-width: 1300px;
     margin: 0 auto;
-    position: absoloute;
 }
 
 
@@ -452,7 +451,6 @@ input,
     height: 15px;
     border-radius: 5px;
     margin-right: 5px;
-    aspect-ratio: 1;
 }
 
 .yellow {
