@@ -28,7 +28,7 @@ I ran the code for all the pages through the [W3C HTML Validator](https://valida
 
 #### **Errors**
 
-There were 4 errors, some occurring on multiple elements:
+There were 5 errors, some occurring on multiple elements:
 
 * An empty "action" attribute on the form
 * Fix: remove the action attribute
@@ -50,6 +50,12 @@ There were 4 errors, some occurring on multiple elements:
 
 * An empty "src" attribute on the highlight images (which would be populated by the JavaScript)
 * Fix: Give the src a value of one of the highlight images as a placeholder (removing the src entirely throws up a different error)
+<details><summary>Screenshot</summary>
+<img src="">
+</details>
+
+* On the 404 page the button element was a descendant of an <a> element
+* Fix: change the button to an <a> element
 <details><summary>Screenshot</summary>
 <img src="">
 </details>

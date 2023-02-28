@@ -50,6 +50,7 @@ h3 {
 
 p,
 button,
+a,
 input,
 #personality-stats-div h3 {
     font-family: 'Raleway', sans-serif;
@@ -609,8 +610,8 @@ input,
     margin-bottom: 20px;
 }
 
-#go-home-btn {
-    margin-top: 30px;
+#error-div p {
+    margin-bottom: 30px;
 }
 
 /* Media Queries */
@@ -789,8 +790,7 @@ input,
         line-height: 36px;
     }
 
-    #start-again-button-div,
-    #go-home-btn {
+    #start-again-button-div {
         margin-top: 40px;
 
     }
