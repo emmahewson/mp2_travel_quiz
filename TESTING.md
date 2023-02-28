@@ -64,7 +64,7 @@ There were 5 errors, some occurring on multiple elements:
 
 
 
-#### **HTML Validation After Errors Fixed**
+#### **HTML Validation Post-Fix**
 
 <details><summary>HTML Validation Final Results - index.html</summary>
 <img src="docs/testing/testing_htmlval_final1.jpeg">
@@ -94,7 +94,7 @@ Error 2: incorrect aspect ratio value
 * Fix: remove aspect ratio (not doing anything)
 
 
-#### **CSS Validation After Errors Fixed**
+#### **CSS Validation Post-Fix**
 
 <details><summary>CSS Validation Final Results</summary>
 <img src="docs/testing/testing_cssval2.jpeg">
@@ -104,7 +104,7 @@ Error 2: incorrect aspect ratio value
 
 ### JavaScript Validation
 
-I ran the CSS code through the [](). 
+I ran the JavaScript code through the [](). 
 <details><summary>JavaScript Validation Results</summary>
 <img src="">
 </details>
@@ -120,24 +120,25 @@ I ran the site through the [Wave Web Accessibility Evaulation Tool](https://wave
 There were 2 warnings, some occurring on multiple elements:
 
 <details><summary>Warning 1</summary>
-<img src="">
+<img src="docs/testing/testing_waveval1.jpeg">
 </details>
 
 * Missing heading level
 * Fix: change `<h3>`to `<h2>`
 
 <details><summary>Warning 2</summary>
-<img src="">
+<img src="docs/testing/testing_waveval2.jpeg">
+<img src="docs/testing/testing_waveval3.jpeg">
 </details>
 
 * Possible headings x3
 * Fix: Changed recommended country name to a heading, but left the question & tie-breaker as `<p>` elements as this made more sense semantically and these were warnings rather than errors with the tool guessing what it thought was a heading.
 
 
-#### **Wave Web Accessibility Results After Errors Fixed**
+#### **Wave Web Accessibility Results Post-Fix**
 
 <details><summary>Wave Web Accessibility Final Results</summary>
-<img src="">
+<img src="docs/testing/testing_waveval_final.jpeg">
 </details>
 
 
