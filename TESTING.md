@@ -249,7 +249,7 @@ I ran the site through the [Wave Web Accessibility Evaulation Tool](https://wave
 
 #### **Errors**
 
-There were 2 warnings, some occurring on multiple elements:
+On index.html there were 2 warnings, some occurring on multiple elements:
 
 <details><summary>Warning 1</summary>
 <img src="docs/testing/testing_waveval1.jpeg">
@@ -266,11 +266,17 @@ There were 2 warnings, some occurring on multiple elements:
 * Possible headings x3
 * Fix: Changed recommended country name to a heading, but left the question & tie-breaker as `<p>` elements as this made more sense semantically and these were warnings rather than errors with the tool guessing what it thought was a heading.
 
+There were no errors or warnings on 404.html.
+
 
 #### **Wave Web Accessibility Results Post-Fix**
 
-<details><summary>Wave Web Accessibility Final Results</summary>
+<details><summary>Wave Web Accessibility Final Results - index.html</summary>
 <img src="docs/testing/testing_waveval_final.jpeg">
+</details>
+
+<details><summary>Wave Web Accessibility Final Results - 404.html</summary>
+<img src="docs/testing/testing_waveval_final2.jpeg">
 </details>
 
 
