@@ -407,12 +407,11 @@ The site was tested on the following devices
 - - -
 #### **Browser Compatibility**
 
-The site was tested on the following browsers
+The site was tested on the following browsers. No browser-specific bugs were found.
 * Google Chrome
 * Mozilla Firefox
 * Apple Safari
 
-**Bugs found - specific to browser testing:** REMOVE IF NONE!!
 
 - - -
 ### Testing Results Table
@@ -420,37 +419,37 @@ The site was tested on the following browsers
 **Every Page / Section**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Whole Page | Layout is fully responsive |  |  |  |
-| Main Page Contents | Background gradient, logo, footer & footer contents appear correctly and remain visible througout game |  |  |  |
-| Favicon | Appears in browser tab |  |  |  |
-| Footer Image | Image changes on smallest devices |  |  |  |
-| Footer Social Links | Hover Effect with transition on hover |  |  |  |
-| Footer Social Links | Open correct pages in separate tab |  |  |  |
-| Console | No errors appear in console throughout game |  |  |  |
+| Whole Page | Layout is fully responsive | Checked all pages on various browsers and devices including Google Dev Tool device simulators | All elements were fully responsive on all devices tested | Pass |
+| Main Page Contents | Background gradient, logo, footer & footer contents appear correctly and remain visible througout game | Checked on various browsers and devices throughout game | All content appeared as expected | Pass |
+| Favicon | Appears in browser tab | Checked browser tabs in different browsers and devices | Favicon appeared as expected | Pass |
+| Footer Image | Image changes on smallest devices | Check footer image using mobile device and with Dev Tools's inspect tool | Footer image changes to small version on small devices | Pass |
+| Footer Social Links | Hover Effect with transition on hover | Hovered on icons | Hover colour change happens as expected | Pass |
+| Footer Social Links | Open correct pages in separate tab | Clicked on social links | Links open correctly in separate tab | Pass |
+| Console | No errors appear in console throughout game | Checked console in dev tools during game play | Console logged no errors. Warnings relating to Google Maps API did appear [more information here](#6-google-maps-api---console-errors) | Pass |
 
 **Welcome Section**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Welcome Div Contents | Text, name input & start game button appear correctly |  |  |  |
-| Welcome Section | Loads on page refresh - no other parts of game visible |  |  |  |
-| Name Input | Allows user to input name |  |  |  |
-| Name Input | User must enter name between 2-10 characters |  |  |  |
-| Start Quiz Button | Hover effect with transition on hover |  |  |  |
-| Start Quiz Button | If no name inputted alert appears & game doesn't start |  |  |  |
-| Start Quiz Button | Starts Quiz (hides welcome div and reveals game div) |  |  |  |
+| Welcome Div Contents | Text, name input & start game button appear correctly | Loading page | All content appeared as expected | Pass |
+| Welcome Section | Loads on page refresh - no other parts of game visible | Loading page | The correct divs load as expected | Pass |
+| Name Input | Allows user to input name | Inputting name | User is able to input name | Pass |
+| Name Input | User must enter name between 2-10 characters | Attempted to enter a name shorter than 2 & longer than 10 characters | Input box performs as expected ![Screen Recording](docs/testing/testing_features_welcome1.gif) | Pass |
+| Start Quiz Button | Hover effect with transition on hover | Hovered on Start Quiz Button | Hover effect works as expected ![Screen Recording](docs/testing/testing_features_welcome2.gif) | Pass |
+| Start Quiz Button | If no name inputted alert appears & game doesn't start | Clicked on start button with no name inputted | Alert pops up with message telling user to enter a name ![Screenshot](docs/testing/testing_features_welcome3.jpg) | Pass |
+| Start Quiz Button | Starts Quiz (hides welcome div and reveals game div) | Clicked on start game button (with username entered) | Game starts, welcome div disappears and game div appears | Pass |
 
 **Game Section**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Game Div Contents | Progress text, progress bar, question text, 6x answer boxes with text contents & restart quiz button appear correctly  |  |  |  |
-| Question & Answers | Correct question and answers load each time an answer is selected |  |  |  |
-| Question & Answers | 10 questions & sets of answers appear in total |  |  |  |
-| Answer Boxes | Hover Effect with transition on hover |  |  |  |
-| Answer Boxes | Colour changes to orange with transition when user selects an answer |  |  |  |
-| Answer Boxes | Brief timeout before question / answers refresh |  |  |  |
-| Answer Boxes | User cannot select another answer once a selection has been made during timeout |  |  |  |
+| Game Div Contents | Progress text, progress bar, question text, 6x answer boxes with text contents & restart quiz button appear correctly  | Clicking start game button in Welcome Div | All content appeared as expected | Pass |
+| Question & Answers | Correct question and answers load each time an answer is selected | Clicking through game and checking against questions and answers in questions array | All questions and answers appear as expected | Pass |
+| Question & Answers | 10 questions & sets of answers appear in total | Clicking through game and counting questions | The correct number of questions appear | Pass |
+| Answer Boxes | Hover Effect with transition on hover | Hovered on questions | Hover effect works as expected ![Screen Recording](docs/testing/testing_features_game1.gif) | Pass |
+| Answer Boxes | Colour changes to orange with transition when user selects an answer | Clicked on answer | Answer box changes colour as expected ![Screen Recording](docs/testing/testing_features_game2.gif) | Pass |
+| Answer Boxes | Brief timeout before question / answers refresh | Clicked on answer | Game pauses before refreshing (see gif above) | Pass |
+| Answer Boxes | User cannot select another answer once a selection has been made during timeout | Clicked on an answer and attempted to select another quickly afterwards. Also checked console logs to if any additional answers were being added to the personalityTally array | Unable to select more than 1 answer during time out and nothing additional added to personalityTally | Pass |
 | Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh |  |  |  |
 | Answer Boxes | Page scrolls to top on question/answer refresh |  |  |  |
 | Progress Bar | Shows "Question 1 of 10" on inital load & pink bar at 10% |  |  |  |
