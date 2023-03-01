@@ -7,17 +7,25 @@
 
 This is the documentation for my web application: The Travel Personality Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
-
+- - -
 ## Table of Contents
 
-1. [Section Name](#)
-    * [Sub-Section Name](#)
-        * [Sub-Section Name](#)
+1. [Project Development & Planning](#project-development--planning)
+    * [Project Goals](#project-goals)
+    * [Research](#research)
+    * [User Stories](#user-stories)
+    * [Design, Layout & Structure](#design-layout--structure)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [JavaScript Functionality](#javascript-functionality)
+5. [Testing & Bugs](#testing--bugs)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
 
-
+- - -
 ## Project Development & Planning
 Throughout the development of this game I followed the principles of User Experience (UX), including the 5 planes of Strategy, Scope, Structure, Skeleton & Surface. At all times I wanted to make sure that the website was easy to use, responsive, accessible and intuitive as well as meeting the goals and needs of the user and client.
-
+- - -
 ### Project Goals
 
 #### **Project Purpose**
@@ -39,7 +47,7 @@ User Goals:
 * Getting recommendations of where to go travelling or on holiday
 * Learning more about a lesser-known destination that suits their travel personality
 
-
+- - -
 ### Research
 
 #### **Market Review**
@@ -53,7 +61,7 @@ I looked at a variety of online travel quizzes. Most were hosted by travel agenc
 * Many of the quizzes featured simple animations on hover or click
 * Most of the quizzes didn't offer a back button to change an answer
 
-
+- - -
 ### User Stories
 Based on the research and goal development above I created a list of user stories. I felt that the quiz was most likely to be something that a visitor used once, rather than repeatedly, as it would likely form part of a bigger website e.g. a tour operator or travel agent site, with a user moving on to discover more about the products offered, so all user stories relate to a first time user.
 
@@ -63,7 +71,7 @@ Based on the research and goal development above I created a list of user storie
 * I want to access the quiz on any device
 * I want to navigate the site easily
 
-
+- - -
 ### Design, Layout & Structure
 
 
@@ -82,7 +90,7 @@ I decided to create a fully designed site in Figma, developing the structure, sk
 <img src="docs/wireframes/wireframes_results.png">
 </details>
    
-
+- - -
 #### **Structure**
 
 The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to users' expectations and making everything as intuitive as I could.
@@ -97,7 +105,7 @@ There is also a 404 page for when a user lands on a non-existent page with a but
 
 Both the main index.html and 404 page contain a logo at the top (not clickable to avoid the user mistakenly clicking it and having to start the quiz again) and a cloud graphics footer, containing my name and social links.
 
-
+- - -
 #### **Colour & Design**
 
 The design of the site is influenced by the view out the window on a plane journey, with the 'paper-like' clouds with drop shadows at the bottom as the footer and a light, airy gradient background as the sky. I have therefore used shades of blue for the colour palette, with a contrasting shades of orange for key elements to allow for good legibility.
@@ -112,12 +120,12 @@ In addition I created a colour palette for the pie chart and personality types, 
 * The use of drop shadows & inner shadows to match the layered paper effect on the footer
 * Consistent use of border radius to give the site a soft, rounded feel and match the rounded cloud design
 
-
+- - -
 #### **Fonts**
 
 I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https://fonts.google.com/specimen/Righteous) (with a fallback of Sans Serif) for the logo and some of the main headings. I felt this font had a slightly exotic, exciting look which added to the travel theme. It also has good legibility and is eye-catching. I also used [Raleway](https://fonts.google.com/specimen/Raleway) (with a fallback of Sans Serif) for the main body text as it contrasted well with the heading font, had good flexibility with a range of weights and is known for being clear and legible as an online font, as well as having a warm, friendly roundness to it.
 
-
+- - -
 ## Technologies Used
 
 ### Languages
@@ -125,6 +133,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
+- - -
 ### Tools
 
 * [Git](https://git-scm.com/)
@@ -154,7 +163,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * [Google Maps API](https://developers.google.com/maps)
     * Linked to Google Maps API to load the relevant country map and create clickable markers
 
-
+- - -
 ## Features
 
 ### All Sections/Pages
@@ -211,7 +220,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * The footer social icons have a hover effect with a smooth colour transition
 * The footer is responsive, the cloud image adjusts as a background image down to tablet-size screens and is replaced by a smaller image on mobile to make the design work and the site perform well.
 
-
+- - -
 ### Welcome Section
 
 ![Welcome Section - Mock Up]()
@@ -237,7 +246,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * Start Quiz button - launches the quiz
     * Has a hover effect on non touchscreen devices with a smooth colour transition
 
-
+- - -
 ### Game Section
 
 ![Game Section - Mock Up]()
@@ -312,7 +321,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * A button to allow the user to go back to the start of the quiz
 * Has a hover effect with a short, smooth colour transition on non touchscreen devices
 
-
+- - -
 ### Tie Breaker
 
 ![Tie Breaker - Mock Up]()
@@ -335,7 +344,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 * The images have associated "alt" values to make them accessible
 * The layout is fully responsive depending on the screen size and the number of images that appear
 
-
+- - -
 ### Results Section
 
 ![Results Section - Mock Up]()
@@ -463,7 +472,7 @@ The country recommendation section contains
 * Has explanatory text to give the site a friendly 'voice'
 * Button has a hover effect with a short, smooth colour transition on non touchscreen devices
 
-
+- - -
 ### 404 Page
 
 ![404 Page - Mock Up]()
@@ -474,7 +483,7 @@ The country recommendation section contains
 * The text is light hearted and relevant to the theme of the quiz
 * There is a button to take the user back to the home page so there is no need to user the browser back button
 
-
+- - -
 ### Future Features
 I would like to expand the site in the future with the following features
 
@@ -484,7 +493,7 @@ Give the user the ability to save their results and recommendations, creating an
 #### **Multiple / More Detailed Recommendations**
 Give the user more detailed country recommendations, with multiple options and more countries available. This would be a good way to address the bug that I have talked about in the [TESTING document](#TESTING.md) where, when 2 countries have an equal number of points, the country that occurs first in the countries array is automatically selected. It would be a nice idea in this situation to give the user multiple options to choose between or compare.
 
-
+- - -
 ## JavaScript Functionality
 
 This section explains in plain English what happens in the JavaScript code as the user moves through the game. This is in addition to the comments in the JavaScript Code.
@@ -735,10 +744,11 @@ This section explains in plain English what happens in the JavaScript code as th
     * clears all results so far
 </details>
 
-
+- - -
 ## Testing & Bugs
 [See TESTING.md for full breakdown of testing & bugs](TESTING.md)
 
+- - -
 ## Deployment
 
 ### GitHub Pages
@@ -770,6 +780,7 @@ You can clone the repository to use locally by following these steps:
 
 The project will now be cloned locally for you to use.
 
+- - -
 ## Credits
 
 ### Code
@@ -778,6 +789,7 @@ The project will now be cloned locally for you to use.
 * [Chart.js](https://www.chartjs.org/): ChartJS library used to create pie chart
 * [Google Maps API](https://developers.google.com/maps): Connected to Google Maps API for the map and clickable markers
 
+- - -
 ### Content
 
 * [Planet Aware](https://www.planetware.com/tourist-attractions/new-zealand-nz.htm): New Zealand Text
@@ -787,10 +799,12 @@ The project will now be cloned locally for you to use.
 * [Secret Africa](https://secretafrica.com/top-10-tourist-attractions-in-zambia/): Zambia Text
 * [Wild Frontiers Travel](https://www.wildfrontierstravel.com/en_GB/blog/places-to-visit-in-kyrgyzstan): Kyrgyzstan Text
 
+- - -
 ### Media
 
 * Background Cloud Image [Image by rawpixel.com on Freepik](https://www.freepik.com/free-vector/cloud-background-pastel-paper-cut-style-vector_18220838.htm#&position=8&from_view=collections)
 
+- - -
 #### **Photos**
 
 **New Zealand**
@@ -815,7 +829,6 @@ The project will now be cloned locally for you to use.
 * Kaikoura 2 [Kaikoura Kayaks](https://www.kaikourakayaks.nz/library/images/01-kaikoura-canterbury-kyle-mulinder.jpg)
 * Kaikoura 3 [Trip Advisor](https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5d/b9/cb/2-day-guided-seal-kayaking.jpg?w=1200&h=900&s=1)
 * Kaikoura 4 [Dolphin Encounter](https://www.dolphinencounter.co.nz/assets/Dolphin-Encounter-Files/6fb981f931/Dolphins_People_0007-v2__FocusFillWyItMC4yMyIsIi0wLjI4IiwxMjAwLDgwMF0.jpg)
-
 
 **Peru**
 * Peru Main [Alexander Schimmeck](https://unsplash.com/photos/MraFXV3v7Ts)
@@ -904,7 +917,7 @@ The project will now be cloned locally for you to use.
 * Lake Kashiba [Kafakumba](https://www.kafakumbalogistics.com/)
 * Lake Kashiba 3 & 4[Pwando24](https://www.facebook.com/pwando24/posts/2509074145889425?locale=ne_NP&paipv=0&eav=AfYGwDvL2chHGT9GCnQUqZUz47BTVoe4SKmfArQofASI_-oNa-ngjRXBOLwrX3rjusY&_rdr)
 
-
+- - -
 ### Acknowledgements
 
 * My mentor [Gareth McGirr](https://github.com/Gareth-McGirr/) for all his help and advice throughout the project
