@@ -482,7 +482,7 @@ I would like to expand the site in the future with the following features
 Give the user the ability to save their results and recommendations, creating an account and log in so that they can re-access their data.
 
 #### **Multiple / More Detailed Recommendations**
-Give the user more detailed country recommendations, with multiple options and more countries available
+Give the user more detailed country recommendations, with multiple options and more countries available. This would be a good way to address the bug that I have talked about in the [TESTING document](#TESTING.md) where, when 2 countries have an equal number of points, the country that occurs first in the countries array is automatically selected. It would be a nice idea in this situation to give the user multiple options to choose between or compare.
 
 
 ## JavaScript Functionality

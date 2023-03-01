@@ -12,9 +12,20 @@ This is the testing documentation for my web application: The Travel Personality
 
 ## Table of Contents
 
-1. [Section Name](#)
-    * [Sub-Section Name](#)
-        * [Sub-Section Name](#)
+1. [Automated Testing](#automated-testing)
+    * [HTML Validation](#html-validation)
+    * [CSS Validation](#css-validation)
+    * [JavaScript Validation](#javascript-validation)
+    * [Accessibility](#accessibility)
+    * [Performance](#performance)
+2. [Manual Testing](#manual-testing)
+    * [Testing User Stories](#testing-user-stories)
+    * [Feature Testing](#feature-testing)
+        * [Responsiveness / Device Testing](#responsiveness--device-testing)
+        * [Browser Compatibility](#browser-compatibility)
+        * [Feature Testing Results Table](#feature-testing-results-table)
+3. [Bugs & Fixes](#bugs--fixes)
+    * [Known bugs](#k)
 
 - - -
 ## Automated Testing
@@ -247,7 +258,7 @@ There were no errors but there were a number of warnings which can be groups as 
 
 I ran the site through the [Wave Web Accessibility Evaulation Tool](https://wave.webaim.org/). 
 
-#### **Errors**
+#### **Accessibility Errors**
 
 On index.html there were 2 warnings, some occurring on multiple elements:
 
@@ -385,7 +396,7 @@ I tested the site based on my user stories:
 </details>
 
 - - -
-### Full Testing
+### Feature Testing
 
 #### **Responsiveness / Device Testing**
 
@@ -414,7 +425,7 @@ The site was tested on the following browsers. No browser-specific bugs were fou
 
 
 - - -
-### Testing Results Table
+### Feature Testing Results Table
 
 **Every Page / Section**
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -723,6 +734,10 @@ I found the solution to this was to add the following code to the CSS to over-ri
 }
 ```
 - - -
+
+#### **9: Country results can end in a tie**
+
+In some circumstances 2 countries can have equal points and the site will automatically suggest whichever occurs first in the countries array. This is not so much a bug but a slight hole in the way that the quiz works. I did think about ways to overcome this but as the game already contains a tie-breaker I didn't want to add any more complexity to the project. I have mentioned this issue in the [README](#README.md) as an area for future development of the app.
 
 
 
