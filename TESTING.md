@@ -478,31 +478,32 @@ The site was tested on the following browsers. No browser-specific bugs were fou
 | Personality Description | Matches winning personality type | Using console logs to check the winning time at different stages of the code and matching it to what appears on the page | The correct personality description appears ![Screenshot](docs/testing/testing_features_results9.jpeg)![Screenshot](docs/testing/testing_features_results10.jpeg) | Pass |
 | Personality Description | 3rd paragraph contains reference to 2nd and 3rd place personalities if over 15% | Matching the 2nd and 3rd place personalties to what appears in the text using the pie chart and console logs | The correct personalities appear in the 3rd paragraph ![Screenshot](docs/testing/testing_features_results11.jpeg) | Pass |
 | Recommended Country Contents | Country recommendation heading, photo & description appear correctly | Scrolling down the results and checking the content | All content appears as expected | Pass |
-| Recommended Country | All contents recommend the correct country based on user answers |  |  |  |
-| Recommended Country Heading | Contains recommended country based on user answers | Using a series of console logs and matching the result of those to the page content | The correct country appears | Pass |
-| Recommended Country Image | Appears and matches the recommended country |  |  |  |
-| Recommended Country Text | Appears and matches the recommended country |  |  |  |
-| Country Highlights Contents | Highlights heading, map & map markers appear correctly |  |  |  |
-| Country Highlights Heading | Contains the correct country name |  |  |  |
-| Country Map | Calls the API correctly with no errors |  |  |  |
-| Country Map | Shows the correct country |  |  |  |
-| Country Map | Whole country and all markers are visible |  |  |  |
-| Country Map | Google Maps inbuilt functionality works (map/satellite, full screen, street view, zoom, pan & scroll on touchscreen devices) |  |  |  |
-| Map Markers | Markers are clickable |  |  |  |
-| Map Markers | Clicking on a marker reveals the correct highlight information below including text and images |  |  |  |
-| Highlight Info | Page scrolls down smoothly to show all highlight info |  |  |  |
-| Highlight Info | Replaced when clicking on a different marker |  |  |  |
-| Start Again Button & Text | Appear above footer |  |  |  |
-| Start Again Button | Hover effect with transition on hover |  |  |  |
-| Start Again Button | Refreshes page, hides results div and reveals welcome div, resets all scores |  |  |  |
+| Recommended Country | All contents recommend the correct country based on user answers | Using console logs and matching the result of those to the page content | The correct country appears ![Screenshot](docs/testing/testing_features_results12.jpeg)![Screenshot](docs/testing/testing_features_results13.jpeg) | Pass |
+| Recommended Country Heading | Contains recommended country | Check country name against correct country | The correct country appears ![Screenshot](docs/testing/testing_features_results14.jpeg) | Pass |
+| Recommended Country Image | Appears and matches the recommended country | Check image is of the correct country | The correct country image appears ![Screenshot](docs/testing/testing_features_results15.jpeg) | Pass |
+| Recommended Country Text | Appears and matches the recommended country | Check the description is of the correct country | The description is of the correct country ![Screenshot](docs/testing/testing_features_results16.jpeg) | Pass |
+| Country Highlights Contents | Highlights heading, map & map markers appear correctly | Scroll down to highlight content and check it appears correctly | All highlight content is present and works correctly | Pass |
+| Country Highlights Heading | Contains the correct country name | Check heading contains the correct country name | Heading contains the correct country name ![Screenshot](docs/testing/testing_features_results17.jpeg) | Pass |
+| Country Map | Calls the API correctly with no errors | Check the map appears and there are no console errors | The map appears correctly, some console warnings appear but no errors [see bugs section](#6-google-maps-api---console-errors) | Pass |
+| Country Map | Shows the correct country | Check the map matches the recommended country | Map is of the correct place ![Screenshot](docs/testing/testing_features_results18.jpeg) | Pass |
+| Country Map | Country is at an appropriate zoom level for device and screen size and all markers are visible | Check the country appears neatly within the map box and all markers are visible on different devices with appropriate zoom level | The country fits neatly within the map and all markers are visible on different devices ![Screenshot](docs/testing/testing_features_results19.jpeg) ![Screenshot](docs/testing/testing_features_results20.jpeg) | Pass |
+| Country Map | Google Maps inbuilt functionality works (map/satellite, full screen, street view, zoom, pan & scroll on touchscreen devices) |  | All in built map functionality works correctly ![Screen Recording](docs/testing/testing_features_results21.gif) | Pass |
+| Map Markers | Markers are clickable | Clicking on all markers | All markers are clickable and function correctly ![Screen Recording](docs/testing/testing_features_results22.gif) | Pass |
+| Map Markers | Clicking on a marker reveals the correct highlight information below including text and images | Clicking on each marker and checking the highlight text and photos appear and are correct | All highlights' text and images are correct (see gif above) | Pass |
+| Highlight Info | Page scrolls down smoothly to show all highlight info | Clicking on a marker and checking the page scrolls smoothly to the correct place | Page scrolls correctly (see gif above) | Pass |
+| Highlight Info | Replaced when clicking on a different marker | Clicking on a marker and checking the content is replaced | Content is replaced correctly (see gif above) | Pass |
+| Start Again Button & Text | Appear above footer | Scroll down and checking content appears correctly | Button and text appear correctly | Pass |
+| Start Again Button | Hover effect with transition on hover | Hovering over button | Button hover effect works correctly ![Screen Recording](docs/testing/testing_features_results23.gif) | Pass |
+| Start Again Button | Refreshes page, hides results div and reveals welcome div | Clicking Start Again button and checking the page reloads back to the welcome page | The page reloads correctly back to the welcome div | Pass |
 
 **404 Page**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| 404 page contents | Heading, text & 'go home' button appear correctly |  |  |  |
-| Go Home Button | Hover effect with transition on hover |  |  |  |
-| Go Home Button | Refreshes page, hides results div and reveals welcome div, resets all scores |  |  |  |
+| 404 page contents | Heading, text & 'go home' button appear correctly | Load 404 page, check all content is correct | All content appears correctly | Pass |
+| 404 page functionality | Typing in a non-existent URL will bring up 404 page | Typing in a non-existent url on website | 404 page appears | Pass |
+| Go Home Button | Hover effect with transition on hover | Hovering over Go Home button | Button hover effect works correctly ![Screen Recording](docs/testing/testing_features_404_1.gif) | Pass |
+| Go Home Button | Refreshes page, hides results div and reveals welcome div | Clicking on Go Home button | Welcome page loads ![Screen Recording](docs/testing/testing_features_404_2.gif) | Pass |
 
 
 
