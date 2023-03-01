@@ -214,6 +214,12 @@ function startGame(event) {
 
                     // Reveals results
                     chooseCountry();
+                    console.log("New Zealand Score: " + userTotal[0]);
+                    console.log("Mexico Score: " + userTotal[1]);
+                    console.log("Peru Score: " + userTotal[2]);
+                    console.log("China Score: " + userTotal[3]);
+                    console.log("Zambia Score: " + userTotal[4]);
+                    console.log("Kyrgyzstan Score: " + userTotal[5]);
                     showResults(topPersonality);
                 });
             }
@@ -223,6 +229,12 @@ function startGame(event) {
             topPersonality = topPersonalityArray[0];
             console.log("No Tie The winning personality is... " + topPersonality);
             chooseCountry();
+            console.log("New Zealand Score: " + userTotal[0]);
+            console.log("Mexico Score: " + userTotal[1]);
+            console.log("Peru Score: " + userTotal[2]);
+            console.log("China Score: " + userTotal[3]);
+            console.log("Zambia Score: " + userTotal[4]);
+            console.log("Kyrgyzstan Score: " + userTotal[5]);
             showResults(topPersonality);
         }
 

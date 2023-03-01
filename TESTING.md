@@ -436,7 +436,7 @@ The site was tested on the following browsers. No browser-specific bugs were fou
 | Name Input | Allows user to input name | Inputting name | User is able to input name | Pass |
 | Name Input | User must enter name between 2-10 characters | Attempted to enter a name shorter than 2 & longer than 10 characters | Input box performs as expected ![Screen Recording](docs/testing/testing_features_welcome1.gif) | Pass |
 | Start Quiz Button | Hover effect with transition on hover | Hovered on Start Quiz Button | Hover effect works as expected ![Screen Recording](docs/testing/testing_features_welcome2.gif) | Pass |
-| Start Quiz Button | If no name inputted alert appears & game doesn't start | Clicked on start button with no name inputted | Alert pops up with message telling user to enter a name ![Screenshot](docs/testing/testing_features_welcome3.jpg) | Pass |
+| Start Quiz Button | If no name inputted alert appears & game doesn't start | Clicked on start button with no name inputted | Alert pops up with message telling user to enter a name ![Screenshot](docs/testing/testing_features_welcome3.jpeg) | Pass |
 | Start Quiz Button | Starts Quiz (hides welcome div and reveals game div) | Clicked on start game button (with username entered) | Game starts, welcome div disappears and game div appears | Pass |
 
 **Game Section**
@@ -450,36 +450,36 @@ The site was tested on the following browsers. No browser-specific bugs were fou
 | Answer Boxes | Colour changes to orange with transition when user selects an answer | Clicked on answer | Answer box changes colour as expected ![Screen Recording](docs/testing/testing_features_game2.gif) | Pass |
 | Answer Boxes | Brief timeout before question / answers refresh | Clicked on answer | Game pauses before refreshing (see gif above) | Pass |
 | Answer Boxes | User cannot select another answer once a selection has been made during timeout | Clicked on an answer and attempted to select another quickly afterwards. Also checked console logs to if any additional answers were being added to the personalityTally array | Unable to select more than 1 answer during time out and nothing additional added to personalityTally | Pass |
-| Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh |  |  |  |
-| Answer Boxes | Page scrolls to top on question/answer refresh |  |  |  |
-| Progress Bar | Shows "Question 1 of 10" on inital load & pink bar at 10% |  |  |  |
-| Progress Bar | Increments each time a question is selected with the correct numbers & bar width |  |  |  |
-| Quiz functionality | Correct personality type is added to personalityTally array when user selects an answer |  |  |  |
-| Quiz functionality | personalityArray contains 10 personality types once main quiz is complete |  |  |  |
-| Tie Breaker | If there is a tied result tie breaker appears & main game is hidden |  |  |  |
-| Tie Breaker | Tie breaker title and text appear if result is tied |  |  |  |
-| Tie Breaker | Tie breaker only contains images of the tied personality types |  |  |  |
-| Tie Breaker Photos | Hover Effect with transition on hover |  |  |  |
-| Restart Quiz Button | Hover effect with transition on hover |  |  |  |
-| Restart Quiz Button | Refreshes page, hides game div and reveals welcome div, resets all scores |  |  |  |
+| Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh | Clicked on answer | Colour changes back on refresh as expected (see gif above) | Pass |
+| Answer Boxes | Page scrolls to top on question/answer refresh | Using Dev Tool's device simulator scrolled down & clicked on answer | Page scrolls to top as expected ![Screen Recording](docs/testing/testing_features_game3.gif) | Pass |
+| Progress Bar | Shows "Question 1 of 10" on inital load & pink bar at 10% | Loaded game and checked progress bar | Progress bar and text were correct (see gif below) | Pass |
+| Progress Bar | Increments each time a question is selected with the correct numbers & bar width | Played game and checked progress bar | Progress bar increments correctly ![Screen Recording](docs/testing/testing_features_game4.gif) | Pass |
+| Quiz functionality | Correct personality type is added to personalityTally array when user selects an answer | Log personalityTally to console for testing purposes and check it matches the selected answer | console logs match the selected answers ![Screen Recording](docs/testing/testing_features_game5.gif) | Pass |
+| Quiz functionality | personalityTally contains 10 personality types once main quiz is complete | Log personalityTally to console for testing purposes and check number of items in array | code performs as expected (see gif above) | Pass |
+| Tie Breaker | If there is a tied result tie breaker appears & main game is hidden | Selecting answers that will result in a tie | Tie breaker appears correctly | Pass |
+| Tie Breaker | Tie breaker title and text appear if result is tied | Using console logs to check whether result is tied and matches what's in the personalityTally | Tie breaker only appears when the result is tied ![Screenshot](docs/testing/testing_features_game6.jpeg) | Pass |
+| Tie Breaker | Tie breaker only contains images of the tied personality types | Using console logs to check which results are tied and by going through and selecting different combinations of answers that will result in a different number of tied results | The correct number of tie breaker images appear and match the number of tied results ![Screenshot](docs/testing/testing_features_game7.jpeg) | Pass |
+| Tie Breaker Photos | Hover Effect with transition on hover | Hovered on tie breaker image | Hover effect worked as expected ![Screen Recording](docs/testing/testing_features_game8.gif) | Pass |
+| Restart Quiz Button | Hover effect with transition on hover | Hovered on restart quiz button | Hover effect worked as expected ![Screen Recording](docs/testing/testing_features_game9.gif) | Pass |
+| Restart Quiz Button | Refreshes page, hides game div and reveals welcome div, resets all scores | Clicked on restart quiz button during game play | Restart Quiz button works as expected | Pass |
 
 
 **Results Section**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Personality Results Contents | Personality heading, pie chart, colour key, percentages & description appear correctly |  |  |  |
-| Personality heading | Contains name inputted by user |  |  |  |
-| Personality heading | Contains correct personality type |  |  |  |
-| Pie chart | Pie sections & colours match key |  |  |  |
-| Pie chart | Results are correct based on user answers in game |  |  |  |
-| Pie chart | All personality types are listed in descending order |  |  |  |
-| Pie chart | Percentages total 100 |  |  |  |
-| Personality Description | Matches winning personality type |  |  |  |
-| Personality Description | 3rd paragraph contains reference to 2nd and 3rd place personalities if over 15% |  |  |  |
-| Recommended Country Contents | Country recommendation heading, photo & description appear correctly |  |  |  |
+| Personality Results Contents | Personality heading, pie chart, colour key, percentages & description appear correctly | Clicking on the final question | All content appeared as expected | Pass |
+| Personality heading | Contains name inputted by user | Inputting name and checking it appears in results | Name appears correctly ![Screenshot](docs/testing/testing_features_results1.jpeg)![Screenshot](docs/testing/testing_features_results2.jpeg) | Pass |
+| Personality heading | Contains correct personality type | Using console logs to check the winning personality at different stages of the game and checking it matches | Personality type appears correctly and matches the console logs ![Screenshot](docs/testing/testing_features_results3.jpeg)![Screenshot](docs/testing/testing_features_results4.jpeg)![Screenshot](docs/testing/testing_features_results5.jpeg) | Pass |
+| Pie chart | Pie sections & colours match key | Visually checking the colours match between the key and the pie chart | All colours and percentages match | Pass |
+| Pie chart | Results are correct based on user answers in game | Using console logs to check the percentages and matching those with the pie and key | All numbers, personality types and colours match ![Screenshot](docs/testing/testing_features_results6.jpeg)![Screenshot](docs/testing/testing_features_results7.jpeg)|  |
+| Pie chart | All personality types are listed in descending order | Checking that the percentages are in reverse order, largest to smallest | The personality types appear in the correct order | Pass |
+| Pie chart | Percentages total 100 | Using console logs and testing the game with a tie break result (where the rounding issue occurs) and checking everything adds up | The percentages add up to 100 ![Screenshot](docs/testing/testing_features_results8.jpeg) | Pass |
+| Personality Description | Matches winning personality type | Using console logs to check the winning time at different stages of the code and matching it to what appears on the page | The correct personality description appears ![Screenshot](docs/testing/testing_features_results9.jpeg)![Screenshot](docs/testing/testing_features_results10.jpeg) | Pass |
+| Personality Description | 3rd paragraph contains reference to 2nd and 3rd place personalities if over 15% | Matching the 2nd and 3rd place personalties to what appears in the text using the pie chart and console logs | The correct personalities appear in the 3rd paragraph ![Screenshot](docs/testing/testing_features_results11.jpeg) | Pass |
+| Recommended Country Contents | Country recommendation heading, photo & description appear correctly | Scrolling down the results and checking the content | All content appears as expected | Pass |
 | Recommended Country | All contents recommend the correct country based on user answers |  |  |  |
-| Recommended Country Heading | Contains recommended country |  |  |  |
+| Recommended Country Heading | Contains recommended country based on user answers | Using a series of console logs and matching the result of those to the page content | The correct country appears | Pass |
 | Recommended Country Image | Appears and matches the recommended country |  |  |  |
 | Recommended Country Text | Appears and matches the recommended country |  |  |  |
 | Country Highlights Contents | Highlights heading, map & map markers appear correctly |  |  |  |
