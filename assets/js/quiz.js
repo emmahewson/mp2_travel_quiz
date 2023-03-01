@@ -49,14 +49,13 @@ let remotePoints = [0, 0, 2, 0, 1, 3];
 function startGame(event) {
     event.preventDefault();
     scrollToTop();
-
     // capturing user name
     username = document.getElementById("name-input");
-
+    
     // alert if no username entered
     if (username.value === "") {
         alert(`Please enter your name to play, real or imaginary!`);
-
+    
         // game play functionality
     } else {
         welcomeDiv.classList.toggle("hidden");
@@ -72,16 +71,13 @@ function startGame(event) {
     // Populate the questions and answers & move on progress bar
     function addQuestionContent(index) {
         let currentQuestion = questions[index];
-
         // populate question
         questionText.innerText = currentQuestion.questionText;
-
         // populate answers
         let answers = currentQuestion.answers;
         for (let i = 0; i < answers.length; i++) {
             choices[i].innerText = answers[i].answerText;
         }
-
         // set progress bar
         let questionNumber = questions[0].questionNumber;
         progressText.innerHTML = `Question ${questionNumber} of ${maxQuestions}`;
@@ -137,7 +133,6 @@ function startGame(event) {
             }
         });
     }
-
 
     // Calculates user personality
     function findTopPersonality() {
@@ -249,7 +244,6 @@ function startGame(event) {
         }
     }
 
-
     // re-enable the buttons after question answered
     function enableButtons() {
         choices.forEach(choice => {
@@ -274,9 +268,7 @@ function startGame(event) {
             }
         }
 
-
         // Update data & pie chart
-
         // sort personalities by score
         function compareScores(a, b) {
             return a.score - b.score;
@@ -307,7 +299,6 @@ function startGame(event) {
 
         // If scores add up to 100% add difference to top score
         let percentDifference = 100 - percentagesTotal;
-
         if (percentDifference !== 0) {
             percentageArray[0] += percentDifference;
         }
@@ -315,7 +306,6 @@ function startGame(event) {
         // populate statistics & create color array for piechart
         let keyColors = [];
         let pieLabels = [];
-
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             pieColorKey[i].classList.add(reverseSortedPersonalities[i].color);
             pieTypesText[i].innerText = reverseSortedPersonalities[i].name;
@@ -374,7 +364,6 @@ function startGame(event) {
                     }
                 }
             }
-
         });
 
         // populates the country results
@@ -386,7 +375,8 @@ function startGame(event) {
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;
-
+        
+        // runs Google Map API (function stored in map.js)
         initMap(topCountryIndex);
 
         // start again game button - reload page
