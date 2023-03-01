@@ -287,15 +287,61 @@ There were no errors or warnings on 404.html.
 I ran the site through Google Chrome Dev Tools' Lighthouse to check on its performance.
 
 #### **Original Results**
-<details><summary>Title</summary>
+<details><summary>Main Page</summary>
 <img src="">
+
+*Main Page - Desktop*
+
+<img src="">
+
+*Main Page - Mobile*
+
+<img src="">
+
+*Main Page - Mobile - Accessibility Warning*
+
 </details>
 
-Amendments
+<details><summary>404</summary>
+<img src="">
+
+*404 - Desktop*
+
+<img src="">
+
+*404 - Mobile*
+
+</details>
+
+There were 2 issues of concern: 
+
+1. The accessibilty score was being affected by the maximum scale attribute that I had added to the meta tag in the HTML to stop mobile browsers automatically zooming in on the input field where the user enters their name, which would then not reset when the game appeared, leaving the web page slightly zoomed in, which created a bad user experience. [See bugs section below](#4-mobile-input-zoom-in-not-resetting).
+I had not considered the impact on accessibility, that not allowing users to zoom in might cause issues for those with visual impairment so in order to overcome this I did some research and discovered that mobile web browsers tend to only zoom in if the font size on an input is less than 16px. So I simply changed the size of the placeholder & user-inputted text to 16px.
+
+2. On the 404 page the SEO score was being affected by the size of the social link icons, they needed to be bigger to be easy to click on a mobile device, though this warning didn't come up on the main page. Upon investigation I realised I had made changes to the footer on the main page and not on the 404 page, so the icons were displaying differently with less space between them. I fixed this code by replacing the footer on the 404 page with the correct one and this fixed the warning.
+
 
 #### **Final Results**
-<details><summary>Title</summary>
+<details><summary>Main Page</summary>
 <img src="">
+
+*Main Page - Desktop*
+
+<img src="">
+
+*Main Page - Mobile*
+
+</details>
+
+<details><summary>404</summary>
+<img src="">
+
+*404 - Desktop*
+
+<img src="">
+
+*404 - Mobile*
+
 </details>
 
 - - -
