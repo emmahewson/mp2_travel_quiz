@@ -288,57 +288,61 @@ I ran the site through Google Chrome Dev Tools' Lighthouse to check on its perfo
 
 #### **Original Results**
 <details><summary>Main Page</summary>
-<img src="">
+<img src="docs/testing/testing_lh_main_desktop.jpeg">
 
 *Main Page - Desktop*
 
-<img src="">
+<img src="docs/testing/testing_lh_main_mobile1.jpeg">
 
 *Main Page - Mobile*
 
-<img src="">
+<img src="docs/testing/testing_lh_main_mobile2.jpeg">
 
 *Main Page - Mobile - Accessibility Warning*
 
 </details>
 
 <details><summary>404</summary>
-<img src="">
+<img src="docs/testing/testing_lh_404_desktop.jpeg">
 
 *404 - Desktop*
 
-<img src="">
+<img src="docs/testing/testing_lh_404_mobile1.jpeg">
 
 *404 - Mobile*
+
+<img src="docs/testing/testing_lh_404_mobile2.jpeg">
+
+*404 - Mobile - SEO Warning*
 
 </details>
 
 There were 2 issues of concern: 
 
 1. The accessibilty score was being affected by the maximum scale attribute that I had added to the meta tag in the HTML to stop mobile browsers automatically zooming in on the input field where the user enters their name, which would then not reset when the game appeared, leaving the web page slightly zoomed in, which created a bad user experience. [See bugs section below](#4-mobile-input-zoom-in-not-resetting).
-I had not considered the impact on accessibility, that not allowing users to zoom in might cause issues for those with visual impairment so in order to overcome this I did some research and discovered that mobile web browsers tend to only zoom in if the font size on an input is less than 16px. So I simply changed the size of the placeholder & user-inputted text to 16px.
+I had not considered the impact on accessibility, that not allowing users to zoom in might cause issues for those with visual impairment so in order to overcome this I did some research and discovered that mobile web browsers tend to only zoom in if the font size on an input is less than 16px. So I removed the maximum scale attribute and simply changed the size of the placeholder & user-inputted text to 16px.
 
 2. On the 404 page the SEO score was being affected by the size of the social link icons, they needed to be bigger to be easy to click on a mobile device, though this warning didn't come up on the main page. Upon investigation I realised I had made changes to the footer on the main page and not on the 404 page, so the icons were displaying differently with less space between them. I fixed this code by replacing the footer on the 404 page with the correct one and this fixed the warning.
 
 
 #### **Final Results**
 <details><summary>Main Page</summary>
-<img src="">
+<img src="docs/testing/testing_lh_main_desktop_final.jpeg">
 
 *Main Page - Desktop*
 
-<img src="">
+<img src="docs/testing/testing_lh_main_mobile_final.jpeg">
 
 *Main Page - Mobile*
 
 </details>
 
 <details><summary>404</summary>
-<img src="">
+<img src="docs/testing/testing_lh_404_desktop_final.jpeg">
 
 *404 - Desktop*
 
-<img src="">
+<img src="docs/testing/testing_lh_404_mobile_final.jpeg">
 
 *404 - Mobile*
 
@@ -584,7 +588,7 @@ The website failed to scroll to the top when clicking on a button, this caused p
 #### **4: Mobile input zoom-in not resetting**
 
 During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">.
-I wanted to make sure that accessibility wasn't affected by over-riding the zoom so I also increased the size of the name input box and start button.
+However, later on, in performance testing using Google's Dev Tools Lighthouse I discovered that setting the maximum scale like this affected accessibility. You can see details of how I worked around this issue [here](#performance).
 
 
 <details><summary>Screenshots</summary>
