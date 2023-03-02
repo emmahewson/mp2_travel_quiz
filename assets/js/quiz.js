@@ -351,7 +351,8 @@ function startGame(event) {
                         boxPadding: 5,
                         backgroundColor: 'rgba(17, 66, 92, 0.9)',
                         titleFont: 'Raleway, sans-serif',
-                        /** Tooltip popup formatting callback taken from
+                        /** Adds clickable sections on pie chart
+                         * Tooltip popup formatting callback taken from
                          * https://stackoverflow.com/questions/46317867/how-to-append-text-or-symbol-to-tooltip-of-chart-js
                          * https://stackoverflow.com/questions/44632529/how-do-you-hide-the-title-of-a-chart-tooltip
                          */

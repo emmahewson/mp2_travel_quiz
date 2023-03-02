@@ -116,6 +116,7 @@ In addition I created a colour palette for the pie chart and personality types, 
 
 ![Pie Chart Colour Pallette](docs/colors/color-pallette-02.jpg)
 
+- - -
 **Other Design Choices**
 * The use of drop shadows & inner shadows to match the layered paper effect on the footer
 * Consistent use of border radius to give the site a soft, rounded feel and match the rounded cloud design
@@ -149,13 +150,15 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * [Font Awesome](https://fontawesome.com/)
     * Used to add icons to the site
 * [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html)
-    * Used to help create the colour pallette as well as designing some of the graphic elements such as the buttons
+    * Used to help create the colour pallette as well as adjusting the background image
 * [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html)
     * Used to crop, adjust and resize the photos to optimise them for the site
 * [Tiny PNG](https://tinypng.com/)
     * Used to further optimise the images for the site and reduce file size
 * [Bulk Image Crop](https://bulkimagecrop.com/)
     * Used to bulk crop bulk
+* [ezGIF](https://ezgif.com/)
+    * Creating GIFs for the README
 * [Favicon.io](https://favicon.io/favicon-converter/)
     * Used to create and add the favicon to the browser tab
 * [Chart.js](https://www.chartjs.org/)
@@ -172,7 +175,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_whole_favicon.jpeg">
 
 *Favicon*
 
@@ -184,7 +187,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_whole_logo.jpeg">
 
 *Logo*
 
@@ -200,15 +203,11 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_whole_footer_dt.jpeg">
 
-*Footer on desktop*
+*Footer on desktop / tablet*
 
-<img src="">
-
-*Footer on tablet*
-
-<img src="">
+<img src="docs/features/features_whole_footer_mb.jpeg">
 
 *Footer on mobile*
 
@@ -227,11 +226,16 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_welcome_dt.jpeg">
+<img src="docs/features/features_welcome_tb.jpeg">
 
-*Alert if no name entered*
+*Welcome sectionp*
 
-<img src="">
+<img src="docs/features/features_welcome_startquiz.jpeg">
+
+*Welcome section - start quiz button*
+
+<img src="docs/features/features_welcome_startquiz.gif">
 
 *Hover effect on button*
 
@@ -253,7 +257,9 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshot</summary>
 
-<img src="">
+<img src="docs/features/features_game_layout_dt.jpeg">
+<img src="docs/features/features_game_layout_tb.jpeg">
+<img src="docs/features/features_game_layout_mb.jpeg">
 
 *Game Section*
 
@@ -266,7 +272,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_game_progress.gif">
 
 *Progress Bar updates with each question answered*
 
@@ -277,31 +283,23 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 * Updates when a user selects an answer and the question is repopulated
 
 
-#### **Question**
+#### **Questions & Answers**
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_game_answerselect.gif">
 
-*Question*
+*Answer selection & question/answer update*
 
-</details>
+<img src="docs/features/features_game_answerhover.gif">
 
-* Question text updates (along with the corresponding answers) each time a user makes a selection
+*Answer hover effect*
 
-
-#### **Answers**
-
-<details><summary>Screenshots</summary>
-
-<img src="">
-
-*Answers*
 
 </details>
 
-* Updates with the next set of answers (along with the corresponding question) each time the user makes a selection
-* Has a darker blue hover effect on non touchscreen devices with a smooth transition
+* Updates with the next question and a set of answers each time the user makes a selection
+* Has a darker blue hover effect on the answers on non touchscreen devices with a smooth transition
 * Once the user has selected an answer it turns orange
 * There is a brief timeout to allow the orange to appear before the question & answers update, this gives the user a sense that the answer has definitely been selected and submitted and gives them time to see the question update happenning - all part of creating an intuitive and positive user experience.
 * This also avoids having a separate 'next question' button which would add more clicks and may annoy a user
@@ -312,7 +310,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_game_restartbutton.gif">
 
 *Restart Quiz Button*
 
@@ -328,9 +326,21 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_game_tiebreak_5_dt.jpeg">
+<img src="docs/features/features_game_tiebreak_5_tb.jpeg">
+<img src="docs/features/features_game_tiebreak_5_mb.jpeg">
 
-*Tie Breaker layouts*
+*Tie Breaker*
+
+<img src="docs/features/features_game_tiebreak_4.jpeg">
+<img src="docs/features/features_game_tiebreak_3.jpeg">
+<img src="docs/features/features_game_tiebreak_2.jpeg">
+
+*Tie Breaker - Number of photos varies depending on how many personality-type scores are tied*
+
+<img src="docs/features/features_game_tiebreak_hover.gif">
+
+*Tie Break Image Hover*
 
 </details>
 
@@ -356,25 +366,19 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_results_personality_dt.jpeg">
+<img src="docs/features/features_results_personality_mb.jpeg">
 
 *Personality Type Box*
 
-<img src="">
+<img src="docs/features/features_results_personality_pieclick.gif">
 
-*User's name and personality type heading*
+*Clickable pie chart*
 
-<img src="">
+<img src="docs/features/features_results_personality_parathree.jpeg">
 
-*Pie Chart and statistics*
+*Content of paragraph 3 varies depending on results*
 
-<img src="">
-
-*Text about personality type*
-
-<img src="">
-
-*Paragraph about the influence of 2nd and 3rd place personality results on the country recommendation*
 
 </details>
 
@@ -382,7 +386,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 * It is personalised to the user with their name
 * The pie chart has a colour key with each personality type having an associated colour
 * Each answer selected by the user is associated with one of the personality types, the percentages are calculated based on these, including the tie break
-* The pie chart animates on
+* The pie chart animates on and has clickable sections to see the percentages for each
 * Includes text information about the personality type
 * The final paragraph is bespoke to the user's results, if they have high % scores in the 2nd and 3rd place personalities these are included here.
     * The recommended country is based on all the personality types chosen, not just the winning one - this helps explain this to the user.
@@ -394,7 +398,8 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_results_country_tb.jpeg">
+<img src="docs/features/features_results_country_mb.jpeg">
 
 *Country Recommendation*
 
@@ -420,21 +425,24 @@ The country recommendation section contains
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_results_country_highlights.jpeg">
+<img src="docs/features/features_results_country_highlights2.jpeg">
+<img src="docs/features/features_results_country_highlights3.jpeg">
 
-*Country Highlights - Whole section*
+*Country Highlights Section*
 
-<img src="">
+<img src="docs/features/features_results_highlights_click.gif">
 
 *Clickable marker with page scroll*
 
-<img src="">
-
-*Responsive map zoom*
-
-<img src="">
+<img src="docs/features/features_results_map_functionality.gif">
 
 *Google Maps Built in Functionality*
+
+<img src="docs/features/features_results_responsivemap1.jpeg">
+<img src="docs/features/features_results_responsivemap2.jpeg">
+
+*Responsive map zoom*
 
 
 </details>
@@ -461,7 +469,8 @@ The country recommendation section contains
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/features/features_results_startagaintext.jpeg">
+<img src="docs/features/features_results_startagain.gif">
 
 *Start Again Button*
 
@@ -476,6 +485,18 @@ The country recommendation section contains
 ### 404 Page
 
 ![404 Page - Mock Up]()
+
+<details><summary>Screenshots</summary>
+
+<img src="docs/features/features_404.jpeg">
+
+*404 Page*
+
+<img src="docs/features/features_404_gohome.gif">
+
+*Go Home Button*
+
+</details>
 
 * 404 page to smoothly handle user's who have ended up on a non-existent part of the site
 * This bespoke 404 page provides a positive emotional response to the user and a better user experience
@@ -670,6 +691,7 @@ This section explains in plain English what happens in the JavaScript code as th
         * The colours for the key & pie chart are assigned by pulling the associated colour from the personalities array
         * This means that the same colours are always used for the same personalities
     * The pie chart animates on - animation by chart.js
+    * The pie chart has clickable sections, when you click on them you see the personality type and the percentage - functionality from chart.js
 * The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
 </details>
 
@@ -915,7 +937,7 @@ The project will now be cloned locally for you to use.
 * Kafue National Park all highlight photos [Natucate](https://www.natucate.com/en/blog/travel-guide/zambia-kafue-national-park)
 * Lake Kashiba [Fast Track Visa](https://www.fasttrackvisa.com/blog/entry-to-zambia/)
 * Lake Kashiba [Kafakumba](https://www.kafakumbalogistics.com/)
-* Lake Kashiba 3 & 4[Pwando24](https://www.facebook.com/pwando24/posts/2509074145889425?locale=ne_NP&paipv=0&eav=AfYGwDvL2chHGT9GCnQUqZUz47BTVoe4SKmfArQofASI_-oNa-ngjRXBOLwrX3rjusY&_rdr)
+* Lake Kashiba 3 & 4 [Pwando24](https://www.facebook.com/pwando24/posts/2509074145889425?locale=ne_NP&paipv=0&eav=AfYGwDvL2chHGT9GCnQUqZUz47BTVoe4SKmfArQofASI_-oNa-ngjRXBOLwrX3rjusY&_rdr)
 
 - - -
 ### Acknowledgements
