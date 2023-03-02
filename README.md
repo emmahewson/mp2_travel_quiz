@@ -72,6 +72,28 @@ Based on the research and goal development above I created a list of user storie
 * I want to navigate the site easily
 
 - - -
+### Content
+The quiz is made up of 10 questions each with 6 answer options to choose between. Each of the answers relates to a personality type.
+These are:
+* Culture-Vulture
+* Thrill-Seeker
+* Peace-Lover
+* People-Person
+* Foodie
+* Animal-Lover
+
+Each time the user selects an answer it builds up a picture of what kind of personality they have. At the end of the quiz these results are presented to the user with a full breakdown of their personality in percentages. These results are also processed to calculate the best country recommendation for the user, I have included 6 countries, all of which are less visited or off the beaten track countries, to fit the client goals.
+These are:
+* New Zealand
+* Zambia
+* Kyrgyzstan
+* Peru
+* Mexico
+* China
+
+It is worth pointing out that whilst this is presented as a personality test there is no specific psychological research done in to the personality testing and it is purely for fun.
+
+- - -
 ### Design, Layout & Structure
 
 
