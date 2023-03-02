@@ -14,6 +14,7 @@ This is the documentation for my web application: The Travel Personality Quiz. I
     * [Project Goals](#project-goals)
     * [Research](#research)
     * [User Stories](#user-stories)
+    * [Content](#content)
     * [Design, Layout & Structure](#design-layout--structure)
 2. [Technologies Used](#technologies-used)
 3. [Features](#features)
@@ -834,7 +835,7 @@ The project will now be cloned locally for you to use.
 * [Google Maps API](https://developers.google.com/maps): Connected to Google Maps API for the map and clickable markers
 
 - - -
-### Content
+### Text Content
 
 * [Planet Aware](https://www.planetware.com/tourist-attractions/new-zealand-nz.htm): New Zealand Text
 * [Lonely Planet](https://www.lonelyplanet.com/articles/best-places-to-visit-in-mexico): Mexico Text
