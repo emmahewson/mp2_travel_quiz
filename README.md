@@ -1,6 +1,6 @@
 # The Travel Personality Quiz
 
-![Mock-up]()
+![Mock-up](docs/mockups/mockup_1_main.jpeg)
 
 #### **By Emma Hewson**
 [Click here to view the live web application](https://emmahewson.github.io/mp2_travel_quiz/)
@@ -159,6 +159,8 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
     * Used to bulk crop bulk
 * [ezGIF](https://ezgif.com/)
     * Creating GIFs for the README
+* [Techsini Mockup](https://techsini.com/multi-mockup/)
+    * Creating the mockup images for the README
 * [Favicon.io](https://favicon.io/favicon-converter/)
     * Used to create and add the favicon to the browser tab
 * [Chart.js](https://www.chartjs.org/)
@@ -222,7 +224,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 - - -
 ### Welcome Section
 
-![Welcome Section - Mock Up]()
+![Welcome Section - Mock Up](docs/mockups/mockup_2_welcome.jpeg)
 
 <details><summary>Screenshots</summary>
 
@@ -253,7 +255,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 - - -
 ### Game Section
 
-![Game Section - Mock Up]()
+![Game Section - Mock Up](docs/mockups/mockup_3_game.jpeg)
 
 <details><summary>Screenshot</summary>
 
@@ -322,7 +324,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 - - -
 ### Tie Breaker
 
-![Tie Breaker - Mock Up]()
+![Tie Breaker - Mock Up](docs/mockups/mockup_4_tie.jpeg)
 
 <details><summary>Screenshots</summary>
 
@@ -357,7 +359,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 - - -
 ### Results Section
 
-![Results Section - Mock Up]()
+![Results Section - Mock Up](docs/mockups/mockup_5_results.jpeg)
 
 * The results section is fully responsive with the answers stacking full width on smaller devices and in 2 columns on larger devices as well as other layout changes
 
@@ -484,7 +486,7 @@ The country recommendation section contains
 - - -
 ### 404 Page
 
-![404 Page - Mock Up]()
+![404 Page - Mock Up](docs/mockups/mockup_6_404.jpeg)
 
 <details><summary>Screenshots</summary>
 

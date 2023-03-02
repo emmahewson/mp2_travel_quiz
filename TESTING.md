@@ -1,6 +1,6 @@
 # The Travel Personality Quiz - Testing
 
-![Mock-up]()
+![Mock-up](docs/mockups/mockup_1_main.jpeg)
 
 #### **By Emma Hewson**
 [Click here to view the live web application](https://emmahewson.github.io/mp2_travel_quiz/)
