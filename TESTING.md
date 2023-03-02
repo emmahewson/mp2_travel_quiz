@@ -375,23 +375,27 @@ I tested the site based on my user stories:
 **Screen Recordings of User Stories**
 
 <details><summary>User Story 1</summary>
-<img src="">
+<img src="docs/testing/testing_us1.gif">
 </details>
 
 <details><summary>User Story 2</summary>
-<img src="">
+<img src="docs/testing/testing_us2.gif">
 </details>
 
 <details><summary>User Story 3</summary>
-<img src="">
+<img src="docs/testing/testing_us3.gif">
 </details>
 
 <details><summary>User Story 4</summary>
-<img src="">
+<img src="docs/testing/testing_us4_1.gif">
+<img src="docs/testing/testing_us4_2.gif">
+<img src="docs/testing/testing_us4_3.gif">
 </details>
 
 <details><summary>User Story 5</summary>
-<img src="">
+<img src="docs/testing/testing_us5_1.gif">
+<img src="docs/testing/testing_us5_2.gif">
+<img src="docs/testing/testing_us5_3.gif">
 </details>
 
 - - -
@@ -713,7 +717,7 @@ I found the solution to this was to add the following code to the CSS to over-ri
 
 #### **9: Country results can end in a tie**
 
-In some circumstances 2 countries can have equal points and the site will automatically suggest whichever occurs first in the countries array. This is not so much a bug but a slight hole in the way that the quiz works. I did think about ways to overcome this but as the game already contains a tie-breaker I didn't want to add any more complexity to the project. I have mentioned this issue in the [README](#README.md) as an area for future development of the app.
+In some circumstances 2 countries can have equal points and the site will automatically suggest whichever occurs first in the countries array. This is not so much a bug but a slight hole in the way that the quiz works. I did think about ways to overcome this but as the game already contains a tie-breaker I didn't want to add any more complexity to the project. I have mentioned this issue in the [README](README.md) as an area for future development of the app.
 
 
 
