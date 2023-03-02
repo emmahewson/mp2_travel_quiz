@@ -361,8 +361,6 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 
 ![Results Section - Mock Up](docs/mockups/mockup_5_results.jpeg)
 
-* The results section is fully responsive with the answers stacking full width on smaller devices and in 2 columns on larger devices as well as other layout changes
-
 
 #### **Personality Type**
 

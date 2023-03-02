@@ -7,7 +7,7 @@
 
 This is the testing documentation for my web application: The Travel Personality Quiz.
 
-[Full README available here](README.md).
+[Full README available here](README.md)
 
 
 ## Table of Contents
@@ -25,7 +25,6 @@ This is the testing documentation for my web application: The Travel Personality
         * [Browser Compatibility](#browser-compatibility)
         * [Feature Testing Results Table](#feature-testing-results-table)
 3. [Bugs & Fixes](#bugs--fixes)
-    * [Known bugs](#k)
 
 - - -
 ## Automated Testing
@@ -181,7 +180,7 @@ There were no errors but there were a number of warnings which can be groups as 
 
     ```
 
-    I made a number of attempts to re-write the code in a way that declared the function outside of the loop, however each attempt caused a different console error and the app failed to work, with the tie breaker click event not working and the results not being calculated. I therefore decided to leave the code as it was, based on the fact that it was a warning that came down to the readability of the code, I would like to be able to make my code more readable in the future, but as this is my first project using JavaScript I didn't have the knowledge or experience to solve this warning in this case.
+    I made a number of attempts to re-write the code in a way that declared the function outside of the loop, however each attempt caused a different console error and the app failed to work, with the tie breaker click event not working and the results not being calculated. I therefore decided to leave the code as it was, based on the fact that it was a warning that came down to the readability of the code, though learning from this for future JavaScript projects to avoid these warnings.
 
 
 <details><summary>Warning 3: Do not use "new" for side effects</summary>
@@ -540,13 +539,10 @@ After adding an inset shadow on the map using a ::before element created in CSS 
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug1_before.gif">
+<img src="docs/bugs/bug1_after.gif">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
@@ -566,13 +562,10 @@ After deploying the site to GitHub pages and viewing on mobile and in Safari the
 ```
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug2_before.jpeg">
+<img src="docs/bugs/bug2_after.jpeg">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
@@ -586,13 +579,10 @@ The website failed to scroll to the top when clicking on a button, this caused p
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug3_before.gif">
+<img src="docs/bugs/bug3_after.gif">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
@@ -605,13 +595,10 @@ However, later on, in performance testing using Google's Dev Tools Lighthouse I 
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug4_before.gif">
+<img src="docs/bugs/bug4_after.gif">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
@@ -623,13 +610,10 @@ I found that the button text colour on mobile was set to blue rather than black,
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug5_before.jpeg">
+<img src="docs/bugs/bug5_after.jpeg">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
@@ -641,7 +625,7 @@ On page load Dev Tool's console was logging a series of errors relating to Googl
 **Error 1**
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug6_error1.jpeg">
 
 </details>
 
@@ -663,7 +647,7 @@ This error was also stopping the map from loading. I fixed this by changing the 
 **Error 2**
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug6_error2.jpeg">
 
 </details>
 
@@ -674,7 +658,7 @@ I found and adapted this solution from [here](https://www.javascripttutorial.net
 **Error 3**
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug6_error3.jpeg">
 
 </details>
 
@@ -690,13 +674,7 @@ On page load Dev Tool's console was logging an error and failing to load the pie
 
 <details><summary>Screenshots</summary>
 
-<img src="">
-
-*Before*
-
-<img src="">
-
-*After*
+<img src="docs/bugs/bug7_error.jpeg">
 
 </details>
 
@@ -715,13 +693,10 @@ When testing on mobile I discovered that the button styling had changed compared
 
 <details><summary>Screenshots</summary>
 
-<img src="">
+<img src="docs/bugs/bug8_before.jpeg">
+<img src="docs/bugs/bug8_after.jpeg">
 
-*Before*
-
-<img src="">
-
-*After*
+*Before & After*
 
 </details>
 
