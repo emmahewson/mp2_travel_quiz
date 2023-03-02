@@ -374,25 +374,25 @@ I tested the site based on my user stories:
 
 **Screen Recordings of User Stories**
 
-<details><summary>User Story 1</summary>
+<details><summary>User Story 1: I want to take part in a fun, online game to find out my travel personality and my ideal travel destination</summary>
 <img src="docs/testing/testing_us1.gif">
 </details>
 
-<details><summary>User Story 2</summary>
+<details><summary>User Story 2: I want to see information, images and a map of my recommended destination</summary>
 <img src="docs/testing/testing_us2.gif">
 </details>
 
-<details><summary>User Story 3</summary>
+<details><summary>User Story 3: I want to see a breakdown of my results to learn more about my personality</summary>
 <img src="docs/testing/testing_us3.gif">
 </details>
 
-<details><summary>User Story 4</summary>
+<details><summary>User Story 4: I want to access the quiz on any device</summary>
 <img src="docs/testing/testing_us4_1.gif">
 <img src="docs/testing/testing_us4_2.gif">
 <img src="docs/testing/testing_us4_3.gif">
 </details>
 
-<details><summary>User Story 5</summary>
+<details><summary>User Story 5: I want to navigate the site easily</summary>
 <img src="docs/testing/testing_us5_1.gif">
 <img src="docs/testing/testing_us5_2.gif">
 <img src="docs/testing/testing_us5_3.gif">
