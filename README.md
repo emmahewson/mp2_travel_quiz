@@ -120,9 +120,9 @@ The structure of the site is informed by the scope, user and business goals as w
 
 The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code at different points in the game. There are 3 main divs within the page which appear and disappear depending on where you are in the game, these are:
 
-Welcome - a brief intro with a name capture input to personalise the user's results and a start game button
-Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
-Results - the results of the quiz, showing the user's personality results breakdown in the form of a pie chart and text information as well as a recommended destination based on their responses to the quiz. This page also contains a button to take the user back to the start to begin the quiz again.
+* Welcome - a brief intro with a name capture input to personalise the user's results and a start game button
+* Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
+* Results - the results of the quiz, showing the user's personality results breakdown in the form of a pie chart and text information as well as a recommended destination based on their responses to the quiz. This page also contains a button to take the user back to the start to begin the quiz again.
 
 There is also a 404 page for when a user lands on a non-existent page with a button to link back to index.html to start the quiz again
 
@@ -254,7 +254,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 <img src="docs/features/features_welcome_dt.jpeg">
 <img src="docs/features/features_welcome_tb.jpeg">
 
-*Welcome sectionp*
+*Welcome section*
 
 <img src="docs/features/features_welcome_startquiz.jpeg">
 
@@ -343,6 +343,7 @@ I imported [Google Fonts](https://fonts.google.com/) and used [Righteous](https:
 
 * A button to allow the user to go back to the start of the quiz
 * Has a hover effect with a short, smooth colour transition on non touchscreen devices
+* I chose to make this button grey, rather than orange like the other navigation buttons because I didn't want it to draw the user's attention away from the game too much, it doesn't form part of the game and I didn't want the user to mistakenly click on it thinking it was a 'submit answer' button or similar.
 
 - - -
 ### Tie Breaker
@@ -400,7 +401,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 
 <img src="docs/features/features_results_personality_parathree.jpeg">
 
-*Content of paragraph 3 varies depending on results*
+*Content of paragraph 3 varies depending on results - this one shows a different example to to other screen shots, where both the 2nd and 3rd place have scored over 15%*
 
 
 </details>
@@ -714,7 +715,7 @@ This section explains in plain English what happens in the JavaScript code as th
         * The colours for the key & pie chart are assigned by pulling the associated colour from the personalities array
         * This means that the same colours are always used for the same personalities
     * The pie chart animates on - animation by chart.js
-    * The pie chart has clickable sections, when you click on them you see the personality type and the percentage - functionality from chart.js
+    * The pie chart sections have a hover effect on them, when you hover over them you see the personality type and the percentage - hover functionality from chart.js
 * The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
 </details>
 
@@ -723,8 +724,8 @@ This section explains in plain English what happens in the JavaScript code as th
 
 * The recommended country results are populated based on the winning country
     * This is based on the index of the winning country (see above)
-    * All the data is stored in the countries array including text, photos, alt values, map information, highlights data etc
-    * The country image is also assigned an associated 'alt' value to make it accessible (stored in the countries array)
+    * All the data is stored in the countries array including text, photos, map information, highlights data etc
+    * The country image and highlights images are also assigned an associated 'alt' value to make them accessible (stored in the countries array)
     ```
     const countries = [{
         name: "New Zealand",
@@ -849,7 +850,7 @@ The project will now be cloned locally for you to use.
 
 * Background Cloud Image [Image by rawpixel.com on Freepik](https://www.freepik.com/free-vector/cloud-background-pastel-paper-cut-style-vector_18220838.htm#&position=8&from_view=collections)
 
-- - -
+
 #### **Photos**
 
 **New Zealand**
