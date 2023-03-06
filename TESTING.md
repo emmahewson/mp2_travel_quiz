@@ -284,6 +284,8 @@ On index.html there were 2 warnings, some occurring on multiple elements:
 
 There were no errors or warnings on 404.html.
 
+As well as the above amendments I also made sure that there was placeholder text in the headings and images which would later be populated by the JavaScript based on the user answers. Having empty headings, buttons and no 'src' for images caused issues with accessibility testing during the development process and so I included these in the final code.
+
 
 #### **Wave Web Accessibility Results Post-Fix**
 
