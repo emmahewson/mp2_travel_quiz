@@ -31,7 +31,9 @@ This is the testing documentation for my web application: The Travel Personality
 
 ## Introduction
 
-In my testing I developed a comprehensive testing plan to make sure that the site was functioning correctly. I used predominantly manual testing, this was due to the game being a fairly simple app that didn't require complex automated testing. My manual testing involved going through the game and manually checking if answers and results matched what would be expected. However I have included details of basic automated testing that I undertook which included validation for HTML & CSS and checking the site for accessibilty and performance. The site was tested throughout the process, both in the development and deployed version of the sites. All the test results detailed below are based on the [deployed site](https://emmahewson.github.io/mp2_travel_quiz/). 
+In my testing I developed a comprehensive testing plan to make sure that the site was functioning correctly. I used predominantly manual testing, I did investigate the option of automated testing and ran a few trial tests at the end of the development process as part of my own learning and personal development, but due to the way I had written the JavaScript and the resulting complexity of the automated testing I would need to write I felt that it was not necessary for this application as it was a fairly simple app that would be better served by in depth manual testing.
+
+My manual testing involved going through the game and manually checking if answers and results matched what would be expected. However I have included details of basic automated testing that I undertook which included validation for HTML & CSS and checking the site for accessibilty and performance. The site was tested throughout the process, both in the development and deployed version of the sites. All the test results detailed below are based on the [deployed site](https://emmahewson.github.io/mp2_travel_quiz/). 
 
 ## Automated Testing
 

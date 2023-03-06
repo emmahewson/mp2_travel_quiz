@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-let startGame;
+let startGame = require("./quiz.js", "./questions_array.js", "./countries_array.js", "./map.js", "./personalities_array.js");
 
 beforeEach( () => {
     let fs = require("fs");
@@ -10,7 +10,6 @@ beforeEach( () => {
     document.open();
     document.write(fileContents);
     document.close();
-    startGame = require("./quiz.js", "./questions_array.js", "./countries_array.js", "./map.js", "./personalities_array.js");
 });
 
 describe("Question Populate tests", () => {
