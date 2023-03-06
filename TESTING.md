@@ -284,9 +284,6 @@ On index.html there were 2 warnings, some occurring on multiple elements:
 
 There were no errors or warnings on 404.html.
 
-As well as the above amendments I also made sure that there was placeholder text in the headings and images which would later be populated by the JavaScript based on the user answers. Having empty headings, buttons and no 'src' for images caused issues with accessibility testing during the development process and so I included these in the final code.
-
-
 #### **Wave Web Accessibility Results Post-Fix**
 
 <details><summary>Wave Web Accessibility Final Results - index.html</summary>
@@ -295,6 +292,18 @@ As well as the above amendments I also made sure that there was placeholder text
 
 <details><summary>Wave Web Accessibility Final Results - 404.html</summary>
 <img src="docs/testing/testing_waveval_final2.jpeg">
+</details>
+
+
+#### **Additional Accessibility Improvements**
+
+When tidying up the project in the final stages before submission I removed placeholders which I'd used in some of the HTML elements (e.g. headings, buttons, images, alt-values). These were elements that would later be populated based on user answers, e.g. the image of the winning country, or text about the user's personality. However, as a precaution I ran an additional accessibility test before submission to check the code. It threw up errors about empty elements and empty alt-values. I therefore decided to reinstate some basic placeholder content to the site to avoid these errors.
+
+<details><summary>Test results - after removing placeholder data</summary>
+<img src="docs/testing/testing_waveval4.jpeg">
+</details>
+<details><summary>Test results - after reinstating placeholder data</summary>
+<img src="docs/testing/testing_waveval5.jpeg">
 </details>
 
 
