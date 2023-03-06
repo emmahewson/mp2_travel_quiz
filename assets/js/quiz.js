@@ -394,3 +394,5 @@ function startGame(event) {
         });
     }
 }
+
+module.exports = startGame;
