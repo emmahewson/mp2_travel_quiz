@@ -12,21 +12,27 @@ This is the testing documentation for my web application: The Travel Personality
 
 ## Table of Contents
 
-1. [Automated Testing](#automated-testing)
+1. [Introduction](#introduction)
+2. [Automated Testing](#automated-testing)
     * [HTML Validation](#html-validation)
     * [CSS Validation](#css-validation)
     * [JavaScript Validation](#javascript-validation)
     * [Accessibility](#accessibility)
     * [Performance](#performance)
-2. [Manual Testing](#manual-testing)
+3. [Manual Testing](#manual-testing)
     * [Testing User Stories](#testing-user-stories)
     * [Feature Testing](#feature-testing)
         * [Responsiveness / Device Testing](#responsiveness--device-testing)
         * [Browser Compatibility](#browser-compatibility)
         * [Feature Testing Results Table](#feature-testing-results-table)
-3. [Bugs & Fixes](#bugs--fixes)
+4. [Bugs & Fixes](#bugs--fixes)
 
 - - -
+
+## Introduction
+
+In my testing I developed a comprehensive testing plan to make sure that the site was functioning correctly. I used predominantly manual testing, this was due to the game being a fairly simple app that didn't require complex automated testing. My manual testing involved going through the game and manually checking if answers and results matched what would be expected. However I have included details of basic automated testing that I undertook which included validation for HTML & CSS and checking the site for accessibilty and performance. The site was tested throughout the process, both in the development and deployed version of the sites. All the test results detailed below are based on the [deployed site](https://emmahewson.github.io/mp2_travel_quiz/). 
+
 ## Automated Testing
 
 ### HTML Validation
@@ -274,7 +280,7 @@ On index.html there were 2 warnings, some occurring on multiple elements:
 </details>
 
 * Possible headings x3
-* Fix: Changed recommended country name to a heading, but left the question & tie-breaker as `<p>` elements as this made more sense semantically and these were warnings rather than errors with the tool guessing what it thought was a heading.
+* Fix: Changed all recommended elements to heading elements, changing the CSS styling accordingly.
 
 There were no errors or warnings on 404.html.
 

@@ -42,8 +42,7 @@ body {
     text-transform: lowercase;
 }
 
-h1,
-h2 {
+.heading-font {
     font-family: 'Righteous', sans-serif;
 }
 
@@ -51,8 +50,15 @@ p,
 button,
 a,
 input,
-#personality-stats-div h2 {
+.body-font {
     font-family: 'Raleway', sans-serif;
+}
+
+p,
+button,
+a,
+input,
+#personality-stats-div h2 {
     font-size: 16px;
 }
 

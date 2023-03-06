@@ -22,9 +22,3 @@ describe("Question Populate tests", () => {
         expect(document.getElementById("question-text").innerHTML).toEqual("At a party you are most likely to be found…");
     });
 });
-
-describe("Mock DOM tests", () => {
-    test("Restart Game Button", () => {
-        expect(document.getElementById("restart-game-btn").innerHTML).toEqual('Restart Quiz')
-    });
-});

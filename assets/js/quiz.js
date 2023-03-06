@@ -1,61 +1,61 @@
-// declaring consts for Welcome Page DOM Objects
-const welcomeDiv = document.getElementById("welcome-div");
-
-// declaring consts for Game DOM Objects
-const gameDiv = document.getElementById("game-div");
-const questionText = document.getElementById("question-text");
-const choices = Array.from(document.getElementsByClassName("btn-choice"));
-const tieChoices = Array.from(document.getElementsByClassName("btn-choice-tie"));
-const progressDiv = document.getElementById("progress-div");
-const progressText = document.getElementById("progress-text");
-const progressBar = document.getElementById("progressbar-fg");
-const restartGameBtn = document.getElementById("restart-game-btn");
-const answerDiv = document.getElementById("answer-div-hide");
-const answerTieDiv = document.getElementById("answer-tie-div-hide");
-
-// declaring consts for Results DOM Objects
-const resultsDiv = document.getElementById("results-div");
-const personalityHeading = document.getElementById("personality-heading");
-const personalityTextP1 = document.getElementById("personality-text-p1");
-const personalityTextP2 = document.getElementById("personality-text-p2");
-const personalityTextP3 = document.getElementById("personality-text-p3");
-const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
-const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
-const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
-const resultsCountry = document.getElementById("country-heading-place");
-const resultsImage = document.getElementById("results-image");
-const resultsTextP1 = document.getElementById("country-text-para1");
-const resultsTextP2 = document.getElementById("country-text-para2");
-const highlightCountryName = document.getElementById("highlight-country-name");
-const startAgainBtn = document.getElementById("start-again-btn");
-
-// declaring other variables
-let maxQuestions = 10;
-let username;
-let personalityTally = [];
-
-/* index of points matches index of country in countries_array
- * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan]*/
-let userTotal = [0, 0, 0, 0, 0, 0];
-let wildlifePoints = [0, 1, 0, 0, 3, 2];
-let thrillPoints = [3, 0, 1, 0, 2, 0];
-let culturePoints = [0, 0, 3, 2, 0, 1];
-let foodPoints = [2, 3, 0, 1, 0, 0];
-let peoplePoints = [1, 2, 0, 3, 0, 0];
-let remotePoints = [0, 0, 2, 0, 1, 3];
-
-
 // Start Game Button - controls all game functionality
 function startGame(event) {
+
+    // declaring consts for Welcome Page DOM Objects
+    const welcomeDiv = document.getElementById("welcome-div");
+
+    // declaring consts for Game DOM Objects
+    const gameDiv = document.getElementById("game-div");
+    const questionText = document.getElementById("question-text");
+    const choices = Array.from(document.getElementsByClassName("btn-choice"));
+    const tieChoices = Array.from(document.getElementsByClassName("btn-choice-tie"));
+    const progressDiv = document.getElementById("progress-div");
+    const progressText = document.getElementById("progress-text");
+    const progressBar = document.getElementById("progressbar-fg");
+    const restartGameBtn = document.getElementById("restart-game-btn");
+    const answerDiv = document.getElementById("answer-div-hide");
+    const answerTieDiv = document.getElementById("answer-tie-div-hide");
+
+    // declaring consts for Results DOM Objects
+    const resultsDiv = document.getElementById("results-div");
+    const personalityHeading = document.getElementById("personality-heading");
+    const personalityTextP1 = document.getElementById("personality-text-p1");
+    const personalityTextP2 = document.getElementById("personality-text-p2");
+    const personalityTextP3 = document.getElementById("personality-text-p3");
+    const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
+    const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
+    const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
+    const resultsCountry = document.getElementById("country-heading-place");
+    const resultsImage = document.getElementById("results-image");
+    const resultsTextP1 = document.getElementById("country-text-para1");
+    const resultsTextP2 = document.getElementById("country-text-para2");
+    const highlightCountryName = document.getElementById("highlight-country-name");
+    const startAgainBtn = document.getElementById("start-again-btn");
+
+    // declaring other variables
+    let maxQuestions = 10;
+    let username;
+    let personalityTally = [];
+
+    /* index of points matches index of country in countries_array
+     * [New Zealand, Mexico, Peru, China, Zambia, Kyrgyzstan]*/
+    let userTotal = [0, 0, 0, 0, 0, 0];
+    let wildlifePoints = [0, 1, 0, 0, 3, 2];
+    let thrillPoints = [3, 0, 1, 0, 2, 0];
+    let culturePoints = [0, 0, 3, 2, 0, 1];
+    let foodPoints = [2, 3, 0, 1, 0, 0];
+    let peoplePoints = [1, 2, 0, 3, 0, 0];
+    let remotePoints = [0, 0, 2, 0, 1, 3];
+
     event.preventDefault();
     scrollToTop();
     // capturing user name
     username = document.getElementById("name-input");
-    
+
     // alert if no username entered
     if (username.value === "") {
         alert(`Please enter your name to play, real or imaginary!`);
-    
+
         // game play functionality
     } else {
         welcomeDiv.classList.toggle("hidden");
@@ -162,7 +162,7 @@ function startGame(event) {
         // Checks for a tie
         if (topPersonalityArray.length > 1) {
 
-        //run tie breaker if more than 1 winner
+            //run tie breaker if more than 1 winner
             // reveals photos for tied personalities
             for (let i = 0; i < tieChoices.length; i++) {
                 if (topPersonalityArray.includes(tieChoices[i].getAttribute("data-type"))) {
@@ -376,7 +376,7 @@ function startGame(event) {
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;
-        
+
         // runs Google Map API (function stored in map.js)
         initMap(topCountryIndex);
 
