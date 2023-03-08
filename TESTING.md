@@ -440,10 +440,13 @@ The site was tested on the following devices
 - - -
 #### **Browser Compatibility**
 
-The site was tested on the following browsers. No browser-specific bugs were found.
+The site was tested on the following browsers.
 * Google Chrome
 * Mozilla Firefox
 * Apple Safari
+
+**Bugs found - specific to browser testing:**
+* [Console Error - Permissions Policy Header: on Chrome](#10-console-error-on-chrome-error-with-permissions-policy-header)
 
 
 - - -
