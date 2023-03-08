@@ -739,4 +739,21 @@ I found the solution to this was to add the following code to the CSS to over-ri
 In some circumstances 2 countries can have equal points and the site will automatically suggest whichever occurs first in the countries array. This is not so much a bug but a slight hole in the way that the quiz works. I did think about ways to overcome this but as the game already contains a tie-breaker I didn't want to add any more complexity to the project. I have mentioned this issue in the [README](README.md) as an area for future development of the app.
 
 
+#### **10: Console Error on Chrome: Error with Permissions-Policy header**
+
+<details><summary>Screenshot</summary>
+
+<img src="docs/bugs/bug10.jpeg">
+
+</details>
+
+During browser testing in Google Chrome I found that the console was throwing up an error of "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'." I found various references online and in the Code Institute Slack group to this being an issue relating to Google's new tracking method [FLoC](https://www.howtogeek.com/724441/what-is-googles-floc-and-how-will-it-track-you-online/) which is being blocked by GitHub Pages. All references I found to it suggested that it was a browser issue rather than an issue with the site itself and that it can be safely disregarded.
+
+
+[GitHub Blog Article](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/)
+
+[Stack Overflow Question](https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort)
+
+
+
 
