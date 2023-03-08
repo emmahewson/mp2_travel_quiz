@@ -78,7 +78,7 @@ function startGame(event) {
         restartGameBtn.addEventListener('click', function () {
             window.location.reload();
         });
-    };
+    }
 
 
     // Game play functions
@@ -107,7 +107,7 @@ function startGame(event) {
                 setTimeout(scrollToTop, 500);
             });
         });
-    };
+    }
 
 
     // Helper functions for handleAnswer
@@ -140,7 +140,7 @@ function startGame(event) {
             }
         });
         console.log(personalityTally);
-    };
+    }
 
     // Helper Functions for selectAndSubmit
 
@@ -161,7 +161,7 @@ function startGame(event) {
         choices.forEach(choice => {
             choice.disabled = false;
         });
-    };
+    }
 
     // Calculates user personality & reveals results
     function findTopPersonality() {
@@ -199,7 +199,7 @@ function startGame(event) {
                     // sets winning personality based on last item in personalityTally
                     topPersonality = personalityTally[personalityTally.length - 1];
                     console.log("Top Personality Array in findTopPersonality() if statement Tied is: " + topPersonalityArray);
-                    console.log("Top Personality in findTopPersonality() if statement Tied is: " + topPersonality)
+                    console.log("Top Personality in findTopPersonality() if statement Tied is: " + topPersonality);
 
                     // Reveals results
                     showResults(topPersonality);
@@ -235,9 +235,9 @@ function startGame(event) {
             if (personalities[i].score === maxPersonalityScore) {
                 topPersonalityArray.push(personalities[i].type);
             }
-        };
+        }
         console.log("Top Personality Array inside checkForTie runs is... " + topPersonalityArray);
-    };
+    }
 
     function showTieBreaker(topPersonalityArray) {
         console.log("Top Personality Array at start of runTieBreaker() is: " + topPersonalityArray);
@@ -253,7 +253,7 @@ function startGame(event) {
         answerDiv.classList.add("hidden");
         progressDiv.classList.add("hidden");
         answerTieDiv.classList.remove("hidden");
-    };
+    }
 
     // Function to check for number of times an element occurs in an array
     // function adapted from https://linuxhint.com/count-array-element-occurrences-in-javascript/#:~:text=To%20count%20element%20occurrences%20in,%E2%80%9Cfor%2Dof%E2%80%9D%20loop.
@@ -327,21 +327,21 @@ function startGame(event) {
                 personalityTextP2.innerText = personalities[i].text[1];
             }
         }
-    };
+    }
 
     // sort the personalities by score (reverse order)
     function sortPersonalityScores() {
         let sorted = personalities.sort(compareScores);
         // reverse order of sorted personalities
         let reversed = sorted.reverse();
-        console.log(reversed)
+        console.log(reversed);
         return reversed;
-    };
+    }
 
     // helper function for sortPersonalityScores (for ordering)
     function compareScores(a, b) {
         return a.score - b.score;
-    };
+    }
 
     function calculatePiePersonalities(reverseSortedPersonalities, percentageArray) {
 
@@ -363,11 +363,11 @@ function startGame(event) {
         let percentDifference = 100 - percentagesTotal;
         if (percentDifference !== 0) {
             percentageArray[0] += percentDifference;
-        };
+        }
         console.log(percentageArray);
         return percentageArray;
 
-    };
+    }
 
     // helper function for calculatePiePersonalities - calculate percentage
     function calcPercent(score, total) {
@@ -379,7 +379,7 @@ function startGame(event) {
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             pieTypesText[i].innerText = reverseSortedPersonalities[i].name;
             piePercentages[i].innerText = `: ${percentageArray[i]}%`;
-        };
+        }
     }
 
     // calculates and populates the colours for the pie chart and key
@@ -389,20 +389,20 @@ function startGame(event) {
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             pieColorKey[i].classList.add(reverseSortedPersonalities[i].color);
             colors.push(reverseSortedPersonalities[i].colorCode);
-        };
+        }
         console.log(colors);
         return colors;
-    };
+    }
 
     // calculates the values for the hover pie labels
     function calculatePieLabels(reverseSortedPersonalities) {
         let labels = [];
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             labels.push((reverseSortedPersonalities[i].name));
-        };
+        }
         console.log(labels);
         return labels;
-    };
+    }
 
     // Populates the 3rd paragraph of the personality text
     function populatePersonalityParaThree(reverseSortedPersonalities, percentageArray) {
@@ -415,7 +415,7 @@ function startGame(event) {
             personalityTextP3.innerHTML = `But we humans are complex creatures, you also scored highly as ${reverseSortedPersonalities[1].prefix} <strong>${reverseSortedPersonalities[1].name}</strong> and <strong>${reverseSortedPersonalities[2].name}</strong>. Check our our recommendations below
                     to see which destination suits all these aspects your personality!`;
         }
-    };
+    }
 
     // build piechart
     // uses chart.js library https://www.chartjs.org/
@@ -459,7 +459,7 @@ function startGame(event) {
                 }
             }
         });
-    };
+    }
 
     // calculates winning country based on user answers in personalityTally
     function chooseCountry() {
@@ -500,7 +500,7 @@ function startGame(event) {
         let winningIndex = userTotal.indexOf(Math.max(...userTotal));
         console.log(winningIndex);
         return winningIndex;
-    };
+    }
 
     // populates the country results
     function populateCountry(topCountryIndex) {
@@ -510,7 +510,5 @@ function startGame(event) {
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;
-    };
-};
-
-module.exports = startGame;
+    }
+}
