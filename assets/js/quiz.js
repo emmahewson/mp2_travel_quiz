@@ -1,4 +1,4 @@
-// Start Game Button - controls all game functionality
+// Start Game Button - activates all game functionality
 function startGame(event) {
 
     // declaring consts for Welcome Page DOM Objects
@@ -48,6 +48,14 @@ function startGame(event) {
     let remotePoints = [0, 0, 2, 0, 1, 3];
 
 
+    // Username submission & Start Quiz Functionality ------------------------------------------ //
+
+    // Handle form submission
+    event.preventDefault();
+
+    // Scroll to top of page
+    scrollToTop();
+
     // helper function to move back to the top of the page
     function scrollToTop() {
         window.scrollTo({
@@ -55,12 +63,6 @@ function startGame(event) {
             behavior: 'smooth'
         });
     }
-
-    // Handle form submission
-    event.preventDefault();
-
-    // Scroll to top of page
-    scrollToTop();
 
     // capturing user name
     username = document.getElementById("name-input");
@@ -81,7 +83,7 @@ function startGame(event) {
     }
 
 
-    // Game play functions
+    // Quiz Functionality --------------------------------------------------------------------- //
 
     // Populate the questions and answers & move on progress bar
     function addQuestionContent(index) {
@@ -139,7 +141,6 @@ function startGame(event) {
                 choice.disabled = true;
             }
         });
-        console.log(personalityTally);
     }
 
     // Helper Functions for selectAndSubmit
@@ -174,7 +175,6 @@ function startGame(event) {
         // Checks for a tie
         let topPersonalityArray = [];
         checkForTie(topPersonalityArray);
-        console.log("Top Personality Array after checkForTie runs is... " + topPersonalityArray);
 
         // if not tied reveal results, if tied run tie breaker & reveal results
         let topPersonality;
@@ -194,12 +194,9 @@ function startGame(event) {
                     for (let i = 0; i < personalities.length; i++) {
                         personalities[i].score = elementCount(personalityTally, personalities[i].type);
                     }
-                    console.log("personality Tally after user selects tie photo is: " + personalityTally);
 
                     // sets winning personality based on last item in personalityTally
                     topPersonality = personalityTally[personalityTally.length - 1];
-                    console.log("Top Personality Array in findTopPersonality() if statement Tied is: " + topPersonalityArray);
-                    console.log("Top Personality in findTopPersonality() if statement Tied is: " + topPersonality);
 
                     // Reveals results
                     showResults(topPersonality);
@@ -210,7 +207,6 @@ function startGame(event) {
 
             // if not tied - sets the winning personality
             topPersonality = topPersonalityArray[0];
-            console.log("Top Personality in findTopPersonality() if statement Not Tied is: " + topPersonality);
 
             // Reveals results
             showResults(topPersonality);
@@ -219,6 +215,7 @@ function startGame(event) {
 
     // Helper functions for findTopPersonality
 
+    // Checks for tied personality results
     function checkForTie(topPersonalityArray) {
 
         // creates an array of the number of times each personality occurs
@@ -236,11 +233,10 @@ function startGame(event) {
                 topPersonalityArray.push(personalities[i].type);
             }
         }
-        console.log("Top Personality Array inside checkForTie runs is... " + topPersonalityArray);
     }
 
+    // Reveals Tie Breaker
     function showTieBreaker(topPersonalityArray) {
-        console.log("Top Personality Array at start of runTieBreaker() is: " + topPersonalityArray);
 
         // reveals photos for tied personalities
         for (let i = 0; i < tieChoices.length; i++) {
@@ -262,6 +258,8 @@ function startGame(event) {
     }
 
 
+    // Results Page Functionality ------------------------------------------------------------------------------ //
+
     // Reveal Results
     function showResults(topPersonality) {
 
@@ -275,23 +273,19 @@ function startGame(event) {
 
         // sort the personalities by score (reverse order)
         let reverseSortedPersonalities = sortPersonalityScores();
-        console.log(reverseSortedPersonalities);
 
         // convert scores to percentages
         let percentageArray = [];
         calculatePiePersonalities(reverseSortedPersonalities, percentageArray);
-        console.log(percentageArray);
 
         // populates the names and percentages for the pie key
         populatePieKeyData(reverseSortedPersonalities, percentageArray);
 
         // create colour key for pie & populate key colours
         let keyColors = calculatePieColours(reverseSortedPersonalities);
-        console.log(keyColors);
 
         // create labels for pie
         let pieLabels = calculatePieLabels(reverseSortedPersonalities);
-        console.log(pieLabels);
 
         // Populates the 3rd paragraph of the personality text
         populatePersonalityParaThree(reverseSortedPersonalities, percentageArray);
@@ -315,8 +309,7 @@ function startGame(event) {
         });
     }
 
-
-    // Helper Function for showResults()
+    // Helper Functions for showResults()
 
     // Populates personality heading and text
     function populatePersonalityText(topPersonality) {
@@ -334,7 +327,6 @@ function startGame(event) {
         let sorted = personalities.sort(compareScores);
         // reverse order of sorted personalities
         let reversed = sorted.reverse();
-        console.log(reversed);
         return reversed;
     }
 
@@ -343,6 +335,7 @@ function startGame(event) {
         return a.score - b.score;
     }
 
+    // Creates an array of the score percentages for the pie key
     function calculatePiePersonalities(reverseSortedPersonalities, percentageArray) {
 
         // calculate sum of all scores
@@ -364,7 +357,6 @@ function startGame(event) {
         if (percentDifference !== 0) {
             percentageArray[0] += percentDifference;
         }
-        console.log(percentageArray);
         return percentageArray;
 
     }
@@ -390,7 +382,6 @@ function startGame(event) {
             pieColorKey[i].classList.add(reverseSortedPersonalities[i].color);
             colors.push(reverseSortedPersonalities[i].colorCode);
         }
-        console.log(colors);
         return colors;
     }
 
@@ -400,7 +391,6 @@ function startGame(event) {
         for (let i = 0; i < reverseSortedPersonalities.length; i++) {
             labels.push((reverseSortedPersonalities[i].name));
         }
-        console.log(labels);
         return labels;
     }
 
@@ -498,7 +488,6 @@ function startGame(event) {
             }
         }
         let winningIndex = userTotal.indexOf(Math.max(...userTotal));
-        console.log(winningIndex);
         return winningIndex;
     }
 
