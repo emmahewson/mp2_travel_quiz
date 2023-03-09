@@ -710,6 +710,11 @@ a {
         display: block;
     }
 
+    #answer-div,
+    #answer-tie-div {
+        display: block;
+    }
+
     #progress-div {
         margin-top: 20px;
         width: 85%;
@@ -725,17 +730,16 @@ a {
         margin-bottom: 20px;
     }
 
-    #answer-tie-div {
-        row-gap: 10px;
-        column-gap: 10px;
-    }
-
     .btn-choice {
         width: 100%;
         height: initial;
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 20px;
+    }
+
+    .btn-choice-tie {
+        margin: 5px;
     }
 
     #restart-button-div {
