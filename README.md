@@ -411,6 +411,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 * The pie chart has a colour key with each personality type having an associated colour
 * Each answer selected by the user is associated with one of the personality types, the percentages are calculated based on these, including the tie break
 * The pie chart animates on and has clickable sections to see the percentages for each
+    * In a few older browsers the chart.js library doesn't work - in this situation the user is presented with a friendly error message in the place of the pie chart to improve user experience see [TESTING.md](TESTING.md)
 * Includes text information about the personality type
 * The final paragraph is bespoke to the user's results, if they have high % scores in the 2nd and 3rd place personalities these are included here.
     * The recommended country is based on all the personality types chosen, not just the winning one - this helps explain this to the user.
@@ -717,6 +718,14 @@ This section explains in plain English what happens in the JavaScript code as th
     * The pie chart animates on - animation by chart.js
     * The pie chart sections have a hover effect on them, when you hover over them you see the personality type and the percentage - hover functionality from chart.js
     * During testing I discovered that chart.js is not supported by older Safari versions on IOS (12 and earlier) - in this situation a try / catch statement is used to replace the failed pie chart with a `<p>` element telling the user their browser doesn't support the pie chart.
+        ```
+        try {
+            buildPie(percentageArray, keyColors, pieLabels);
+        } catch (err) {
+            pieDiv.classList.add("error-background");
+            pieDiv.innerHTML = "<p class='text-centre'>Sorry!<br>Your browser version doesn't support our pie charts.</p>";
+        }
+        ```
 * The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
 </details>
 

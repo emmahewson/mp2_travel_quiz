@@ -881,4 +881,10 @@ All information about remaining bugs is included in the information above. Click
 [Bug 11.3: Safari IOS12 doesn't support smooth scroll](#11-iphone-5s-safari-120---various-bugs)
 
 
+
 - - -
+- - -
+
+[Go to Top](#the-travel-personality-quiz---testing)
+
+[Go to README](README.md)
