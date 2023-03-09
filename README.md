@@ -411,7 +411,7 @@ As there are only 10 questions and each ones selects one of 6 personality types,
 * The pie chart has a colour key with each personality type having an associated colour
 * Each answer selected by the user is associated with one of the personality types, the percentages are calculated based on these, including the tie break
 * The pie chart animates on and has clickable sections to see the percentages for each
-    * In a few older browsers the chart.js library doesn't work - in this situation the user is presented with a friendly error message in the place of the pie chart to improve user experience see [TESTING.md](TESTING.md)
+    * If the pie chart fails to load the user is presented with a friendly error message in the place of the pie chart to improve user experience - see bugs in [TESTING.md](TESTING.md)
 * Includes text information about the personality type
 * The final paragraph is bespoke to the user's results, if they have high % scores in the 2nd and 3rd place personalities these are included here.
     * The recommended country is based on all the personality types chosen, not just the winning one - this helps explain this to the user.

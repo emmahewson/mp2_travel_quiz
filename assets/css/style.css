@@ -492,12 +492,14 @@ a {
     align-items: center;
 }
 
+/* Bug Fix for chart.js failing to load on older browsers - div */
 .error-background {
     background-color: rgba(231, 231, 231, 1);
     border-radius: 50%;
     margin-bottom: 15px;
 }
 
+/* Bug Fix for chart.js failing to load on older browsers - text */
 #pie-chart p {
     padding: 20px;
     font-size: 14px;
