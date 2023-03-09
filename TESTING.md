@@ -26,6 +26,7 @@ This is the testing documentation for my web application: The Travel Personality
         * [Browser Compatibility](#browser-compatibility)
         * [Feature Testing Results Table](#feature-testing-results-table)
 4. [Bugs & Fixes](#bugs--fixes)
+    * [Known & Remaining Bugs](#known--remaining-bugs)
 
 - - -
 
@@ -248,7 +249,7 @@ There were no errors but there were a number of warnings which can be groups as 
     <form id="start-form" method="POST" onsubmit="startGame(event)">
 
     // in quiz.js
-    function startGame(event) {
+    function startGame(event)
     ```
 
 
@@ -436,6 +437,7 @@ The site was tested on the following devices
 * [Button colour on mobile](#5-button-colour-on-mobile)
 * [Button styling on mobile](#8-button-styling-on-mobile)
 * [IPhone 5S Safari 12.0 - Various Bugs](#11-iphone-5s-safari-120---various-bugs)
+* [Scrolling too far on highlight marker click on small screens](#12-highlight-marker-click-scrolls-too-far-on-smaller-screens)
 
 
 - - -
@@ -448,6 +450,7 @@ The site was tested on the following browsers.
 
 **Bugs found - specific to browser testing:**
 * [Console Error - Permissions Policy Header: on Chrome](#10-console-error-on-chrome-error-with-permissions-policy-header)
+* [IPhone 5S Safari 12.0 - Various Bugs](#11-iphone-5s-safari-120---various-bugs)
 
 
 - - -
@@ -488,7 +491,7 @@ The site was tested on the following browsers.
 | Answer Boxes | Brief timeout before question / answers refresh | Clicked on answer | Game pauses before refreshing (see gif above) | Pass |
 | Answer Boxes | User cannot select another answer once a selection has been made during timeout | Clicked on an answer and attempted to select another quickly afterwards. Also checked console logs to if any additional answers were being added to the personalityTally array | Unable to select more than 1 answer during time out and nothing additional added to personalityTally | Pass |
 | Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh | Clicked on answer | Colour changes back on refresh as expected (see gif above) | Pass |
-| Answer Boxes | Page scrolls to top on question/answer refresh | Using Dev Tool's device simulator scrolled down & clicked on answer | Page scrolls to top as expected ![Screen Recording](docs/testing/testing_features_game3.gif) | Pass |
+| Answer Boxes | Page scrolls to top on question/answer refresh | Using Dev Tool's device simulator scrolled down & clicked on answer | Page scrolls to top as expected *[(Smooth Scroll Bug Found on Safari IOS12 & earlier)](#11-iphone-5s-safari-120---various-bugs)* ![Screen Recording](docs/testing/testing_features_game3.gif) | Pass on majority of devices |
 | Progress Bar | Shows "Question 1 of 10" on inital load & pink bar at 10% | Loaded game and checked progress bar | Progress bar and text were correct (see gif below) | Pass |
 | Progress Bar | Increments each time a question is selected with the correct numbers & bar width | Played game and checked progress bar | Progress bar increments correctly ![Screen Recording](docs/testing/testing_features_game4.gif) | Pass |
 | Quiz functionality | Correct personality type is added to personalityTally array when user selects an answer | Log personalityTally to console for testing purposes and check it matches the selected answer | console logs match the selected answers ![Screen Recording](docs/testing/testing_features_game5.gif) | Pass |
@@ -505,14 +508,14 @@ The site was tested on the following browsers.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Personality Results Contents | Personality heading, pie chart, colour key, percentages & description appear correctly | Clicking on the final question | All content appeared as expected | Pass |
+| Personality Results Contents | Personality heading, pie chart, colour key, percentages & description appear correctly | Clicking on the final question | All content appeared as expected *[(Pie Chart fails to load on Safari IOS12 & earlier - see bugs)](#11-iphone-5s-safari-120---various-bugs)* | Pass on majority of devices |
 | Personality heading | Contains name inputted by user | Inputting name and checking it appears in results | Name appears correctly ![Screenshot](docs/testing/testing_features_results1.jpeg)![Screenshot](docs/testing/testing_features_results2.jpeg) | Pass |
 | Personality heading | Contains correct personality type | Using console logs to check the winning personality at different stages of the game and checking it matches | Personality type appears correctly and matches the console logs ![Screenshot](docs/testing/testing_features_results3.jpeg)![Screenshot](docs/testing/testing_features_results4.jpeg)![Screenshot](docs/testing/testing_features_results5.jpeg) | Pass |
-| Pie chart | Pie sections & colours match key | Visually checking the colours match between the key and the pie chart | All colours and percentages match | Pass |
-| Pie chart | Results are correct based on user answers in game | Using console logs to check the percentages and matching those with the pie and key | All numbers, personality types and colours match ![Screenshot](docs/testing/testing_features_results6.jpeg)![Screenshot](docs/testing/testing_features_results7.jpeg)|  |
+| Pie chart | Pie sections & colours match key | Visually checking the colours match between the key and the pie chart | All colours and percentages match *[(Pie Chart fails to load on Safari IOS12 & earlier - see bugs)](#11-iphone-5s-safari-120---various-bugs)* | Pass on majority of devices |
+| Pie chart | Results are correct based on user answers in game | Using console logs to check the percentages and matching those with the pie and key | All numbers, personality types and colours match ![Screenshot](docs/testing/testing_features_results6.jpeg)![Screenshot](docs/testing/testing_features_results7.jpeg)| Pass |
 | Pie chart | All personality types are listed in descending order | Checking that the percentages are in reverse order, largest to smallest | The personality types appear in the correct order | Pass |
 | Pie chart | Percentages total 100 | Using console logs and testing the game with a tie break result (where the rounding issue occurs) and checking everything adds up | The percentages add up to 100 ![Screenshot](docs/testing/testing_features_results8.jpeg) | Pass |
-| Pie chart | Pie chart is clickable, showing the percentages of each section | Click on sections of pie chart | Functions as expected and text matches key ![Screenshot](docs/testing/testing_features_results8b.gif) | Pass |
+| Pie chart | Pie chart is clickable, showing the percentages of each section | Click on sections of pie chart | Functions as expected and text matches key *[(Pie Chart fails to load on Safari IOS12 & earlier - see bugs)](#11-iphone-5s-safari-120---various-bugs)* ![Screenshot](docs/testing/testing_features_results8b.gif) | Pass on majority of devices |
 | Personality Description | Matches winning personality type | Using console logs to check the winning time at different stages of the code and matching it to what appears on the page | The correct personality description appears ![Screenshot](docs/testing/testing_features_results9.jpeg)![Screenshot](docs/testing/testing_features_results10.jpeg) | Pass |
 | Personality Description | 3rd paragraph contains reference to 2nd and 3rd place personalities if over 15% | Matching the 2nd and 3rd place personalties to what appears in the text using the pie chart and console logs | The correct personalities appear in the 3rd paragraph ![Screenshot](docs/testing/testing_features_results11.jpeg) | Pass |
 | Recommended Country Contents | Country recommendation heading, photo & description appear correctly | Scrolling down the results and checking the content | All content appears as expected | Pass |
@@ -528,7 +531,7 @@ The site was tested on the following browsers.
 | Country Map | Google Maps inbuilt functionality works (map/satellite, full screen, street view, zoom, pan & scroll on touchscreen devices) |  | All in built map functionality works correctly ![Screen Recording](docs/testing/testing_features_results21.gif) | Pass |
 | Map Markers | Markers are clickable | Clicking on all markers | All markers are clickable and function correctly ![Screen Recording](docs/testing/testing_features_results22.gif) | Pass |
 | Map Markers | Clicking on a marker reveals the correct highlight information below including text and images | Clicking on each marker and checking the highlight text and photos appear and are correct | All highlights' text and images are correct (see gif above) | Pass |
-| Highlight Info | Page scrolls down smoothly to show all highlight info | Clicking on a marker and checking the page scrolls smoothly to the correct place | Page scrolls correctly (see gif above) | Pass |
+| Highlight Info | Page scrolls down smoothly to show highlight info | Clicking on a marker and checking the page scrolls smoothly to the correct place | Page scrolls correctly (see gif above) *[(Smooth Scroll Bug Found on Safari IOS12 & earlier)](#11-iphone-5s-safari-120---various-bugs)* | Pass on majority of devices |
 | Highlight Info | Replaced when clicking on a different marker | Clicking on a marker and checking the content is replaced | Content is replaced correctly (see gif above) | Pass |
 | Start Again Button & Text | Appear above footer | Scroll down and checking content appears correctly | Button and text appear correctly | Pass |
 | Start Again Button | Hover effect with transition on hover | Hovering over button | Button hover effect works correctly ![Screen Recording](docs/testing/testing_features_results23.gif) | Pass |
@@ -698,13 +701,6 @@ More information [here](https://stackoverflow.com/questions/47799388/javascript-
 
 On page load Dev Tool's console was logging an error and failing to load the pie chart.
 
-
-<details><summary>Screenshots</summary>
-
-<img src="docs/bugs/bug7_error.jpeg">
-
-</details>
-
 I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E). It was happenning because the CDN link I was using to the chart.js library was out of date and I needed to update it to a more recent version - as in the code below.
 
 
@@ -712,20 +708,17 @@ I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E)
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 ```
 
+<details><summary>Screenshots</summary>
+
+<img src="docs/bugs/bug7_error.jpeg">
+
+</details>
+
+
 - - -
 #### **8: Button styling on mobile**
 
 When testing on mobile I discovered that the button styling had changed compared to the main site and dev tools phone simulators.
-
-
-<details><summary>Screenshots</summary>
-
-<img src="docs/bugs/bug8_before.jpeg">
-<img src="docs/bugs/bug8_after.jpeg">
-
-*Before & After*
-
-</details>
 
 I found the solution to this was to add the following code to the CSS to over-ride the mobile device's built in styling that it adds to certain buttons and inputs. Whilst only one of the buttons was affected (the only one with a 'type' attribute defined, I decided to over-ride the styling for all the buttons incase there were any issues on other mobile devices elsewhere.)
 
@@ -736,20 +729,26 @@ I found the solution to this was to add the following code to the CSS to over-ri
     appearance: none !important;
 }
 ```
+
+<details><summary>Screenshots</summary>
+
+<img src="docs/bugs/bug8_before.jpeg">
+<img src="docs/bugs/bug8_after.jpeg">
+
+*Before & After*
+
+</details>
+
+
 - - -
 
 #### **9: Country results can end in a tie**
 
 In some circumstances 2 countries can have equal points and the site will automatically suggest whichever occurs first in the countries array. This is not so much a bug but a slight hole in the way that the quiz works. I did think about ways to overcome this but as the game already contains a tie-breaker I didn't want to add any more complexity to the project. I have mentioned this issue in the [README](README.md) as an area for future development of the app.
 
+- - -
 
 #### **10: Console Error on Chrome: Error with Permissions-Policy header**
-
-<details><summary>Screenshot</summary>
-
-<img src="docs/bugs/bug10.jpeg">
-
-</details>
 
 During browser testing in Google Chrome I found that the console was throwing up an error of "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'." I found various references online and in the Code Institute Slack group to this being an issue relating to Google's new tracking method [FLoC](https://www.howtogeek.com/724441/what-is-googles-floc-and-how-will-it-track-you-online/) which is being blocked by GitHub Pages. All references I found to it suggested that it was a browser issue rather than an issue with the site itself and that it can be safely disregarded.
 
@@ -758,25 +757,128 @@ During browser testing in Google Chrome I found that the console was throwing up
 
 [Stack Overflow Question](https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort)
 
+<details><summary>Screenshot</summary>
 
-#### **11: iPhone 5S Safari 12.0 - various bugs**
-
-<details><summary>Screenshots</summary>
-
-<img src="">
+<img src="docs/bugs/bug10.jpeg">
 
 </details>
 
-During Testing on iPhone 5S I ran in to a number of bugs which were all caused by using an older version of Safari (12.0).
+- - -
+
+#### **11: iPhone 5S Safari 12.0 - various bugs**
+
+During Testing on iPhone 5S I ran in to a number of bugs and a complete breakdown in game functionality, which were all caused by using an older version of Safari (12.0).
 
 **Bug 11.1**
 
-The Flexbox row gap was not appearing which meant that my answer buttons had no margin between them, making them difficult to click.
+<details><summary>Screenshots</summary>
+
+<img src="docs/bugs/bug11_1_before1.jpeg">
+<img src="docs/bugs/bug11_1_before2.jpeg">
+
+*Before*
+
+<img src="docs/bugs/bug11_1_after1.jpeg">
+<img src="docs/bugs/bug11_1_after2.jpeg">
+
+*After*
+
+</details>
+
+The Flexbox row gap & column gaps were not appearing which meant that my answer buttons, tie break buttons and footer social links had no margin between them, making them difficult to click without accidentally selecting the wrong answer or link. This was due to the flexbox row-gap and column-gap not being supported in Safari 12.0 and earlier.
+
+In order to fix this I decided to re-write the CSS as a media query for smaller screens, which removed the need for the row and column gap, replacing them with margins or alternative layout techniques.
+
 
 **Bug 11.2**
 
-The were some serious issues in the JavaScript functionality, with the pie chart, country details, highlights and 'start again' button all failing. After some investigation I discovered that this was down to a compatibility issue with chart.js on older versions of Safari (below 14.1). The JavaScript was breaking at the point it reached the buildPie() function, and so all code that came after that didn't work.
+<details><summary>Screenshots</summary>
 
-My initial fix for this was to re-order the code so that the pie chart was the last thing to happen. This solved all the other broken JavaScript. However the chart was still not loading.
+<img src="docs/bugs/bug11_2_before.gif">
+<img src="docs/bugs/bug11_2_after.gif">
+
+*Before & After*
+
+</details>
+
+The were some serious issues in the JavaScript functionality, with the pie chart, country details, highlights and 'start again' button all failing. After some investigation I discovered that this was down to a compatibility issue with chart.js on older versions of Safari (below 14.1). The JavaScript was breaking at the point it reached the buildPie() function, and so all code that came after that didn't work and only the placeholder content was visible for the country name, photo, map and highlights.
+
+My initial fix for this was to re-order the code so that the pie chart was the last thing to happen. This solved all the other broken JavaScript. However the chart was still not loading, after extensive research I couldn't find a solution to this bug with my level of JavaScript experience, so instead I decided to handle the error with a try / catch statement around the buildPie() function. This tested to see if the function threw up an error, and if it did it added styling and text content to the div where the pie chart would normally appear which gave the user a friendly error message explaining that their browser didn't support the pie chart. I felt this was the best workaround and the best user experience in the circumstances.
+
+```
+try {
+    buildPie(percentageArray, keyColors, pieLabels);
+} catch (err) {
+    pieDiv.classList.add("error-background");
+    pieDiv.innerHTML = "<p class='text-centre'>Sorry!<br>Your browser version doesn't support our pie charts.</p>";
+}
+
+```
 
 
+**Bug 11.3**
+
+<details><summary>Screenshots</summary>
+
+<img src="docs/bugs/bug11_3.gif">
+
+</details>
+
+Safari 12.0 also didn't support the smooth scroll functionality included in the JavaScript. I was unable to find a solution to this issue and so this bug remains.
+
+- - -
+
+#### **12: Highlight marker click scrolls too far on smaller screens**
+
+During testing on the iPhone 5S I discovered that the scroll function I had added to the highlight markers on the Google Map of the country would go past the top of the text about that highlight due to the smaller screen size. The original plan had been to allow users to see that there were photos and to view the whole text and photo content together, however on a smaller screen this just wasn't possible.
+
+To fix this issue I added an if statement within map.js to check the screen size and on smaller screens to scroll to the top of the text content, rather than the bottom of the photos.
+
+
+```
+// timeout to allow photos to load before scroll
+// scroll to adjusted for screen size so screen doesn't scroll past top of content
+    if (width <= 576) {
+        setTimeout(function () {
+            highlightContentDiv.scrollIntoView(true, {
+                behavior: 'smooth'
+            });
+        }, 150);
+    } else {
+        setTimeout(function () {
+            countryHighlightDiv.scrollIntoView(false, {
+                behavior: 'smooth'
+            });
+        }, 150);
+    };
+```
+
+<details><summary>Screenshots</summary>
+
+<img src="docs/bugs/bug12_before.gif">
+<img src="docs/bugs/bug12_after.gif">
+
+*Before & After*
+
+</details>
+
+
+- - -
+
+
+### Known & Remaining Bugs
+
+All information about remaining bugs is included in the information above. Click on the links below to find out more details:
+
+[Bug 6.3: Console error - Google Maps API Touchscreen Events](#6-google-maps-api---console-errors)
+
+[Bug 9: Country results can end in a tie](#9-country-results-can-end-in-a-tie)
+
+[Bug 10: Chrome - console error - permission policy header](#10-console-error-on-chrome-error-with-permissions-policy-header)
+
+[Bug 11.2: Chart.js doesn't display pie chart on Safari IOS12 and earlier](#11-iphone-5s-safari-120---various-bugs)
+
+[Bug 11.3: Safari IOS12 doesn't support smooth scroll](#11-iphone-5s-safari-120---various-bugs)
+
+
+- - -

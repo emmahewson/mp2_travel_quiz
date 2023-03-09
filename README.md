@@ -478,7 +478,7 @@ The country recommendation section contains
 * There is explanatory text at the top telling the user to click on a marker, though the markers in themselves encourage users to click on them due to the popularity of Google Maps and people's knowledge of it
 * When a marker is clicked text and images appear about that destination highlight
 * The highlight images have associated "alt" values to make them accessible
-* The page scrolls to the bottom of the highlights section when a marker is clicked, this makes sure that the user can see the photos that appear
+* The page scrolls down when a marker is clicked, this varies depending on screen size - on a large device it scrolls to the bottom of the highlights div, this makes sure that the user can see the whole highlight text and photos on screen at the same time, on a smaller device, where this isn't possible, it scrolls to the top of the highlight text.
 * This section is fully responsive, as well as layout changes to the main div and photos the map zoom level also changes for different devices to allow the whole country to appear on the user's screen and all markers to be visible and not too close together.
 * If something goes wrong and the map fails to load Google has a built in error message to handle the problem in a user-friendly way
 * The map also has Google's in-built functionality including:
@@ -716,6 +716,7 @@ This section explains in plain English what happens in the JavaScript code as th
         * This means that the same colours are always used for the same personalities
     * The pie chart animates on - animation by chart.js
     * The pie chart sections have a hover effect on them, when you hover over them you see the personality type and the percentage - hover functionality from chart.js
+    * During testing I discovered that chart.js is not supported by older Safari versions on IOS (12 and earlier) - in this situation a try / catch statement is used to replace the failed pie chart with a `<p>` element telling the user their browser doesn't support the pie chart.
 * The final paragraph of text is personalised based on the 2nd and 3rd place scores (if over 15%) to explain to the user how the country recommendation is based on all the aspects of their personality, rather than just on the winning personality type.
 </details>
 
@@ -775,7 +776,7 @@ This section explains in plain English what happens in the JavaScript code as th
     * The map contains clickable markers
         * Each marker is clickable and reveals text and photos about a tourist attraction at that location
         * The highlight images are also assigned an associated 'alt' value to make them accessible (stored in the countries array)
-        * When a user clicks on a marker the page scrolls down so that the user can see the highlight's photos
+        * When a user clicks on a marker the page scrolls down to reveal the highlight info - where it scrolls to varies based on screen size for the best user experience.
         * If a user clicks on another marker the highlight text and photos are replaced
     * If the map fails to load text is displayed in the map box which handles the error smoothly for the user (built in functionality from Google Maps API)
     * The map also contains all the standard Google Maps functionality such as zoom, satellite view, street view and full screen
