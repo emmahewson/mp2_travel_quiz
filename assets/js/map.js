@@ -30,6 +30,7 @@ function initMap(index) {
     const imageFour = document.getElementById('highlight-photo-4')
     const highlightInfoDiv = document.getElementById('highlight-info-div')
     const countryHighlightDiv = document.getElementById('country-highlights-div')
+    const highlightContentDiv = document.getElementById('highlight-content-div')
 
 
     // Clickable map markers adapted from: https://www.aspsnippets.com/Articles/Google-Maps-API-V3-Add-click-event-listener-to-all-multiple-markers.aspx
@@ -76,12 +77,23 @@ function initMap(index) {
                 imageFour.src = `assets/images/countries/highlights/${this.images[3].img}`;
                 imageFour.alt = this.images[3].alt;
                 highlightInfoDiv.classList.remove("hidden");
+
                 // timeout to allow photos to load before scroll
-                setTimeout(function () {
-                    countryHighlightDiv.scrollIntoView(false, {
-                        behavior: 'smooth'
-                    });
-                }, 150);
+                // scroll to adjusted for screen size so screen doesn't scroll past top of content
+                if (width <= 576) {
+                    setTimeout(function () {
+                        highlightContentDiv.scrollIntoView(true, {
+                            behavior: 'smooth'
+                        });
+                    }, 150);
+                } else {
+                    setTimeout(function () {
+                        countryHighlightDiv.scrollIntoView(false, {
+                            behavior: 'smooth'
+                        });
+                    }, 150);
+                };
+
 
             });
         })(marker, data);
