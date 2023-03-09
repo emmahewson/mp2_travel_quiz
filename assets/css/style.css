@@ -707,7 +707,7 @@ a {
     /* Game */
     #answer-div {
         width: 85%;
-        row-gap: 20px;
+        display: block;
     }
 
     #progress-div {
@@ -735,6 +735,7 @@ a {
         height: initial;
         padding: 10px;
         border-radius: 10px;
+        margin-bottom: 20px;
     }
 
     #restart-button-div {
