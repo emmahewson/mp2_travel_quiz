@@ -426,8 +426,7 @@ The site was tested on the following devices
 * Apple Macbook Pro 16inch
 * LG Ultrafine Display 27inch External Monitor
 * Apple iMac 5K 27-inch
-* Apple iPhone SE
-* Apple iPhone 5S
+* Apple iPhone SE 2020
 * Google Chrome Developer Tools - simulator for all different device options as well as using the adjustable sizing options
 
 **Bugs found - specific to device testing:**
