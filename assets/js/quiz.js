@@ -23,7 +23,6 @@ function startGame(event) {
     const personalityTextP2 = document.getElementById("personality-text-p2");
     const personalityTextP3 = document.getElementById("personality-text-p3");
     const pieDiv = document.getElementById("pie-chart");
-    const pieCanvas = document.getElementById("myChart");
     const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
     const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
     const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
@@ -306,12 +305,13 @@ function startGame(event) {
             window.location.reload();
         });
 
-        // build piechart
-        // uses chart.js library https://www.chartjs.org/
-        buildPie(percentageArray, keyColors, pieLabels);
-
-        if (pieCanvas.width != 340) {
-            pieDiv.classList.add("hidden");
+        try {
+            // build piechart
+            // uses chart.js library https://www.chartjs.org/
+            buildPie(percentageArray, keyColors, pieLabels);
+        } catch (err) {
+            pieDiv.classList.add("error-background");
+            pieDiv.innerHTML = "<p class='text-centre'>Sorry!<br>Your browser version doesn't support our pie charts.</p>";
         }
     }
 

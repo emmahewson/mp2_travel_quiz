@@ -489,6 +489,19 @@ a {
 #pie-chart {
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-background {
+    background-color: rgba(231, 231, 231, 1);
+    border-radius: 50%;
+}
+
+#pie-chart p {
+    padding: 20px;
+    font-size: 14px;
 }
 
 #country-info-div {
