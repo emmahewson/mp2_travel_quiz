@@ -290,10 +290,6 @@ function startGame(event) {
         // Populates the 3rd paragraph of the personality text
         populatePersonalityParaThree(reverseSortedPersonalities, percentageArray);
 
-        // build piechart
-        // uses chart.js library https://www.chartjs.org/
-        buildPie(percentageArray, keyColors, pieLabels);
-
         // calculates the winning country based on personalityTally
         let topCountryIndex = chooseCountry();
 
@@ -307,6 +303,10 @@ function startGame(event) {
         startAgainBtn.addEventListener('click', function () {
             window.location.reload();
         });
+
+        // build piechart
+        // uses chart.js library https://www.chartjs.org/
+        buildPie(percentageArray, keyColors, pieLabels);
     }
 
     // Helper Functions for showResults()
