@@ -176,12 +176,11 @@ a {
     bottom: 20px;
     width: 100%;
     align-items: baseline;
-    column-gap: 20px;
 }
 
-
-#social-links {
-    column-gap: 20px;
+#footer-contents p,
+#social-links> :first-child {
+    margin-right: 20px;
 }
 
 #social-links a {
@@ -224,7 +223,6 @@ a {
     padding: 10px;
     margin-bottom: 20px;
 }
-
 
 
 /* Game */
@@ -828,13 +826,9 @@ a {
         height: 250px;
     }
 
-    #social-links,
-    #footer-contents {
-        column-gap: 10px;
-    }
-
-    #social-links a {
-        font-size: 26px;
+    #footer-contents p,
+    #social-links> :first-child {
+        margin-right: 10px;
     }
 }
 

@@ -309,7 +309,7 @@ function startGame(event) {
         try {
             // build piechart
             // uses chart.js library https://www.chartjs.org/
-            bbuildPie(percentageArray, keyColors, pieLabels);
+            buildPie(percentageArray, keyColors, pieLabels);
         } catch (err) {
             pieDiv.classList.add("error-background");
             pieDiv.innerHTML = "<p class='text-centre'>Sorry!<br>Your browser version doesn't support our pie charts.</p>";
