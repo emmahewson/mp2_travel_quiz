@@ -22,6 +22,8 @@ function startGame(event) {
     const personalityTextP1 = document.getElementById("personality-text-p1");
     const personalityTextP2 = document.getElementById("personality-text-p2");
     const personalityTextP3 = document.getElementById("personality-text-p3");
+    const pieDiv = document.getElementById("pie-chart");
+    const pieCanvas = document.getElementById("myChart");
     const pieColorKey = Array.from(document.getElementsByClassName("stat-key"));
     const pieTypesText = Array.from(document.getElementsByClassName("stat-type"));
     const piePercentages = Array.from(document.getElementsByClassName("stat-percent"));
@@ -307,6 +309,10 @@ function startGame(event) {
         // build piechart
         // uses chart.js library https://www.chartjs.org/
         buildPie(percentageArray, keyColors, pieLabels);
+
+        if (pieCanvas.width != 340) {
+            pieDiv.classList.add("hidden");
+        }
     }
 
     // Helper Functions for showResults()
@@ -407,50 +413,6 @@ function startGame(event) {
         }
     }
 
-    // build piechart
-    // uses chart.js library https://www.chartjs.org/
-    function buildPie(percentageArray, keyColors, pieLabels) {
-        var yValues = percentageArray;
-        var barColors = keyColors;
-
-        new Chart("myChart", {
-            type: "pie",
-            data: {
-                labels: pieLabels,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues,
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        enabled: true,
-                        boxPadding: 5,
-                        backgroundColor: 'rgba(17, 66, 92, 0.9)',
-                        titleFont: 'Raleway, sans-serif',
-                        /** Adds clickable sections on pie chart
-                         * Tooltip popup formatting callback taken from
-                         * https://stackoverflow.com/questions/46317867/how-to-append-text-or-symbol-to-tooltip-of-chart-js
-                         * https://stackoverflow.com/questions/44632529/how-do-you-hide-the-title-of-a-chart-tooltip
-                         */
-                        callbacks: {
-                            title: () => null,
-                            label: function (context) {
-                                return context.label + ': ' + context.formattedValue + '%';
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    }
-
     // calculates winning country based on user answers in personalityTally
     function chooseCountry() {
         for (let i = 0; i < personalityTally.length; i++) {
@@ -499,5 +461,49 @@ function startGame(event) {
         resultsTextP1.innerText = countries[topCountryIndex].text[0];
         resultsTextP2.innerText = countries[topCountryIndex].text[1];
         highlightCountryName.innerText = countries[topCountryIndex].name;
+    }
+
+    // build piechart
+    // uses chart.js library https://www.chartjs.org/
+    function buildPie(percentageArray, keyColors, pieLabels) {
+        var yValues = percentageArray;
+        var barColors = keyColors;
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: pieLabels,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true,
+                        boxPadding: 5,
+                        backgroundColor: 'rgba(17, 66, 92, 0.9)',
+                        titleFont: 'Raleway, sans-serif',
+                        /** Adds clickable sections on pie chart
+                         * Tooltip popup formatting callback taken from
+                         * https://stackoverflow.com/questions/46317867/how-to-append-text-or-symbol-to-tooltip-of-chart-js
+                         * https://stackoverflow.com/questions/44632529/how-do-you-hide-the-title-of-a-chart-tooltip
+                         */
+                        callbacks: {
+                            title: () => null,
+                            label: function (context) {
+                                return context.label + ': ' + context.formattedValue + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
     }
 }

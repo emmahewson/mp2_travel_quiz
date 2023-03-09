@@ -426,7 +426,8 @@ The site was tested on the following devices
 * Apple Macbook Pro 16inch
 * LG Ultrafine Display 27inch External Monitor
 * Apple iMac 5K 27-inch
-* Apple iPhone SE 2020
+* Apple iPhone SE
+* Apple iPhone 5S
 * Google Chrome Developer Tools - simulator for all different device options as well as using the adjustable sizing options
 
 **Bugs found - specific to device testing:**
@@ -434,6 +435,7 @@ The site was tested on the following devices
 * [Mobile input zoom-in not resetting](#4-mobile-input-zoom-in-not-resetting)
 * [Button colour on mobile](#5-button-colour-on-mobile)
 * [Button styling on mobile](#8-button-styling-on-mobile)
+* [IPhone 5S Safari 12.0 - Various Bugs](#11-iphone-5s-safari-120---various-bugs)
 
 
 - - -
@@ -757,5 +759,24 @@ During browser testing in Google Chrome I found that the console was throwing up
 [Stack Overflow Question](https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort)
 
 
+#### **11: iPhone 5S Safari 12.0 - various bugs**
+
+<details><summary>Screenshots</summary>
+
+<img src="">
+
+</details>
+
+During Testing on iPhone 5S I ran in to a number of bugs which were all caused by using an older version of Safari (12.0).
+
+**Bug 11.1**
+
+The Flexbox row gap was not appearing which meant that my answer buttons had no margin between them, making them difficult to click.
+
+**Bug 11.2**
+
+The were some serious issues in the JavaScript functionality, with the pie chart, country details, highlights and 'start again' button all failing. After some investigation I discovered that this was down to a compatibility issue with chart.js on older versions of Safari (below 14.1). The JavaScript was breaking at the point it reached the buildPie() function, and so all code that came after that didn't work.
+
+My initial fix for this was to re-order the code so that the pie chart was the last thing to happen. This solved all the other broken JavaScript. However the chart was still not loading.
 
 
