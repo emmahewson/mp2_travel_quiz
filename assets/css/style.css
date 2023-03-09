@@ -497,6 +497,7 @@ a {
 .error-background {
     background-color: rgba(231, 231, 231, 1);
     border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 #pie-chart p {

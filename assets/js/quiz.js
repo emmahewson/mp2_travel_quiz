@@ -305,10 +305,11 @@ function startGame(event) {
             window.location.reload();
         });
 
+        // Builds pie chart - doesn't work on Safari IOS 12 and earlier - try/catch to handle error styling (see bugs in TESTING.md)
         try {
             // build piechart
             // uses chart.js library https://www.chartjs.org/
-            buildPie(percentageArray, keyColors, pieLabels);
+            bbuildPie(percentageArray, keyColors, pieLabels);
         } catch (err) {
             pieDiv.classList.add("error-background");
             pieDiv.innerHTML = "<p class='text-centre'>Sorry!<br>Your browser version doesn't support our pie charts.</p>";
