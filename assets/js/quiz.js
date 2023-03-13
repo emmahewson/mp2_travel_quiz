@@ -365,7 +365,6 @@ function startGame(event) {
             percentageArray[0] += percentDifference;
         }
         return percentageArray;
-
     }
 
     // helper function for calculatePiePersonalities - calculate percentage

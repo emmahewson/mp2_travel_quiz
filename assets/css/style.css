@@ -92,7 +92,6 @@ a {
     -o-transition: all 0.25s ease-in-out;
 }
 
-
 #restart-game-btn {
     background-color: #d1d1d1;
     transition: all 0.25s ease-in-out;
@@ -122,8 +121,6 @@ a {
 }
 
 
-
-
 /* Background */
 
 #background-div {
@@ -134,7 +131,6 @@ a {
 
 
 /* Logo */
-
 
 #logo-div img {
     width: 220px;
@@ -281,7 +277,6 @@ a {
 }
 
 
-
 /* Game Tie Breaker styling */
 
 #answer-tie-div {
@@ -333,7 +328,6 @@ a {
     left: 0;
     background-color: inherit;
     border-radius: inherit;
-
 }
 
 .culture {
@@ -359,7 +353,6 @@ a {
 .wildlife {
     background-image: url("../images/personality/wildlife.jpg");
 }
-
 
 
 /* Results Page */
@@ -419,12 +412,10 @@ a {
     margin-bottom: 20px;
 }
 
-
 #stats-key-chart-div {
     margin-top: 15px;
     column-gap: 10px;
     row-gap: 15px;
-
 }
 
 .stat-key-div {
@@ -518,7 +509,6 @@ a {
 #country-highlights-div>p {
     color: white;
 }
-
 
 #country-highlights-div>p {
     margin-top: 8px;
@@ -622,7 +612,7 @@ a {
 
 /* Media Queries */
 
-/* Medium Devices */
+/* Med-Large Devices */
 @media (max-width: 992px) {
     #answer-div {
         width: 80%;
@@ -636,6 +626,7 @@ a {
     }
 }
 
+/* Medium Devices */
 @media (max-width: 768px) {
     .highlight-photo {
         width: 50%;
@@ -667,8 +658,8 @@ a {
 
 /* Small Devices */
 @media (max-width: 576px) {
-    /* Main Elements */
-
+    
+    /* Small Devices - Main Elements */
     .small-heading {
         font-size: 24px;
     }
@@ -687,7 +678,7 @@ a {
         background-size: cover;
     }
 
-    /* Welcome */
+    /* Small Devices - Welcome */
     #welcome-div {
         width: 85%;
         margin-top: 20px;
@@ -749,7 +740,8 @@ a {
         height: 150px;
     }
 
-    /* Results */
+
+    /* Small Devices - Results */
     #personality-div,
     #country-highlights-div,
     #country-info-div {
@@ -798,7 +790,6 @@ a {
 
     #start-again-button-div {
         margin-top: 40px;
-
     }
 }
 
@@ -836,6 +827,7 @@ a {
     }
 
 }
+
 
 /* DOM Manipulation Classes */
 
