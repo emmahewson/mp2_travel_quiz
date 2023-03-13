@@ -21,7 +21,7 @@ function initMap(index) {
         center: countries[index].center
     });
 
-    //Declaring DOM elements
+    //Declaring DOM elements for highlights
     const highlightTitle = document.getElementById('highlight-title');
     const highlightText = document.getElementById('highlight-text');
     const imageOne = document.getElementById('highlight-photo-1');
@@ -35,7 +35,7 @@ function initMap(index) {
 
     // Clickable map markers adapted from: https://www.aspsnippets.com/Articles/Google-Maps-API-V3-Add-click-event-listener-to-all-multiple-markers.aspx
 
-    // Populating the Map with Markers & attaching text & photos to each marker ready to be called on click
+    // Populating the Map with Highlight Markers & attaching text & photos to each marker ready to be called on click
     for (let i = 0; i < countries[index].highlights.length; i++) {
         let data = countries[index].highlights[i];
         let myLatlng = new google.maps.LatLng(data.lat, data.lng);
