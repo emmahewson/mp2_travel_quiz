@@ -870,12 +870,12 @@ The project will now be cloned locally for you to use.
 * Queenstown 3 [Virtuoso](https://www.virtuoso.com/travel/articles/city-guide-queenstown-new-zealand)
 * Queenstown 4 [Bucketlistly](https://www.bucketlistly.blog/posts/queenstown-things-to-do-backpacking)
 * Fjordland 1 [Britannica](https://cdn.britannica.com/51/59851-050-02ED07E5/Mitre-Peak-waters-Milford-Sound-Fiordland-National.jpg)
-* Fjordland 2 [NZ Pocket Guide](https://nzpocketguide.com/wp-content/uploads/2018/03/Doubtful-Sound-credit-Fland-Heli2-waterfall-fiordland-landscape-scenery-scenic-flight-Credit-Fiordland-Helicopters-Feature-Mandatory-Credit-Destination-Fiordland.jpg)
+* Fjordland 2 [Fjordland Helicopters](https://www.fiordlandhelicopters.co.nz/dusky-doubtful/)
 * Fjordland 3 [PSU.edu](https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/3/61309/files/2017/01/Fiordland-National-Park-Photo-143jraf.jpg)
-* Fjordland 4 [NZ Pocket Guide](https://nzpocketguide.com/wp-content/uploads/2018/05/Lake-mapourika-best-kayak-tours-in-new-zealand-Feature-Mandatory-Credit-NZPocketGuide.com_.jpg)
+* Fjordland 4 [NZ Pocket Guide](https://nzpocketguide.com/10-best-kayak-tours-in-new-zealand/)
 * Bay of Islands 1 [Britannica](https://cdn.britannica.com/23/124823-050-723623CC/Russell-Bay-of-Islands-New-Zealand.jpg)
 * Bay of Islands 2 [NZ Pocket Guide](https://nzpocketguide.com/wp-content/uploads/2020/08/Kerikeri-Rainbow-Falls-Feature-Mandatory-Credit-Unsplash-3.jpg)
-* Bay of Islands 3 [NZ Pocket Guide](https://nzpocketguide.com/wp-content/uploads/2017/07/Kayaking-Haruru-Falls-Paihia-Feature-Mandatory-Credit-NZPocketGuide.com_.jpg)
+* Bay of Islands 3 [NZ Pocket Guide](https://nzpocketguide.com/water-activities-in-the-bay-of-islands/)
 * Bay of Islands 4 [Zu Blu](https://www.zubludiving.com/images/Pacific/New-Zealand/Bay-of-Islands/Bay-of-Islands-New-Zealand-scuba-diving-11.jpg)
 * Tongariro National Park 1 [Love Taupo](https://d3qvqlc701gzhm.cloudfront.net/full/dc34abf72f24b44c88de4520ab3a4df190ba2a3b502969f010d055fc7d9598cc.jpg)
 * Tongariro National Park 2 [Love Taupo](https://www.lovetaupo.com/en/scenic-attractions/tongariro-alpine-crossing/)
@@ -918,7 +918,7 @@ The project will now be cloned locally for you to use.
 * Jety-Oguz 1 [Travel Land](https://trvlland.com/kyrgyzstan/sights/jety-oguz)
 * Jety-Oguz 2 [Pinterest](https://www.pinterest.co.uk/pin/the-seven-bulls-of-jetioguz-kyrgyzstan--456411743467474442/)
 * Jety-Oguz 3 & 4 [Adventures of Lil Nicki](https://adventuresoflilnicki.com/jeti-oguz-kyrgyzstan/)
-* Issyk Kul 1 - 3 [](https://theplanetd.com/issyk-kul-lake-kyrgyzstan/)
+* Issyk Kul 1 - 3 [The Planet D](https://theplanetd.com/issyk-kul-lake-kyrgyzstan/)
 * Issyk Kul 4 [Kalpak Travel](https://kalpak-travel.com/blog/issyk-kul/)
 * Song Kul all highlight photos [Kalpak Travel](https://kalpak-travel.com/blog/song-kul-kyrgyzstan/)
 
@@ -978,3 +978,8 @@ The project will now be cloned locally for you to use.
 
 * My mentor [Gareth McGirr](https://github.com/Gareth-McGirr/) for all his help and advice throughout the project
 * The whole team at [Code Institute](https://codeinstitute.net/) for their teaching and support
+
+- - -
+- - -
+
+[Go to Top](#the-travel-personality-quiz)

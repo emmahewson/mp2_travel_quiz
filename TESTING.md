@@ -32,11 +32,11 @@ This is the testing documentation for my web application: The Travel Personality
 
 ## Introduction
 
-In my testing I developed a comprehensive testing plan to make sure that the site was functioning correctly. I used predominantly manual testing, I did investigate the option of automated testing and ran a few trial tests at the end of the development process as part of my own learning and personal development, but due to the way I had written the JavaScript and the resulting complexity of the automated testing I would need to write I felt that it was not necessary for this application as it was a fairly simple app that would be better served by in depth manual testing.
+In my testing I developed a comprehensive testing plan to make sure that the site was functioning correctly. I used predominantly manual testing, I did investigate the option of writing bespoke automated tests and ran a few trial tests at the end of the development process as part of my own learning and personal development, but due to the way I had written the JavaScript and the resulting complexity of the automated testing that I would need to write, I felt that it was not necessary for this application as it was a fairly simple app that would be better served by in-depth manual testing which I have detailed below.
 
-My manual testing involved going through the game and manually checking if answers and results matched what would be expected. However I have included details of basic automated testing that I undertook which included validation for HTML & CSS and checking the site for accessibilty and performance. The site was tested throughout the process, both in the development and deployed version of the sites. All the test results detailed below are based on the [deployed site](https://emmahewson.github.io/mp2_travel_quiz/). 
+My manual testing involved going through the game and manually checking all elements behaved as expected and making sure that the JavaScript was producing the correct results based on the user selections. I have also included details of automated testing/validation that I undertook which included validation for HTML & CSS and checking the site for accessibilty and performance. The site was tested throughout the process, both in the development and deployed version of the sites. All the test results detailed below are based on the [deployed site](https://emmahewson.github.io/mp2_travel_quiz/). 
 
-## Automated Testing
+## Automated Checks and Validation
 
 ### HTML Validation
 
@@ -298,7 +298,7 @@ There were no errors or warnings on 404.html.
 </details>
 
 
-#### **Additional Accessibility Improvements**
+#### **Additional Accessibility Checks - Placeholder Text & Images**
 
 When tidying up the project in the final stages before submission I removed placeholders which I'd used in some of the HTML elements (e.g. headings, buttons, images, alt-values). These were elements that would later be populated based on user answers, e.g. the image of the winning country, or text about the user's personality. However, as a precaution I ran an additional accessibility test before submission to check the code. It threw up errors about empty elements and empty alt-values. I therefore decided to reinstate some basic placeholder content to the site to avoid these errors.
 
@@ -619,7 +619,10 @@ The website failed to scroll to the top when clicking on a button, this caused p
 - - -
 #### **4: Mobile input zoom-in not resetting**
 
-During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">.
+During testing on mobile, when selecting the name input box, the browser would zoom in make the box bigger. This was due to the input box having text smaller than 16px. However upon input the browser wasn't zooming out again. I fixed this by adding the following to the viewport data in the head element of the HTML code: 
+```
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+```
 However, later on, in performance testing using Google's Dev Tools Lighthouse I discovered that setting the maximum scale like this affected accessibility. You can see details of how I worked around this issue [here](#performance).
 
 
@@ -681,8 +684,14 @@ This error was also stopping the map from loading. I fixed this by changing the 
 
 </details>
 
-This error was due to the initMap function not being fed an index value from the countries array as it hadn't been calculated yet. I overcame this using an if statement at the start of the initMap function that checked if the parameter was undefined (ie it hadn't been given a value yet) and if so it gave it the value of 0 to load the first country in the countries array. This got rid of the console error.
-I found and adapted this solution from [here](https://www.javascripttutorial.net/es6/javascript-default-parameters/#:~:text=Setting%20JavaScript%20default%20parameters%20for,the%20default%20values%20of%20undefined%20.). (Credited in code comments.)
+This error was due to the initMap function not being fed an index value from the countries array as it hadn't been calculated yet. I overcame this using an if statement at the start of the initMap function that checked if the parameter was undefined (ie it hadn't been given a value yet) and if so it gave it the value of 0 to load the first country in the countries array. This got rid of the console error. I found and adapted this solution from [here](https://www.javascripttutorial.net/es6/javascript-default-parameters/#:~:text=Setting%20JavaScript%20default%20parameters%20for,the%20default%20values%20of%20undefined%20.). (Credited in code comments.)
+```
+if (typeof index === 'undefined') {
+        index = 0;
+    } else {
+        index = index;
+    }
+```
 
 
 **Error 3**
@@ -701,7 +710,7 @@ More information [here](https://stackoverflow.com/questions/47799388/javascript-
 
 On page load Dev Tool's console was logging an error and failing to load the pie chart.
 
-I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E). It was happenning because the CDN link I was using to the chart.js library was out of date and I needed to update it to a more recent version - as in the code below.
+I found the solution to this [here](https://www.youtube.com/watch?v=ens3HK88h5E). It was happening because the CDN link I was using to the chart.js library was out of date and I needed to update it to a more recent version - as in the code below.
 
 
 ```
