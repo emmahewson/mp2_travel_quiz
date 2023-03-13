@@ -15,14 +15,6 @@ body {
     background-color: #fff;
 }
 
-.inline-block {
-    display: inline-block;
-}
-
-.inline {
-    display: inline;
-}
-
 .flex-center {
     display: flex;
     justify-content: center;
@@ -36,10 +28,6 @@ body {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-.lowercase {
-    text-transform: lowercase;
 }
 
 .heading-font {
@@ -274,9 +262,6 @@ a {
 #answer-div {
     width: 70%;
     max-width: 960px;
-}
-
-#answer-div {
     justify-content: space-between;
 }
 
@@ -649,11 +634,6 @@ a {
         margin-left: 60px;
         margin-right: 60px;
     }
-
-    #personality-div-flex {
-        justify-content: center;
-        row-gap: 20px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -688,6 +668,10 @@ a {
 /* Small Devices */
 @media (max-width: 576px) {
     /* Main Elements */
+
+    .small-heading {
+        font-size: 24px;
+    }
 
     #logo-div img {
         width: 155px;
@@ -797,10 +781,6 @@ a {
 
     #results-image {
         margin: 30px 0;
-    }
-
-    .small-heading {
-        font-size: 24px;
     }
 
     #country-highlights-div>h2 {
