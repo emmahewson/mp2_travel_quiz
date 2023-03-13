@@ -6,7 +6,7 @@ function initMap(index) {
         index = 0;
     } else {
         index = index;
-    };
+    }
 
     // sets zoom level based on screen size
     let zoomLevel;
@@ -19,18 +19,18 @@ function initMap(index) {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: zoomLevel,
         center: countries[index].center
-    })
+    });
 
     //Declaring DOM elements
-    const highlightTitle = document.getElementById('highlight-title')
-    const highlightText = document.getElementById('highlight-text')
-    const imageOne = document.getElementById('highlight-photo-1')
-    const imageTwo = document.getElementById('highlight-photo-2')
-    const imageThree = document.getElementById('highlight-photo-3')
-    const imageFour = document.getElementById('highlight-photo-4')
-    const highlightInfoDiv = document.getElementById('highlight-info-div')
-    const countryHighlightDiv = document.getElementById('country-highlights-div')
-    const highlightContentDiv = document.getElementById('highlight-content-div')
+    const highlightTitle = document.getElementById('highlight-title');
+    const highlightText = document.getElementById('highlight-text');
+    const imageOne = document.getElementById('highlight-photo-1');
+    const imageTwo = document.getElementById('highlight-photo-2');
+    const imageThree = document.getElementById('highlight-photo-3');
+    const imageFour = document.getElementById('highlight-photo-4');
+    const highlightInfoDiv = document.getElementById('highlight-info-div');
+    const countryHighlightDiv = document.getElementById('country-highlights-div');
+    const highlightContentDiv = document.getElementById('highlight-content-div');
 
 
     // Clickable map markers adapted from: https://www.aspsnippets.com/Articles/Google-Maps-API-V3-Add-click-event-listener-to-all-multiple-markers.aspx
@@ -92,9 +92,7 @@ function initMap(index) {
                             behavior: 'smooth'
                         });
                     }, 150);
-                };
-
-
+                }
             });
         })(marker, data);
     }
